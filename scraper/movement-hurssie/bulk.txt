@@ -21260,7 +21260,7 @@
                 "service": {
                     "id": "b60cd835-ff28-4f9e-ba76-7474fe7a031a",
                     "info": {
-                        "name": "Pop Up Class W Roselyn",
+                        "name": "Beginner Choreography W Roselyn",
                         "images": [
                             {
                                 "id": "e9ca0b_95b78408169d439a85314d20367534e0~mv2.jpg",
@@ -21515,10 +21515,10 @@
                         "id": "dd0f3b32-3f22-459d-827a-acdfa0b10f53",
                         "scheduleOwnerId": "b60cd835-ff28-4f9e-ba76-7474fe7a031a",
                         "firstSessionStart": "2023-02-28T07:00:00Z",
-                        "lastSessionEnd": "2023-02-28T08:00:00Z",
+                        "lastSessionEnd": "2024-04-23T10:00:00Z",
                         "timeZone": "Australia/Sydney",
                         "intervals": [],
-                        "title": "Pop Up Class W Roselyn",
+                        "title": "Beginner Choreography W Roselyn",
                         "tags": [
                             "GROUP"
                         ],
@@ -21575,9 +21575,10 @@
                         "participants": [],
                         "status": "CREATED",
                         "created": "2023-02-24T08:55:19.998Z",
-                        "updated": "2023-02-24T08:58:33.934Z",
+                        "updated": "2024-04-21T07:50:58.968Z",
                         "version": 0,
-                        "inheritedFields": []
+                        "inheritedFields": [],
+                        "scheduleOwnerName": "Beginner Choreography W Roselyn"
                     }
                 ],
                 "category": {
@@ -21592,21 +21593,25 @@
                 "urls": {
                     "servicePageUrl": {
                         "base": "https://www.movementnation.com.au",
-                        "path": "/service-page/pop-up-class-w-roselyn"
+                        "path": "/service-page/beginner-choreography-w-roselyn"
                     },
                     "bookingPageUrl": {
                         "base": "https://www.movementnation.com.au",
-                        "path": "/booking-calendar/pop-up-class-w-roselyn"
+                        "path": "/booking-calendar/beginner-choreography-w-roselyn"
                     },
                     "calendarPageUrl": {
                         "base": "https://www.movementnation.com.au",
-                        "path": "/booking-calendar/pop-up-class-w-roselyn"
+                        "path": "/booking-calendar/beginner-choreography-w-roselyn"
                     }
                 },
                 "slugs": [
                     {
-                        "name": "pop-up-class-w-roselyn",
-                        "createdAt": "2023-02-24T08:57:40.320Z"
+                        "name": "beginner-choreography-w-roselyn",
+                        "createdAt": "2024-04-21T07:50:32.052Z"
+                    },
+                    {
+                        "name": "beginner-choreography-w-roselyn",
+                        "createdAt": "2024-04-21T07:50:32.052Z"
                     },
                     {
                         "name": "pop-up-class-w-roselyn",

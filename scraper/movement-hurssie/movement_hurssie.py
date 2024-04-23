@@ -5,12 +5,14 @@ import json
 # Note that currently for authorisation, the token is hardcoded and will expire after a certain time
 # Get new token from accessing webpage if it doesnt work
 
+auth = "D5Qhfxxogv0c9-0E4kxqTv9yPiLQaGc5HqpI94EL7YA.eyJpbnN0YW5jZUlkIjoiZjI4MWM2ZjItOGMxMy00ZDRmLTlmYWMtYjgwYTE1NTZlZmIxIiwiYXBwRGVmSWQiOiIxM2QyMWM2My1iNWVjLTU5MTItODM5Ny1jM2E1ZGRiMjdhOTciLCJtZXRhU2l0ZUlkIjoiMzQyMGE5MjktMzUwYy00NGFkLWE1M2ItMmM0NTQ1NzMyNjM2Iiwic2lnbkRhdGUiOiIyMDI0LTA0LTIyVDA0OjA2OjQ1LjU5MloiLCJ2ZW5kb3JQcm9kdWN0SWQiOiJib29raW5ncyIsImRlbW9Nb2RlIjpmYWxzZSwiYWlkIjoiZGMzNmZmZDktMDFhYy00MGJjLWJiOTMtMGYzOTJiMjU4YzMzIiwiYmlUb2tlbiI6ImM2YTE2ZmRiLWI5MWYtMDllMi0zYTk3LTk0NGY1MDI1Yzk4NyIsInNpdGVPd25lcklkIjoiZTQ1NDYxYzMtNjRhZC00ZDlmLTg0NGUtNzc0MGJjMjU2NGE2In0"
+
 
 # Get all the data
 # bulk
 
 r = requests.post('https://www.movementnation.com.au/_api/services-catalog/bulk', headers={
-    "authorization": "GJkZRwSwZfdauOp1iNmj0us5NGdDt7LfeeuQ9MQ7GLA.eyJpbnN0YW5jZUlkIjoiZjI4MWM2ZjItOGMxMy00ZDRmLTlmYWMtYjgwYTE1NTZlZmIxIiwiYXBwRGVmSWQiOiIxM2QyMWM2My1iNWVjLTU5MTItODM5Ny1jM2E1ZGRiMjdhOTciLCJtZXRhU2l0ZUlkIjoiMzQyMGE5MjktMzUwYy00NGFkLWE1M2ItMmM0NTQ1NzMyNjM2Iiwic2lnbkRhdGUiOiIyMDI0LTA0LTIxVDAzOjUxOjI5LjcwMloiLCJ2ZW5kb3JQcm9kdWN0SWQiOiJib29raW5ncyIsImRlbW9Nb2RlIjpmYWxzZSwiYWlkIjoiM2UzMWQ3ZWEtOGNiNS00M2RmLWE1YmUtNGY0NDY0ZmZhYmNjIiwiYmlUb2tlbiI6ImM2YTE2ZmRiLWI5MWYtMDllMi0zYTk3LTk0NGY1MDI1Yzk4NyIsInNpdGVPd25lcklkIjoiZTQ1NDYxYzMtNjRhZC00ZDlmLTg0NGUtNzc0MGJjMjU2NGE2In0",
+    "authorization": auth,
     "commonconfig": "%7B%22brand%22%3A%22wix%22%2C%22host%22%3A%22VIEWER%22%2C%22BSI%22%3A%22f1cdc301-a785-4f39-8430-3eecd21e9537%7C1%22%7D",
     "content-type": "application/json",
     "x-wix-brand": "wix",
@@ -40,6 +42,11 @@ r = requests.post('https://www.movementnation.com.au/_api/services-catalog/bulk'
     }
 })
 
+if r.status_code != 200:
+    print("Error Bulk: ", r.status_code)
+    print(r.text)
+    exit()
+
 try:
     data = json.loads(r.text)
     formatted_json = json.dumps(data, indent=4)
@@ -59,10 +66,10 @@ for service in bulk["responseServices"]['services']:
     service = service['service']
     service_ids.append(service['id'])
     
-print(service_ids)
+# print(service_ids)
     
 r = requests.post('https://www.movementnation.com.au/_api/availability-calendar/v1/availability/query', headers={
-    "authorization": "GJkZRwSwZfdauOp1iNmj0us5NGdDt7LfeeuQ9MQ7GLA.eyJpbnN0YW5jZUlkIjoiZjI4MWM2ZjItOGMxMy00ZDRmLTlmYWMtYjgwYTE1NTZlZmIxIiwiYXBwRGVmSWQiOiIxM2QyMWM2My1iNWVjLTU5MTItODM5Ny1jM2E1ZGRiMjdhOTciLCJtZXRhU2l0ZUlkIjoiMzQyMGE5MjktMzUwYy00NGFkLWE1M2ItMmM0NTQ1NzMyNjM2Iiwic2lnbkRhdGUiOiIyMDI0LTA0LTIxVDAzOjUxOjI5LjcwMloiLCJ2ZW5kb3JQcm9kdWN0SWQiOiJib29raW5ncyIsImRlbW9Nb2RlIjpmYWxzZSwiYWlkIjoiM2UzMWQ3ZWEtOGNiNS00M2RmLWE1YmUtNGY0NDY0ZmZhYmNjIiwiYmlUb2tlbiI6ImM2YTE2ZmRiLWI5MWYtMDllMi0zYTk3LTk0NGY1MDI1Yzk4NyIsInNpdGVPd25lcklkIjoiZTQ1NDYxYzMtNjRhZC00ZDlmLTg0NGUtNzc0MGJjMjU2NGE2In0",
+    "authorization": auth,
     "commonconfig": "%7B%22brand%22%3A%22wix%22%2C%22host%22%3A%22VIEWER%22%2C%22BSI%22%3A%22f1cdc301-a785-4f39-8430-3eecd21e9537%7C1%22%7D",
     "content-type": "application/json",
     "x-wix-brand": "wix",
@@ -78,6 +85,11 @@ r = requests.post('https://www.movementnation.com.au/_api/availability-calendar/
     }
 })
 
+if r.status_code != 200:
+    print("Error Query: ", r.status_code)
+    print(r.text)
+    exit()
+
 try:
     data = json.loads(r.text)
     formatted_json = json.dumps(data, indent=4)
@@ -85,3 +97,50 @@ try:
         file.write(formatted_json)
 except json.JSONDecodeError:
     print("Response is not valid JSON.")
+
+query = r.json()
+
+# Link query and json information
+# Output it as good stuff in a file
+
+# Data structure of classData
+# {
+#     "serviceId": "string",
+#     "start": "string",
+#     "end": "string",
+#     "choreo": "string",
+#     "location": "string",
+#     "totalSpots": "int",
+#     "openSpots": "int",
+#     "name": "string",
+#     "description": "string"
+# }
+
+
+
+data = []
+
+for slot in query["availabilityEntries"]:
+    classData = {}
+    classData["serviceId"] = slot["slot"]["serviceId"]
+    classData["start"] = slot["slot"]["startDate"]
+    classData["end"] = slot["slot"]["endDate"]
+    classData["choreo"] = slot["slot"]["resource"]["name"]
+    classData["location"] = slot["slot"]["location"]["formattedAddress"]
+    classData["totalSpots"] = slot["totalSpots"]
+    classData["openSpots"] = slot["openSpots"]
+
+    # find the corresponding service
+    for service in bulk["responseServices"]['services']:
+        if service["service"]['id'] == classData["serviceId"]:
+            classData["name"] = service["service"]["info"]["name"]
+            #classData["description"] = service["service"]["info"]["description"]
+
+    print(classData)
+    print()
+
+    data.append(classData) 
+
+formatted_json = json.dumps(data, indent=4)
+with open('mn-hurstville.json', 'w') as file:
+    file.write(formatted_json)

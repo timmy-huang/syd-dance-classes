@@ -22,7 +22,7 @@
             },
             "bookable": true,
             "totalSpots": 25,
-            "openSpots": 22,
+            "openSpots": 15,
             "waitingList": {
                 "totalSpots": 20,
                 "openSpots": 20
@@ -58,7 +58,7 @@
             },
             "bookable": true,
             "totalSpots": 25,
-            "openSpots": 24,
+            "openSpots": 21,
             "waitingList": {
                 "totalSpots": 20,
                 "openSpots": 20
@@ -110,16 +110,16 @@
         },
         {
             "slot": {
-                "sessionId": "193ZPR9ppP9emJUCLevcLf6orynNEIDt5nc0520xjGQILnPPaF5s62yK3BWz7ExgIRM1UqYd4EtvKzaRK5cSp4VKjU0UlgcG7OkHnUhpf7AyoazeDTiG0sX0abg3A0JaO6WHVjv10gE02NoRt2yDCuNSjLk0WjGyjzNUD42VO2Z835sbKmzeOVTycGFrhqI0wSfmX0BBhzRlfT5iwfLt2L49PmNwtsQSZZ60ZrMUoBWSCwzaJ5JGm7Kpj3GcIp6WOlK0P8fgE7VB8C6M9Q2YTtyn0WzHGZn9oIyuQKs635UWaL1IxZtwuSwSUbSXUoKET92SgmJ83VXCsn",
-                "serviceId": "7c38edfd-09ea-4f90-a36c-9fc33b8d4e01",
-                "scheduleId": "d5e30f99-11be-4944-a104-a09f96674694",
+                "sessionId": "2mmoW0vwKcSFyxtOfCdKcKdaRTXE66piE079sjIkvFLsHZlTkOi0dkvVApRoRhLrnqvoR57usqa67cdeRiJPquyDtam0WadrFGof",
+                "serviceId": "b60cd835-ff28-4f9e-ba76-7474fe7a031a",
+                "scheduleId": "dd0f3b32-3f22-459d-827a-acdfa0b10f53",
                 "startDate": "2024-04-23T19:00:00.000+10:00",
-                "endDate": "2024-04-23T20:15:00.000+10:00",
+                "endDate": "2024-04-23T20:00:00.000+10:00",
                 "timezone": "Australia/Sydney",
                 "resource": {
-                    "id": "6c3e10c4-75b3-4577-8b63-9dcf9c1494d2",
-                    "name": "Rishika",
-                    "scheduleId": "95ee3f55-4cd1-4faf-b743-c04ac96d4cb5"
+                    "id": "89fab096-c4d1-4b9a-8fcc-9f588307ff72",
+                    "name": "Roselyn",
+                    "scheduleId": "4bebcef5-e1f8-4aa4-8fa6-68550c889c6f"
                 },
                 "location": {
                     "id": "31aa05db-524c-4def-a765-5102f2474bfa",
@@ -130,7 +130,7 @@
             },
             "bookable": true,
             "totalSpots": 25,
-            "openSpots": 24,
+            "openSpots": 25,
             "waitingList": {
                 "totalSpots": 20,
                 "openSpots": 20

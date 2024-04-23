@@ -1,0 +1,92 @@
+[
+    {
+        "serviceId": "3b0baabe-560a-4313-aab4-f8d9049a6f91",
+        "start": "2024-04-22T18:00:00.000+10:00",
+        "end": "2024-04-22T19:00:00.000+10:00",
+        "choreo": "Aleira",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 15,
+        "name": "Beginner Choreography W Aleira"
+    },
+    {
+        "serviceId": "06e3a68c-cc64-4587-be96-2cd77742543a",
+        "start": "2024-04-22T19:00:00.000+10:00",
+        "end": "2024-04-22T20:15:00.000+10:00",
+        "choreo": "Lana ",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 21,
+        "name": "Int/Advanced Heels W Lana"
+    },
+    {
+        "serviceId": "5e2c8ff2-668c-4184-9957-3bd455ae598b",
+        "start": "2024-04-23T18:00:00.000+10:00",
+        "end": "2024-04-23T19:00:00.000+10:00",
+        "choreo": "Laura",
+        "location": "Movement Nation Dance Studio, Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Beginner Choreography W Laura"
+    },
+    {
+        "serviceId": "b60cd835-ff28-4f9e-ba76-7474fe7a031a",
+        "start": "2024-04-23T19:00:00.000+10:00",
+        "end": "2024-04-23T20:00:00.000+10:00",
+        "choreo": "Roselyn",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Beginner Choreography W Roselyn"
+    },
+    {
+        "serviceId": "4995382a-62ca-4fa5-b006-10cca20a7707",
+        "start": "2024-04-24T20:30:00.000+10:00",
+        "end": "2024-04-24T21:45:00.000+10:00",
+        "choreo": "Jeffery hu",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Int/Advanced Choreography W Jeff"
+    },
+    {
+        "serviceId": "9c07c69d-1fcd-4588-9448-d1892af343f2",
+        "start": "2024-04-25T18:00:00.000+10:00",
+        "end": "2024-04-25T19:00:00.000+10:00",
+        "choreo": "Koki",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 24,
+        "name": "Beginner Hip Hop W Koki "
+    },
+    {
+        "serviceId": "e6b83d82-0a7d-486b-bc69-a1c05eb154ff",
+        "start": "2024-04-25T19:00:00.000+10:00",
+        "end": "2024-04-25T20:15:00.000+10:00",
+        "choreo": "Will",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 24,
+        "name": "Popping W Will Mak"
+    },
+    {
+        "serviceId": "d268e663-a073-4767-9d8f-223883fc6e43",
+        "start": "2024-04-26T18:00:00.000+10:00",
+        "end": "2024-04-26T19:00:00.000+10:00",
+        "choreo": "Janey",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Beginner Choreography W Janey"
+    },
+    {
+        "serviceId": "217471e4-5ebf-4355-8758-f4b8a35566a4",
+        "start": "2024-04-27T14:30:00.000+10:00",
+        "end": "2024-04-27T15:30:00.000+10:00",
+        "choreo": "Chantelle",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Beginner Choreography W Chantelle"
+    }
+]

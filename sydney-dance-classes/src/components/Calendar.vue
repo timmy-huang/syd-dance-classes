@@ -1,6 +1,9 @@
 <template>
+    <v-container style="display: flex; justify-content: center; flex-direction: column;">
+        Class Schedule
+    </v-container>
 </template>
-  
-<script setup lang="ts">
+
+<script lang="ts" setup>
   //
 </script>

@@ -1,0 +1,72 @@
+[
+    {
+        "serviceId": "b7afdbf9-2932-4704-8fbc-d268009d3398",
+        "start": "2024-04-29T19:00:00.000+10:00",
+        "end": "2024-04-29T20:00:00.000+10:00",
+        "choreo": "Merry",
+        "location": "110 Church Street, Parramatta NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 9,
+        "name": "Beginner Choreography W Merry"
+    },
+    {
+        "serviceId": "abc5aaf1-c3e8-45fa-966d-050e38e61a29",
+        "start": "2024-04-30T19:15:00.000+10:00",
+        "end": "2024-04-30T20:15:00.000+10:00",
+        "choreo": "Jeff",
+        "location": "110 Church Street, Parramatta NSW, Australia",
+        "totalSpots": 30,
+        "openSpots": 17,
+        "name": "Beginner Hip Hop W Jeff"
+    },
+    {
+        "serviceId": "125e2a5b-385e-433b-b9e8-2b2cd5ed3362",
+        "start": "2024-04-30T20:15:00.000+10:00",
+        "end": "2024-04-30T21:30:00.000+10:00",
+        "choreo": "Tracey Phan",
+        "location": "110 Church Street, Parramatta NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 21,
+        "name": "Intermediate Choreography W Tracey"
+    },
+    {
+        "serviceId": "52c2a176-977f-41e8-bcbd-6d5b74ad9aa0",
+        "start": "2024-05-01T18:00:00.000+10:00",
+        "end": "2024-05-01T19:00:00.000+10:00",
+        "choreo": "Tommy",
+        "location": "110 Church Street, Parramatta NSW, Australia",
+        "totalSpots": 12,
+        "openSpots": 0,
+        "name": "Beginner Choreography W Tommy"
+    },
+    {
+        "serviceId": "57321f49-b87b-4c9b-920b-7ecf23341b35",
+        "start": "2024-05-02T18:00:00.000+10:00",
+        "end": "2024-05-02T19:00:00.000+10:00",
+        "choreo": "Tracey Phan",
+        "location": "110 Church Street, Parramatta NSW, Australia",
+        "totalSpots": 33,
+        "openSpots": 20,
+        "name": "Beginner Choreography W Tracey"
+    },
+    {
+        "serviceId": "56dc5144-93de-4baa-8ddc-d18ea0ae6336",
+        "start": "2024-05-02T19:00:00.000+10:00",
+        "end": "2024-05-02T20:15:00.000+10:00",
+        "choreo": "Sakshi",
+        "location": "110 Church Street, Parramatta NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 16,
+        "name": "Int/Advanced Choreography W Sakshi"
+    },
+    {
+        "serviceId": "3f1818f2-f8fd-4561-9434-95d69e7a17b2",
+        "start": "2024-05-03T18:00:00.000+10:00",
+        "end": "2024-05-03T19:00:00.000+10:00",
+        "choreo": "Vi",
+        "location": "110 Church Street, Parramatta NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 23,
+        "name": "Beginner Hip Hop W Vi"
+    }
+]

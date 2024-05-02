@@ -6,8 +6,8 @@
         "choreo": "Aleira",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 15,
-        "name": "Beginner Choreography W Aleira"
+        "openSpots": 8,
+        "name": "Beginner Hip Hop W Jeff (cover) "
     },
     {
         "serviceId": "06e3a68c-cc64-4587-be96-2cd77742543a",
@@ -16,7 +16,7 @@
         "choreo": "Lana ",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 21,
+        "openSpots": 18,
         "name": "Int/Advanced Heels W Lana"
     },
     {
@@ -26,7 +26,7 @@
         "choreo": "Laura",
         "location": "Movement Nation Dance Studio, Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 24,
         "name": "Beginner Choreography W Laura"
     },
     {
@@ -36,7 +36,7 @@
         "choreo": "Roselyn",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 21,
         "name": "Beginner Choreography W Roselyn"
     },
     {
@@ -46,7 +46,7 @@
         "choreo": "Jeffery hu",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 15,
         "name": "Int/Advanced Choreography W Jeff"
     },
     {
@@ -56,7 +56,7 @@
         "choreo": "Koki",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 24,
+        "openSpots": 17,
         "name": "Beginner Hip Hop W Koki "
     },
     {
@@ -66,7 +66,7 @@
         "choreo": "Will",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 24,
+        "openSpots": 23,
         "name": "Popping W Will Mak"
     },
     {
@@ -76,7 +76,7 @@
         "choreo": "Janey",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 17,
         "name": "Beginner Choreography W Janey"
     },
     {
@@ -86,7 +86,7 @@
         "choreo": "Chantelle",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 16,
         "name": "Beginner Choreography W Chantelle"
     }
 ]

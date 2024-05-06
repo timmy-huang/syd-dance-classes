@@ -26,33 +26,34 @@
 
   const lessons: Ref<Lesson[] | null> = ref(null);
   const day = ref('Monday')
-  const date = ref(new Date("Mon Apr 22 2024 18:00:00 GMT+1000 (Australian Eastern Standard Time)"))
+  const date = ref(new Date("Mon Apr 29 2024 18:00:00 GMT+1000 (Australian Eastern Standard Time)"))
 
   const displayData = computed(() => {
     // Check that the lesson is on the day we want
     if (lessons.value) {
-      console.log(lessons.value[0].start)
-      console.log(date.value)
-      return lessons.value.filter((lesson) => 
-        lesson.start.getDate() === date.value.getDate() && 
-        lesson.start.getMonth() === date.value.getMonth() && 
-        lesson.start.getFullYear() === date.value.getFullYear()
-      )
+      if (lessons.value.length > 0) {
+        console.log("filtering lessons")
+        const temp = lessons.value.filter((lesson) => {
+          console.log(lesson.start)
+          console.log(date.value)
+          return lesson.start.getDate() === date.value.getDate() && 
+          lesson.start.getMonth() === date.value.getMonth() && 
+          lesson.start.getFullYear() === date.value.getFullYear()
+      })
+        console.log(temp)
+        console.log(date.value)
+        console.log(lessons.value)
+        console.log(lessons.value[0])
+        return temp
+      } 
     }
+    console.log('No lessons')
     return []
   })
 
   onMounted(async () => {
     // TODO give every lesson a uniq id
-    const data = await getData()
-    lessons.value = data.map((lesson: Lesson) => ({
-      ...lesson,
-      start: new Date(lesson.start),
-      end: new Date(lesson.end)
-    }))
-    console.log("d")
-    console.log(data)
+    lessons.value = await getData()
     console.log(lessons.value)
-
   })
 </script>

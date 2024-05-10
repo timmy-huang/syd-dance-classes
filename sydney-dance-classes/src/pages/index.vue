@@ -1,20 +1,22 @@
 <template>
-  <v-container class="fill-height">
-    <v-responsive
-      class="align-centerfill-height mx-auto"
-      max-width="900"
-    >
-      <Calendar 
-        :selectedDay="day"
-        @update="handleUpdateDay"
-      />
+  <v-responsive
+    class="align-centerfill-height mx-auto"
+    max-width="900"
+  >
+    <Calendar 
+      :selectedDay="day"
+      @update="handleUpdateDay"
+      class="mt-10"
+    />
+    <div>
       <LessonCard
-        v-for="lesson in displayData"
-        :key="lesson.serviceId"
-        :lesson="lesson"
+      v-for="lesson in displayData"
+      :key="lesson.serviceId"
+      :lesson="lesson"
       />
-    </v-responsive>
-  </v-container>
+    </div>
+    
+  </v-responsive>
   
 </template>
 
@@ -43,7 +45,9 @@
           return lesson.start.getDate() === selectedDate.value.getDate() && 
           lesson.start.getMonth() === selectedDate.value.getMonth() && 
           lesson.start.getFullYear() === selectedDate.value.getFullYear()
-      })
+        }).sort((a, b) => {
+          return a.start.getTime() - b.start.getTime()
+        })
         return temp
       } 
     }

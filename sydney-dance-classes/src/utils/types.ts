@@ -13,8 +13,8 @@ export type Lesson = {
     end: Date;
     choreo: string;
     location: string;
-    totalSpots: number;
-    openSpots: number;
+    totalSpots?: number;
+    openSpots?: number;
     name: string;
     studio: string;
 }

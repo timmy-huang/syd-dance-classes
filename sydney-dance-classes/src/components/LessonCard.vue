@@ -1,5 +1,8 @@
 <template>
-  <v-card>
+  <v-card
+    hover
+    elevation="6"
+  >
     <template v-slot:prepend>
       <StudioIcon :studio="lesson.studio" />
     </template> 
@@ -13,7 +16,7 @@
     </template>
 
     <template v-slot:text>
-      {{ lesson.start }}
+      {{ formatDate(lesson.start) + " - " + formatDate(lesson.end) }}
     </template>
     </v-card>
 </template>
@@ -25,4 +28,14 @@
   defineProps({
     lesson: Object as PropType<Lesson>,
   })
+
+  const formatDate = (date: Date) => {
+    return date.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', hour12: true }).replace(" ", "")
+  }
 </script>
+
+<style>
+  .v-card {
+    margin: 1em;
+  }
+</style>

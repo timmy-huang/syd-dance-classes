@@ -1,6 +1,6 @@
 <template>
   <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-    <div style="margin-bottom: 2em;">
+    <div class="text-h2 mb-10">
       Class Schedule
     </div>
     <div style="display: flex; justify-content: space-between">

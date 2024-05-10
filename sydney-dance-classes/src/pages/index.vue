@@ -4,13 +4,14 @@
       class="align-centerfill-height mx-auto"
       max-width="900"
     >
-      <Calendar />
+      <Calendar 
+        :selectedDay="day"
+        @update="handleUpdateDay"
+      />
       <LessonCard
         v-for="lesson in displayData"
         :key="lesson.serviceId"
-        :title="lesson.name"
-        :subtitle="lesson.choreo"
-        :text="lesson.start"
+        :lesson="lesson"
       />
     </v-responsive>
   </v-container>
@@ -25,22 +26,23 @@
   import { Lesson } from '../utils/types'
 
   const lessons: Ref<Lesson[]> = ref([]);
-  const day = ref('Monday')
-  const date = ref(new Date("Mon Apr 29 2024 18:00:00 GMT+1000 (Australian Eastern Standard Time)"))
+  
+  const today = ref(new Date("Mon Apr 29 2024 18:00:00 GMT+1000 (Australian Eastern Standard Time)"))
+  const day = ref((today.value.getDay()+ 6) % 7);// 0 = Monday
+
+  const selectedDate = computed(() => {
+    var date = new Date(today.value.valueOf());
+    date.setDate(date.getDate() + day.value);
+    return date;
+  });
 
   const displayData = computed(() => {
-    // Check that the lesson is on the day we want
-    // console.log("test")
     if (lessons.value) {
-      console.log("lessons")
-      // console.log(lessons.value)
-      // console.log(lessons.value[0])
       if (lessons.value.length > 0) {
-        console.log("filtering lessons")
         const temp = lessons.value.filter((lesson) => {
-          return lesson.start.getDate() === date.value.getDate() && 
-          lesson.start.getMonth() === date.value.getMonth() && 
-          lesson.start.getFullYear() === date.value.getFullYear()
+          return lesson.start.getDate() === selectedDate.value.getDate() && 
+          lesson.start.getMonth() === selectedDate.value.getMonth() && 
+          lesson.start.getFullYear() === selectedDate.value.getFullYear()
       })
         return temp
       } 
@@ -48,6 +50,10 @@
     console.log('No lessons')
     return []
   })
+
+  const handleUpdateDay = (newDay: number) => {
+    day.value = newDay
+  }
 
   onMounted(async () => {
     // TODO give every lesson a uniq id

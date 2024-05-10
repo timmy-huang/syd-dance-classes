@@ -16,4 +16,5 @@ export type Lesson = {
     totalSpots: number;
     openSpots: number;
     name: string;
+    studio: string;
 }

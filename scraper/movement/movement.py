@@ -5,8 +5,8 @@ import json
 # Get new token from accessing webpage if it doesnt work
 
 def movement(hauth, pauth, location, start_date, end_date):
-    hlocation = location + 'mn-hurstville.json'
-    plocation = location + 'mn-parramatta.json'
+    hlocation = location + 'movement_nation_hurstville.json'
+    plocation = location + 'movement_nation_parramatta.json'
 
     getData(hauth, hlocation, start_date, end_date)
     getData(pauth, plocation, start_date, end_date)

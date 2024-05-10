@@ -1,19 +1,28 @@
 <template>
   <v-card>
+    <template v-slot:prepend>
+      <StudioIcon :studio="lesson.studio" />
+    </template> 
+
     <template v-slot:title>
-      {{ title }}
+      {{ lesson.name }}
     </template>
 
     <template v-slot:subtitle>
-      {{ subtitle }}
+      {{ lesson.choreo }}
     </template>
 
     <template v-slot:text>
-      {{ text }}
+      {{ lesson.start }}
     </template>
     </v-card>
 </template>
   
 <script lang="ts" setup>
-  defineProps(['title', 'subtitle', 'text'])
+  import { Lesson } from '../utils/types'
+  import { PropType } from 'vue'
+
+  defineProps({
+    lesson: Object as PropType<Lesson>,
+  })
 </script>

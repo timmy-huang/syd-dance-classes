@@ -4,30 +4,31 @@
     elevation="6"
     class="d-flex align-center"
   >
-    <template v-slot:prepend>
-      <StudioIcon :studio="lesson.studio" />
-    </template> 
 
-    <template v-slot:title>
-      {{ lesson.name }}
-    </template>
+    <v-card-item class="lesson-card-item">
+      <template v-slot:prepend>
+        <StudioIcon :studio="lesson.studio" />
+      </template> 
+      <v-card-title>
+        {{ lesson.name }}
+      </v-card-title>
+      <v-card-subtitle>
+        {{ lesson.choreo }}
+      </v-card-subtitle>
+    </v-card-item>
 
-    <template v-slot:subtitle>
-      {{ lesson.choreo }}
-    </template>
-
-    <template v-slot:text>
+    <v-card-text>
       <div class="text-subtitle-1">
         {{ formatDate(lesson.start) + " - " + formatDate(lesson.end) }}
       </div>
-    </template>
-    <template v-slot:actions>
+    </v-card-text>
+    <v-card-actions>
       <v-btn
         variant="outlined"
         text="Book Now"
         class="mr-4"
       />
-    </template>
+    </v-card-actions>
   </v-card>
 </template>
   
@@ -47,5 +48,9 @@
 <style>
   .v-card {
     margin: 1em;
+  }
+
+  .lesson-card-item {
+    width: 500px;
   }
 </style>

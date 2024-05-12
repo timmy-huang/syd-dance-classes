@@ -8,11 +8,12 @@
 //         "name": "Int/Advanced Heels W Lana"
 
 export type Lesson = {
-    serviceId: string;
+    serviceId?: string;
     start: Date;
     end: Date;
     choreo: string;
-    location: string;
+    choreoInsta?: string;
+    location?: string;
     totalSpots?: number;
     openSpots?: number;
     name: string;

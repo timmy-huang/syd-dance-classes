@@ -2,6 +2,7 @@ import { Lesson } from './types';
 import { Ref } from 'vue';
 
 const studios = [
+  "imi",
   "movement_nation_hurstville",
   "movement_nation_parramatta",
 ]

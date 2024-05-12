@@ -20,71 +20,61 @@ import re
 #   -H "sec-fetch-site: cross-site" ^
 #   -H "user-agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Mobile Safari/537.36"
   
-callback = "jQuery36406886794353924179_1715325689640"
-start_date = "2024-05-10"
-_id = "1715325689641"
 
-url = "https://widgets.mindbodyonline.com/widgets/schedules/86397/load_markup"
-params = {
-    "callback": callback,
-    "options[start_date]": start_date,
-    "_": _id
-}
-headers = {
-    "accept": "*/*",
-    "accept-language": "en-US,en;q=0.9",
-    "sec-ch-ua": "\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"",
-    "sec-ch-ua-mobile": "?1",
-    "sec-ch-ua-platform": "\"Android\"",
-    "sec-fetch-dest": "script",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "cross-site",
-    "referrer": "(link unavailable)",
-    "referrerPolicy": "strict-origin-when-cross-origin"
-}
+def imi(callback, start_date, _id, location):
+    url = "https://widgets.mindbodyonline.com/widgets/schedules/86397/load_markup"
+    params = {
+        "callback": callback,
+        "options[start_date]": start_date,
+        "_": _id
+    }
+    headers = {
+        "accept": "*/*",
+        "accept-language": "en-US,en;q=0.9",
+        "sec-ch-ua": "\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?1",
+        "sec-ch-ua-platform": "\"Android\"",
+        "sec-fetch-dest": "script",
+        "sec-fetch-mode": "no-cors",
+        "sec-fetch-site": "cross-site",
+        "referrer": "(link unavailable)",
+        "referrerPolicy": "strict-origin-when-cross-origin"
+    }
 
-response = requests.get(url, params=params, headers=headers)
+    html = requests.get(url, params=params, headers=headers).text.replace(" ", "")
 
-parsedResponse = response.text[len(callback)+1:-2].replace(" ", "")
+    # Extract class names
+    class_names = re.findall(r'data-bw-widget-mbo-class-name=\\"(.*?)\\"', html)
+    # print(class_names)
 
-html = parsedResponse
+    # Extract start times
+    start_times = re.findall(r'timeclass=\\"hc_starttime\\"datetime=\\"(.*?)\\"', html)
+    # Extract end times
+    end_times = re.findall(r'timeclass=\\"hc_endtime\\"datetime=\\"(.*?)\\"', html)
 
-# Extract class names
-class_names = re.findall(r'data-bw-widget-mbo-class-name=\\"(.*?)\\"', html)
-# print(class_names)
+    # print(start_times)
+    # print(end_times)
 
-# Extract start times
-start_times = re.findall(r'timeclass=\\"hc_starttime\\"datetime=\\"(.*?)\\"', html)
-# Extract end times
-end_times = re.findall(r'timeclass=\\"hc_endtime\\"datetime=\\"(.*?)\\"', html)
+    # # Extract staff names
+    staff = re.findall(r'divclass=\\"bw-session__staff\\"style=\\"\\"\\u003e\\n(.*?)\\n', html)
+    # print(staff)
 
-# print(start_times)
-# print(end_times)
+    data = []
 
-# # Extract staff names
-# "bw-session__staff\"style=\"\"\u003e\nMerry|@charmingmerry888\n\u003c/
-staff = re.findall(r'divclass=\\"bw-session__staff\\"style=\\"\\"\\u003e\\n(.*?)\\n', html)
-# print(staff)
+    for i in range(len(class_names)):
+        classData = {}
+        classData["start"] = start_times[i]
+        classData["end"] = end_times[i]
+        classData["choreo"] = staff[i].split("|")[0]
+        classData["choreoInsta"] = staff[i].split("|")[0]
+        classData["name"] = class_names[i].replace("_", " ").title()
+        # print("Class Name:", class_names[i])
+        # print("Start Time:", start_times[i])
+        # print("End Time:", end_times[i])
+        # print("Staff:", staff[i])
+        # print("-----")
+        data.append(classData)
 
-data = []
-
-for i in range(len(class_names)):
-    classData = {}
-    classData["start"] = start_times[i]
-    classData["end"] = end_times[i]
-    classData["choreo"] = staff[i].split("|")[0]
-    classData["choreoInsta"] = staff[i].split("|")[0]
-    classData["name"] = class_names[i]
-    print("Class Name:", class_names[i])
-    print("Start Time:", start_times[i])
-    print("End Time:", end_times[i])
-    print("Staff:", staff[i])
-    print("-----")
-    data.append(classData)
-
-formatted_json = json.dumps(data, indent=4)
-with open("temp.txt", 'w') as file:
-    file.write(formatted_json)
-
-with open("imi.txt", 'w') as file:
-    file.write(parsedResponse)
+    formatted_json = json.dumps(data, indent=4)
+    with open(location + "imi.json", 'w') as file:
+        file.write(formatted_json)

@@ -43,13 +43,13 @@
   const bookLink = computed(() => {
     if (props.lesson) {
       console.log(props.lesson.studio)
-      if (props.lesson.studio == "movement_nation_hurstville") {
+      if (props.lesson.studio === "movement_nation_hurstville") {
         return "https://www.movementnation.com.au/hurstville-bookings"
       }
-      if (props.lesson.studio == "movement_nation_parramatta") {
+      if (props.lesson.studio === "movement_nation_parramatta") {
         return "https://2020movementnation.wixsite.com/website-1"
       }
-      if (props.lesson.studio == "imi") {
+      if (props.lesson.studio === "imi") {
         return "https://imient.com.au/classes"
       }
     }

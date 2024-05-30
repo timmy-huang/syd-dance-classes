@@ -10,9 +10,9 @@
     />
     <div>
       <LessonCard
-      v-for="lesson in displayData"
-      :key="lesson.serviceId"
-      :lesson="lesson"
+        v-for="lesson in displayData"
+        :key="lesson.serviceId"
+        :lesson="lesson"
       />
     </div>
     

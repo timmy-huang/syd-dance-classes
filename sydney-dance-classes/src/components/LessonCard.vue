@@ -25,9 +25,12 @@
     <v-card-actions>
       <v-btn
         variant="outlined"
-        text="Book Now"
         class="mr-4"
-      />
+      >
+        <a :href="bookLink" target="_blank" style="text-decoration: none; color: inherit;">
+          Book Now
+        </a>
+      </v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -35,8 +38,26 @@
 <script lang="ts" setup>
   import { Lesson } from '../utils/types'
   import { PropType } from 'vue'
+  import { computed } from 'vue';
 
-  defineProps({
+  const bookLink = computed(() => {
+    if (props.lesson) {
+      console.log(props.lesson.studio)
+      if (props.lesson.studio == "movement_nation_hurstville") {
+        return "https://www.movementnation.com.au/hurstville-bookings"
+      }
+      if (props.lesson.studio == "movement_nation_parramatta") {
+        return "https://2020movementnation.wixsite.com/website-1"
+      }
+      if (props.lesson.studio == "imi") {
+        return "https://imient.com.au/classes"
+      }
+    }
+    console.log("Booking Link not found for ", props.lesson)
+    return ""
+  })
+
+  const props = defineProps({
     lesson: Object as PropType<Lesson>,
   })
 

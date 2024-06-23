@@ -78,3 +78,5 @@ def imi(callback, start_date, _id, location):
     formatted_json = json.dumps(data, indent=4)
     with open(location + "imi.json", 'w') as file:
         file.write(formatted_json)
+
+    print("Scraped IMI")

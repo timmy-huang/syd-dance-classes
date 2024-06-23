@@ -120,11 +120,10 @@ def getData(auth, location, start_date, end_date):
                 classData["name"] = service["service"]["info"]["name"]
                 #classData["description"] = service["service"]["info"]["description"]
 
-        print(classData)
-        print()
-
         data.append(classData) 
 
     formatted_json = json.dumps(data, indent=4)
     with open(location, 'w') as file:
         file.write(formatted_json)
+
+    print("Scraped " + location)

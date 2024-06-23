@@ -29,7 +29,8 @@
 
   const lessons: Ref<Lesson[]> = ref([]);
   
-  const today = ref(new Date("Mon Apr 29 2024 18:00:00 GMT+1000 (Australian Eastern Standard Time)"))
+  const today = ref(new Date())
+  console.log(today)
   const day = ref((today.value.getDay()+ 6) % 7);// 0 = Monday
 
   const selectedDate = computed(() => {

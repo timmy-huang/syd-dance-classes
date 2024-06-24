@@ -30,7 +30,12 @@
   const lessons: Ref<Lesson[]> = ref([]);
   
   const today = ref(new Date())
-  console.log(today)
+  // If Sunday, show from Monday. In future it should be, if day is empty, show next day
+  // Also in the future should show next week
+  if (today.value.getDay() === 0) { 
+    today.value.setDate(today.value.getDate() + 1);
+  }
+  console.log(today.value)
   const day = ref((today.value.getDay()+ 6) % 7);// 0 = Monday
 
   const selectedDate = computed(() => {

@@ -1,3 +1,2 @@
 node_modules
-/sydney-dance-classes/data/
-data/
+/__pycache__/

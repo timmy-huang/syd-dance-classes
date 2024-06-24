@@ -12,7 +12,7 @@ const getData = async (lessons: Ref<Lesson[]>) => {
 
     studios.forEach(async (file) => {
       try {
-        const response = await fetch(`../../data/${file}.json`);
+        const response = await fetch(`data/${file}.json`);
         if (!response.ok) {
           throw new Error('Data not found.');
         }

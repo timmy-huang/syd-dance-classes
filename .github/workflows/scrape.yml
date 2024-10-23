@@ -1,0 +1,39 @@
+name: Weekly Web Scrape Python Task
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every Sunday
+    - cron: '0 0 * * 0'
+  
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8.2'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+          
+      - name: Run main.py
+        run: |
+          # Add the scraper directory to Python path so it can find local modules
+          PYTHONPATH=$PYTHONPATH:$(pwd)/scraper python scraper/main.py
+        
+      - name: Commit and push if changes exist
+        run: |
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
+          git add -A
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Weekly automated update" && git push)

@@ -1,162 +1,72 @@
 [
     {
-        "serviceId": "0bdb7736-fdbb-4fc1-9354-883be54a5c10",
-        "start": "2024-06-24T18:00:00.000+10:00",
-        "end": "2024-06-24T19:00:00.000+10:00",
-        "choreo": "Oliver",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 20,
-        "name": "Beginner Choreography W Oliver"
-    },
-    {
-        "serviceId": "b7afdbf9-2932-4704-8fbc-d268009d3398",
-        "start": "2024-06-24T19:00:00.000+10:00",
-        "end": "2024-06-24T20:00:00.000+10:00",
-        "choreo": "Merry",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 14,
-        "name": "Beginner Choreography W Merry"
-    },
-    {
-        "serviceId": "901ba9de-2b68-4688-9e1b-219bde7065e7",
-        "start": "2024-06-24T20:00:00.000+10:00",
-        "end": "2024-06-24T21:00:00.000+10:00",
-        "choreo": "Liz",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 21,
-        "name": "Beginner Choreography W Liz"
-    },
-    {
-        "serviceId": "dc26ec99-ed99-4809-b8d4-c3854a3fc039",
-        "start": "2024-06-25T18:00:00.000+10:00",
-        "end": "2024-06-25T19:00:00.000+10:00",
-        "choreo": "Chantelle",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 33,
-        "openSpots": 25,
-        "name": "Beginner Choreography W Chantelle"
-    },
-    {
-        "serviceId": "32821a6b-8c5e-49dd-9a96-1387375d9922",
-        "start": "2024-06-25T19:00:00.000+10:00",
-        "end": "2024-06-25T20:00:00.000+10:00",
-        "choreo": "Koki",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 21,
-        "name": "Beginner Hip Hop W Koki"
-    },
-    {
-        "serviceId": "19e4c27e-2267-4605-a343-d8fe0a7cff0d",
-        "start": "2024-06-25T20:00:00.000+10:00",
-        "end": "2024-06-25T21:15:00.000+10:00",
-        "choreo": "Ivy",
-        "location": "110 Church Street, Parramatta NSW, Australia",
+        "serviceId": "a6b9ba10-43b9-4456-bdac-dc3e286f7d8f",
+        "start": "2024-10-22T18:00:00.000+11:00",
+        "end": "2024-10-22T19:00:00.000+11:00",
+        "choreo": "Winter",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
         "openSpots": 19,
-        "name": "Int/Advance Choreography W Ivy"
-    },
-    {
-        "serviceId": "52c2a176-977f-41e8-bcbd-6d5b74ad9aa0",
-        "start": "2024-06-26T18:00:00.000+10:00",
-        "end": "2024-06-26T19:00:00.000+10:00",
-        "choreo": "Tommy",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 15,
-        "openSpots": 13,
-        "name": "Beginner Choreo W Tommy"
-    },
-    {
-        "serviceId": "f085b238-5860-4cef-9b38-37311abcf2ff",
-        "start": "2024-06-26T18:00:00.000+10:00",
-        "end": "2024-06-26T19:00:00.000+10:00",
-        "choreo": "Rishika",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 25,
-        "name": "Beginner Heels W Rishika"
-    },
-    {
-        "serviceId": "07b6c60b-4acb-4ec5-b63f-30e2014c9793",
-        "start": "2024-06-26T19:00:00.000+10:00",
-        "end": "2024-06-26T20:00:00.000+10:00",
-        "choreo": "Winter Lo",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 33,
-        "openSpots": 31,
         "name": "Beginner Choreography W Winter"
     },
     {
-        "serviceId": "d3fe523b-7256-482f-8b55-f71265624f69",
-        "start": "2024-06-26T19:00:00.000+10:00",
-        "end": "2024-06-26T20:15:00.000+10:00",
-        "choreo": "Janey",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 15,
-        "openSpots": 13,
-        "name": "Intermediate Choreography W Janey"
+        "serviceId": "dd2c019a-4caf-4737-9055-5cb5118e2b28",
+        "start": "2024-10-22T19:00:00.000+11:00",
+        "end": "2024-10-22T20:00:00.000+11:00",
+        "choreo": "Kurt",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 15,
+        "name": "Beginner Choreography W Kurt"
     },
     {
-        "serviceId": "1dd60002-1189-4fbe-a491-0f9450893bbb",
-        "start": "2024-06-26T20:15:00.000+10:00",
-        "end": "2024-06-26T21:30:00.000+10:00",
-        "choreo": "Kurt Hacking",
-        "location": "110 Church Street, Parramatta NSW, Australia",
+        "serviceId": "2563ad6a-fcbb-45a5-8e8b-ad5577768d3c",
+        "start": "2024-10-23T18:00:00.000+11:00",
+        "end": "2024-10-23T19:00:00.000+11:00",
+        "choreo": "Cheska",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
         "openSpots": 25,
-        "name": "Int/Adv Choreography W Kurt"
+        "name": "Beginner Choreography w Cheska"
     },
     {
-        "serviceId": "221305b0-598e-49bd-9a49-a72548e15d04",
-        "start": "2024-06-27T18:00:00.000+10:00",
-        "end": "2024-06-27T19:00:00.000+10:00",
+        "serviceId": "017ce4e4-59eb-4cba-8944-15274e15babe",
+        "start": "2024-10-23T19:00:00.000+11:00",
+        "end": "2024-10-23T20:15:00.000+11:00",
+        "choreo": "Jumi",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 17,
+        "name": "Int/Advanced Choreo W Jumi (Pop Up)"
+    },
+    {
+        "serviceId": "9c07c69d-1fcd-4588-9448-d1892af343f2",
+        "start": "2024-10-24T18:00:00.000+11:00",
+        "end": "2024-10-24T19:00:00.000+11:00",
+        "choreo": "Koki",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 21,
+        "name": "Beginner Hip Hop W Koki "
+    },
+    {
+        "serviceId": "43f3c0e1-33ad-45b4-89e6-cd4d91e26669",
+        "start": "2024-10-24T19:00:00.000+11:00",
+        "end": "2024-10-24T20:15:00.000+11:00",
+        "choreo": "Leany",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Int/Advanced Choreo W Leany (Pop Up)"
+    },
+    {
+        "serviceId": "d6e8abcf-4def-4f42-bec9-0b6916b89ae6",
+        "start": "2024-10-26T14:30:00.000+11:00",
+        "end": "2024-10-26T15:30:00.000+11:00",
         "choreo": "Ivy",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 33,
-        "openSpots": 26,
-        "name": "Beginner Choreography W Ivy"
-    },
-    {
-        "serviceId": "430188e5-44c2-4bd8-862c-f3a9694498b9",
-        "start": "2024-06-27T19:00:00.000+10:00",
-        "end": "2024-06-27T20:15:00.000+10:00",
-        "choreo": "Chantelle",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 23,
-        "name": "Intermediate Choreography W Chantelle"
-    },
-    {
-        "serviceId": "3f1818f2-f8fd-4561-9434-95d69e7a17b2",
-        "start": "2024-06-28T18:00:00.000+10:00",
-        "end": "2024-06-28T19:00:00.000+10:00",
-        "choreo": "Vi",
-        "location": "110 Church Street, Parramatta NSW, Australia",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
         "openSpots": 25,
-        "name": "Beginner Hip Hop W Vi"
-    },
-    {
-        "serviceId": "f709c272-6579-444c-b92b-497ca7c31d5e",
-        "start": "2024-06-28T19:00:00.000+10:00",
-        "end": "2024-06-28T20:00:00.000+10:00",
-        "choreo": "Rhode-Annie",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 23,
-        "name": "Beginner Choreography W Rhode"
-    },
-    {
-        "serviceId": "d22cb14d-37d5-4106-b6b6-7b99df9651a3",
-        "start": "2024-06-28T20:15:00.000+10:00",
-        "end": "2024-06-28T21:30:00.000+10:00",
-        "choreo": "Min Bin",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 24,
-        "name": "Int/Advanced Choreography W Min"
+        "name": "Beginner Choreography W Ivy"
     }
 ]

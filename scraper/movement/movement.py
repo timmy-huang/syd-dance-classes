@@ -4,16 +4,17 @@ import json
 # Note that currently for authorisation, the token is hardcoded and will expire after a certain time
 # Get new token from accessing webpage if it doesnt work
 
-def movement(hauth, pauth, location, start_date, end_date):
+def movement(location, start_date, end_date):
     hlocation = location + 'movement_nation_hurstville.json'
     plocation = location + 'movement_nation_parramatta.json'
 
-    hauth = getHAuth()
+    authToken = getAuthToken()
+    print("Recieved auth token for Movement Nation")
 
-    getData(hauth, hlocation, start_date, end_date)
-    getData(pauth, plocation, start_date, end_date)
+    getData(authToken, hlocation, start_date, end_date)
+    getData(authToken, plocation, start_date, end_date)
 
-def getHAuth():
+def getAuthToken():
     r = requests.get('https://www.movementnation.com.au/_api/v1/access-tokens', headers={
         "accept": "*/*",
         "accept-language": "en-US,en;q=0.9",
@@ -33,9 +34,9 @@ def getHAuth():
         print("Error getting auth: ", r.status_code)
         return
     
-    print(r.json())
-    return r.json()["apps"]
-
+    for key, item in r.json()["apps"].items():
+        return item["instance"]
+    
 def getData(auth, location, start_date, end_date):
     # Get all the data
     # bulk

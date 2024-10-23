@@ -1,18 +1,15 @@
-name: Weekly Web Scrape Python Task
+name: Weekly Web Scrape and Deploy
 
 on:
   schedule:
-    # Runs at 00:00 UTC every Sunday
     - cron: '0 0 * * 0'
-  
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 permissions:
   contents: write
-
+  
 jobs:
-  run-python-script:
+  scrape-and-deploy:
     runs-on: ubuntu-latest
     
     steps:
@@ -24,19 +21,53 @@ jobs:
         with:
           python-version: '3.x'
           
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests
           
       - name: Run main.py
         run: |
-          # Add the scraper directory to Python path so it can find local modules
           PYTHONPATH=$PYTHONPATH:$(pwd)/scraper python scraper/main.py
         
-      - name: Commit and push if changes exist
+      - name: Commit scraping changes to master
         run: |
           git config --global user.name 'GitHub Actions Bot'
           git config --global user.email 'actions@github.com'
           git add -A
           git diff --quiet && git diff --staged --quiet || (git commit -m "Weekly automated update" && git push)
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install Vue dependencies
+        working-directory: sydney-dance-classes
+        run: npm install
+        
+      - name: Build Vue project
+        working-directory: sydney-dance-classes
+        run: npm run build
+        
+      - name: Deploy to gh-pages
+        run: |
+          cd sydney-dance-classes/dist
+          
+          # Copy the data folder into the dist directory
+          cp -r ../data .
+          
+          # Initialize new git repository in dist
+          git init
+          git checkout -b gh-pages
+          
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
+          
+          git add -A
+          git commit -m "Deploy weekly update to gh-pages"
+          
+          # Force push to the gh-pages branch
+          git push -f https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

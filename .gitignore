@@ -1,2 +1,12 @@
 node_modules
-/__pycache__/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local data files
+*.csv
+*.json
+*.xlsx
+*.db

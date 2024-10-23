@@ -124,5 +124,19 @@
         "choreo": "MiyuAikawa",
         "choreoInsta": "MiyuAikawa",
         "name": "Intermediate Choreography Studio B"
+    },
+    {
+        "start": "2024-10-29T18:30",
+        "end": "2024-10-29T19:45",
+        "choreo": "Noah",
+        "choreoInsta": "Noah",
+        "name": "Pop Up Intermediate Choreography Studio B"
+    },
+    {
+        "start": "2024-10-29T19:45",
+        "end": "2024-10-29T21:00",
+        "choreo": "Suzy",
+        "choreoInsta": "Suzy",
+        "name": "Open Choreography Studio B"
     }
 ]

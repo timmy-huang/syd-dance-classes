@@ -1,48 +1,48 @@
 [
     {
         "serviceId": "a6b9ba10-43b9-4456-bdac-dc3e286f7d8f",
-        "start": "2024-10-29T18:00:00.000+11:00",
-        "end": "2024-10-29T19:00:00.000+11:00",
+        "start": "2024-11-05T18:00:00.000+11:00",
+        "end": "2024-11-05T19:00:00.000+11:00",
         "choreo": "Winter",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 18,
+        "openSpots": 12,
         "name": "Beginner Choreography W Winter"
     },
     {
-        "serviceId": "dd2c019a-4caf-4737-9055-5cb5118e2b28",
-        "start": "2024-10-29T19:00:00.000+11:00",
-        "end": "2024-10-29T20:00:00.000+11:00",
-        "choreo": "Kurt",
+        "serviceId": "0eb17268-3aed-4443-a118-c95ef94ef267",
+        "start": "2024-11-05T19:00:00.000+11:00",
+        "end": "2024-11-05T20:00:00.000+11:00",
+        "choreo": "Tracey Phan",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 18,
-        "name": "Beginner Choreography W Kurt"
+        "openSpots": 11,
+        "name": "Beginner Choreography w Tracey"
     },
     {
         "serviceId": "2563ad6a-fcbb-45a5-8e8b-ad5577768d3c",
-        "start": "2024-10-30T18:00:00.000+11:00",
-        "end": "2024-10-30T19:00:00.000+11:00",
+        "start": "2024-11-06T18:00:00.000+11:00",
+        "end": "2024-11-06T19:00:00.000+11:00",
         "choreo": "Cheska",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 19,
+        "openSpots": 16,
         "name": "Beginner Choreography w Cheska"
     },
     {
-        "serviceId": "09572aa8-0f4a-4f3c-a5ff-8d3327480cd4",
-        "start": "2024-10-30T19:00:00.000+11:00",
-        "end": "2024-10-30T20:00:00.000+11:00",
-        "choreo": "Alex x Doug",
+        "serviceId": "9b71ac2a-cb6f-4bb7-875d-1d155ead5c4b",
+        "start": "2024-11-06T19:00:00.000+11:00",
+        "end": "2024-11-06T20:15:00.000+11:00",
+        "choreo": "Noah",
         "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 24,
-        "name": "Int/Adv Collab W Doug X Alex (Pop Up)"
+        "totalSpots": 20,
+        "openSpots": 6,
+        "name": "Noah Choreography Pop Up"
     },
     {
         "serviceId": "9c07c69d-1fcd-4588-9448-d1892af343f2",
-        "start": "2024-10-31T18:00:00.000+11:00",
-        "end": "2024-10-31T19:00:00.000+11:00",
+        "start": "2024-11-07T18:00:00.000+11:00",
+        "end": "2024-11-07T19:00:00.000+11:00",
         "choreo": "Koki",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
@@ -51,22 +51,22 @@
     },
     {
         "serviceId": "e3720910-e0ba-4636-8410-315d7f5cb11e",
-        "start": "2024-11-01T18:00:00.000+11:00",
-        "end": "2024-11-01T19:00:00.000+11:00",
+        "start": "2024-11-08T18:00:00.000+11:00",
+        "end": "2024-11-08T19:00:00.000+11:00",
         "choreo": "Tracey Phan",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 21,
+        "openSpots": 19,
         "name": "Beginner Choreography W Tracey"
     },
     {
         "serviceId": "d6e8abcf-4def-4f42-bec9-0b6916b89ae6",
-        "start": "2024-11-02T14:30:00.000+11:00",
-        "end": "2024-11-02T15:30:00.000+11:00",
+        "start": "2024-11-09T14:30:00.000+11:00",
+        "end": "2024-11-09T15:30:00.000+11:00",
         "choreo": "Ivy",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 21,
+        "openSpots": 14,
         "name": "Beginner Choreography W Ivy"
     }
 ]

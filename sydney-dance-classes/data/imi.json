@@ -1,126 +1,133 @@
 [
     {
-        "start": "2024-11-11T17:15",
-        "end": "2024-11-11T18:30",
+        "start": "2024-11-18T17:15",
+        "end": "2024-11-18T18:30",
         "choreo": "Tommy",
         "choreoInsta": "Tommy",
         "name": "Beginner Choreography Studio A"
     },
     {
-        "start": "2024-11-11T18:30",
-        "end": "2024-11-11T19:45",
+        "start": "2024-11-18T18:30",
+        "end": "2024-11-18T19:45",
         "choreo": "Ivy",
         "choreoInsta": "Ivy",
         "name": "Beginner Choreography Studio A"
     },
     {
-        "start": "2024-11-11T18:30",
-        "end": "2024-11-11T19:45",
-        "choreo": "Pacient",
-        "choreoInsta": "Pacient",
+        "start": "2024-11-18T18:30",
+        "end": "2024-11-18T19:45",
+        "choreo": "AngelaJung",
+        "choreoInsta": "AngelaJung",
         "name": "Open Choreography Studio B"
     },
     {
-        "start": "2024-11-11T19:45",
-        "end": "2024-11-11T21:00",
+        "start": "2024-11-18T19:45",
+        "end": "2024-11-18T21:00",
         "choreo": "MiyuAikawa",
         "choreoInsta": "MiyuAikawa",
         "name": "Intermediate Choreography Studio B"
     },
     {
-        "start": "2024-11-12T18:30",
-        "end": "2024-11-12T19:45",
+        "start": "2024-11-19T18:30",
+        "end": "2024-11-19T19:45",
         "choreo": "Noah",
         "choreoInsta": "Noah",
         "name": "Intermediate Choreography Studio B"
     },
     {
-        "start": "2024-11-13T18:30",
-        "end": "2024-11-13T19:45",
+        "start": "2024-11-19T19:45",
+        "end": "2024-11-19T21:00",
+        "choreo": "Suzy",
+        "choreoInsta": "Suzy",
+        "name": "Open Choreography Studio B"
+    },
+    {
+        "start": "2024-11-20T18:30",
+        "end": "2024-11-20T19:45",
         "choreo": "AngelaJung",
         "choreoInsta": "AngelaJung",
         "name": "Beginner Choreography Studio B"
     },
     {
-        "start": "2024-11-13T19:45",
-        "end": "2024-11-13T21:00",
+        "start": "2024-11-20T19:45",
+        "end": "2024-11-20T21:00",
         "choreo": "Evelyn",
         "choreoInsta": "Evelyn",
         "name": "Beginner Choreography Studio B"
     },
     {
-        "start": "2024-11-14T17:15",
-        "end": "2024-11-14T18:30",
+        "start": "2024-11-21T17:15",
+        "end": "2024-11-21T18:30",
         "choreo": "Jeein",
         "choreoInsta": "Jeein",
         "name": "Beginner Choreography Studio B"
     },
     {
-        "start": "2024-11-14T18:30",
-        "end": "2024-11-14T19:45",
+        "start": "2024-11-21T18:30",
+        "end": "2024-11-21T19:45",
         "choreo": "Merry",
         "choreoInsta": "Merry",
         "name": "Beginner Choreography Studio A"
     },
     {
-        "start": "2024-11-14T18:30",
-        "end": "2024-11-14T19:45",
+        "start": "2024-11-21T18:30",
+        "end": "2024-11-21T19:45",
         "choreo": "Pacient",
         "choreoInsta": "Pacient",
         "name": "Intermediate Choreography Studio B"
     },
     {
-        "start": "2024-11-14T18:30",
-        "end": "2024-11-14T19:45",
+        "start": "2024-11-21T18:30",
+        "end": "2024-11-21T19:45",
         "choreo": "Minbin",
         "choreoInsta": "Minbin",
         "name": "Open Choreography Studio 1"
     },
     {
-        "start": "2024-11-14T19:45",
-        "end": "2024-11-14T21:00",
+        "start": "2024-11-21T19:45",
+        "end": "2024-11-21T21:00",
         "choreo": "Ivy",
         "choreoInsta": "Ivy",
         "name": "Open Choreography Studio B"
     },
     {
-        "start": "2024-11-15T17:15",
-        "end": "2024-11-15T18:30",
+        "start": "2024-11-22T17:15",
+        "end": "2024-11-22T18:30",
         "choreo": "Anna",
         "choreoInsta": "Anna",
         "name": "Open Choreography Studio 1"
     },
     {
-        "start": "2024-11-15T17:15",
-        "end": "2024-11-15T18:30",
+        "start": "2024-11-22T17:15",
+        "end": "2024-11-22T18:30",
         "choreo": "Angie",
         "choreoInsta": "Angie",
         "name": "Beginner Choreography Studio A"
     },
     {
-        "start": "2024-11-15T18:30",
-        "end": "2024-11-15T19:45",
+        "start": "2024-11-22T18:30",
+        "end": "2024-11-22T19:45",
         "choreo": "Tianna",
         "choreoInsta": "Tianna",
         "name": "Beginner Choreography Studio B"
     },
     {
-        "start": "2024-11-15T18:30",
-        "end": "2024-11-15T19:45",
+        "start": "2024-11-22T18:30",
+        "end": "2024-11-22T19:45",
         "choreo": "Minbin",
         "choreoInsta": "Minbin",
         "name": "Intermediate Choreography Studio A"
     },
     {
-        "start": "2024-11-15T19:45",
-        "end": "2024-11-15T21:00",
+        "start": "2024-11-22T19:45",
+        "end": "2024-11-22T21:00",
         "choreo": "Suzy",
         "choreoInsta": "Suzy",
         "name": "Beginner Choreography Studio B"
     },
     {
-        "start": "2024-11-16T11:15",
-        "end": "2024-11-16T12:30",
+        "start": "2024-11-23T11:15",
+        "end": "2024-11-23T12:30",
         "choreo": "HanB",
         "choreoInsta": "HanB",
         "name": "Beg Int Choreography Studio A"

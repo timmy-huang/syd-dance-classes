@@ -1,18 +1,18 @@
 [
     {
-        "serviceId": "0eb17268-3aed-4443-a118-c95ef94ef267",
-        "start": "2024-12-03T18:00:00.000+11:00",
-        "end": "2024-12-03T19:00:00.000+11:00",
-        "choreo": "Tracey Phan",
+        "serviceId": "a6b9ba10-43b9-4456-bdac-dc3e286f7d8f",
+        "start": "2024-12-10T18:00:00.000+11:00",
+        "end": "2024-12-10T19:00:00.000+11:00",
+        "choreo": "Winter",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 24,
-        "name": "Beginner Choreography w Tracey"
+        "openSpots": 15,
+        "name": "Beginner Choreography W Winter"
     },
     {
         "serviceId": "2563ad6a-fcbb-45a5-8e8b-ad5577768d3c",
-        "start": "2024-12-04T18:00:00.000+11:00",
-        "end": "2024-12-04T19:00:00.000+11:00",
+        "start": "2024-12-11T18:00:00.000+11:00",
+        "end": "2024-12-11T19:00:00.000+11:00",
         "choreo": "Cheska",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
@@ -20,53 +20,23 @@
         "name": "Beginner Choreography w Cheska"
     },
     {
-        "serviceId": "9b71ac2a-cb6f-4bb7-875d-1d155ead5c4b",
-        "start": "2024-12-04T19:00:00.000+11:00",
-        "end": "2024-12-04T20:15:00.000+11:00",
-        "choreo": "Noah",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 20,
-        "openSpots": 8,
-        "name": "Int/Advanced Choreography W Noah"
-    },
-    {
         "serviceId": "9c07c69d-1fcd-4588-9448-d1892af343f2",
-        "start": "2024-12-05T18:00:00.000+11:00",
-        "end": "2024-12-05T19:00:00.000+11:00",
+        "start": "2024-12-12T18:00:00.000+11:00",
+        "end": "2024-12-12T19:00:00.000+11:00",
         "choreo": "Koki",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 21,
+        "openSpots": 19,
         "name": "Beginner Hip Hop W Koki "
     },
     {
         "serviceId": "e7b91fdd-1a8d-4c28-a212-c54f85e2a557",
-        "start": "2024-12-05T19:00:00.000+11:00",
-        "end": "2024-12-05T20:15:00.000+11:00",
+        "start": "2024-12-12T19:00:00.000+11:00",
+        "end": "2024-12-12T20:15:00.000+11:00",
         "choreo": "Jeffery hu",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 14,
+        "openSpots": 20,
         "name": "Intermediate Hip Hop Combo W Jeff"
-    },
-    {
-        "serviceId": "e3720910-e0ba-4636-8410-315d7f5cb11e",
-        "start": "2024-12-06T18:00:00.000+11:00",
-        "end": "2024-12-06T19:00:00.000+11:00",
-        "choreo": "Tracey Phan",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 23,
-        "name": "Beginner Choreography W Tracey"
-    },
-    {
-        "serviceId": "d6e8abcf-4def-4f42-bec9-0b6916b89ae6",
-        "start": "2024-12-07T14:30:00.000+11:00",
-        "end": "2024-12-07T15:30:00.000+11:00",
-        "choreo": "Ivy",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 21,
-        "name": "Beginner Choreography W Ivy"
     }
 ]

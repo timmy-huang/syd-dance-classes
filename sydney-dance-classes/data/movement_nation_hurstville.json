@@ -1,18 +1,18 @@
 [
     {
         "serviceId": "a6b9ba10-43b9-4456-bdac-dc3e286f7d8f",
-        "start": "2024-12-10T18:00:00.000+11:00",
-        "end": "2024-12-10T19:00:00.000+11:00",
+        "start": "2024-12-17T18:00:00.000+11:00",
+        "end": "2024-12-17T19:00:00.000+11:00",
         "choreo": "Winter",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 15,
+        "openSpots": 16,
         "name": "Beginner Choreography W Winter"
     },
     {
         "serviceId": "2563ad6a-fcbb-45a5-8e8b-ad5577768d3c",
-        "start": "2024-12-11T18:00:00.000+11:00",
-        "end": "2024-12-11T19:00:00.000+11:00",
+        "start": "2024-12-18T18:00:00.000+11:00",
+        "end": "2024-12-18T19:00:00.000+11:00",
         "choreo": "Cheska",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
@@ -21,22 +21,12 @@
     },
     {
         "serviceId": "9c07c69d-1fcd-4588-9448-d1892af343f2",
-        "start": "2024-12-12T18:00:00.000+11:00",
-        "end": "2024-12-12T19:00:00.000+11:00",
+        "start": "2024-12-19T18:00:00.000+11:00",
+        "end": "2024-12-19T19:00:00.000+11:00",
         "choreo": "Koki",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
         "openSpots": 19,
         "name": "Beginner Hip Hop W Koki "
-    },
-    {
-        "serviceId": "e7b91fdd-1a8d-4c28-a212-c54f85e2a557",
-        "start": "2024-12-12T19:00:00.000+11:00",
-        "end": "2024-12-12T20:15:00.000+11:00",
-        "choreo": "Jeffery hu",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 20,
-        "name": "Intermediate Hip Hop Combo W Jeff"
     }
 ]

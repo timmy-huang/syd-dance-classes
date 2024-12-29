@@ -1,32 +1,22 @@
 [
     {
-        "serviceId": "a6b9ba10-43b9-4456-bdac-dc3e286f7d8f",
-        "start": "2024-12-17T18:00:00.000+11:00",
-        "end": "2024-12-17T19:00:00.000+11:00",
-        "choreo": "Winter",
+        "serviceId": "fa98e60b-2411-45b7-9c6c-f0fc92530469",
+        "start": "2024-12-28T14:00:00.000+11:00",
+        "end": "2024-12-28T15:30:00.000+11:00",
+        "choreo": "Jeff x Min",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 16,
-        "name": "Beginner Choreography W Winter"
+        "openSpots": 8,
+        "name": "Jeff x Min (Int/Advanced Choreo)"
     },
     {
-        "serviceId": "2563ad6a-fcbb-45a5-8e8b-ad5577768d3c",
-        "start": "2024-12-18T18:00:00.000+11:00",
-        "end": "2024-12-18T19:00:00.000+11:00",
-        "choreo": "Cheska",
+        "serviceId": "123437ef-b513-409b-a35d-2d26b1f70095",
+        "start": "2024-12-28T15:30:00.000+11:00",
+        "end": "2024-12-28T17:00:00.000+11:00",
+        "choreo": "Lana x Doug",
         "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 15,
-        "name": "Beginner Choreography w Cheska"
-    },
-    {
-        "serviceId": "9c07c69d-1fcd-4588-9448-d1892af343f2",
-        "start": "2024-12-19T18:00:00.000+11:00",
-        "end": "2024-12-19T19:00:00.000+11:00",
-        "choreo": "Koki",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 19,
-        "name": "Beginner Hip Hop W Koki "
+        "totalSpots": 28,
+        "openSpots": 9,
+        "name": "Doug x Lana (Contemporary)"
     }
 ]

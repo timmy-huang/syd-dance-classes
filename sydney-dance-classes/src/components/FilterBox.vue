@@ -1,19 +1,6 @@
 <template>
   <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-    <div class="text-h2 mb-10">
-      Class Schedule
-    </div>
-    <div style="display: flex; justify-content: space-between">
-      <v-btn 
-        variant="tonal" 
-        v-for="day in days" 
-        :key="day" 
-        :active="days.indexOf(day) === selectedDay"
-        :onClick="() => $emit('update', days.indexOf(day))"
-      >
-        {{ day }}
-      </v-btn>
-    </div>
+    <v-text-field label="Label"></v-text-field>
   </div>
 </template>
 

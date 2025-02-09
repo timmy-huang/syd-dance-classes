@@ -5,6 +5,7 @@
   >
     <Calendar 
       :selectedDay="day"
+      :mondayDate="mondayDate"
       @update="handleUpdateDay"
       class="mt-10"
     />
@@ -37,6 +38,8 @@
   }
   console.log(today.value)
   const day = ref((today.value.getDay()+ 6) % 7);// 0 = Monday
+
+  const mondayDate = new Date(new Date(today.value.valueOf()).setDate(today.value.getDate() - day.value));
 
   const selectedDate = computed(() => {
     var date = new Date(today.value.valueOf());

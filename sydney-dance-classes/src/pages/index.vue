@@ -3,12 +3,17 @@
     class="align-centerfill-height mx-auto"
     max-width="900"
   >
-    <Calendar 
-      :selectedDay="day"
-      :mondayDate="mondayDate"
-      @update="handleUpdateDay"
-      class="mt-10"
-    />
+    <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;" class="mt-10">
+      <div class="text-h2 mb-10">
+        Class Schedule
+      </div>
+      <Calendar 
+        :selectedDay="day"
+        :mondayDate="mondayDate"
+        @update="handleUpdateDay"
+        class="mt-10"
+      />
+    </div>
     <div>
       <LessonCard
         v-for="lesson in displayData"

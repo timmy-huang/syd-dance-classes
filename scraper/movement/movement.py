@@ -8,19 +8,23 @@ def movement(location, start_date, end_date):
     hlocation = location + 'movement_nation_hurstville.json'
     plocation = location + 'movement_nation_parramatta.json'
 
-    authToken = getAuthToken()
+    hurstvilleURL = "https://www.movementnation.com.au"
+    parramattaURL = "https://2020movementnation.wixsite.com/website-1"
+
+    hauthToken = getAuthToken(hurstvilleURL)
+    pauthToken = getAuthToken(parramattaURL)
     print("Recieved auth token for Movement Nation")
 
-    getData(authToken, hlocation, start_date, end_date)
-    getData(authToken, plocation, start_date, end_date)
+    getData(hauthToken, hlocation, hurstvilleURL, start_date, end_date)
+    getData(pauthToken, plocation, parramattaURL, start_date, end_date)
 
-def getAuthToken():
-    r = requests.get('https://www.movementnation.com.au/_api/v1/access-tokens', headers={
+def getAuthToken(url):
+    r = requests.get(url + '/_api/v1/access-tokens', headers={
         "accept": "*/*",
         "accept-language": "en-US,en;q=0.9",
         "cookie": "ssr-caching=cache#desc=miss#varnish=miss_miss#dc#desc=fastly_42_g",
         "priority": "u=1, i",
-        "referer": "https://www.movementnation.com.au/",
+        "referer": url,
         "sec-ch-ua": "\"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\"",
         "sec-ch-ua-mobile": "?1",
         "sec-ch-ua-platform": "\"Android\"",
@@ -37,11 +41,11 @@ def getAuthToken():
     for key, item in r.json()["apps"].items():
         return item["instance"]
     
-def getData(auth, location, start_date, end_date):
+def getData(auth, location, url, start_date, end_date):
     # Get all the data
     # bulk
 
-    r = requests.post('https://www.movementnation.com.au/_api/services-catalog/bulk', headers={
+    r = requests.post((url + '/_api/services-catalog/bulk'), headers={
         "authorization": auth,
         "commonconfig": "%7B%22brand%22%3A%22wix%22%2C%22host%22%3A%22VIEWER%22%2C%22BSI%22%3A%22f1cdc301-a785-4f39-8430-3eecd21e9537%7C1%22%7D",
         "content-type": "application/json",
@@ -97,7 +101,7 @@ def getData(auth, location, start_date, end_date):
         
     # print(service_ids)
         
-    r = requests.post('https://www.movementnation.com.au/_api/availability-calendar/v1/availability/query', headers={
+    r = requests.post(url + '/_api/availability-calendar/v1/availability/query', headers={
         "authorization": auth,
         "commonconfig": "%7B%22brand%22%3A%22wix%22%2C%22host%22%3A%22VIEWER%22%2C%22BSI%22%3A%22f1cdc301-a785-4f39-8430-3eecd21e9537%7C1%22%7D",
         "content-type": "application/json",

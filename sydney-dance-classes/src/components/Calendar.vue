@@ -1,5 +1,5 @@
 <template>
-  <div style="display: flex; justify-content: space-between">
+  <div style="display: flex; justify-content: space-between" class="mt-5" >
     <v-btn 
       variant="tonal" 
       v-for="day in days" 

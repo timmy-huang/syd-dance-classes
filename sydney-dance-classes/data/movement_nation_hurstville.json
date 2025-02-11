@@ -1,172 +1,12 @@
 [
     {
-        "serviceId": "3b0baabe-560a-4313-aab4-f8d9049a6f91",
-        "start": "2025-02-03T18:00:00.000+11:00",
-        "end": "2025-02-03T19:00:00.000+11:00",
-        "choreo": "Taylor",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 16,
-        "name": "Beginner Choreography W Taylor"
-    },
-    {
-        "serviceId": "0eb17268-3aed-4443-a118-c95ef94ef267",
-        "start": "2025-02-03T19:00:00.000+11:00",
-        "end": "2025-02-03T20:00:00.000+11:00",
-        "choreo": "Tracey Phan",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 12,
-        "name": "Beginner Choreography W Tracey"
-    },
-    {
-        "serviceId": "4995382a-62ca-4fa5-b006-10cca20a7707",
-        "start": "2025-02-03T20:15:00.000+11:00",
-        "end": "2025-02-03T21:30:00.000+11:00",
-        "choreo": "Jeffery Hu",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 14,
-        "name": "Int/Advanced Choreography W Hu Jeffery"
-    },
-    {
-        "serviceId": "a6b9ba10-43b9-4456-bdac-dc3e286f7d8f",
-        "start": "2025-02-04T18:00:00.000+11:00",
-        "end": "2025-02-04T19:00:00.000+11:00",
-        "choreo": "Winter",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 17,
-        "name": "Beginner Girls Choreography W Winter"
-    },
-    {
-        "serviceId": "06e3a68c-cc64-4587-be96-2cd77742543a",
-        "start": "2025-02-04T19:00:00.000+11:00",
-        "end": "2025-02-04T20:15:00.000+11:00",
-        "choreo": "Lana ",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 16,
-        "name": "Int/Advanced Commercial Jazz W Lana"
-    },
-    {
-        "serviceId": "c0b72eb0-f2af-4677-92c6-96207c785f56",
-        "start": "2025-02-04T20:15:00.000+11:00",
-        "end": "2025-02-04T21:30:00.000+11:00",
-        "choreo": "Doug",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 17,
-        "name": "Int/Advanced Choreography W Doug"
-    },
-    {
-        "serviceId": "e9484616-5a68-42fa-a139-79b0ac542678",
-        "start": "2025-02-05T18:00:00.000+11:00",
-        "end": "2025-02-05T19:00:00.000+11:00",
-        "choreo": "Momo",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 22,
-        "name": "Beginner Choreography W Momo"
-    },
-    {
-        "serviceId": "630441ee-b457-495c-ba00-23bde87756a3",
-        "start": "2025-02-05T19:00:00.000+11:00",
-        "end": "2025-02-05T20:15:00.000+11:00",
-        "choreo": "Tracey Phan",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 16,
-        "name": "Int/Advanced Choreography W Tracey"
-    },
-    {
-        "serviceId": "fdeed9e2-cdba-4e21-892f-87d6860a683c",
-        "start": "2025-02-05T20:15:00.000+11:00",
-        "end": "2025-02-05T21:30:00.000+11:00",
-        "choreo": "Fynn Avery",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 11,
-        "name": "Intermediate Choreography W Fynn"
-    },
-    {
-        "serviceId": "9c07c69d-1fcd-4588-9448-d1892af343f2",
-        "start": "2025-02-06T18:00:00.000+11:00",
-        "end": "2025-02-06T19:00:00.000+11:00",
-        "choreo": "Koki",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 16,
-        "name": "Beginner Hip Hop W Koki"
-    },
-    {
-        "serviceId": "dd0ba46d-420b-4624-ad04-d95e4581c250",
-        "start": "2025-02-06T19:00:00.000+11:00",
-        "end": "2025-02-06T20:00:00.000+11:00",
-        "choreo": "Taymane",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 21,
-        "name": "Beginner Choreography W Taymane"
-    },
-    {
-        "serviceId": "900e6b62-22ca-4702-8b2e-45d3a93fb9e8",
-        "start": "2025-02-07T18:00:00.000+11:00",
-        "end": "2025-02-07T19:15:00.000+11:00",
-        "choreo": "Tommy",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 14,
-        "name": "Intermediate Choreography W Tommy"
-    },
-    {
-        "serviceId": "3ece572b-999d-4841-88bc-810d40fd745d",
-        "start": "2025-02-07T19:15:00.000+11:00",
-        "end": "2025-02-07T20:30:00.000+11:00",
-        "choreo": "Oliver",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 24,
-        "name": "Int/Advanced Choreography W Oli (Pop-Up)"
-    },
-    {
-        "serviceId": "18270d3c-b5a4-4680-8160-1b4588f28936",
-        "start": "2025-02-07T20:30:00.000+11:00",
-        "end": "2025-02-07T21:45:00.000+11:00",
-        "choreo": "Ivy",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 9,
-        "name": "Int/Advanced Choreography W Ivy"
-    },
-    {
-        "serviceId": "217471e4-5ebf-4355-8758-f4b8a35566a4",
-        "start": "2025-02-08T14:30:00.000+11:00",
-        "end": "2025-02-08T15:30:00.000+11:00",
-        "choreo": "Chantelle",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 15,
-        "name": "Beginner Girls Choreography W Chantelle"
-    },
-    {
-        "serviceId": "d6e8abcf-4def-4f42-bec9-0b6916b89ae6",
-        "start": "2025-02-08T15:30:00.000+11:00",
-        "end": "2025-02-08T16:30:00.000+11:00",
-        "choreo": "Ivy",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 11,
-        "name": "Beginner Choreography W Ivy"
-    },
-    {
         "serviceId": "9491909f-db1c-49d9-8f61-a0315bf52826",
         "start": "2025-02-10T18:00:00.000+11:00",
         "end": "2025-02-10T19:15:00.000+11:00",
         "choreo": "Taylor x Jeric",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 22,
+        "openSpots": 12,
         "name": "Taylor & Jeric Valentine Collab"
     },
     {
@@ -176,7 +16,7 @@
         "choreo": "Tracey Phan",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 19,
+        "openSpots": 11,
         "name": "Beginner Choreography W Tracey"
     },
     {
@@ -186,7 +26,7 @@
         "choreo": "Jeffery Hu",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 18,
         "name": "Int/Advanced Choreography W Hu Jeffery"
     },
     {
@@ -196,7 +36,7 @@
         "choreo": "Winter",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 17,
         "name": "Beginner Girls Choreography W Winter"
     },
     {
@@ -206,7 +46,7 @@
         "choreo": "Lana ",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 22,
+        "openSpots": 7,
         "name": "Int/Advanced Heels W Lana"
     },
     {
@@ -216,7 +56,7 @@
         "choreo": "Doug x Audrey",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 11,
         "name": "Doug & Audrey Valentine Collab"
     },
     {
@@ -236,7 +76,7 @@
         "choreo": "Tracey Phan",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 24,
         "name": "Int/Advanced Choreography W Tracey"
     },
     {
@@ -246,7 +86,7 @@
         "choreo": "Fynn Avery",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 24,
         "name": "Intermediate Choreography W Fynn"
     },
     {
@@ -256,7 +96,7 @@
         "choreo": "Koki",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 18,
         "name": "Beginner Hip Hop W Koki"
     },
     {
@@ -266,18 +106,8 @@
         "choreo": "Taymane",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 24,
         "name": "Beginner Choreography W Taymane"
-    },
-    {
-        "serviceId": "900e6b62-22ca-4702-8b2e-45d3a93fb9e8",
-        "start": "2025-02-14T18:00:00.000+11:00",
-        "end": "2025-02-14T19:15:00.000+11:00",
-        "choreo": "Tommy",
-        "location": "390 Forest Road, Hurstville NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 25,
-        "name": "Intermediate Choreography W Tommy"
     },
     {
         "serviceId": "fb25073f-9646-4f59-b4cc-57c6d929f118",
@@ -328,5 +158,145 @@
         "totalSpots": 25,
         "openSpots": 25,
         "name": "Ivy & Fynn Valentine Collab"
+    },
+    {
+        "serviceId": "0eb17268-3aed-4443-a118-c95ef94ef267",
+        "start": "2025-02-17T19:00:00.000+11:00",
+        "end": "2025-02-17T20:00:00.000+11:00",
+        "choreo": "Tracey Phan",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Beginner Choreography W Tracey"
+    },
+    {
+        "serviceId": "4995382a-62ca-4fa5-b006-10cca20a7707",
+        "start": "2025-02-17T20:15:00.000+11:00",
+        "end": "2025-02-17T21:30:00.000+11:00",
+        "choreo": "Jeffery Hu",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Int/Advanced Choreography W Hu Jeffery"
+    },
+    {
+        "serviceId": "a6b9ba10-43b9-4456-bdac-dc3e286f7d8f",
+        "start": "2025-02-18T18:00:00.000+11:00",
+        "end": "2025-02-18T19:00:00.000+11:00",
+        "choreo": "Winter",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 24,
+        "name": "Beginner Girls Choreography W Winter"
+    },
+    {
+        "serviceId": "06e3a68c-cc64-4587-be96-2cd77742543a",
+        "start": "2025-02-18T19:00:00.000+11:00",
+        "end": "2025-02-18T20:15:00.000+11:00",
+        "choreo": "Lana ",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Int/Advanced Commercial Jazz W Lana"
+    },
+    {
+        "serviceId": "c0b72eb0-f2af-4677-92c6-96207c785f56",
+        "start": "2025-02-18T20:15:00.000+11:00",
+        "end": "2025-02-18T21:30:00.000+11:00",
+        "choreo": "Doug",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Int/Advanced Choreography W Doug"
+    },
+    {
+        "serviceId": "e9484616-5a68-42fa-a139-79b0ac542678",
+        "start": "2025-02-19T18:00:00.000+11:00",
+        "end": "2025-02-19T19:00:00.000+11:00",
+        "choreo": "Momo",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Beginner Choreography W Momo"
+    },
+    {
+        "serviceId": "630441ee-b457-495c-ba00-23bde87756a3",
+        "start": "2025-02-19T19:00:00.000+11:00",
+        "end": "2025-02-19T20:15:00.000+11:00",
+        "choreo": "Tracey Phan",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Int/Advanced Choreography W Tracey"
+    },
+    {
+        "serviceId": "fdeed9e2-cdba-4e21-892f-87d6860a683c",
+        "start": "2025-02-19T20:15:00.000+11:00",
+        "end": "2025-02-19T21:30:00.000+11:00",
+        "choreo": "Fynn Avery",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Intermediate Choreography W Fynn"
+    },
+    {
+        "serviceId": "9c07c69d-1fcd-4588-9448-d1892af343f2",
+        "start": "2025-02-20T18:00:00.000+11:00",
+        "end": "2025-02-20T19:00:00.000+11:00",
+        "choreo": "Koki",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Beginner Hip Hop W Koki"
+    },
+    {
+        "serviceId": "900e6b62-22ca-4702-8b2e-45d3a93fb9e8",
+        "start": "2025-02-21T18:00:00.000+11:00",
+        "end": "2025-02-21T19:15:00.000+11:00",
+        "choreo": "Tommy",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Intermediate Choreography W Tommy"
+    },
+    {
+        "serviceId": "c80fe9f5-b944-4db6-9f68-22543eb55841",
+        "start": "2025-02-21T19:15:00.000+11:00",
+        "end": "2025-02-21T20:30:00.000+11:00",
+        "choreo": "Min Bin",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Int/Advanced Choreography W Min"
+    },
+    {
+        "serviceId": "18270d3c-b5a4-4680-8160-1b4588f28936",
+        "start": "2025-02-21T20:30:00.000+11:00",
+        "end": "2025-02-21T21:45:00.000+11:00",
+        "choreo": "Ivy",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Int/Advanced Choreography W Ivy"
+    },
+    {
+        "serviceId": "217471e4-5ebf-4355-8758-f4b8a35566a4",
+        "start": "2025-02-22T14:30:00.000+11:00",
+        "end": "2025-02-22T15:30:00.000+11:00",
+        "choreo": "Chantelle",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Beginner Girls Choreography W Chantelle"
+    },
+    {
+        "serviceId": "d6e8abcf-4def-4f42-bec9-0b6916b89ae6",
+        "start": "2025-02-22T15:30:00.000+11:00",
+        "end": "2025-02-22T16:30:00.000+11:00",
+        "choreo": "Ivy",
+        "location": "390 Forest Road, Hurstville NSW, Australia",
+        "totalSpots": 25,
+        "openSpots": 25,
+        "name": "Beginner Choreography W Ivy"
     }
 ]

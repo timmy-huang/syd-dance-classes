@@ -4,7 +4,7 @@
     max-width="900"
   >
     <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;" class="mt-10;">
-      <div class="text-h2 mb-7">
+      <div class="text-h2 my-7">
         Class Schedule
       </div>
       <FilterBox 

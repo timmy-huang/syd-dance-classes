@@ -65,7 +65,7 @@
   const mondayDate = new Date(new Date(today.value.valueOf()).setDate(today.value.getDate() - day.value));
 
   const selectedDate = computed(() => {
-    var date = new Date(today.value.valueOf());
+    var date = new Date(mondayDate.valueOf());
     date.setDate(date.getDate() + day.value);
     return date;
   });

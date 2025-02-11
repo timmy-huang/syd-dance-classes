@@ -18,4 +18,5 @@ export type Lesson = {
     openSpots?: number;
     name: string;
     studio: string;
+    level: string[];
 }

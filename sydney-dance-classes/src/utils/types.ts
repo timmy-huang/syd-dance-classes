@@ -20,3 +20,8 @@ export type Lesson = {
     studio: string;
     level: string[];
 }
+
+export type SelectedStudio = {
+    name: string;
+    selected: boolean;
+}

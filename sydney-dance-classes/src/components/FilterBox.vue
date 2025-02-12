@@ -28,12 +28,12 @@
           :onchange="() => $emit('update:adv')"
         />
       </div>
-      <!-- <div class="d-flex ">
+      <div class="d-flex ">
         <v-select
           variant="underlined"
           density="comfortable"
           v-model="favorites"
-          :items="cleanedStudios"
+          :items="studios"
           label="Studios"
           multiple
           persistent-hint
@@ -54,26 +54,18 @@
 
             <v-divider class="mt-2"></v-divider>
           </template>
-        </v-select> -->
-      <!-- </div> -->
+        </v-select>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-  import { studios } from '../utils/consts'
-
-  const cleanedStudios = studios.map((studio) => {
-    if (studio == "imi") {
-      return "IMI"
-    }
-    return studio.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
-  })
-
   const props = defineProps({
     beg: Boolean,
     inte: Boolean,
     adv: Boolean,
-    search: String
+    search: String,
+    studios: Array
   });
 </script>

@@ -12,6 +12,7 @@
         :inte="inte"
         :adv="adv"
         :search="search"
+        :selectedStudios="selectedStudios"
         @update:beg="beg = !beg"
         @update:inte="inte = !inte"
         @update:adv="adv = !adv"
@@ -40,7 +41,8 @@
   import { computed, onMounted, ref, Ref, toRaw } from 'vue'
   import getData from '../utils/data'
   import LessonCard from '../components/LessonCard.vue';
-  import { Lesson, SelectedStudio } from '../utils/types'
+  import { Lesson } from '../utils/types'
+  import { studios } from '../utils/consts';
 
   const lessons: Ref<Lesson[]> = ref([]);
 
@@ -49,16 +51,8 @@
   const inte = ref(true)
   const adv = ref(true)
   
-  const selectedStudios = ref([
-    {name: 'Movement Nation Hurstville', selected: true},
-    {name: 'Dancekool', selected: true},
-    {name: 'Latin Dance Australia', selected: true},
-    {name: 'Salsa Republic', selected: true},
-    {name: 'Salsabor', selected: true},
-    {name: 'Salsa Suave', selected: true},
-    {name: 'Salsa Synergy', selected: true},
-    {name: 'Salsa Vida', selected: true}
-  ])
+  // copy studios
+  const selectedStudios = ref([...studios])
 
   // Handle the selected day
   const today = ref(new Date())

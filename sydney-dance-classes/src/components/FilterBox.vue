@@ -46,8 +46,8 @@
             >
               <template v-slot:prepend>
                 <v-checkbox-btn
-                  :indeterminate="likesSomeFruit && !likesAllFruit"
-                  :model-value="likesAllFruit"
+                  :indeterminate="someStudiosSelected && !allStudiosSelected"
+                  :model-value="allStudiosSelected"
                 ></v-checkbox-btn>
               </template>
             </v-list-item>
@@ -61,11 +61,22 @@
 </template>
 
 <script lang="ts" setup>
+  import { computed } from 'vue';
+import { studios } from '../utils/consts';
   const props = defineProps({
     beg: Boolean,
     inte: Boolean,
     adv: Boolean,
     search: String,
-    studios: Array
+    selectedStudios: Array
   });
+
+  const allStudiosSelected = computed(() => {
+    return props.selectedStudios.length === studios.length
+  })
+
+  const someStudiosSelected = computed(() => {
+    return props.selectedStudios.length > 0
+  })
+
 </script>

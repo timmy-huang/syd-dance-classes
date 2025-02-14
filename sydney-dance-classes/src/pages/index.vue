@@ -17,6 +17,7 @@
         @update:inte="inte = !inte"
         @update:adv="adv = !adv"
         @update:search="search = $event.target.value"
+        @update:selectedStudios="updateSelectedStudios"
       />
       <Calendar 
         :selectedDay="day"
@@ -62,7 +63,6 @@
   if (today.value.getDay() === 0) { 
     today.value.setDate(today.value.getDate() + 1);
   }
-  // console.log(today.value)
   const day = ref((today.value.getDay()+ 6) % 7);// 0 = Monday
 
   const mondayDate = new Date(new Date(today.value.valueOf()).setDate(today.value.getDate() - day.value));
@@ -79,9 +79,7 @@
       console.log('No lessons')
       return []
     }
-
     
-    console.log(search.value)
     const temp = lessons.value.filter((lesson) => {  // filter lessons by day
       return lesson.start.getDate() === selectedDate.value.getDate() && 
       lesson.start.getMonth() === selectedDate.value.getMonth() && 
@@ -94,7 +92,9 @@
       return (beg.value && lesson.level.includes('beginner')) || 
       (inte.value && lesson.level.includes('intermediate')) ||
       (adv.value && lesson.level.includes('advanced'))
-    }).sort((a, b) => {
+    }).filter((lesson) => {  // filter lessons by studio
+      return selectedStudios.value.includes(lesson.studio)
+    }).sort((a, b) => {  // sort lessons by start time
       return a.start.getTime() - b.start.getTime()
     })
     
@@ -103,6 +103,10 @@
 
   const handleUpdateDay = (newDay: number) => {
     day.value = newDay
+  }
+
+  const updateSelectedStudios = (newStudios: string[]) => {
+    selectedStudios.value = newStudios
   }
 
   onMounted(async () => {

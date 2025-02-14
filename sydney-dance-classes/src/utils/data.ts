@@ -5,7 +5,7 @@ import { studios } from './consts';
 const getData = async (lessons: Ref<Lesson[]>) => {
   // get data from the data folder
   studios.forEach(async (studioName) => {
-    const file = studioName.replace(' ', '_').toLowerCase();
+    const file = studioName.replaceAll(' ', '_').toLowerCase();
     try {
       const response = await fetch(`data/${file}.json`);
       if (!response.ok) {

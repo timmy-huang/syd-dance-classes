@@ -1,14 +1,14 @@
 <template>
   <v-img 
-    v-if="studio === 'movement_nation_hurstville'"
+    v-if="studio === 'Movement Nation Hurstville'"
     src="/public/movement_nation_hurstville.webp"
   />
   <v-img 
-    v-if="studio === 'movement_nation_parramatta'"
+    v-if="studio === 'Movement Nation Parramatta'"
     src="/public/movement_nation_parramatta.webp"
   />
   <v-img
-    v-if="studio === 'imi'"
+    v-if="studio === 'IMI'"
     class="imi pa-2"
     src="/public/imi.png"
   />

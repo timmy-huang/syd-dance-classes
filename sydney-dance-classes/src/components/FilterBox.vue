@@ -32,13 +32,28 @@
         <v-select
           variant="underlined"
           density="comfortable"
-          v-model="favorites"
+          :model-value="selectedStudios"
+          @update:model-value="$emit('update:selectedStudios', $event)"
           :items="studios"
           label="Studios"
           multiple
           persistent-hint
-          style="min-width: 150px"
+          style="width: 200px"
         >
+          <template v-slot:selection="{ item, index }">
+            <span
+              v-if="allStudiosSelected && index === 0"
+              class="d-inline-block"
+            >
+              All studios
+            </span>
+            <span
+              v-if="!allStudiosSelected && index === 0"
+              class="d-inline-block"
+            >
+              Selected Studios
+            </span>
+          </template>
           <template v-slot:prepend-item>
             <v-list-item
               title="Select All"
@@ -62,7 +77,10 @@
 
 <script lang="ts" setup>
   import { computed } from 'vue';
-import { studios } from '../utils/consts';
+  import { studios } from '../utils/consts';
+
+  const emit = defineEmits(["update:selectedStudios"])
+
   const props = defineProps({
     beg: Boolean,
     inte: Boolean,
@@ -78,5 +96,9 @@ import { studios } from '../utils/consts';
   const someStudiosSelected = computed(() => {
     return props.selectedStudios.length > 0
   })
+
+  const toggle = () => {
+    emit('update:selectedStudios', allStudiosSelected.value ? [] : [...studios]);
+  };
 
 </script>

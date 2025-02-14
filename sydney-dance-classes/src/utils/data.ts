@@ -4,8 +4,8 @@ import { studios } from './consts';
 
 const getData = async (lessons: Ref<Lesson[]>) => {
   // get data from the data folder
-
-  studios.forEach(async (file) => {
+  studios.forEach(async (studioName) => {
+    const file = studioName.replaceAll(' ', '_').toLowerCase();
     try {
       const response = await fetch(`data/${file}.json`);
       if (!response.ok) {
@@ -17,7 +17,7 @@ const getData = async (lessons: Ref<Lesson[]>) => {
           ...lesson,
           start: new Date(lesson.start),
           end: new Date(lesson.end),
-          studio: file.replace('.json', ''),
+          studio: studioName,
           level: determineLevel(lesson.name)
         });
       });

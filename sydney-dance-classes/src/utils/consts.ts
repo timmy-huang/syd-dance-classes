@@ -1,13 +1,8 @@
+
 const studios = [
-  "imi",
-  "movement_nation_hurstville",
-  "movement_nation_parramatta",
-];
+  "IMI",
+  "Movement Nation Hurstville",
+  "Movement Nation Parramatta",
+]
 
 export { studios };
-
-// export const studios = [
-//   "imi",
-//   "movement_nation_hurstville",
-//   "movement_nation_parramatta",
-// ];

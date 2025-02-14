@@ -28,17 +28,32 @@
           :onchange="() => $emit('update:adv')"
         />
       </div>
-      <!-- <div class="d-flex ">
+      <div class="d-flex ">
         <v-select
           variant="underlined"
           density="comfortable"
-          v-model="favorites"
-          :items="cleanedStudios"
+          :model-value="selectedStudios"
+          @update:model-value="$emit('update:selectedStudios', $event)"
+          :items="studios"
           label="Studios"
           multiple
           persistent-hint
-          style="min-width: 150px"
+          style="width: 200px"
         >
+          <template v-slot:selection="{ item, index }">
+            <span
+              v-if="allStudiosSelected && index === 0"
+              class="d-inline-block"
+            >
+              All studios
+            </span>
+            <span
+              v-if="!allStudiosSelected && index === 0"
+              class="d-inline-block"
+            >
+              Selected Studios
+            </span>
+          </template>
           <template v-slot:prepend-item>
             <v-list-item
               title="Select All"
@@ -46,34 +61,44 @@
             >
               <template v-slot:prepend>
                 <v-checkbox-btn
-                  :indeterminate="likesSomeFruit && !likesAllFruit"
-                  :model-value="likesAllFruit"
+                  :indeterminate="someStudiosSelected && !allStudiosSelected"
+                  :model-value="allStudiosSelected"
                 ></v-checkbox-btn>
               </template>
             </v-list-item>
 
             <v-divider class="mt-2"></v-divider>
           </template>
-        </v-select> -->
-      <!-- </div> -->
+        </v-select>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-  import { studios } from '../utils/consts'
+  import { computed } from 'vue';
+  import { studios } from '../utils/consts';
 
-  const cleanedStudios = studios.map((studio) => {
-    if (studio == "imi") {
-      return "IMI"
-    }
-    return studio.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
-  })
+  const emit = defineEmits(["update:selectedStudios"])
 
   const props = defineProps({
     beg: Boolean,
     inte: Boolean,
     adv: Boolean,
-    search: String
+    search: String,
+    selectedStudios: Array
   });
+
+  const allStudiosSelected = computed(() => {
+    return props.selectedStudios.length === studios.length
+  })
+
+  const someStudiosSelected = computed(() => {
+    return props.selectedStudios.length > 0
+  })
+
+  const toggle = () => {
+    emit('update:selectedStudios', allStudiosSelected.value ? [] : [...studios]);
+  };
+
 </script>

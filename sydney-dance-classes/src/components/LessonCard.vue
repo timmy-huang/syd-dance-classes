@@ -42,7 +42,6 @@
 
   const bookLink = computed(() => {
     if (props.lesson) {
-      console.log(props.lesson.studio)
       if (props.lesson.studio === "movement_nation_hurstville") {
         return "https://www.movementnation.com.au/hurstville-bookings"
       }

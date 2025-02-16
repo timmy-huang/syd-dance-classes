@@ -166,7 +166,7 @@
         "choreo": "Ivy",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 16,
+        "openSpots": 10,
         "name": "Beginner Choreography W Ivy"
     },
     {
@@ -176,18 +176,8 @@
         "choreo": "Taymane ",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 17,
         "name": "Beginner Choreography W Taymane"
-    },
-    {
-        "serviceId": "a2a5761d-e5dd-431b-a2d2-60f8212ad7f2",
-        "start": "2025-02-14T20:15:00.000+11:00",
-        "end": "2025-02-14T21:30:00.000+11:00",
-        "choreo": "Doug",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 25,
-        "name": "Int/Advanced Contemporary W Doug"
     },
     {
         "serviceId": "bcdfa7d3-07e2-4286-8ff8-d8c838ed1b22",
@@ -216,7 +206,7 @@
         "choreo": "Rhode",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 24,
         "name": "Beginner Soca W Rhode"
     },
     {
@@ -290,6 +280,16 @@
         "name": "Beginner Girls Choreography W Winter"
     },
     {
+        "serviceId": "d3fe523b-7256-482f-8b55-f71265624f69",
+        "start": "2025-02-19T19:00:00.000+11:00",
+        "end": "2025-02-19T20:15:00.000+11:00",
+        "choreo": "Janey",
+        "location": "110 Church Street, Parramatta NSW, Australia",
+        "totalSpots": 15,
+        "openSpots": 14,
+        "name": "Intermediate Choreography W Janey"
+    },
+    {
         "serviceId": "e2683403-1fe2-47ad-bf7b-0ad78bf5d0d6",
         "start": "2025-02-19T20:15:00.000+11:00",
         "end": "2025-02-19T21:30:00.000+11:00",
@@ -316,7 +316,7 @@
         "choreo": "Winter Lo",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 15,
-        "openSpots": 15,
+        "openSpots": 13,
         "name": "Intermediate Choreography W Winter"
     },
     {
@@ -346,7 +346,7 @@
         "choreo": "Ivy",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 23,
         "name": "Beginner Choreography W Ivy"
     },
     {

@@ -7,7 +7,7 @@
       :model-value="search"
       @input="$emit('update:search', $event)"
     />
-    <div class="justify-space-between d-flex align-center" style="width: 100%">
+    <div class="justify-space-between d-flex align-center filter-options" style="width: 100%">
       <div class="d-flex">
         <v-checkbox 
           label="Beginner" 
@@ -102,3 +102,12 @@
   };
 
 </script>
+
+<style>
+@media screen and (max-width: 600px) {
+  .filter-options {
+    flex-direction: column;
+  }
+  
+}
+</style>

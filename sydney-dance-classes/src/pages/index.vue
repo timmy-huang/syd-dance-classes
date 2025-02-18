@@ -3,8 +3,8 @@
     class="align-centerfill-height mx-auto"
     max-width="900"
   >
-    <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;" class="mt-10;">
-      <div class="text-h2 my-7">
+    <div style="justify-content: center; align-items: center;" class="mt-10 d-flex flex-column">
+      <div class="text-h2 my-7 text-center">
         Class Schedule
       </div>
       <FilterBox 

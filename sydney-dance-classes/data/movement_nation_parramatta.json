@@ -86,7 +86,7 @@
         "choreo": "Tommy",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 23,
         "name": "Beginner Choreography W Tommy"
     },
     {
@@ -96,18 +96,8 @@
         "choreo": "Winter Lo",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 22,
+        "openSpots": 18,
         "name": "Beginner Girls Choreography W Winter"
-    },
-    {
-        "serviceId": "d3fe523b-7256-482f-8b55-f71265624f69",
-        "start": "2025-02-19T19:00:00.000+11:00",
-        "end": "2025-02-19T20:15:00.000+11:00",
-        "choreo": "Janey",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 15,
-        "openSpots": 13,
-        "name": "Intermediate Choreography W Janey"
     },
     {
         "serviceId": "e2683403-1fe2-47ad-bf7b-0ad78bf5d0d6",
@@ -116,7 +106,7 @@
         "choreo": "Jeff",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 24,
+        "openSpots": 23,
         "name": "Int/Advanced Choreography W Jeffery"
     },
     {

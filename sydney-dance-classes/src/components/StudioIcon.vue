@@ -13,6 +13,10 @@
       class="imi pa-2"
       src="/public/imi.png"
     />
+    <v-img
+      v-if="studio === 'Crossover'"
+      src="/public/xo.jpg"
+    />
   </div>
 </template>
   

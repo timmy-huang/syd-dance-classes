@@ -33,7 +33,7 @@ const getData = async (lessons: Ref<Lesson[]>) => {
 const determineLevel = (name: string): string[] => {
   if (name.toLowerCase().includes('int/adv')) {
     return ['intermediate', 'advanced'];
-  } else if (name.toLowerCase().includes('beginner')) {
+  } else if (name.toLowerCase().includes('beg')) {
     return ['beginner'];
   } else if (name.toLowerCase().includes('intermediate')) {
     return ['intermediate'];

@@ -2,6 +2,7 @@ import requests
 import json
 from movement.movement import movement
 from imi.imi import imi
+from xo.xo import xo
 import datetime
 
 # Globals
@@ -22,3 +23,5 @@ upcoming_sunday = today + datetime.timedelta(days=(7 + 6 - today_weekday))
 
 movement(location, previous_monday, upcoming_sunday)
 imi(imi_callback, today, imi__id, location)
+xo(location)
+print("Scraping completed")

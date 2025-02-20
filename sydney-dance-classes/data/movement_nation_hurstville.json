@@ -66,7 +66,7 @@
         "choreo": "Momo",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 21,
+        "openSpots": 17,
         "name": "Beginner Choreography W Momo"
     },
     {
@@ -76,7 +76,7 @@
         "choreo": "Tracey Phan",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 22,
+        "openSpots": 12,
         "name": "Int/Advanced Choreography W Tracey"
     },
     {
@@ -86,7 +86,7 @@
         "choreo": "Fynn Avery",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 21,
+        "openSpots": 10,
         "name": "Intermediate Choreography W Fynn"
     },
     {
@@ -96,7 +96,7 @@
         "choreo": "Koki",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 24,
+        "openSpots": 14,
         "name": "Beginner Hip Hop W Koki"
     },
     {
@@ -106,7 +106,7 @@
         "choreo": "Taymane",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 20,
         "name": "Beginner Choreography W Taymane"
     },
     {
@@ -146,7 +146,7 @@
         "choreo": "Chantelle",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 24,
+        "openSpots": 23,
         "name": "Beginner Girls Choreography W Chantelle"
     },
     {
@@ -226,7 +226,7 @@
         "choreo": "Doug",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 24,
         "name": "Int/Advanced Choreography W Doug"
     },
     {
@@ -251,8 +251,8 @@
     },
     {
         "serviceId": "9c07c69d-1fcd-4588-9448-d1892af343f2",
-        "start": "2025-02-27T18:00:00.000+11:00",
-        "end": "2025-02-27T19:00:00.000+11:00",
+        "start": "2025-02-27T18:15:00.000+11:00",
+        "end": "2025-02-27T19:15:00.000+11:00",
         "choreo": "Koki",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,
@@ -261,8 +261,8 @@
     },
     {
         "serviceId": "dd0ba46d-420b-4624-ad04-d95e4581c250",
-        "start": "2025-02-27T19:00:00.000+11:00",
-        "end": "2025-02-27T20:15:00.000+11:00",
+        "start": "2025-02-27T19:15:00.000+11:00",
+        "end": "2025-02-27T20:30:00.000+11:00",
         "choreo": "Taymane",
         "location": "390 Forest Road, Hurstville NSW, Australia",
         "totalSpots": 25,

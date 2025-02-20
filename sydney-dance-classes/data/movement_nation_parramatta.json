@@ -86,7 +86,7 @@
         "choreo": "Tommy",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 23,
+        "openSpots": 14,
         "name": "Beginner Choreography W Tommy"
     },
     {
@@ -96,7 +96,7 @@
         "choreo": "Winter Lo",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 18,
+        "openSpots": 14,
         "name": "Beginner Girls Choreography W Winter"
     },
     {
@@ -106,7 +106,7 @@
         "choreo": "Jeff",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 23,
+        "openSpots": 18,
         "name": "Int/Advanced Choreography W Jeffery"
     },
     {
@@ -116,7 +116,7 @@
         "choreo": "Tracey Phan",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 3,
         "name": "Beginner Choreography W Tracey"
     },
     {
@@ -126,7 +126,7 @@
         "choreo": "Winter Lo",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 15,
-        "openSpots": 12,
+        "openSpots": 0,
         "name": "Intermediate Choreography W Winter"
     },
     {
@@ -136,7 +136,7 @@
         "choreo": "Chantelle",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 23,
+        "openSpots": 8,
         "name": "Intermediate Choreography W Chantelle"
     },
     {
@@ -146,7 +146,7 @@
         "choreo": "Tracey Phan",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 24,
+        "openSpots": 10,
         "name": "Int/Advanced Choreography W Tracey"
     },
     {
@@ -156,7 +156,7 @@
         "choreo": "Ivy",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 21,
+        "openSpots": 15,
         "name": "Beginner Choreography W Ivy"
     },
     {
@@ -196,18 +196,8 @@
         "choreo": "Merry",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 23,
         "name": "Beginner Street Jazz W Merry"
-    },
-    {
-        "serviceId": "f709c272-6579-444c-b92b-497ca7c31d5e",
-        "start": "2025-02-24T19:15:00.000+11:00",
-        "end": "2025-02-24T20:15:00.000+11:00",
-        "choreo": "Rhode",
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 24,
-        "name": "Beginner Soca W Rhode"
     },
     {
         "serviceId": "e63641ab-5347-45f4-a778-ddc74d4270f7",
@@ -216,7 +206,7 @@
         "choreo": "Laura",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 24,
         "name": "Beginner Contemporary W Laura"
     },
     {
@@ -246,7 +236,7 @@
         "choreo": "Jeff",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 23,
         "name": "Beginner Hip Hop W Jeff"
     },
     {
@@ -256,7 +246,7 @@
         "choreo": "Amanda",
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 24,
         "name": "Beginner Hip Hop W Amanda"
     },
     {

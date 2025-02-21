@@ -3,7 +3,9 @@ import json
 from movement.movement import movement
 from imi.imi import imi
 from xo.xo import xo
+from ix.ix import ix
 import datetime
+
 
 # Globals
 location = './sydney-dance-classes/data/'
@@ -21,7 +23,8 @@ today_weekday = today.weekday()
 previous_monday = today - datetime.timedelta(days=today_weekday)
 upcoming_sunday = today + datetime.timedelta(days=(7 + 6 - today_weekday))
 
-movement(location, previous_monday, upcoming_sunday)
-imi(imi_callback, today, imi__id, location)
-xo(location)
+# movement(location, previous_monday, upcoming_sunday)
+# imi(imi_callback, today, imi__id, location)
+# xo(location)
+ix(location, previous_monday, upcoming_sunday)
 print("Scraping completed")

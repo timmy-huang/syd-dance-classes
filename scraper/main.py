@@ -4,6 +4,7 @@ from movement.movement import movement
 from imi.imi import imi
 from xo.xo import xo
 from ix.ix import ix
+from pdc.pdc import pdc
 import datetime
 
 
@@ -26,5 +27,6 @@ upcoming_sunday = today + datetime.timedelta(days=(7 + 6 - today_weekday))
 # movement(location, previous_monday, upcoming_sunday)
 # imi(imi_callback, today, imi__id, location)
 # xo(location)
-ix(location, previous_monday, upcoming_sunday)
+# ix(location, previous_monday, upcoming_sunday)
+pdc(location, previous_monday, upcoming_sunday)
 print("Scraping completed")

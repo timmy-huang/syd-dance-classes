@@ -4,7 +4,8 @@ const studios = [
   "Movement Nation Hurstville",
   "Movement Nation Parramatta",
   "Crossover",
-  "IX"
+  "IX",
+  "PDC"
 ]
 
 export { studios };

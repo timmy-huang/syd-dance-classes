@@ -21,6 +21,10 @@
       v-if="studio === 'IX'"
       src="/public/ix.png"
     />
+    <v-img
+      v-if="studio === 'PDC'"
+      src="/public/pdc.jpg"
+    />
   </div>
 </template>
   

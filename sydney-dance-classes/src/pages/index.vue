@@ -13,9 +13,9 @@
         :adv="adv"
         :search="search"
         :selectedStudios="selectedStudios"
-        @update:beg="beg = !beg"
-        @update:inte="inte = !inte"
-        @update:adv="adv = !adv"
+        @update:beg="toggleBeg"
+        @update:inte="toggleInte"
+        @update:adv="toggleAdv"
         @update:search="search = $event.target.value"
         @update:selectedStudios="updateSelectedStudios"
       />
@@ -48,12 +48,10 @@
   const lessons: Ref<Lesson[]> = ref([]);
 
   const search = ref<string>('')
-  const beg = ref(true)
-  const inte = ref(true)
-  const adv = ref(true)
-  
-  // copy studios
-  const selectedStudios = ref([...studios])
+  const beg = ref(localStorage.getItem('beg') ? JSON.parse(localStorage.getItem('beg')!) : true)
+  const inte = ref(localStorage.getItem('inte') ? JSON.parse(localStorage.getItem('inte')!) : true)
+  const adv = ref(localStorage.getItem('adv') ? JSON.parse(localStorage.getItem('adv')!) : true)  
+  const selectedStudios = ref(localStorage.getItem('selectedStudios') ? JSON.parse(localStorage.getItem('selectedStudios')!) : [...studios])
 
   // Handle the selected day
   const today = ref(new Date())
@@ -107,6 +105,22 @@
 
   const updateSelectedStudios = (newStudios: string[]) => {
     selectedStudios.value = newStudios
+    localStorage.setItem('selectedStudios', JSON.stringify(selectedStudios.value))
+  }
+
+  const toggleBeg = () => {
+    beg.value = !beg.value
+    localStorage.setItem('beg', JSON.stringify(beg.value))
+  }
+
+  const toggleInte = () => {
+    inte.value = !inte.value
+    localStorage.setItem('inte', JSON.stringify(inte.value))
+  }
+
+  const toggleAdv = () => {
+    adv.value = !adv.value
+    localStorage.setItem('adv', JSON.stringify(adv.value))
   }
 
   onMounted(async () => {

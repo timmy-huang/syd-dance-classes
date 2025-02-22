@@ -37,9 +37,7 @@ def xo(location):
     for class_name_raw, start_time, end_time, display_name, trainer in class_rows:
         # Parse the class name to extract information
         name_parts = display_name.split('|')
-        
-        print(display_name)
-        
+                
         # Extract level from the class name
         level = []
         level_indicators = ['Beg', 'Int', 'Adv', 'Open']

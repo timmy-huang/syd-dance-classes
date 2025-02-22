@@ -3,7 +3,9 @@ const studios = [
   "IMI",
   "Movement Nation Hurstville",
   "Movement Nation Parramatta",
-  "Crossover"
+  "Crossover",
+  "IX",
+  "PDC"
 ]
 
 export { studios };

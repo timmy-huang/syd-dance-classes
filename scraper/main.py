@@ -5,6 +5,7 @@ from imi.imi import imi
 from xo.xo import xo
 from ix.ix import ix
 from pdc.pdc import pdc
+from duti.duti import duti
 import datetime
 
 
@@ -17,7 +18,10 @@ location = './sydney-dance-classes/data/'
 #mnp_auth = "aOhvictdeaKTuQxsdRXNiy5tz_uchUKgsodI7ygk9Cc.eyJpbnN0YW5jZUlkIjoiYWJjNTcxYzItMzhlMC00ZGMzLWI4MGEtZmJkZTRhNTk4YzcyIiwiYXBwRGVmSWQiOiIxM2QyMWM2My1iNWVjLTU5MTItODM5Ny1jM2E1ZGRiMjdhOTciLCJtZXRhU2l0ZUlkIjoiZDFkZjNhMTUtNWYwZC00OWZjLWJkNmYtNDc0NmI4OGZjNTRjIiwic2lnbkRhdGUiOiIyMDI0LTA2LTI0VDA0OjA1OjQwLjk0NloiLCJ2ZW5kb3JQcm9kdWN0SWQiOiJib29raW5ncyIsImRlbW9Nb2RlIjpmYWxzZSwib3JpZ2luSW5zdGFuY2VJZCI6ImYyODFjNmYyLThjMTMtNGQ0Zi05ZmFjLWI4MGExNTU2ZWZiMSIsImFpZCI6ImEzOWQ0NmU1LTQxNzAtNDdlNC1hZDViLTcwNzc1ODQxMzJlOSIsImJpVG9rZW4iOiI3YTFhNGJkNy02N2VkLTA0M2YtMDU2NS1iYzk4ZjJkNjQ5M2UiLCJzaXRlT3duZXJJZCI6ImU0NTQ2MWMzLTY0YWQtNGQ5Zi04NDRlLTc3NDBiYzI1NjRhNiJ9"
 
 imi_callback = "jQuery36406886794353924179_1715325689640"
-imi__id = "1715325689641"
+imi_id = "1715325689641"
+
+duti_callback = "jQuery364011093063789286006_1740274810344"
+duti_id = "1740274810346"
 
 today = datetime.date.today()
 today_weekday = today.weekday()
@@ -25,8 +29,9 @@ previous_monday = today - datetime.timedelta(days=today_weekday)
 upcoming_sunday = today + datetime.timedelta(days=(7 + 6 - today_weekday))
 
 movement(location, previous_monday, upcoming_sunday)
-imi(imi_callback, today, imi__id, location)
+imi(imi_callback, today, imi_id, location)
 xo(location)
 ix(location, previous_monday, upcoming_sunday)
 pdc(location, previous_monday, upcoming_sunday)
+duti(duti_callback, today, duti_id, location)
 print("Scraping completed")

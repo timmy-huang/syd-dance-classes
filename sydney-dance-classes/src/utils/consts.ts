@@ -5,7 +5,8 @@ const studios = [
   "Movement Nation Parramatta",
   "Crossover",
   "IX",
-  "PDC"
+  "PDC",
+  "DUTI"
 ]
 
 export { studios };

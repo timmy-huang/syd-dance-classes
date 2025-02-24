@@ -11,4 +11,4 @@ __pycache__/
 *.xlsx
 *.db
 
-data/*
+sydney-dance-classes/data/*

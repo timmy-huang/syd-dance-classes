@@ -5,7 +5,16 @@ const studios = [
   "Movement Nation Parramatta",
   "Crossover",
   "IX",
-  "PDC"
+  "PDC",
+  "DUTI"
 ]
 
-export { studios };
+const styles = [
+  "Hip Hop",
+  "Contemporary",
+  "Choreography",
+  "Kpop",
+  "Other"
+]
+
+export { studios, styles };

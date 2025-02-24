@@ -19,4 +19,5 @@ export type Lesson = {
     name: string;
     studio: string;
     level: string[];
+    style: string[];
 }

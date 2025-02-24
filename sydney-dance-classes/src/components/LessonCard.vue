@@ -27,10 +27,11 @@
       <v-btn
         variant="outlined"
         class="mr-4"
+        :href="bookLink"
+        target="_blank"
+        rel="noopener"
       >
-        <a :href="bookLink" target="_blank" style="text-decoration: none; color: inherit;">
-          Book Now
-        </a>
+        Book Now
       </v-btn>
     </v-card-actions>
   </v-card>
@@ -67,14 +68,26 @@
 
   const bookLink = computed(() => {
     if (props.lesson) {
-      if (props.lesson.studio === "movement_nation_hurstville") {
+      if (props.lesson.studio === "Movement Nation Hurstville") {
         return "https://www.movementnation.com.au/hurstville-bookings"
       }
-      if (props.lesson.studio === "movement_nation_parramatta") {
+      if (props.lesson.studio === "Movement Nation Parramatta") {
         return "https://2020movementnation.wixsite.com/website-1"
       }
-      if (props.lesson.studio === "imi") {
+      if (props.lesson.studio === "IMI") {
         return "https://imient.com.au/classes"
+      }
+      if (props.lesson.studio === "XO") {
+        return "https://www.crossoverdance.com/timetable/"
+      }
+      if (props.lesson.studio === "IX") {
+        return "https://www.ixdancestudio.com/booking"
+      }
+      if (props.lesson.studio === "PDC") {
+        return "https://www.pdcdance.net/book-online"
+      }
+      if (props.lesson.studio === "DUTI") {
+        return "https://www.dutistudios.com.au/timetable"
       }
     }
     console.log("Booking Link not found for ", props.lesson)

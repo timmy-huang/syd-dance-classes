@@ -18,7 +18,8 @@ const getData = async (lessons: Ref<Lesson[]>) => {
           start: new Date(lesson.start),
           end: new Date(lesson.end),
           studio: studioName,
-          level: determineLevel(lesson.name)
+          level: determineLevel(lesson.name),
+          style: determineStyle(lesson.name),
         });
       });
     } catch (error) {
@@ -40,6 +41,19 @@ const determineLevel = (name: string): string[] => {
   } else {
     return ['advanced'];
   }
+}
+
+const determineStyle = (name: string): string[] => {
+  if (name.toLowerCase().replace(" ", "").includes('hiphop')) {
+    return ['Hip Hop'];
+  } else if (name.toLowerCase().includes('contemporary')) {
+    return ['Contemporary'];
+  } else if (name.toLowerCase().replace("-", "").includes('kpop')) {
+    return ['Kpop'];
+  } else if (name.toLowerCase().includes('choreo')) {
+    return ['Choreography'];
+  }
+  return ['Other'];
 }
 
 export default getData;

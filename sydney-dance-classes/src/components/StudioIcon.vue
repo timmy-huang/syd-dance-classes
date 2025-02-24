@@ -25,6 +25,10 @@
       v-if="studio === 'PDC'"
       src="/public/pdc.jpg"
     />
+    <v-img
+      v-if="studio === 'DUTI'"
+      src="/public/duti.png"
+    />
   </div>
 </template>
   

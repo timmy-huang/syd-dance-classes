@@ -11,6 +11,7 @@ declare module 'vue' {
     FilterBox: typeof import('./src/components/FilterBox.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     LessonCard: typeof import('./src/components/LessonCard.vue')['default']
+    MultiSelect: typeof import('./src/components/MultiSelect.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     StudioIcon: typeof import('./src/components/StudioIcon.vue')['default']

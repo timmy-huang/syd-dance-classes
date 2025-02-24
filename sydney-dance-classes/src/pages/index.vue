@@ -13,11 +13,13 @@
         :adv="adv"
         :search="search"
         :selectedStudios="selectedStudios"
+        :selectedStyles="selectedStyles"
         @update:beg="toggleBeg"
         @update:inte="toggleInte"
         @update:adv="toggleAdv"
         @update:search="search = $event.target.value"
         @update:selectedStudios="updateSelectedStudios"
+        @update:selectedStyles="updateSelectedStyles"
       />
       <Calendar 
         :selectedDay="day"
@@ -51,7 +53,9 @@
   const beg = ref(localStorage.getItem('beg') ? JSON.parse(localStorage.getItem('beg')!) : true)
   const inte = ref(localStorage.getItem('inte') ? JSON.parse(localStorage.getItem('inte')!) : true)
   const adv = ref(localStorage.getItem('adv') ? JSON.parse(localStorage.getItem('adv')!) : true)  
+
   const selectedStudios = ref(localStorage.getItem('selectedStudios') ? JSON.parse(localStorage.getItem('selectedStudios')!) : [...studios])
+  const selectedStyles = ref(localStorage.getItem('selectedStyles') ? JSON.parse(localStorage.getItem('selectedStyles')!) : [])
 
   // Handle the selected day
   const today = ref(new Date())
@@ -92,6 +96,8 @@
       (adv.value && lesson.level.includes('advanced'))
     }).filter((lesson) => {  // filter lessons by studio
       return selectedStudios.value.includes(lesson.studio)
+    }).filter((lesson) => { // Filter by style
+      return selectedStyles.value.some(style => lesson.style.includes(style))
     }).sort((a, b) => {  // sort lessons by start time
       return a.start.getTime() - b.start.getTime()
     })
@@ -106,6 +112,11 @@
   const updateSelectedStudios = (newStudios: string[]) => {
     selectedStudios.value = newStudios
     localStorage.setItem('selectedStudios', JSON.stringify(selectedStudios.value))
+  }
+
+  const updateSelectedStyles = (newStyles: string[]) => {
+    selectedStyles.value = newStyles
+    localStorage.setItem('selectedStyles', JSON.stringify(selectedStyles.value))
   }
 
   const toggleBeg = () => {

@@ -45,7 +45,7 @@
   import getData from '../utils/data'
   import LessonCard from '../components/LessonCard.vue';
   import { Lesson } from '../utils/types'
-  import { studios } from '../utils/consts';
+  import { studios, styles } from '../utils/consts';
 
   const lessons: Ref<Lesson[]> = ref([]);
 
@@ -55,7 +55,7 @@
   const adv = ref(localStorage.getItem('adv') ? JSON.parse(localStorage.getItem('adv')!) : true)  
 
   const selectedStudios = ref(localStorage.getItem('selectedStudios') ? JSON.parse(localStorage.getItem('selectedStudios')!) : [...studios])
-  const selectedStyles = ref(localStorage.getItem('selectedStyles') ? JSON.parse(localStorage.getItem('selectedStyles')!) : [])
+  const selectedStyles = ref(localStorage.getItem('selectedStyles') ? JSON.parse(localStorage.getItem('selectedStyles')!) : [...styles])
 
   // Handle the selected day
   const today = ref(new Date())

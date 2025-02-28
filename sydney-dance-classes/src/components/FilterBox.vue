@@ -28,7 +28,7 @@
           :onchange="() => $emit('update:adv')"
         />
       </div>
-      <div class="d-flex ">
+      <div class="d-flex px-1">
         <MultiSelect :value="selectedStyles" @update="($event) => $emit('update:selectedStyles', $event)" type="Styles" />
         <MultiSelect :value="selectedStudios" @update="($event) => $emit('update:selectedStudios', $event)" type="Studios" />
       </div>

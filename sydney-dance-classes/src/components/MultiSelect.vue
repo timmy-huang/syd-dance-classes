@@ -8,8 +8,7 @@
     :label="type"
     multiple
     persistent-hint
-    class="ml-2"
-    style="width: 200px"
+    class="ml-2 select"
   >
     <template v-slot:selection="{ item, index }">
       <span
@@ -79,3 +78,15 @@
     }
   };
 </script>
+
+<style>
+  .select {
+    width: 200px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .select {
+      width: 150px;
+    }
+  }
+</style>

@@ -14,7 +14,18 @@
         {{ lesson.name }}
       </v-card-title>
       <v-card-subtitle>
-        {{ lesson.choreo }}
+        {{ lesson.choreo.name }}
+        <v-btn
+          icon="mdi-instagram"
+          size="small"
+          variant="text"
+          :href="`https://www.instagram.com/${lesson.choreo.instagram.replace('@', '')}`"
+          target="_blank"
+          rel="noopener"
+          class="ml-1"
+          v-if="lesson.choreo.instagram"
+        >
+        </v-btn>
       </v-card-subtitle>
     </v-card-item>
 
@@ -47,7 +58,18 @@
         {{ lesson.name }}
       </v-card-title>
       <v-card-subtitle>
-        {{ lesson.choreo }}
+        {{ lesson.choreo.name }}
+        <v-btn
+          icon="mdi-instagram"
+          size="small"
+          variant="text"
+          :href="`https://www.instagram.com/${lesson.choreo.instagram.replace('@', '')}`"
+          target="_blank"
+          rel="noopener"
+          class="ml-1"
+          v-if="lesson.choreo.instagram"
+        >
+        </v-btn>
       </v-card-subtitle>
       <v-card-text class="px-0 d-flex align-center justify-space-between">
         <studio-icon :studio="lesson.studio" />

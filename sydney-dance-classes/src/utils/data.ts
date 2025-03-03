@@ -20,6 +20,11 @@ const getData = async (lessons: Ref<Lesson[]>) => {
           studio: studioName,
           level: determineLevel(lesson.name),
           style: determineStyle(lesson.name),
+          choreo: {
+            id: lesson.choreo.id || '',
+            name: lesson.choreo.name || '',
+            instagram: lesson.choreo.instagram || ''
+          }
         });
       });
     } catch (error) {

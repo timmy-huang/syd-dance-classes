@@ -89,7 +89,7 @@
     }).filter((lesson) => {  // filter lessons by search (name, studio, choreo)
       return lesson.name.toLowerCase().includes(search.value.toLowerCase()) || 
       lesson.studio.toLowerCase().includes(search.value.toLowerCase()) || 
-      lesson.choreo.toLowerCase().includes(search.value.toLowerCase())
+      lesson.choreo.name.toLowerCase().includes(search.value.toLowerCase())
     }).filter((lesson) => {  // filter lessons by level
       return (beg.value && lesson.level.includes('beginner')) || 
       (inte.value && lesson.level.includes('intermediate')) ||

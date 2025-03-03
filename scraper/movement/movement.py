@@ -1,5 +1,6 @@
 import requests
 import json
+from helper import get_or_create_choreographer
 # Did not need to scrape the website as we could access the APIs
 # Note that currently for authorisation, the token is hardcoded and will expire after a certain time
 # Get new token from accessing webpage if it doesnt work
@@ -135,15 +136,16 @@ def getData(auth, location, url, start_date, end_date):
     data = []
 
     for slot in query["availabilityEntries"]:
-        classData = {}
-        classData["serviceId"] = slot["slot"]["serviceId"]
-        classData["start"] = slot["slot"]["startDate"]
-        classData["end"] = slot["slot"]["endDate"]
-        classData["choreo"] = slot["slot"]["resource"]["name"]
-        classData["location"] = slot["slot"]["location"]["formattedAddress"]
-        classData["totalSpots"] = slot["totalSpots"]
-        classData["openSpots"] = slot["openSpots"]
-
+        choreographer = get_or_create_choreographer(slot["slot"]["resource"]["name"])
+        classData = {
+            "serviceId": slot["slot"]["serviceId"],
+            "start": slot["slot"]["startDate"],
+            "end": slot["slot"]["endDate"],
+            "choreo": choreographer,
+            "location": slot["slot"]["location"]["formattedAddress"],
+            "totalSpots": slot["totalSpots"],
+            "openSpots": slot["openSpots"]
+        }
         # find the corresponding service
         for service in bulk["responseServices"]['services']:
             if service["service"]['id'] == classData["serviceId"]:

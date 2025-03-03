@@ -2,6 +2,7 @@ import requests
 import json
 import re
 from datetime import datetime
+from helper import get_or_create_choreographer
 
 def xo(location):
     url = "https://widgets.mindbodyonline.com/widgets/schedules/9b4010856f8.json"
@@ -24,7 +25,7 @@ def xo(location):
 
     html = requests.get(url, params=params, headers=headers).json()["contents"]
 
-     # Find all class rows
+    # Find all class rows
     class_rows = re.findall(r'<tr[^>]*class="[^"]*filterable[^"]*"[^>]*data-hc-mbo-class-name="([^"]*)".*?'
                            r'hc_starttime"[^>]*data-datetime="&quot;([^"]+)&quot;".*?'
                            r'hc_endtime"[^>]*data-datetime="&quot;([^"]+)&quot;".*?'
@@ -33,30 +34,22 @@ def xo(location):
                            html, re.DOTALL)
 
     formatted_classes = []
-    
+
     for class_name_raw, start_time, end_time, display_name, trainer in class_rows:
-        # Parse the class name to extract information
-        name_parts = display_name.split('|')
-                
-        # Extract level from the class name
-        level = []
-        level_indicators = ['Beg', 'Int', 'Adv', 'Open']
-        for indicator in level_indicators:
-            if indicator.lower() in display_name.lower():
-                level.append(indicator)
+        # Get or create choreographer object
+        choreographer = get_or_create_choreographer(trainer.strip())
         
         # Parse datetime strings
         start = datetime.strptime(start_time, '%Y-%m-%dT%H:%M:%S.%f%z')
         end = datetime.strptime(end_time, '%Y-%m-%dT%H:%M:%S.%f%z')
         
         class_data = {
-            "serviceId": class_name_raw,  # Using the raw class name as serviceId
+            "serviceId": class_name_raw,
             "start": start.strftime('%Y-%m-%d %H:%M:%S'),
             "end": end.strftime('%Y-%m-%d %H:%M:%S'),
-            "choreo": trainer.strip(),
-            "choreoInsta": trainer.strip(),  # Using same as choreo if no Instagram handle available
+            "choreo": choreographer,
             "name": display_name.strip(),
-            "studio": "Crossover",  # Hardcoded as this is specifically for Crossover
+            "studio": "Crossover"
         }
         formatted_classes.append(class_data)
 

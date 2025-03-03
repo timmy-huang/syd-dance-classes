@@ -1,7 +1,7 @@
 import requests
 import json
 import re
-from helper import get_or_create_choreographer
+from helper import get_or_create_choreographer, determine_level, determine_style
 
 # pre sure these guys use square space
 
@@ -68,7 +68,9 @@ def imi(callback, start_date, _id, location):
             "start": start_times[i],
             "end": end_times[i],
             "choreo": choreographer,
-            "name": class_names[i].replace("_", " ").title()
+            "name": class_names[i].replace("_", " ").title(),
+            "level": determine_level(class_names[i].replace("_", " ").title()),
+            "style": determine_style(class_names[i].replace("_", " ").title())
         }
         data.append(classData)
 

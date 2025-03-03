@@ -11,9 +11,14 @@ def get_or_create_choreographer(name, instagram=""):
     else:
         choreographers = []
 
-    # Look for existing choreographer
+    # Look for existing choreographer and update instagram if provided
     for choreographer in choreographers:
         if choreographer['name'].lower() == name.lower():
+            if instagram.strip():  # If instagram parameter is not empty
+                choreographer['instagram'] = instagram.strip()
+                # Save updated choreographers
+                with open(choreographers_file, 'w') as file:
+                    json.dump(choreographers, file, indent=4)
             return choreographer
 
     # Create new choreographer
@@ -30,3 +35,26 @@ def get_or_create_choreographer(name, instagram=""):
         json.dump(choreographers, file, indent=4)
 
     return new_choreographer
+
+def determine_level(name: str) -> list:
+    name = name.lower()
+    if 'int/adv' in name:
+        return ['intermediate', 'advanced']
+    elif 'beg' in name:
+        return ['beginner']
+    elif 'intermediate' in name:
+        return ['intermediate']
+    else:
+        return ['advanced']
+
+def determine_style(name: str) -> list:
+    name = name.lower().replace(" ", "").replace("-", "")
+    if 'hiphop' in name:
+        return ['Hip Hop']
+    elif 'contemporary' in name:
+        return ['Contemporary']
+    elif 'kpop' in name:
+        return ['Kpop']
+    elif 'choreo' in name:
+        return ['Choreography']
+    return ['Other']

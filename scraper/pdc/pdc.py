@@ -1,6 +1,6 @@
 import requests
 import json
-from helper import get_or_create_choreographer
+from helper import get_or_create_choreographer, determine_level, determine_style
 # Did not need to scrape the website as we could access the APIs
 # Note that currently for authorisation, the token is hardcoded and will expire after a certain time
 # Get new token from accessing webpage if it doesnt work
@@ -148,6 +148,9 @@ def getData(auth, location, url, start_date, end_date):
             if service["service"]['id'] == classData["serviceId"]:
                 classData["name"] = service["service"]["info"]["name"]
                 #classData["description"] = service["service"]["info"]["description"]
+
+        classData["level"] = determine_level(classData["name"])
+        classData["style"] = determine_style(classData["name"])
 
         data.append(classData) 
 

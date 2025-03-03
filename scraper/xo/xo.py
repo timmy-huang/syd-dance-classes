@@ -2,7 +2,7 @@ import requests
 import json
 import re
 from datetime import datetime
-from helper import get_or_create_choreographer
+from helper import get_or_create_choreographer, determine_level, determine_style
 
 def xo(location):
     url = "https://widgets.mindbodyonline.com/widgets/schedules/9b4010856f8.json"
@@ -49,7 +49,9 @@ def xo(location):
             "end": end.strftime('%Y-%m-%d %H:%M:%S'),
             "choreo": choreographer,
             "name": display_name.strip(),
-            "studio": "Crossover"
+            "studio": "Crossover",
+            "level": determine_level(display_name.strip()),
+            "style": determine_style(display_name.strip())
         }
         formatted_classes.append(class_data)
 

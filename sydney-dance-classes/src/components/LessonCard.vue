@@ -52,6 +52,10 @@
     elevation="6"
     class="d-flex align-center"
     v-else
+    link
+    :href="bookLink"
+    target="_blank"
+    rel="noopener"
   >
     <v-card-item class="lesson-card-item-mobile">
       <v-card-title class="text-wrap">
@@ -68,6 +72,7 @@
           rel="noopener"
           class="ml-1"
           v-if="lesson.choreo.instagram"
+          @click.stop
         >
         </v-btn>
       </v-card-subtitle>
@@ -78,7 +83,6 @@
         </div>
       </v-card-text>
     </v-card-item>
-
   </v-card>
 </template>
   

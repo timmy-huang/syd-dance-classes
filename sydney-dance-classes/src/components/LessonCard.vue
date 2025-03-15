@@ -14,7 +14,18 @@
         {{ lesson.name }}
       </v-card-title>
       <v-card-subtitle>
-        {{ lesson.choreo }}
+        {{ lesson.choreo.name }}
+        <v-btn
+          icon="mdi-instagram"
+          size="small"
+          variant="text"
+          :href="`https://www.instagram.com/${lesson.choreo.instagram.replace('@', '')}`"
+          target="_blank"
+          rel="noopener"
+          class="ml-1"
+          v-if="lesson.choreo.instagram"
+        >
+        </v-btn>
       </v-card-subtitle>
     </v-card-item>
 
@@ -41,13 +52,29 @@
     elevation="6"
     class="d-flex align-center"
     v-else
+    link
+    :href="bookLink"
+    target="_blank"
+    rel="noopener"
   >
     <v-card-item class="lesson-card-item-mobile">
       <v-card-title class="text-wrap">
         {{ lesson.name }}
       </v-card-title>
       <v-card-subtitle>
-        {{ lesson.choreo }}
+        {{ lesson.choreo.name }}
+        <v-btn
+          icon="mdi-instagram"
+          size="small"
+          variant="text"
+          :href="`https://www.instagram.com/${lesson.choreo.instagram.replace('@', '')}`"
+          target="_blank"
+          rel="noopener"
+          class="ml-1"
+          v-if="lesson.choreo.instagram"
+          @click.stop
+        >
+        </v-btn>
       </v-card-subtitle>
       <v-card-text class="px-0 d-flex align-center justify-space-between">
         <studio-icon :studio="lesson.studio" />
@@ -56,7 +83,6 @@
         </div>
       </v-card-text>
     </v-card-item>
-
   </v-card>
 </template>
   

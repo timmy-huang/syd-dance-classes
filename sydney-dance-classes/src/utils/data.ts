@@ -18,8 +18,11 @@ const getData = async (lessons: Ref<Lesson[]>) => {
           start: new Date(lesson.start),
           end: new Date(lesson.end),
           studio: studioName,
-          level: determineLevel(lesson.name),
-          style: determineStyle(lesson.name),
+          choreo: {
+            id: lesson.choreo.id || '',
+            name: lesson.choreo.name || '',
+            instagram: lesson.choreo.instagram || ''
+          }
         });
       });
     } catch (error) {
@@ -29,31 +32,6 @@ const getData = async (lessons: Ref<Lesson[]>) => {
   console.log('lessons');
   console.log(lessons);
   return lessons;
-}
-
-const determineLevel = (name: string): string[] => {
-  if (name.toLowerCase().includes('int/adv')) {
-    return ['intermediate', 'advanced'];
-  } else if (name.toLowerCase().includes('beg')) {
-    return ['beginner'];
-  } else if (name.toLowerCase().includes('intermediate')) {
-    return ['intermediate'];
-  } else {
-    return ['advanced'];
-  }
-}
-
-const determineStyle = (name: string): string[] => {
-  if (name.toLowerCase().replace(" ", "").includes('hiphop')) {
-    return ['Hip Hop'];
-  } else if (name.toLowerCase().includes('contemporary')) {
-    return ['Contemporary'];
-  } else if (name.toLowerCase().replace("-", "").includes('kpop')) {
-    return ['Kpop'];
-  } else if (name.toLowerCase().includes('choreo')) {
-    return ['Choreography'];
-  }
-  return ['Other'];
 }
 
 export default getData;

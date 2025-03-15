@@ -11,8 +11,7 @@ export type Lesson = {
     serviceId?: string;
     start: Date;
     end: Date;
-    choreo: string;
-    choreoInsta?: string;
+    choreo: Choreographer;
     location?: string;
     totalSpots?: number;
     openSpots?: number;
@@ -20,4 +19,10 @@ export type Lesson = {
     studio: string;
     level: string[];
     style: string[];
+}
+
+export type Choreographer = {
+    id: string;
+    name: string;
+    instagram: string;
 }

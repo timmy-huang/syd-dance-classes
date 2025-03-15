@@ -1,6 +1,7 @@
 import requests
 import json
 import re
+from helper import get_or_create_choreographer, determine_level, determine_style
 
 # pre sure these guys use square space
 
@@ -45,34 +46,32 @@ def imi(callback, start_date, _id, location):
 
     # Extract class names
     class_names = re.findall(r'data-bw-widget-mbo-class-name=\\"(.*?)\\"', html)
-    # print(class_names)
-
+    
     # Extract start times
     start_times = re.findall(r'timeclass=\\"hc_starttime\\"datetime=\\"(.*?)\\"', html)
     # Extract end times
     end_times = re.findall(r'timeclass=\\"hc_endtime\\"datetime=\\"(.*?)\\"', html)
 
-    # print(start_times)
-    # print(end_times)
-
-    # # Extract staff names
+    # Extract staff names
     staff = re.findall(r'divclass=\\"bw-session__staff\\"style=\\"\\"\\u003e\\n(.*?)\\n', html)
-    # print(staff)
 
     data = []
 
     for i in range(len(class_names)):
-        classData = {}
-        classData["start"] = start_times[i]
-        classData["end"] = end_times[i]
-        classData["choreo"] = staff[i].split("|")[0]
-        classData["choreoInsta"] = staff[i].split("|")[0]
-        classData["name"] = class_names[i].replace("_", " ").title()
-        # print("Class Name:", class_names[i])
-        # print("Start Time:", start_times[i])
-        # print("End Time:", end_times[i])
-        # print("Staff:", staff[i])
-        # print("-----")
+        name = staff[i].split("|")[0]
+        insta = staff[i].split("|")[1]
+        
+        # Get or create choreographer object
+        choreographer = get_or_create_choreographer(name, insta)
+        
+        classData = {
+            "start": start_times[i],
+            "end": end_times[i],
+            "choreo": choreographer,
+            "name": class_names[i].replace("_", " ").title(),
+            "level": determine_level(class_names[i].replace("_", " ").title()),
+            "style": determine_style(class_names[i].replace("_", " ").title())
+        }
         data.append(classData)
 
     formatted_json = json.dumps(data, indent=4)

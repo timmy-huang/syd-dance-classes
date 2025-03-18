@@ -14,7 +14,12 @@
         {{ lesson.name }}
       </v-card-title>
       <v-card-subtitle>
-        {{ lesson.choreo.name }}
+        <router-link 
+          :to="`/choreographer/${lesson.choreo.id}`"
+          class="choreo-link"
+        >
+          {{ lesson.choreo.name }}
+        </router-link>
         <v-btn
           icon="mdi-instagram"
           size="small"
@@ -30,8 +35,13 @@
     </v-card-item>
 
     <v-card-text>
-      <div class="text-subtitle-1">
-        {{ formatDate(lesson.start) + " - " + formatDate(lesson.end) }}
+      <div class="d-flex-column align-center">
+        <div v-if="displayDay">
+          {{ lesson.start.toLocaleDateString('en-US', { weekday: 'long' }) }}
+        </div>
+        <div class="text-subtitle-1">
+          {{ formatDate(lesson.start) + " - " + formatDate(lesson.end) }}
+        </div>
       </div>
     </v-card-text>
     <v-card-actions>
@@ -62,7 +72,12 @@
         {{ lesson.name }}
       </v-card-title>
       <v-card-subtitle>
-        {{ lesson.choreo.name }}
+        <router-link 
+          :to="`/choreographer/${lesson.choreo.id}`"
+          class="choreo-link"
+        >
+          {{ lesson.choreo.name }}
+        </router-link>
         <v-btn
           icon="mdi-instagram"
           size="small"
@@ -78,8 +93,13 @@
       </v-card-subtitle>
       <v-card-text class="px-0 d-flex align-center justify-space-between">
         <studio-icon :studio="lesson.studio" />
-        <div class="text-subtitle-1">
-          {{ formatDate(lesson.start) + " - " + formatDate(lesson.end) }}
+        <div class="d-flex-column align-center">
+          <div v-if="displayDay">
+            {{ lesson.start.toLocaleDateString('en-US', { weekday: 'long' }) }}
+          </div>
+          <div class="text-subtitle-1">
+            {{ formatDate(lesson.start) + " - " + formatDate(lesson.end) }}
+          </div>
         </div>
       </v-card-text>
     </v-card-item>
@@ -103,7 +123,7 @@
       if (props.lesson.studio === "IMI") {
         return "https://imient.com.au/classes"
       }
-      if (props.lesson.studio === "XO") {
+      if (props.lesson.studio === "Crossover") {
         return "https://www.crossoverdance.com/timetable/"
       }
       if (props.lesson.studio === "IX") {
@@ -122,6 +142,10 @@
 
   const props = defineProps({
     lesson: Object as PropType<Lesson>,
+    displayDay: {
+      type: Boolean,
+      default: false
+    }
   })
 
   const formatDate = (date: Date) => {
@@ -140,5 +164,14 @@
 
   .lesson-card-item-mobile {
     width: 100%;
+  }
+
+  .choreo-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .choreo-link:hover {
+    text-decoration: underline;
   }
 </style>

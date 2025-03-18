@@ -1,5 +1,3 @@
-import requests
-import json
 from movement.movement import movement
 from imi.imi import imi
 from xo.xo import xo

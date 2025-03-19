@@ -61,7 +61,7 @@ const lessons: Ref<Lesson[]> = ref([])
 const choreographer = ref<Choreographer | null>(null)
 
 const goBack = () => {
-  router.go(-1)
+  router.push('/')
 }
 
 const displayData = computed(() => {

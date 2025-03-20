@@ -15,10 +15,7 @@
       </v-card-title>
       <v-card-subtitle>
         <router-link 
-          :to="{
-            name: 'choreographer-id',
-            params: { id: lesson.choreo.id }
-          }"
+          :to="`/choreographer/${lesson.choreo.id}`"
           class="choreo-link"
         >
           {{ lesson.choreo.name }}
@@ -76,10 +73,7 @@
       </v-card-title>
       <v-card-subtitle>
         <router-link 
-          :to="{
-            name: 'choreographer-id',
-            params: { id: lesson.choreo.id }
-          }"
+          :to="`/choreographer/${lesson.choreo.id}`"
           class="choreo-link"
         >
           {{ lesson.choreo.name }}

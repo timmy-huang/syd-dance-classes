@@ -27,7 +27,7 @@ export default defineConfig({
     Components(),
     ViteFonts({
       google: {
-        families: [ {
+        families: [{
           name: 'Roboto',
           styles: 'wght@100;300;400;500;700;900',
         }],
@@ -48,6 +48,16 @@ export default defineConfig({
       '.tsx',
       '.vue',
     ],
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
+      }
+    }
   },
   server: {
     port: 3000,

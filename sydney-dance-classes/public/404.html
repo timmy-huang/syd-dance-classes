@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    // Single Page Apps for GitHub Pages
+    // MIT License
+    // https://github.com/rafgraph/spa-github-pages
+    (function () {
+      // This script takes the current URL and converts the path and query
+      // string into just a query string, and then redirects the browser
+      // to the new URL with only a query string and hash fragment
+
+      // Get the current path excluding the base path
+      var basePath = '/syd-dance-classes/';
+      var path = window.location.pathname;
+      var pathWithoutBase = path.startsWith(basePath) ? path.substr(basePath.length) : path;
+
+      // If there's no path, just go to the index
+      if (pathWithoutBase === '404.html') {
+        pathWithoutBase = '';
+      }
+
+      var redirectUrl = basePath + '?p=' + encodeURIComponent(pathWithoutBase) +
+        window.location.search + window.location.hash;
+
+      window.location.replace(redirectUrl);
+    })();
+  </script>
+</head>
+
+<body>
+  Redirecting...
+</body>
+
+</html>

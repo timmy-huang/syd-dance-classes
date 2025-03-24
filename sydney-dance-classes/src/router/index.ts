@@ -5,11 +5,13 @@
  */
 
 // Composables
-import { createRouter, createWebHashHistory } from 'vue-router/auto'
+import { createRouter, createWebHistory } from 'vue-router/auto'
 
 const router = createRouter({
-  // Use hash history instead of web history for GitHub Pages compatibility
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
+  extendRoutes: (routes) => {
+    return routes
+  }
 })
 
 export default router

@@ -100,9 +100,4 @@ onMounted(fetchData)
 
 // Re-fetch data if the route param changes
 watch(choreographerId, fetchData)
-
-// Add this to ensure the route is properly registered
-defineOptions({
-  name: 'ChoreographerDetailPage',
-})
 </script>

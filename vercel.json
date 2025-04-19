@@ -4,15 +4,5 @@
       "source": "/syd-dance-classes/(.*)",
       "destination": "/syd-dance-classes/index.html"
     }
-  ],
-  "routes": [
-    {
-      "src": "/syd-dance-classes/(.*\\.(js|css|ico|png|jpg|svg|woff|woff2|ttf))",
-      "dest": "/syd-dance-classes/$1"
-    },
-    {
-      "src": "/syd-dance-classes/(.*)",
-      "dest": "/syd-dance-classes/index.html"
-    }
   ]
 }

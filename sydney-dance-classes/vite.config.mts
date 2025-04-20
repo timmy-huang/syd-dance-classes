@@ -13,7 +13,11 @@ import { fileURLToPath, URL } from 'node:url'
 export default defineConfig({
   base: "/syd-dance-classes/",
   plugins: [
-    VueRouter(),
+    VueRouter({
+      routesFolder: 'src/pages',
+      extensions: ['.vue'],
+      dts: './typed-router.d.ts',
+    }),
     Vue({
       template: { transformAssetUrls },
     }),
@@ -27,7 +31,7 @@ export default defineConfig({
     Components(),
     ViteFonts({
       google: {
-        families: [ {
+        families: [{
           name: 'Roboto',
           styles: 'wght@100;300;400;500;700;900',
         }],
@@ -51,5 +55,15 @@ export default defineConfig({
   },
   server: {
     port: 3000,
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vue-vendor': ['vue', 'vue-router', 'vuetify'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
   },
 })

@@ -51,6 +51,11 @@ import { useRoute, useRouter } from 'vue-router'
 import getData from '../../utils/data'
 import { Lesson, Choreographer } from '../../utils/types'
 
+// Add this to ensure the route is properly registered
+defineOptions({
+  name: 'ChoreographerDetailPage',
+})
+
 const route = useRoute()
 const router = useRouter()
 const choreographerId = computed(() => route.params.id as string)

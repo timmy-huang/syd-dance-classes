@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/syd-dance-classes/(.*)",
+      "destination": "/syd-dance-classes/index.html"
+    }
+  ]
+}

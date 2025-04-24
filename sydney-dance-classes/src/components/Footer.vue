@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer-content">
       <p class="made-by">Made by Timmy Huang</p>
-      <a href="mailto:timmyme2@gmail.com" class="email-link">timmyme2@gmail.com</a>
+      <a href="mailto:timmyme2@gmail.com" class="email-link">Suggestions or Concerns? Email me at timmyme2@gmail.com</a>
       <!-- <div class="social-links">
         <a href="#" class="social-link" aria-label="GitHub">
           <i class="fab fa-github"></i>

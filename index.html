@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Has Moved</title>
+  <meta http-equiv="refresh" content="5; URL=https://example.com" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      text-align: center;
+      padding: 2rem;
+      border-radius: 8px;
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    .loader {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 1rem auto;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Our Website Has Moved</h1>
+    <div class="loader"></div>
+    <p>We've moved to a new address! You'll be redirected to our new site in 5 seconds.</p>
+    <p>Please update your bookmarks to our new location.</p>
+    <p>If you are not redirected automatically, <a href="https://example.com">click here</a>.</p>
+  </div>
+
+  <script>
+    // JavaScript redirect as a fallback
+    setTimeout(function () {
+      window.location.href = "https://example.com";
+    }, 5000);
+  </script>
+</body>
+
+</html>

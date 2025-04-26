@@ -134,15 +134,13 @@ def endless(start_date, end_date, location=""):
   }
 
   # Make request and dump to file
-  with open("dump.html", "w", encoding="utf-8") as f:
-    response = requests.post(url, headers=headers, data=form_data)
-    f.write(response.text)
-    data = json.loads(response.text.split()[1])
-    sid = data[0][1][1]
-    print("SID: ", sid)
-    # Get gsessionid from header X-Http-Session-Id
-    gsessionid = response.headers["X-Http-Session-Id"]
-    print("gsessionid: ", gsessionid)
+  response = requests.post(url, headers=headers, data=form_data)
+  data = json.loads(response.text.split()[1])
+  sid = data[0][1][1]
+  print("SID: ", sid)
+  # Get gsessionid from header X-Http-Session-Id
+  gsessionid = response.headers["X-Http-Session-Id"]
+  print("gsessionid: ", gsessionid)
 
   # Get classes
   url = f"""https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid={gsessionid}&VER=8&database=projects%2Fendless-demo-lh8xa7%2Fdatabases%2F(default)&RID=rpc&SID={sid}&AID=0&CI=0&TYPE=xmlhttp&zx=apcursuep04w&t=1"""
@@ -163,14 +161,12 @@ def endless(start_date, end_date, location=""):
     "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36",
   }
 
-  # Make request and dump to file
-  with open("endless.html", "w", encoding="utf-8") as f:
-    response = requests.get(url, headers=headers)
-    print(response)
-    f.write(response.text)
-    
+  # Make request and parse response directly
+  response = requests.get(url, headers=headers)
+  print(response)
+  
   # Parse the response and extract class information
-  classes = parse_endless_response("endless.html")
+  classes = parse_endless_response_text(response.text)
   
   # Write formatted JSON to file
   formatted_json = json.dumps(classes, indent=4)
@@ -181,10 +177,7 @@ def endless(start_date, end_date, location=""):
   
   return classes
 
-def parse_endless_response(file_path):
-    with open(file_path, 'r', encoding="utf-8") as file:
-        content = file.read()
-    
+def parse_endless_response_text(content):
     # Skip the first line which is just a number
     if content.strip() and content.strip()[0].isdigit():
         content = content.split('\n', 1)[1] if '\n' in content else content

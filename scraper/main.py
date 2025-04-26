@@ -4,6 +4,7 @@ from xo.xo import xo
 from ix.ix import ix
 from pdc.pdc import pdc
 from duti.duti import duti
+from endless.endless import endless
 import datetime
 
 
@@ -32,4 +33,5 @@ xo(location)
 ix(location, previous_monday, upcoming_sunday)
 pdc(location, previous_monday, upcoming_sunday)
 duti(duti_callback, today, duti_id, location)
+endless(previous_monday, upcoming_sunday, location)
 print("Scraping completed")

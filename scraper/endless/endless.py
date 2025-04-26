@@ -1,7 +1,8 @@
 import requests
 import json
 import re
-#from helper import get_or_create_choreographer, determine_level, determine_style
+import datetime
+from helper import get_or_create_choreographer, determine_level, determine_style
 
 # Things we need
 # gsessionid
@@ -30,10 +31,15 @@ zx: suywsytmpiax
 t: 1
 """
 
-
-
-def endless(start_date, end_date):
+def endless(start_date, end_date, location=""):
   ver = "8"  
+  
+  # Convert date objects to ISO format strings if they aren't already
+  if not isinstance(start_date, str):
+    start_date = start_date.isoformat() + "T00:00:00.000000000Z"
+  
+  if not isinstance(end_date, str):
+    end_date = end_date.isoformat() + "T23:59:59.999999999Z"
   
 # TODO create form to send
   # Get SID and gsessionid and post form
@@ -54,8 +60,6 @@ def endless(start_date, end_date):
     "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36",
   }
   
-  #headers=X-Goog-Api-Client%3Agl-js%2F%20fire%2F10.11.1%0D%0AContent-Type%3Atext%2Fplain%0D%0AX-Firebase-GMPID%3A1%3A815212911105%3Aweb%3A9c0a28f5b222c0b50ffe00%0D%0A&count=1&ofs=0&req0___data__=%7B%22database%22%3A%22projects%2Fendless-demo-lh8xa7%2Fdatabases%2F(default)%22%2C%22addTarget%22%3A%7B%22query%22%3A%7B%22structuredQuery%22%3A%7B%22from%22%3A%5B%7B%22collectionId%22%3A%22lessons%22%7D%5D%2C%22where%22%3A%7B%22compositeFilter%22%3A%7B%22op%22%3A%22AND%22%2C%22filters%22%3A%5B%7B%22fieldFilter%22%3A%7B%22field%22%3A%7B%22fieldPath%22%3A%22is_user_based%22%7D%2C%22op%22%3A%22EQUAL%22%2C%22value%22%3A%7B%22booleanValue%22%3Afalse%7D%7D%7D%2C%7B%22fieldFilter%22%3A%7B%22field%22%3A%7B%22fieldPath%22%3A%22start_date_time%22%7D%2C%22op%22%3A%22GREATER_THAN%22%2C%22value%22%3A%7B%22timestampValue%22%3A%222025-04-24T14%3A00%3A00.000000000Z%22%7D%7D%7D%2C%7B%22fieldFilter%22%3A%7B%22field%22%3A%7B%22fieldPath%22%3A%22start_date_time%22%7D%2C%22op%22%3A%22LESS_THAN_OR_EQUAL%22%2C%22value%22%3A%7B%22timestampValue%22%3A%222025-04-25T13%3A59%3A00.000000000Z%22%7D%7D%7D%5D%7D%7D%2C%22orderBy%22%3A%5B%7B%22field%22%3A%7B%22fieldPath%22%3A%22start_date_time%22%7D%2C%22direction%22%3A%22ASCENDING%22%7D%2C%7B%22field%22%3A%7B%22fieldPath%22%3A%22__name__%22%7D%2C%22direction%22%3A%22ASCENDING%22%7D%5D%7D%2C%22parent%22%3A%22projects%2Fendless-demo-lh8xa7%2Fdatabases%2F(default)%2Fdocuments%22%7D%2C%22targetId%22%3A2%7D%7D
-
   # Add form data
   form_data = {
     "X-Goog-Api-Client": "gl-js/ fire/10.11.1",
@@ -129,9 +133,8 @@ def endless(start_date, end_date):
     )
   }
 
-
   # Make request and dump to file
-  with open("dump.html", "w") as f:
+  with open("dump.html", "w", encoding="utf-8") as f:
     response = requests.post(url, headers=headers, data=form_data)
     f.write(response.text)
     data = json.loads(response.text.split()[1])
@@ -161,12 +164,132 @@ def endless(start_date, end_date):
   }
 
   # Make request and dump to file
-  with open("endless.html", "w") as f:
+  with open("endless.html", "w", encoding="utf-8") as f:
     response = requests.get(url, headers=headers)
     print(response)
     f.write(response.text)
     
+  # Parse the response and extract class information
+  classes = parse_endless_response("endless.html")
+  
+  # Write formatted JSON to file
+  formatted_json = json.dumps(classes, indent=4)
+  with open(location + "endless.json", 'w', encoding="utf-8") as file:
+    file.write(formatted_json)
+  
+  print("Scraped Endless Dance Studio")
+  
+  return classes
+
+def parse_endless_response(file_path):
+    with open(file_path, 'r', encoding="utf-8") as file:
+        content = file.read()
+    
+    # Skip the first line which is just a number
+    if content.strip() and content.strip()[0].isdigit():
+        content = content.split('\n', 1)[1] if '\n' in content else content
+    
+    try:
+        # Find the first '[' which should be the start of our JSON array
+        json_start = content.find('[[')
+        if json_start == -1:
+            print("Could not find start of JSON array")
+            return []
+        
+        # Find the matching closing brackets for the outermost array
+        # This handles nested arrays properly
+        bracket_count = 0
+        json_end = -1
+        
+        for i in range(json_start, len(content)):
+            if content[i] == '[':
+                bracket_count += 1
+            elif content[i] == ']':
+                bracket_count -= 1
+                if bracket_count == 0:
+                    json_end = i + 1
+                    break
+        
+        if json_end == -1:
+            print("Could not find end of JSON array")
+            return []
+        
+        # Extract just the JSON part
+        json_content = content[json_start:json_end]
+        
+        # Parse the extracted JSON
+        data = json.loads(json_content)
+        
+        classes = []
+        
+        # Iterate through the response to find document changes
+        for item in data:
+            if len(item) > 1 and isinstance(item[1], list):
+                for doc_item in item[1]:
+                    if "documentChange" in doc_item:
+                        doc = doc_item["documentChange"]["document"]
+                        fields = doc["fields"]
+                        
+                        # Extract choreographer name from title
+                        title = fields["title"]["stringValue"]
+                        choreo_name = title.split('/')[0].strip() if '/' in title else "Unknown"
+                        
+                        # Remove name from title
+                        title = title.split('/')[1].strip() if '/' in title else "Unknown"
+                        
+                        # Create choreographer object
+                        choreographer = get_or_create_choreographer(choreo_name)
+                        
+                        # Extract start time
+                        start_time = fields["start_date_time"]["timestampValue"]
+                        start_datetime = datetime.datetime.fromisoformat(start_time.replace('Z', '+00:00'))
+                        
+                        # Calculate end time based on minutes
+                        minutes = int(fields["minutes"]["integerValue"])
+                        end_datetime = start_datetime + datetime.timedelta(minutes=minutes)
+                        
+                        # Extract location
+                        location_detail = fields["location"]["mapValue"]["fields"]["detail"]["stringValue"]
+                        location_title = fields["location"]["mapValue"]["fields"]["title"]["stringValue"]
+                        location_str = f"{location_title}, {location_detail}"
+                        
+                        # Extract level
+                        level_str = fields["level"]["mapValue"]["fields"]["title"]["stringValue"]
+                        level = [level_str.lower()]
+                        
+                        # Determine style
+                        style = determine_style(title)
+                        
+                        # Create class data
+                        class_data = {
+                            "serviceId": doc["name"].split('/')[-1],
+                            "start": start_datetime.isoformat(),
+                            "end": end_datetime.isoformat(),
+                            "choreo": choreographer,
+                            "name": title,
+                            "studio": "Endless",
+                            "location": location_str,
+                            "level": level,
+                            "style": style,
+                            "totalSpots": int(fields["max_ppl"]["integerValue"]),
+                            "openSpots": int(fields["max_ppl"]["integerValue"]) - int(fields["booked_ppl"]["integerValue"])
+                        }
+                        
+                        classes.append(class_data)
+        
+        return classes
+    
+    except json.JSONDecodeError as e:
+        print(f"Error parsing JSON: {e}")
+        # Save the problematic content for debugging
+        with open("debug_json.txt", "w", encoding="utf-8") as f:
+            f.write(content)
+        return []
+    except Exception as e:
+        print(f"Error processing data: {e}")
+        return []
 
 if __name__ == "__main__":
-  endless("2025-04-24T14:00:00.000000000Z", "2025-04-25T13:59:00.000000000Z")
+  classes = endless("2025-04-24T14:00:00.000000000Z", "2025-04-25T13:59:00.000000000Z", "data/")
+  print(f"Found {len(classes)} classes")
   

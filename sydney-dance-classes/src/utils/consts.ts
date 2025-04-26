@@ -6,7 +6,8 @@ const studios = [
   "Crossover",
   "IX",
   "PDC",
-  "DUTI"
+  "DUTI",
+  "Endless"
 ]
 
 const styles = [

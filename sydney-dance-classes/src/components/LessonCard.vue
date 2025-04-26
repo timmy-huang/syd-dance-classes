@@ -135,6 +135,9 @@
       if (props.lesson.studio === "DUTI") {
         return "https://www.dutistudios.com.au/timetable"
       }
+      if (props.lesson.studio === "Endless") {
+        return "https://www.endlessdance.com.au/classes"
+      }
     }
     console.log("Booking Link not found for ", props.lesson)
     return ""

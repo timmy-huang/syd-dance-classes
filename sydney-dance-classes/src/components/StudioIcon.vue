@@ -29,6 +29,10 @@
       v-if="studio === 'DUTI'"
       src="/public/duti.png"
     />
+    <v-img
+      v-if="studio === 'Endless'"
+      src="/public/endless.jpg"
+    />
   </div>
 </template>
   

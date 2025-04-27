@@ -1,7 +1,7 @@
 <template>
   <v-responsive
-    class="align-centerfill-height mx-auto"
-    max-width="900"
+    class="align-centerfill-height mx-auto px-10"
+    max-width="1000"
   >
     <div style="justify-content: center; align-items: center;" class="mt-10 d-flex flex-column">
       <div class="text-h2 my-7 text-center">
@@ -27,7 +27,7 @@
         @update="handleUpdateDay"
       />
     </div>
-    <div>
+    <div class="mt-5">
       <LessonCard
         v-for="(lesson, index) in displayData"
         :key="`${lesson.serviceId}-${index}`"

@@ -248,7 +248,7 @@ def parse_endless_response_text(content):
                         
                         # Extract level
                         level_str = fields["level"]["mapValue"]["fields"]["title"]["stringValue"]
-                        level = [level_str.lower()]
+                        level = determine_level(level_str)
                         
                         # Determine style
                         style = determine_style(title)

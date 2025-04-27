@@ -78,7 +78,14 @@ const displayData = computed(() => {
   const filtered = lessons.value
     .filter(lesson => {
       return lesson.choreo.id === choreographerId.value
+    }).filter(lesson => { // Ensure that lesson is within the current week
+      const today = new Date()
+      const startOfWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate())
+      const endOfWeek = new Date(startOfWeek)
+      endOfWeek.setDate(startOfWeek.getDate() + 7)
+      return lesson.start >= startOfWeek && lesson.start <= endOfWeek
     })
+
   console.log('Filtered Lessons count:', filtered.length)
   return filtered.sort((a, b) => a.start.getTime() - b.start.getTime())
 })

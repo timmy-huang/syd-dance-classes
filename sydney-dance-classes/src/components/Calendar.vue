@@ -1,21 +1,40 @@
 <template>
-  <div 
-    :class="$vuetify.display.smAndDown ? 'scrollable-mobile' : 'desktop-view'"
-    class="mt-5"
-  >
-    <v-btn 
-      variant="tonal" 
-      v-for="day in days" 
-      :key="day" 
-      :active="days.indexOf(day) === selectedDay"
-      :onClick="() => $emit('update', days.indexOf(day))"
-      style="height: auto; margin-right: 8px;"
+  <div class="d-flex align-center justify-content-center mt-5">
+    <v-btn
+      icon="mdi-chevron-left"
+      variant="text"
+      @click="$emit('previous-week')"
+      aria-label="Previous week"
+      density="comfortable"
+    ></v-btn>
+    
+    <div 
+      :class="$vuetify.display.smAndDown ? 'scrollable-mobile' : 'desktop-view'"
+      class="flex-grow-1"
     >
-      <div style="flex-direction: column;" class="pa-2">
-        <div>{{ mondayDate.getDate() + days.indexOf(day) }}/{{ mondayDate.getMonth() + 1 }}</div>
-        <div>{{ day }}</div>
-      </div>
-    </v-btn>
+      <v-btn 
+        variant="tonal" 
+        v-for="day in days" 
+        :key="day" 
+        :active="days.indexOf(day) === selectedDay"
+        @click="$emit('update', days.indexOf(day))"
+        style="height: auto; margin-right: 8px;"
+      >
+        <div style="flex-direction: column;" class="pa-2">
+          <div>{{ mondayDate.getDate() + days.indexOf(day) }}/{{ mondayDate.getMonth() + 1 }}</div>
+          <div>{{ day }}</div>
+        </div>
+      </v-btn>
+    </div>
+    
+    <v-btn
+      icon="mdi-chevron-right"
+      variant="text"
+      @click="$emit('next-week')"
+      aria-label="Next week"
+      density="comfortable"
+      style="margin-left: -8px;"
+    ></v-btn>
   </div>
 </template>
 
@@ -26,6 +45,8 @@
     selectedDay: Number,
     mondayDate: Date
   });
+
+  defineEmits(['update', 'previous-week', 'next-week']);
 </script>
 
 <style>

@@ -21,7 +21,7 @@
         style="height: auto; margin-right: 8px;"
       >
         <div style="flex-direction: column;" class="pa-2">
-          <div>{{ mondayDate.getDate() + days.indexOf(day) }}/{{ mondayDate.getMonth() + 1 }}</div>
+          <div>{{ new Date(mondayDate.getTime() + days.indexOf(day) * 24 * 60 * 60 * 1000).getDate() }}/{{ new Date(mondayDate.getTime() + days.indexOf(day) * 24 * 60 * 60 * 1000).getMonth() + 1 }}</div>
           <div>{{ day }}</div>
         </div>
       </v-btn>
@@ -40,13 +40,16 @@
 
 <script lang="ts" setup>
   import { useDisplay } from 'vuetify'
-  const days: string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  import { computed } from 'vue'
+  
   const props = defineProps({
     selectedDay: Number,
     mondayDate: Date
   });
 
-  defineEmits(['update', 'previous-week', 'next-week']);
+  const days = computed(() => {
+    return ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  })
 </script>
 
 <style>

@@ -1,31 +1,55 @@
 <template>
-  <div 
-    :class="$vuetify.display.smAndDown ? 'scrollable-mobile' : 'desktop-view'"
-    class="mt-5"
-  >
-    <v-btn 
-      variant="tonal" 
-      v-for="day in days" 
-      :key="day" 
-      :active="days.indexOf(day) === selectedDay"
-      :onClick="() => $emit('update', days.indexOf(day))"
-      style="height: auto; margin-right: 8px;"
+  <div class="d-flex align-center justify-content-center mt-5">
+    <v-btn
+      icon="mdi-chevron-left"
+      variant="text"
+      @click="$emit('previous-week')"
+      aria-label="Previous week"
+      density="comfortable"
+    ></v-btn>
+    
+    <div 
+      :class="$vuetify.display.smAndDown ? 'scrollable-mobile' : 'desktop-view'"
+      class="flex-grow-1"
     >
-      <div style="flex-direction: column;" class="pa-2">
-        <div>{{ mondayDate.getDate() + days.indexOf(day) }}/{{ mondayDate.getMonth() + 1 }}</div>
-        <div>{{ day }}</div>
-      </div>
-    </v-btn>
+      <v-btn 
+        variant="tonal" 
+        v-for="day in days" 
+        :key="day" 
+        :active="days.indexOf(day) === selectedDay"
+        @click="$emit('update', days.indexOf(day))"
+        style="height: auto; margin-right: 8px;"
+      >
+        <div style="flex-direction: column;" class="pa-2">
+          <div>{{ new Date(mondayDate.getTime() + days.indexOf(day) * 24 * 60 * 60 * 1000).getDate() }}/{{ new Date(mondayDate.getTime() + days.indexOf(day) * 24 * 60 * 60 * 1000).getMonth() + 1 }}</div>
+          <div>{{ day }}</div>
+        </div>
+      </v-btn>
+    </div>
+    
+    <v-btn
+      icon="mdi-chevron-right"
+      variant="text"
+      @click="$emit('next-week')"
+      aria-label="Next week"
+      density="comfortable"
+      style="margin-left: -8px;"
+    ></v-btn>
   </div>
 </template>
 
 <script lang="ts" setup>
   import { useDisplay } from 'vuetify'
-  const days: string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  import { computed } from 'vue'
+  
   const props = defineProps({
     selectedDay: Number,
     mondayDate: Date
   });
+
+  const days = computed(() => {
+    return ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  })
 </script>
 
 <style>

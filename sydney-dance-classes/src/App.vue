@@ -3,8 +3,8 @@
   <v-app>
     <v-main>
       <router-view />
-      <Footer />
     </v-main>
+    <Footer />
   </v-app>
 </template>
 
@@ -12,3 +12,11 @@
   import { Analytics } from '@vercel/analytics/vue';
 
 </script>
+
+<style>
+  .v-application {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+</style>

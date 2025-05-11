@@ -1,7 +1,7 @@
 <template>
   <v-responsive
-    class="align-centerfill-height mx-auto px-10"
-    max-width="1000"
+    class="align-centerfill-height mx-auto"
+    max-width="975"
   >
     <div style="justify-content: center; align-items: center;" class="mt-10 d-flex flex-column">
       <div class="text-h2 my-7 text-center">
@@ -22,9 +22,9 @@
         @update:selectedStyles="updateSelectedStyles"
       />
       <Calendar 
-        :selectedDay="day"
+        :selectedDate="selectedDate"
         :mondayDate="mondayDate"
-        @update="handleUpdateDay"
+        @update="handleUpdateDate"
       />
     </div>
     <div class="mt-5">
@@ -32,6 +32,10 @@
         v-for="(lesson, index) in displayData"
         :key="`${lesson.serviceId}-${index}`"
         :lesson="lesson"
+      />
+      <NoClassesFound 
+        v-if="displayData.length === 0"
+        :message="getNoClassesMessage()"
       />
     </div>
     
@@ -60,20 +64,10 @@
   // Handle the selected day
   const today = ref(new Date())
 
-  // If Sunday, show from Monday. In future it should be, if day is empty, show next day
-  // Also in the future should show next week
-  if (today.value.getDay() === 0) { 
-    today.value.setDate(today.value.getDate() + 1);
-  }
-  const day = ref((today.value.getDay()+ 6) % 7);// 0 = Monday
+  const selectedDate = ref(today.value);
 
-  const mondayDate = new Date(new Date(today.value.valueOf()).setDate(today.value.getDate() - day.value));
-
-  const selectedDate = computed(() => {
-    var date = new Date(mondayDate.valueOf());
-    date.setDate(date.getDate() + day.value);
-    return date;
-  });
+  // Get the monday date
+  const mondayDate = new Date(new Date(today.value.valueOf()).setDate(today.value.getDate() - (today.value.getDay() + 6) % 7));
 
   const displayData = computed(() => {
     console.log('displayData')
@@ -105,8 +99,8 @@
     return temp
   })
 
-  const handleUpdateDay = (newDay: number) => {
-    day.value = newDay
+  const handleUpdateDate = (newDate: Date) => {
+    selectedDate.value = newDate
   }
 
   const updateSelectedStudios = (newStudios: string[]) => {
@@ -132,6 +126,26 @@
   const toggleAdv = () => {
     adv.value = !adv.value
     localStorage.setItem('adv', JSON.stringify(adv.value))
+  }
+
+  const getNoClassesMessage = () => {
+    if (!lessons.value || lessons.value.length === 0) {
+      return 'Loading classes data...'
+    }
+    
+    // Check if any filters are applied
+    const hasFilters = search.value || 
+                      !beg.value || 
+                      !inte.value || 
+                      !adv.value || 
+                      selectedStudios.value.length < studios.length ||
+                      selectedStyles.value.length < styles.length;
+                      
+    if (hasFilters) {
+      return 'No classes match your current filters. Try adjusting your search criteria.'
+    }
+    
+    return `No classes found for ${selectedDate.value.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}.`
   }
 
   onMounted(async () => {

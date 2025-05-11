@@ -3,9 +3,11 @@
     <v-btn
       icon="mdi-chevron-left"
       variant="text"
-      @click="$emit('previous-week')"
+      @click="handleLeftClick"
       aria-label="Previous week"
       density="comfortable"
+      :color="disablePrevious ? 'grey' : undefined"
+      :disabled="disablePrevious"
     ></v-btn>
     
     <div 
@@ -14,15 +16,15 @@
     >
       <v-btn 
         variant="tonal" 
-        v-for="day in days" 
-        :key="day" 
-        :active="days.indexOf(day) === selectedDay"
-        @click="$emit('update', days.indexOf(day))"
-        style="height: auto; margin-right: 8px;"
+        v-for="date in datesForWeek" 
+        :key="date.getTime()" 
+        :active="date.getTime() === selectedDate!.getTime()"
+        @click="$emit('update', date)"
+        style="height: auto; margin-right: 8px; width: 122px;"
       >
         <div style="flex-direction: column;" class="pa-2">
-          <div>{{ new Date(mondayDate.getTime() + days.indexOf(day) * 24 * 60 * 60 * 1000).getDate() }}/{{ new Date(mondayDate.getTime() + days.indexOf(day) * 24 * 60 * 60 * 1000).getMonth() + 1 }}</div>
-          <div>{{ day }}</div>
+          <div>{{ date.getDate() }}/{{ date.getMonth() }}</div>
+          <div>{{ days[date.getDay()] }}</div>
         </div>
       </v-btn>
     </div>
@@ -30,26 +32,68 @@
     <v-btn
       icon="mdi-chevron-right"
       variant="text"
-      @click="$emit('next-week')"
+      @click="handleRightClick"
       aria-label="Next week"
       density="comfortable"
       style="margin-left: -8px;"
+      :color="disableNext ? 'grey' : undefined"
+      :disabled="disableNext"
     ></v-btn>
   </div>
 </template>
 
 <script lang="ts" setup>
   import { useDisplay } from 'vuetify'
-  import { computed } from 'vue'
-  
+  import { computed, ref } from 'vue'
+
+  const emit = defineEmits(['update'])
+
   const props = defineProps({
-    selectedDay: Number,
+    selectedDate: Date,
     mondayDate: Date
   });
 
-  const days = computed(() => {
-    return ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  const viewingCurrentWeek = ref(true);
+
+  const disablePrevious = computed(() => {
+    return viewingCurrentWeek.value;
   })
+
+  const disableNext = computed(() => {
+    return !viewingCurrentWeek.value;
+  })
+
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
+  const datesForWeek = computed(() => {
+    // if viewing current week, return the dates for the current week
+    const arr : Date[] = [];
+    if (viewingCurrentWeek.value) {
+      for (let i = 0; i < 7; i++) {
+        if (props.mondayDate) {
+          arr.push(new Date(props.mondayDate.getTime() + i * 24 * 60 * 60 * 1000));
+        }
+      }
+    } else {
+      for (let i = 0; i < 7; i++) {
+        if (props.mondayDate) {
+          arr.push(new Date(props.mondayDate.getTime() + (i + 7) * 24 * 60 * 60 * 1000));
+        }
+      }
+    }
+    return arr;
+  })
+
+  const handleRightClick = () => {
+    viewingCurrentWeek.value = false;
+    emit('update', datesForWeek.value[0]);
+  }
+
+  const handleLeftClick = () => {
+    viewingCurrentWeek.value = true;
+    emit('update', datesForWeek.value[0]);
+  }
+
 </script>
 
 <style>

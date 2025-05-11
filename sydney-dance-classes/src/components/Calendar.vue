@@ -6,6 +6,8 @@
       @click="$emit('previous-week')"
       aria-label="Previous week"
       density="comfortable"
+      :color="disablePrevious ? 'grey' : undefined"
+      :disabled="disablePrevious"
     ></v-btn>
     
     <div 
@@ -34,6 +36,8 @@
       aria-label="Next week"
       density="comfortable"
       style="margin-left: -8px;"
+      :color="disableNext ? 'grey' : undefined"
+      :disabled="disableNext"
     ></v-btn>
   </div>
 </template>
@@ -46,6 +50,9 @@
     selectedDay: Number,
     mondayDate: Date
   });
+
+  const disablePrevious = true;
+  const disableNext = true;
 
   const days = computed(() => {
     return ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']

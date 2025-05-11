@@ -25,7 +25,7 @@ duti_id = "1740274810346"
 today = datetime.date.today()
 today_weekday = today.weekday()
 previous_monday = today - datetime.timedelta(days=today_weekday)
-upcoming_sunday = today + datetime.timedelta(days=(7 + 6 - today_weekday))
+upcoming_sunday = today + datetime.timedelta(days=(7 + 6 - today_weekday + 1)) # +1 so that it includes the upcoming sunday
 
 movement(location, previous_monday, upcoming_sunday)
 imi(imi_callback, today, imi_id, location)

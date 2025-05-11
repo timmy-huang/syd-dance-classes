@@ -33,6 +33,10 @@
         :key="`${lesson.serviceId}-${index}`"
         :lesson="lesson"
       />
+      <NoClassesFound 
+        v-if="displayData.length === 0"
+        :message="getNoClassesMessage()"
+      />
     </div>
     
   </v-responsive>
@@ -122,6 +126,26 @@
   const toggleAdv = () => {
     adv.value = !adv.value
     localStorage.setItem('adv', JSON.stringify(adv.value))
+  }
+
+  const getNoClassesMessage = () => {
+    if (!lessons.value || lessons.value.length === 0) {
+      return 'Loading classes data...'
+    }
+    
+    // Check if any filters are applied
+    const hasFilters = search.value || 
+                      !beg.value || 
+                      !inte.value || 
+                      !adv.value || 
+                      selectedStudios.value.length < studios.length ||
+                      selectedStyles.value.length < styles.length;
+                      
+    if (hasFilters) {
+      return 'No classes match your current filters. Try adjusting your search criteria.'
+    }
+    
+    return `No classes found for ${selectedDate.value.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}.`
   }
 
   onMounted(async () => {

@@ -3,7 +3,7 @@
     <v-btn
       icon="mdi-chevron-left"
       variant="text"
-      @click="$emit('previous-week')"
+      @click="handleLeftClick"
       aria-label="Previous week"
       density="comfortable"
       :color="disablePrevious ? 'grey' : undefined"
@@ -18,9 +18,9 @@
         variant="tonal" 
         v-for="date in datesForWeek" 
         :key="date.getTime()" 
-        :active="date === selectedDate"
+        :active="date.getTime() === selectedDate!.getTime()"
         @click="$emit('update', date)"
-        style="height: auto; margin-right: 8px;"
+        style="height: auto; margin-right: 8px; width: 122px;"
       >
         <div style="flex-direction: column;" class="pa-2">
           <div>{{ date.getDate() }}/{{ date.getMonth() }}</div>
@@ -32,7 +32,7 @@
     <v-btn
       icon="mdi-chevron-right"
       variant="text"
-      @click="$emit('next-week')"
+      @click="handleRightClick"
       aria-label="Next week"
       density="comfortable"
       style="margin-left: -8px;"
@@ -44,24 +44,31 @@
 
 <script lang="ts" setup>
   import { useDisplay } from 'vuetify'
-  import { computed } from 'vue'
-  
+  import { computed, ref } from 'vue'
+
+  const emit = defineEmits(['update'])
+
   const props = defineProps({
     selectedDate: Date,
     mondayDate: Date
   });
 
-  let viewingCurrentWeek = true;
+  const viewingCurrentWeek = ref(true);
 
-  const disablePrevious = true;
-  const disableNext = true;
+  const disablePrevious = computed(() => {
+    return viewingCurrentWeek.value;
+  })
+
+  const disableNext = computed(() => {
+    return !viewingCurrentWeek.value;
+  })
 
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
   const datesForWeek = computed(() => {
     // if viewing current week, return the dates for the current week
     const arr : Date[] = [];
-    if (viewingCurrentWeek) {
+    if (viewingCurrentWeek.value) {
       for (let i = 0; i < 7; i++) {
         if (props.mondayDate) {
           arr.push(new Date(props.mondayDate.getTime() + i * 24 * 60 * 60 * 1000));
@@ -76,6 +83,16 @@
     }
     return arr;
   })
+
+  const handleRightClick = () => {
+    viewingCurrentWeek.value = false;
+    emit('update', datesForWeek.value[0]);
+  }
+
+  const handleLeftClick = () => {
+    viewingCurrentWeek.value = true;
+    emit('update', datesForWeek.value[0]);
+  }
 
 </script>
 

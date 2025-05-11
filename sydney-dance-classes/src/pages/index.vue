@@ -1,7 +1,7 @@
 <template>
   <v-responsive
     class="align-centerfill-height mx-auto"
-    max-width="950"
+    max-width="975"
   >
     <div style="justify-content: center; align-items: center;" class="mt-10 d-flex flex-column">
       <div class="text-h2 my-7 text-center">
@@ -59,12 +59,6 @@
 
   // Handle the selected day
   const today = ref(new Date())
-
-  // If Sunday, show from Monday. In future it should be, if day is empty, show next day
-  // Also in the future should show next week
-  if (today.value.getDay() === 0) { 
-    today.value.setDate(today.value.getDate() + 1);
-  }
 
   const selectedDate = ref(today.value);
 

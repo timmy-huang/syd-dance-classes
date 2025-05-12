@@ -1,6 +1,7 @@
 <template>
-  <div class="d-flex align-center justify-content-center mt-5">
+  <div :class="$vuetify.display.smAndDown ? 'scrollable-mobile' : 'desktop-view'" class="d-flex align-center justify-content-center mt-5">
     <v-btn
+      v-if="!$vuetify.display.smAndDown"
       icon="mdi-chevron-left"
       variant="text"
       @click="handleLeftClick"
@@ -9,27 +10,22 @@
       :color="disablePrevious ? 'grey' : undefined"
       :disabled="disablePrevious"
     ></v-btn>
-    
-    <div 
-      :class="$vuetify.display.smAndDown ? 'scrollable-mobile' : 'desktop-view'"
-      class="flex-grow-1"
+    <v-btn 
+      variant="tonal" 
+      v-for="date in datesForWeek" 
+      :key="date.getTime()" 
+      :active="date.getTime() === selectedDate!.getTime()"
+      @click="$emit('update', date)"
+      style="height: auto; margin-right: 8px; width: 122px;"
     >
-      <v-btn 
-        variant="tonal" 
-        v-for="date in datesForWeek" 
-        :key="date.getTime()" 
-        :active="date.getTime() === selectedDate!.getTime()"
-        @click="$emit('update', date)"
-        style="height: auto; margin-right: 8px; width: 122px;"
-      >
-        <div style="flex-direction: column;" class="pa-2">
-          <div>{{ date.getDate() }}/{{ date.getMonth() }}</div>
-          <div>{{ days[date.getDay()] }}</div>
-        </div>
-      </v-btn>
-    </div>
+      <div style="flex-direction: column;" class="pa-2">
+        <div>{{ date.getDate() }}/{{ date.getMonth() }}</div>
+        <div>{{ days[date.getDay()] }}</div>
+      </div>
+    </v-btn>
     
     <v-btn
+      v-if="!$vuetify.display.smAndDown"
       icon="mdi-chevron-right"
       variant="text"
       @click="handleRightClick"
@@ -68,20 +64,31 @@
   const datesForWeek = computed(() => {
     // if viewing current week, return the dates for the current week
     const arr : Date[] = [];
-    if (viewingCurrentWeek.value) {
-      for (let i = 0; i < 7; i++) {
+    // If mobile return both current and next week
+    const { smAndDown } = useDisplay();
+    if (smAndDown.value) {
+      for (let i = 0; i < 14; i++) {
         if (props.mondayDate) {
           arr.push(new Date(props.mondayDate.getTime() + i * 24 * 60 * 60 * 1000));
-        }
+        } 
       }
     } else {
-      for (let i = 0; i < 7; i++) {
-        if (props.mondayDate) {
-          arr.push(new Date(props.mondayDate.getTime() + (i + 7) * 24 * 60 * 60 * 1000));
+      if (viewingCurrentWeek.value) {
+        for (let i = 0; i < 7; i++) {
+          if (props.mondayDate) {
+            arr.push(new Date(props.mondayDate.getTime() + i * 24 * 60 * 60 * 1000));
+          }
+        }
+      } else {
+        for (let i = 0; i < 7; i++) {
+          if (props.mondayDate) {
+            arr.push(new Date(props.mondayDate.getTime() + (i + 7) * 24 * 60 * 60 * 1000));
+          }
         }
       }
     }
     return arr;
+  
   })
 
   const handleRightClick = () => {

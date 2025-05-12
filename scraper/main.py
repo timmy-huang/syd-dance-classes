@@ -5,6 +5,7 @@ from ix.ix import ix
 from pdc.pdc import pdc
 from duti.duti import duti
 from endless.endless import endless
+from kcc.kcc import kcc
 import datetime
 
 
@@ -22,16 +23,20 @@ imi_id = "1715325689641"
 duti_callback = "jQuery364011093063789286006_1740274810344"
 duti_id = "1740274810346"
 
+kcc_callback = "jQuery36407072146344659085_1747063164353"
+kcc_id = "1747063164355"
+
 today = datetime.date.today()
 today_weekday = today.weekday()
 previous_monday = today - datetime.timedelta(days=today_weekday)
 upcoming_sunday = today + datetime.timedelta(days=(7 + 6 - today_weekday + 1)) # +1 so that it includes the upcoming sunday
 
-movement(location, previous_monday, upcoming_sunday)
-imi(imi_callback, today, imi_id, location)
-xo(location)
-ix(location, previous_monday, upcoming_sunday)
-pdc(location, previous_monday, upcoming_sunday)
-duti(duti_callback, today, duti_id, location)
-endless(previous_monday, upcoming_sunday, location)
+# movement(location, previous_monday, upcoming_sunday)
+# imi(imi_callback, today, imi_id, location)
+# xo(location)
+# ix(location, previous_monday, upcoming_sunday)
+# pdc(location, previous_monday, upcoming_sunday)
+# duti(duti_callback, today, duti_id, location)
+# endless(previous_monday, upcoming_sunday, location)
+kcc(kcc_callback, today, kcc_id, location)
 print("Scraping completed")

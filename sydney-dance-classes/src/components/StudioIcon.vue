@@ -8,11 +8,7 @@
       v-if="studio === 'Movement Nation Parramatta'"
       src="/public/movement_nation_parramatta.webp"
     />
-    <v-img
-      v-if="studio === 'IMI'"
-      class="imi pa-2"
-      src="/public/imi.png"
-    />
+    
     <v-img
       v-if="studio === 'Crossover'"
       src="/public/xo.jpg"
@@ -33,6 +29,16 @@
       v-if="studio === 'Endless'"
       src="/public/endless.jpg"
     />
+    <div v-if="studio === 'KCC' || studio === 'IMI'" class="pa-2 transparent-container">
+      <v-img
+        v-if="studio === 'KCC'"
+        src="/public/kcc.webp"
+      />
+      <v-img
+        v-if="studio === 'IMI'"
+        src="/public/imi.png"
+      />
+    </div>
   </div>
 </template>
   
@@ -58,7 +64,9 @@
     flex-grow: 0;
   }
 
-  .imi {
+  .transparent-container {
+    width: 100%;
+    height: 100%;
     background-color: black;
   }
 

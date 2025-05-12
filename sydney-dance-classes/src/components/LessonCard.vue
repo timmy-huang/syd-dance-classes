@@ -138,6 +138,9 @@
       if (props.lesson.studio === "Endless") {
         return "https://www.endlessdance.com.au/classes"
       }
+      if (props.lesson.studio === "KCC") {
+        return "https://kccstudio.com.au/pages/classes"
+      }
     }
     console.log("Booking Link not found for ", props.lesson)
     return ""

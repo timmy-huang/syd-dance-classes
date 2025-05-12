@@ -7,7 +7,8 @@ const studios = [
   "IX",
   "PDC",
   "DUTI",
-  "Endless"
+  "Endless",
+  "KCC"
 ]
 
 const styles = [
@@ -15,6 +16,7 @@ const styles = [
   "Contemporary",
   "Choreography",
   "Kpop",
+  "Heels",
   "Other"
 ]
 

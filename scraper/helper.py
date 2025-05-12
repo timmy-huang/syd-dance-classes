@@ -107,4 +107,6 @@ def determine_style(name: str) -> list:
         return ['Kpop']
     elif 'choreo' in name:
         return ['Choreography']
+    elif 'heel' in name:
+        return ['Heels']
     return ['Other']

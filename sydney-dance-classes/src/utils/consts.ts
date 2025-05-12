@@ -16,6 +16,7 @@ const styles = [
   "Contemporary",
   "Choreography",
   "Kpop",
+  "Heels",
   "Other"
 ]
 

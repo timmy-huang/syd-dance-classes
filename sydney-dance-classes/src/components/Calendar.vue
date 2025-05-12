@@ -10,20 +10,23 @@
       :color="disablePrevious ? 'grey' : undefined"
       :disabled="disablePrevious"
     ></v-btn>
-    <v-btn 
-      variant="tonal" 
-      v-for="date in datesForWeek" 
-      :key="date.getTime()" 
-      :active="date.getTime() === selectedDate!.getTime()"
-      @click="$emit('update', date)"
-      style="height: auto; margin-right: 8px; width: 122px;"
-    >
-      <div style="flex-direction: column;" class="pa-2">
-        <div>{{ date.getDate() }}/{{ date.getMonth() }}</div>
-        <div>{{ days[date.getDay()] }}</div>
-      </div>
-    </v-btn>
-    
+
+    <div>
+        <v-btn 
+          variant="tonal" 
+          v-for="date in datesForWeek" 
+          :key="date.getTime()" 
+          :active="date.getTime() === selectedDate!.getTime()"
+          @click="$emit('update', date)"
+        style="height: auto; margin-right: 8px; width: 122px;"
+      >
+        <div style="flex-direction: column;" class="pa-2">
+          <div>{{ date.getDate() }}/{{ date.getMonth() }}</div>
+          <div>{{ days[date.getDay()] }}</div>
+        </div>
+      </v-btn>
+    </div>
+
     <v-btn
       v-if="!$vuetify.display.smAndDown"
       icon="mdi-chevron-right"
@@ -43,6 +46,7 @@
   import { computed, ref } from 'vue'
 
   const emit = defineEmits(['update'])
+  const display = useDisplay()
 
   const props = defineProps({
     selectedDate: Date,
@@ -65,8 +69,7 @@
     // if viewing current week, return the dates for the current week
     const arr : Date[] = [];
     // If mobile return both current and next week
-    const { smAndDown } = useDisplay();
-    if (smAndDown.value) {
+    if (display.smAndDown.value) {
       for (let i = 0; i < 14; i++) {
         if (props.mondayDate) {
           arr.push(new Date(props.mondayDate.getTime() + i * 24 * 60 * 60 * 1000));

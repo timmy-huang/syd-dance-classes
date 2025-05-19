@@ -1,8 +1,8 @@
-name: Weekly Web Scrape and Deploy
+name: Daily Web Scrape and Deploy
 
 on:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions:

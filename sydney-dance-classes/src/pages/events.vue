@@ -17,34 +17,7 @@
         sm="6"
         md="4"
       >
-        <v-card class="mx-auto event-card">
-          <v-img
-            :src="event.image"
-            height="200px"
-            cover
-          ></v-img>
-
-          <v-card-title>{{ event.title }}</v-card-title>
-
-          <v-card-subtitle>
-            {{ formatDate(event.date) }}
-          </v-card-subtitle>
-
-          <v-card-text>
-            {{ event.description }}
-          </v-card-text>
-
-          <v-card-actions>
-            <v-btn
-              variant="outlined"
-              :href="event.link"
-              target="_blank"
-              rel="noopener"
-            >
-              Learn More
-            </v-btn>
-          </v-card-actions>
-        </v-card>
+        <EventCard :event="event" />
       </v-col>
     </v-row>
 
@@ -58,11 +31,14 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
 import NoClassesFound from '../components/NoClassesFound.vue'
+import EventCard from '../components/EventCard.vue'
+import { fetchSheetData } from '../utils/googleSheets'
 
 interface Event {
   id: string
   title: string
   date: Date
+  location: string
   description: string
   image: string
   link: string
@@ -81,20 +57,38 @@ const formatDate = (date: Date) => {
 
 const fetchEvents = async () => {
   try {
-    // Replace with your Google Sheets API endpoint
-    const response = await fetch('YOUR_GOOGLE_SHEETS_API_ENDPOINT')
-    const data = await response.json()
+    const SPREADSHEET_ID = '13LyToNV0c_1UR_nJQfC2ShdYuSDJeddIvMVdO9JQZVg'
+    const SHEET_NAME = 'Events' // Update this to match your sheet name
+
+    const rows = await fetchSheetData(SPREADSHEET_ID, SHEET_NAME)
+    console.log('Raw data:', rows)
     
-    events.value = data.map((event: any) => ({
-      id: event.id,
-      title: event.title,
-      date: new Date(event.date),
-      description: event.description,
-      image: event.image,
-      link: event.link
-    }))
+    if (!rows || rows.length < 1) {
+      console.warn('No events found or invalid data format')
+      events.value = []
+      return
+    }
+
+    const now = new Date()
+    
+    // Map the data to events and filter out past events
+    events.value = rows
+      .map((row: any[]): Event => ({
+        id: String(row[0] || ''), // Date
+        title: String(row[1] || ''), // Title
+        date: row[2] instanceof Date ? row[2] : new Date(row[2] || ''), // Event Date
+        location: String(row[3] || ''), // Location
+        description: String(row[4] || ''), // Description
+        image: String(row[5] || ''), // Image URL
+        link: String(row[6] || '') // Event Link
+      }))
+      .filter(event => event.date >= now)
+      .sort((a, b) => a.date.getTime() - b.date.getTime()) // Sort by date ascending
+    
+    console.log('Processed events:', events.value)
   } catch (error) {
     console.error('Error fetching events:', error)
+    events.value = [] // Clear events on error
   }
 }
 

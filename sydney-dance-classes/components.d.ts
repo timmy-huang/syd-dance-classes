@@ -8,7 +8,9 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Calendar: typeof import('./src/components/Calendar.vue')['default']
+    Classes: typeof import('./src/components/Classes.vue')['default']
     EventCard: typeof import('./src/components/EventCard.vue')['default']
+    Events: typeof import('./src/components/Events.vue')['default']
     FilterBox: typeof import('./src/components/FilterBox.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     LessonCard: typeof import('./src/components/LessonCard.vue')['default']

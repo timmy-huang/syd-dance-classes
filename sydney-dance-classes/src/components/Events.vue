@@ -1,14 +1,5 @@
 <template>
-  <v-responsive
-    class="mx-auto"
-    max-width="900"
-  >
-    <div style="justify-content: center; align-items: center;" class="mt-10 d-flex flex-column">
-      <div class="text-h2 my-7 text-center">
-        Events
-      </div>
-    </div>
-
+  <div class="d-flex flex-column align-center">
     <v-row>
       <v-col
         v-for="event in events"
@@ -17,23 +8,38 @@
         sm="6"
         md="4"
       >
-        <EventCard :event="event" />
+        <div class="pa-2">
+          <EventCard :event="event" />
+        </div>
       </v-col>
     </v-row>
-
+    
+    <!-- Big Plus Button -->
+    <v-btn
+      class="mt-6 mb-4"
+      size="x-large"
+      color="primary"
+      icon
+      elevation="4"
+      @click="handleAddEvent"
+    >
+      <v-icon size="48">mdi-plus</v-icon>
+    </v-btn>
+    
     <NoClassesFound 
       v-if="events.length === 0"
       message="No upcoming events at this time."
     />
-  </v-responsive>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
-import NoClassesFound from '../components/NoClassesFound.vue'
-import EventCard from '../components/EventCard.vue'
+import EventCard from './EventCard.vue'
+import NoClassesFound from './NoClassesFound.vue'
 import { fetchSheetData } from '../utils/googleSheets'
 
+// Events data and state
 interface Event {
   id: string
   title: string
@@ -46,19 +52,10 @@ interface Event {
 
 const events = ref<Event[]>([])
 
-const formatDate = (date: Date) => {
-  return new Date(date).toLocaleDateString('en-US', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  })
-}
-
 const fetchEvents = async () => {
   try {
     const SPREADSHEET_ID = '13LyToNV0c_1UR_nJQfC2ShdYuSDJeddIvMVdO9JQZVg'
-    const SHEET_NAME = 'Events' // Update this to match your sheet name
+    const SHEET_NAME = 'Events'
 
     const rows = await fetchSheetData(SPREADSHEET_ID, SHEET_NAME)
     console.log('Raw data:', rows)
@@ -92,20 +89,19 @@ const fetchEvents = async () => {
   }
 }
 
+const handleAddEvent = () => {
+  console.log('Add event button clicked')
+  // Open the Google Form in a new tab
+  window.open('https://docs.google.com/forms/d/e/1FAIpQLSdnd9xh8RE12faM62DgWTADUPXkyBa-gLnWkIW2gTfIsedbrg/viewform', '_blank')
+}
+
+// Fetch events when component is mounted
 onMounted(() => {
   fetchEvents()
 })
-</script>
 
-<style scoped>
-.event-card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.v-card-actions {
-  margin-top: auto;
-  padding: 16px;
-}
-</style>
+// Expose fetchEvents for parent component to call
+defineExpose({
+  fetchEvents
+})
+</script> 

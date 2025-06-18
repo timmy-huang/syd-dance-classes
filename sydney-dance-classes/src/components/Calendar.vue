@@ -11,7 +11,7 @@
       :disabled="disablePrevious"
     ></v-btn>
 
-    <div>
+    <div class="calendar-container">
         <v-btn 
           variant="tonal" 
           v-for="date in datesForWeek" 
@@ -123,5 +123,23 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+.calendar-container {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.calendar-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+@media (max-width: 600px) {
+  .calendar-container {
+    max-width: 100vw; /* Account for navigation arrows */
+    overflow-x: auto;
+  }
 }
 </style>

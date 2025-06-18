@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto event-card">
+  <v-card class="mx-auto event-card ma-2" elevation="6">
     <v-img
       :src="event.image"
       height="200px"

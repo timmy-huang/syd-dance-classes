@@ -11,8 +11,6 @@ sydney-dance-classes/**/*.json
 *.xlsx
 *.db
 
-google-credentials.json
-
 .DS_Store
 node_modules
 

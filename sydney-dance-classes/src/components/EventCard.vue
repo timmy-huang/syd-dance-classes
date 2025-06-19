@@ -12,12 +12,12 @@
       {{ formatDate(event.date) }}
     </v-card-subtitle>
 
-    <v-card-text>
+    <v-card-text class="flex-grow-1">
       <div class="location mb-2">
         <v-icon icon="mdi-map-marker" class="mr-1"></v-icon>
-        {{ event.location }}
+        <span>{{ event.location }}</span>
       </div>
-      <div class="text-body-1">{{ event.description }}</div>
+      <div class="description text-body-1">{{ event.description }}</div>
     </v-card-text>
 
     <v-card-actions>
@@ -62,9 +62,29 @@ const formatDate = (date: Date) => {
 
 <style scoped>
 .event-card {
-  height: 100%;
+  height: 501px;
   display: flex;
   flex-direction: column;
+}
+
+.v-card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  max-height: 2.4em;
+}
+
+.v-card-text {
+  flex: 1;
+  overflow: hidden;
+}
+
+.description {
+  overflow: hidden;
+  line-height: 1.4;
+  word-wrap: break-word;
+  display: block;
 }
 
 .v-card-actions {
@@ -81,5 +101,11 @@ const formatDate = (date: Date) => {
   align-items: center;
   color: rgba(0, 0, 0, 0.6);
   font-size: 0.875rem;
+}
+
+.location span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style> 

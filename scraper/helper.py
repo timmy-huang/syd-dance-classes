@@ -88,14 +88,16 @@ def get_or_create_choreographer(name, instagram=""):
 
 def determine_level(name: str) -> list:
     name = name.lower()
-    if 'int/adv' in name:
-        return ['intermediate', 'advanced']
-    elif 'beg' in name:
-        return ['beginner']
-    elif 'intermediate' in name:
-        return ['intermediate']
-    else:
-        return ['advanced']
+    ret = []
+    if 'int' in name:
+        ret.append('intermediate')
+    if 'beg' in name:
+        ret.append('beginner')
+    if 'adv' or 'open' in name:
+        ret.append('advanced')
+    if ret == []:
+        ret.append('advanced')
+    return ret
 
 def determine_style(name: str) -> list:
     name = name.lower().replace(" ", "").replace("-", "")

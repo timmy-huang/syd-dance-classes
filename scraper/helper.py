@@ -93,7 +93,7 @@ def determine_level(name: str) -> list:
         ret.append('intermediate')
     if 'beg' in name:
         ret.append('beginner')
-    if 'adv' or 'open' in name:
+    if 'adv' in name or 'open' in name:
         ret.append('advanced')
     if ret == []:
         ret.append('advanced')

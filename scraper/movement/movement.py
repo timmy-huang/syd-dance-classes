@@ -9,7 +9,7 @@ def movement(location, start_date, end_date):
     hlocation = location + 'movement_nation_hurstville.json'
     plocation = location + 'movement_nation_parramatta.json'
 
-    hurstvilleURL = "https://www.movementnation.com.au"
+    hurstvilleURL = "https://www.movementnationdancestudio.com"
     parramattaURL = "https://2020movementnation.wixsite.com/website-1"
 
     hauthToken = getAuthToken(hurstvilleURL)

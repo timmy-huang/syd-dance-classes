@@ -4,12 +4,14 @@
       :beg="beg"
       :inte="inte"
       :adv="adv"
+      :popUp="popUp"
       :search="search"
       :selectedStudios="selectedStudios"
       :selectedStyles="selectedStyles"
       @update:beg="toggleBeg"
       @update:inte="toggleInte"
       @update:adv="toggleAdv"
+      @update:popUp="togglePopUp"
       @update:search="search = $event.target.value"
       @update:selectedStudios="updateSelectedStudios"
       @update:selectedStyles="updateSelectedStyles"
@@ -54,6 +56,7 @@ const search = ref<string>('')
 const beg = ref(localStorage.getItem('beg') ? JSON.parse(localStorage.getItem('beg')!) : true)
 const inte = ref(localStorage.getItem('inte') ? JSON.parse(localStorage.getItem('inte')!) : true)
 const adv = ref(localStorage.getItem('adv') ? JSON.parse(localStorage.getItem('adv')!) : true)  
+const popUp = ref(localStorage.getItem('popUp') ? JSON.parse(localStorage.getItem('popUp')!) : true)
 
 const selectedStudios = ref(localStorage.getItem('selectedStudios') ? JSON.parse(localStorage.getItem('selectedStudios')!) : [...studios])
 const selectedStyles = ref(localStorage.getItem('selectedStyles') ? JSON.parse(localStorage.getItem('selectedStyles')!) : [...styles])
@@ -81,7 +84,8 @@ const displayData = computed(() => {
   }).filter((lesson) => {  // filter lessons by level
     return (beg.value && lesson.level.includes('beginner')) || 
     (inte.value && lesson.level.includes('intermediate')) ||
-    (adv.value && lesson.level.includes('advanced'))
+    (adv.value && lesson.level.includes('advanced')) ||
+    (popUp.value && lesson.level.includes('pop-up'))
   }).filter((lesson) => {  // filter lessons by studio
     return selectedStudios.value.includes(lesson.studio)
   }).filter((lesson) => { // Filter by style
@@ -122,6 +126,11 @@ const toggleAdv = () => {
   localStorage.setItem('adv', JSON.stringify(adv.value))
 }
 
+const togglePopUp = () => {
+  popUp.value = !popUp.value
+  localStorage.setItem('popUp', JSON.stringify(popUp.value))
+}
+
 const getNoClassesMessage = () => {
   if (!props.lessons || props.lessons.length === 0) {
     return 'Loading classes data...'
@@ -132,6 +141,7 @@ const getNoClassesMessage = () => {
                     !beg.value || 
                     !inte.value || 
                     !adv.value || 
+                    !popUp.value ||
                     selectedStudios.value.length < studios.length ||
                     selectedStyles.value.length < styles.length;
                     

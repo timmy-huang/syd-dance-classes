@@ -27,6 +27,12 @@
           :model-value="adv"
           :onchange="() => $emit('update:adv')"
         />
+        <v-checkbox 
+          label="Pop Up" 
+          density="comfortable"
+          :model-value="popUp"
+          :onchange="() => $emit('update:popUp')"
+        />
       </div>
       <div class="d-flex px-1">
         <MultiSelect :value="selectedStyles" @update="($event) => $emit('update:selectedStyles', $event)" type="Styles" />
@@ -47,6 +53,7 @@
     beg: Boolean,
     inte: Boolean,
     adv: Boolean,
+    popUp: Boolean,
     search: String,
     selectedStudios: Array,
     selectedStyles: Array

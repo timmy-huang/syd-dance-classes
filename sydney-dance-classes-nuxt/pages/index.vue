@@ -5,7 +5,7 @@
   >
     <div style="justify-content: center; align-items: center;" class="mt-2 d-flex flex-column">      
       <!-- Tabs for switching between Classes and Events -->
-      <ClientOnly>
+      <!-- <ClientOnly>
         <v-tabs
           v-model="activeTab"
           color="primary"
@@ -17,9 +17,9 @@
           <v-tab value="classes" :size="tabSize">Classes</v-tab>
           <v-tab value="events" :size="tabSize">Events</v-tab>
         </v-tabs>
-      </ClientOnly>
+      </ClientOnly> -->
       <!-- Tab Content -->
-      <v-window v-model="activeTab" :touch="false">
+      <!-- <v-window v-model="activeTab" :touch="false">
         <v-window-item value="classes">
           <Classes :lessons="lessonsValue" />
         </v-window-item>
@@ -27,16 +27,16 @@
         <v-window-item value="events">
           <Events />
         </v-window-item>
-      </v-window>
+      </v-window> -->
     </div>
   </v-responsive>
 </template>
 
 <script lang="ts" setup>
   // Get the classes from data
-  import getData from '../utils/data'
-  import Classes from '../components/Classes.vue'
-  import Events from '../components/Events.vue'
+  // import getData from '../utils/data'
+  // import Classes from '../components/Classes.vue'
+  //import Events from '../components/Events.vue'
 
 
   // Tab management
@@ -57,8 +57,8 @@
 
   onMounted(async () => {
     // Load classes data
-    await getData(lessons)
-    console.log(lessons.value)
+    //await getData(lessons)
+    //console.log(lessons.value)
   })
 </script>
 

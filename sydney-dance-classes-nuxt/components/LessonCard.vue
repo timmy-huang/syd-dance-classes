@@ -107,10 +107,7 @@
 </template>
   
 <script lang="ts" setup>
-  import { Lesson } from '../utils/types'
-  import { PropType } from 'vue'
-  import { computed } from 'vue'
-  import { useDisplay } from 'vuetify'
+
 
   const bookLink = computed(() => {
     if (props.lesson) {

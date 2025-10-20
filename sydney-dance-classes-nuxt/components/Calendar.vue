@@ -42,6 +42,7 @@
 </template>
 
 <script lang="ts" setup>
+  import { useDisplay } from 'vuetify'
 
   const emit = defineEmits(['update'])
   const display = useDisplay()

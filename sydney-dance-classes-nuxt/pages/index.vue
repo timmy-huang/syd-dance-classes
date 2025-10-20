@@ -33,12 +33,10 @@
 
 <script lang="ts" setup>
   // Get the classes from data
-  import { computed, onMounted, ref, Ref } from 'vue'
   import { useDisplay } from 'vuetify'
   import getData from '../utils/data'
   import Classes from '../components/Classes.vue'
   import Events from '../components/Events.vue'
-  import { Lesson } from '../utils/types'
 
   const display = useDisplay()
 

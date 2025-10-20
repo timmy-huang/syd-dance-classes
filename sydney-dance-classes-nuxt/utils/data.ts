@@ -1,5 +1,3 @@
-import { Lesson } from './types';
-import { Ref } from 'vue';
 import { studios } from './consts';
 
 const getData = async (lessons: Ref<Lesson[]>) => {

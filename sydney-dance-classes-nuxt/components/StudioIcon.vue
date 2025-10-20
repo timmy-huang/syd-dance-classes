@@ -3,14 +3,14 @@
     <a :href="`https://www.instagram.com/movementnationdancestudio`" target="_blank" rel="noopener">
       <v-img 
         v-if="studio === 'Movement Nation Hurstville'"
-        src="/public/movement_nation_hurstville.webp"
+        src="/movement_nation_hurstville.webp"
     />
     </a>
 
     <a :href="`https://www.instagram.com/movementnation.parramatta`" target="_blank" rel="noopener">
       <v-img 
         v-if="studio === 'Movement Nation Parramatta'"
-        src="/public/movement_nation_parramatta.webp"
+        src="/movement_nation_parramatta.webp"
       />
     </a>
     
@@ -18,35 +18,35 @@
     <a :href="`https://www.instagram.com/crossoverdance`" target="_blank" rel="noopener">
       <v-img
         v-if="studio === 'Crossover'"
-        src="/public/xo.jpg"
+        src="/xo.jpg"
       />
     </a>
 
     <a :href="`https://www.instagram.com/ixdancestudio`" target="_blank" rel="noopener">
       <v-img
         v-if="studio === 'IX'"
-        src="/public/ix.png"
+        src="/ix.png"
       />
     </a>
 
     <a :href="`https://www.instagram.com/pdc_dance_studio`" target="_blank" rel="noopener">
     <v-img
       v-if="studio === 'PDC'"
-        src="/public/pdc.jpg"
+        src="/pdc.jpg"
       />
     </a>
 
     <a :href="`https://www.instagram.com/dutistudios`" target="_blank" rel="noopener">
       <v-img
         v-if="studio === 'DUTI'"
-        src="/public/duti.png"
+        src="/duti.png"
       />  
     </a>
 
     <a :href="`https://www.instagram.com/endlessdancesydney`" target="_blank" rel="noopener">
       <v-img
         v-if="studio === 'Endless'"
-        src="/public/endless.jpg"
+        src="/endless.jpg"
       />
     </a>
 
@@ -54,14 +54,14 @@
       <a :href="`https://www.instagram.com/kcc_studio`" target="_blank" rel="noopener">
         <v-img
           v-if="studio === 'KCC'"
-          src="/public/kcc.webp"
+          src="/kcc.webp"
         />
       </a>
 
       <a :href="`https://www.instagram.com/imidance`" target="_blank" rel="noopener">
         <v-img
           v-if="studio === 'IMI'"
-          src="/public/imi.png"
+          src="/imi.png"
         />
       </a>
     </div>

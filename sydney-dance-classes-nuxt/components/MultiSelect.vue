@@ -45,7 +45,6 @@
 <script lang="ts" setup>
   import { computed } from 'vue';
   import { studios, styles } from '../utils/consts';
-  import { defineProps, defineEmits } from 'vue';
 
   const emit = defineEmits(["update"]);
 

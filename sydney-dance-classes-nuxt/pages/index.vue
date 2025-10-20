@@ -33,19 +33,19 @@
 
 <script lang="ts" setup>
   // Get the classes from data
-  import { useDisplay } from 'vuetify'
   import getData from '../utils/data'
   import Classes from '../components/Classes.vue'
   import Events from '../components/Events.vue'
 
-  const display = useDisplay()
 
   // Tab management
   const activeTab = ref('classes')
 
   // Responsive tab size
   const tabSize = computed(() => {
-    return display.smAndDown.value ? 'large' : 'x-large'
+    // Getting server side rendering issues with this
+    return 'large'
+    //return display.smAndDown.value ? 'large' : 'x-large'
   })
 
   // Classes data and state

@@ -5,18 +5,19 @@
   >
     <div style="justify-content: center; align-items: center;" class="mt-2 d-flex flex-column">      
       <!-- Tabs for switching between Classes and Events -->
-      <v-tabs
-        v-model="activeTab"
-        color="primary"
-        class="mb-6"
-        centered
-        :touch="false"
-        height="60"
-      >
-        <v-tab value="classes" :size="tabSize">Classes</v-tab>
-        <v-tab value="events" :size="tabSize">Events</v-tab>
-      </v-tabs>
-
+      <ClientOnly>
+        <v-tabs
+          v-model="activeTab"
+          color="primary"
+          class="mb-6"
+          centered
+          :touch="false"
+          height="60"
+        >
+          <v-tab value="classes" :size="tabSize">Classes</v-tab>
+          <v-tab value="events" :size="tabSize">Events</v-tab>
+        </v-tabs>
+      </ClientOnly>
       <!-- Tab Content -->
       <v-window v-model="activeTab" :touch="false">
         <v-window-item value="classes">

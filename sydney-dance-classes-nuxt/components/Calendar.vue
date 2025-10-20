@@ -1,44 +1,46 @@
 <template>
-  <div :class="$vuetify.display.smAndDown ? 'scrollable-mobile' : 'desktop-view'" class="d-flex align-center justify-content-center mt-5">
-    <v-btn
-      v-if="!$vuetify.display.smAndDown"
-      icon="mdi-chevron-left"
-      variant="text"
-      @click="handleLeftClick"
-      aria-label="Previous week"
-      density="comfortable"
-      :color="disablePrevious ? 'grey' : undefined"
-      :disabled="disablePrevious"
-    ></v-btn>
+  <ClientOnly>
+    <div :class="display.smAndDown ? 'scrollable-mobile' : 'desktop-view'" class="d-flex align-center justify-content-center mt-5">
+      <v-btn
+        v-if="display.smAndDown"
+        icon="mdi-chevron-left"
+        variant="text"
+        @click="handleLeftClick"
+        aria-label="Previous week"
+        density="comfortable"
+        :color="disablePrevious ? 'grey' : undefined"
+        :disabled="disablePrevious"
+      ></v-btn>
 
-    <div class="calendar-container">
-        <v-btn 
-          variant="tonal" 
-          v-for="date in datesForWeek" 
-          :key="date.getTime()" 
-          :active="date.getTime() === selectedDate!.getTime()"
-          @click="$emit('update', date)"
-        style="height: auto; margin-right: 8px; width: 122px;"
-      >
-        <div style="flex-direction: column;" class="pa-2">
-          <div>{{ date.getDate() }}/{{ date.getMonth() }}</div>
-          <div>{{ days[date.getDay()] }}</div>
-        </div>
-      </v-btn>
+      <div class="calendar-container">
+          <v-btn 
+            variant="tonal" 
+            v-for="date in datesForWeek" 
+            :key="date.getTime()" 
+            :active="date.getTime() === selectedDate!.getTime()"
+            @click="$emit('update', date)"
+          style="height: auto; margin-right: 8px; width: 122px;"
+        >
+          <div style="flex-direction: column;" class="pa-2">
+            <div>{{ date.getDate() }}/{{ date.getMonth() }}</div>
+            <div>{{ days[date.getDay()] }}</div>
+          </div>
+        </v-btn>
+      </div>
+
+      <v-btn
+        v-if="display.smAndDown"
+        icon="mdi-chevron-right"
+        variant="text"
+        @click="handleRightClick"
+        aria-label="Next week"
+        density="comfortable"
+        style="margin-left: -8px;"
+        :color="disableNext ? 'grey' : undefined"
+        :disabled="disableNext"
+      ></v-btn>
     </div>
-
-    <v-btn
-      v-if="!$vuetify.display.smAndDown"
-      icon="mdi-chevron-right"
-      variant="text"
-      @click="handleRightClick"
-      aria-label="Next week"
-      density="comfortable"
-      style="margin-left: -8px;"
-      :color="disableNext ? 'grey' : undefined"
-      :disabled="disableNext"
-    ></v-btn>
-  </div>
+  </ClientOnly>
 </template>
 
 <script lang="ts" setup>

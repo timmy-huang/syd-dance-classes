@@ -7,7 +7,7 @@ __pycache__/
 
 # Local data files
 *.csv
-sydney-dance-classes/**/*.json
+sydney-dance-classes/data/*.json
 *.xlsx
 *.db
 

@@ -49,7 +49,6 @@
 import { computed, onMounted, ref, Ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import getData from '../../utils/data'
-import { Lesson, Choreographer } from '../../utils/types'
 
 // Add this to ensure the route is properly registered
 defineOptions({

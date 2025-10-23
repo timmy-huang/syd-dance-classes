@@ -10,7 +10,7 @@ import datetime
 
 
 # Globals
-location = './sydney-dance-classes-nuxt/data/'
+location = './sydney-dance-classes/data/'
 
 # Note that currently for authorisation, the token is hardcoded and will expire after a certain time
 # Get new token from accessing webpage if it doesnt work

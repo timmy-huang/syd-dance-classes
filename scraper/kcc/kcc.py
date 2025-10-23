@@ -59,7 +59,7 @@ def kcc(callback, start_date, _id, location):
         data.append(classData)
 
     formatted_json = json.dumps(data, indent=4)
-    with open(location + "kcc.json", 'w') as file:
+    with open(location + "kcc.json", 'w+') as file:
         file.write(formatted_json)
 
     print("Scraped KCC")

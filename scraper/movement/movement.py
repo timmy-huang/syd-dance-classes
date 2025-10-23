@@ -158,7 +158,7 @@ def getData(auth, location, url, start_date, end_date):
         data.append(classData) 
 
     formatted_json = json.dumps(data, indent=4)
-    with open(location, 'w') as file:
+    with open(location, 'w+') as file:
         file.write(formatted_json)
 
     print("Scraped " + location)

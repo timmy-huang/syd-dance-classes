@@ -170,7 +170,7 @@ def endless(start_date, end_date, location=""):
   
   # Write formatted JSON to file
   formatted_json = json.dumps(classes, indent=4)
-  with open(location + "endless.json", 'w', encoding="utf-8") as file:
+  with open(location + "endless.json", 'w+', encoding="utf-8") as file:
     file.write(formatted_json)
   
   print("Scraped Endless Dance Studio")
@@ -275,7 +275,7 @@ def parse_endless_response_text(content):
     except json.JSONDecodeError as e:
         print(f"Error parsing JSON: {e}")
         # Save the problematic content for debugging
-        with open("debug_json.txt", "w", encoding="utf-8") as f:
+        with open("debug_json.txt", "w+", encoding="utf-8") as f:
             f.write(content)
         return []
     except Exception as e:

@@ -1,0 +1,245 @@
+[
+    {
+        "start": "2025-10-20T19:00",
+        "end": "2025-10-20T20:15",
+        "choreo": {
+            "id": "254",
+            "name": "iMISS",
+            "instagram": "@sarah_imiss"
+        },
+        "name": "Beginner Intermediate Grooves Amp Choreography Studio B",
+        "level": [
+            "intermediate",
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-10-20T20:15",
+        "end": "2025-10-20T21:30",
+        "choreo": {
+            "id": "192",
+            "name": "MinBin",
+            "instagram": "@minibin_"
+        },
+        "name": "Beginner Choreography Studio B",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-10-21T17:45",
+        "end": "2025-10-21T19:00",
+        "choreo": {
+            "id": "329",
+            "name": "AngiexChristian",
+            "instagram": "@ch_4ngi3@_itsmechristian"
+        },
+        "name": "Collab Session Intermediate Studio 1",
+        "level": [
+            "intermediate"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-10-21T19:00",
+        "end": "2025-10-21T20:15",
+        "choreo": {
+            "id": "262",
+            "name": "JullianPamintuan",
+            "instagram": "@julz.pamintuan"
+        },
+        "name": "Beginner Choreography Studio B",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-10-21T20:15",
+        "end": "2025-10-21T21:30",
+        "choreo": {
+            "id": "31",
+            "name": "HanB",
+            "instagram": "@han_b_k"
+        },
+        "name": "Beginner Choreography Studio B",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-10-22T17:45",
+        "end": "2025-10-22T19:00",
+        "choreo": {
+            "id": "31",
+            "name": "HanB",
+            "instagram": "@han_b_k"
+        },
+        "name": "Beginner Choreography Studio B",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-10-22T19:00",
+        "end": "2025-10-22T20:15",
+        "choreo": {
+            "id": "29",
+            "name": "Suzy",
+            "instagram": "@suzywang1010"
+        },
+        "name": "Open Choreography Studio B",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-10-22T20:15",
+        "end": "2025-10-22T21:30",
+        "choreo": {
+            "id": "15",
+            "name": "Merry",
+            "instagram": "@charmingmerry888"
+        },
+        "name": "Beginner Choreography Studio B",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-10-23T17:45",
+        "end": "2025-10-23T19:00",
+        "choreo": {
+            "id": "192",
+            "name": "MinBin",
+            "instagram": "@minibin_"
+        },
+        "name": "Intermediate Choreography Studio 1",
+        "level": [
+            "intermediate"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-10-23T17:45",
+        "end": "2025-10-23T19:00",
+        "choreo": {
+            "id": "142",
+            "name": "AngelaJung",
+            "instagram": "@angelaajung_"
+        },
+        "name": "Beginner Choreography Studio A",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-10-23T17:45",
+        "end": "2025-10-23T19:00",
+        "choreo": {
+            "id": "155",
+            "name": "MiyuAikawa",
+            "instagram": "@miyuaikawa_"
+        },
+        "name": "Groove And Flow Foundation Studio B",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-10-23T19:00",
+        "end": "2025-10-23T20:15",
+        "choreo": {
+            "id": "240",
+            "name": "Karen",
+            "instagram": "@karen_mirage"
+        },
+        "name": "Beginner House Foundation Studio B",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-10-24T17:45",
+        "end": "2025-10-24T19:00",
+        "choreo": {
+            "id": "143",
+            "name": "Angie",
+            "instagram": "@angeliquevanjour"
+        },
+        "name": "Pop Up Open Choreography Studio A",
+        "level": [
+            "advanced",
+            "pop-up"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-10-24T19:00",
+        "end": "2025-10-24T20:15",
+        "choreo": {
+            "id": "29",
+            "name": "Suzy",
+            "instagram": "@suzywang1010"
+        },
+        "name": "Beginner Choreography Studio B",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-10-24T20:30",
+        "end": "2025-10-24T21:45",
+        "choreo": {
+            "id": "331",
+            "name": "JoshVelarde",
+            "instagram": "@joshvelarde"
+        },
+        "name": "Pop Up Open Choreography Studio B",
+        "level": [
+            "advanced",
+            "pop-up"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    }
+]

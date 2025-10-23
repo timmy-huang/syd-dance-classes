@@ -56,7 +56,7 @@ def xo(location):
         formatted_classes.append(class_data)
 
     formatted_json = json.dumps(formatted_classes, indent=4)
-    with open(location + "crossover.json", 'w') as file:
+    with open(location + "crossover.json", 'w+') as file:
         file.write(formatted_json)
 
     print("Scraped Crossover")

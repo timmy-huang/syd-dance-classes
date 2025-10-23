@@ -75,7 +75,7 @@ def duti(callback, start_date, _id, location):
         data.append(classData)
 
     formatted_json = json.dumps(data, indent=4)
-    with open(location + "duti.json", 'w') as file:
+    with open(location + "duti.json", 'w+') as file:
         file.write(formatted_json)
 
     print("Scraped DUTI")

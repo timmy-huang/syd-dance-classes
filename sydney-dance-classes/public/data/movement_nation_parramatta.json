@@ -1,8 +1,8 @@
 [
     {
-        "serviceId": "56dc5144-93de-4baa-8ddc-d18ea0ae6336",
-        "start": "2025-10-21T18:00:00.000+11:00",
-        "end": "2025-10-21T19:00:00.000+11:00",
+        "serviceId": "dc26ec99-ed99-4809-b8d4-c3854a3fc039",
+        "start": "2025-10-21T19:00:00.000+11:00",
+        "end": "2025-10-21T20:00:00.000+11:00",
         "choreo": {
             "id": "25",
             "name": "Tracey Phan",
@@ -10,27 +10,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 23,
-        "name": "Beginner Choreography W Tracey (cover)",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "serviceId": "dc26ec99-ed99-4809-b8d4-c3854a3fc039",
-        "start": "2025-10-21T19:00:00.000+11:00",
-        "end": "2025-10-21T20:00:00.000+11:00",
-        "choreo": {
-            "id": "24",
-            "name": "Chantelle",
-            "instagram": ""
-        },
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 23,
+        "openSpots": 13,
         "name": "Beginner Girls Choreo W Chantelle",
         "level": [
             "beginner"
@@ -50,7 +30,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 24,
+        "openSpots": 15,
         "name": "Beginner Hip Hop W Jeff",
         "level": [
             "beginner"
@@ -70,7 +50,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 24,
+        "openSpots": 18,
         "name": "Beginner Hip Hop W Amanda",
         "level": [
             "beginner"
@@ -90,7 +70,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 12,
-        "openSpots": 8,
+        "openSpots": 3,
         "name": "Beginner Girls Choreography W Winter",
         "level": [
             "intermediate",
@@ -111,7 +91,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 23,
+        "openSpots": 9,
         "name": "Beginner Choreography W Tracey",
         "level": [
             "beginner"
@@ -131,7 +111,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 28,
-        "openSpots": 28,
+        "openSpots": 26,
         "name": "Beginner Choreography W Ivy",
         "level": [
             "beginner"
@@ -151,7 +131,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 24,
+        "openSpots": 22,
         "name": "Beginner Choreography W Momo",
         "level": [
             "beginner"
@@ -171,7 +151,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 28,
-        "openSpots": 28,
+        "openSpots": 27,
         "name": "Beginner Choreo W Merry",
         "level": [
             "beginner"
@@ -191,8 +171,8 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
-        "name": "Beginner Choreography W Tracey (cover)",
+        "openSpots": 24,
+        "name": "Beginner Choreography W Pacient",
         "level": [
             "beginner"
         ],
@@ -231,7 +211,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 24,
+        "openSpots": 23,
         "name": "Beginner Hip Hop W Jeff",
         "level": [
             "beginner"

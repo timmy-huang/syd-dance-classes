@@ -1,55 +1,5 @@
 [
     {
-        "start": "2025-10-24T17:45",
-        "end": "2025-10-24T19:00",
-        "choreo": {
-            "id": "143",
-            "name": "Angie",
-            "instagram": "@angeliquevanjour"
-        },
-        "name": "Pop Up Open Choreography Studio A",
-        "level": [
-            "advanced",
-            "pop-up"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-10-24T19:00",
-        "end": "2025-10-24T20:15",
-        "choreo": {
-            "id": "29",
-            "name": "Suzy",
-            "instagram": "@suzywang1010"
-        },
-        "name": "Beginner Choreography Studio A",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-10-24T20:30",
-        "end": "2025-10-24T21:45",
-        "choreo": {
-            "id": "331",
-            "name": "JoshVelarde",
-            "instagram": "@joshvelarde"
-        },
-        "name": "Pop Up Open Choreography Studio B",
-        "level": [
-            "advanced",
-            "pop-up"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
         "start": "2025-10-27T17:45",
         "end": "2025-10-27T19:00",
         "choreo": {
@@ -287,6 +237,38 @@
         ],
         "style": [
             "Other"
+        ]
+    },
+    {
+        "start": "2025-10-31T19:00",
+        "end": "2025-10-31T20:15",
+        "choreo": {
+            "id": "29",
+            "name": "Suzy",
+            "instagram": "@suzywang1010"
+        },
+        "name": "Beginner Choreography Studio B",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-10-31T20:30",
+        "end": "2025-10-31T21:45",
+        "choreo": {
+            "id": "15",
+            "name": "Merry",
+            "instagram": "@charmingmerry888"
+        },
+        "name": "Beginner Choreography Studio B",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
         ]
     }
 ]

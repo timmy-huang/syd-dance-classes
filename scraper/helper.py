@@ -89,6 +89,8 @@ def get_or_create_choreographer(name, instagram=""):
 def determine_level(name: str) -> list:
     name = name.lower()
     ret = []
+    if 'kid' in name or 'youth' in name or 'under 15' in name:
+        ret.append('youth')
     if 'int' in name:
         ret.append('intermediate')
     if 'beg' in name:

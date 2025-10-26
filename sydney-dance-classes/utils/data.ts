@@ -1,4 +1,4 @@
-import type { Lesson } from '~/utils/types'
+import type { Lesson } from '~/types'
 import { studios } from './consts'
 
 const getData = async (lessons: Ref<Lesson[]>) => {

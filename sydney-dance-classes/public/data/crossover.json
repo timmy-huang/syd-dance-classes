@@ -1459,7 +1459,7 @@
         "start": "2025-11-02 12:00:00",
         "end": "2025-11-02 13:00:00",
         "choreo": {
-            "id": "341",
+            "id": "338",
             "name": "Loan",
             "instagram": ""
         },
@@ -1513,7 +1513,7 @@
         "start": "2025-11-02 13:00:00",
         "end": "2025-11-02 14:00:00",
         "choreo": {
-            "id": "341",
+            "id": "338",
             "name": "Loan",
             "instagram": ""
         },
@@ -1702,7 +1702,9 @@
         "name": "Kpop | Ceremony - Stray Kids (Beg-Int) | Encore Audition Class",
         "studio": "Crossover",
         "level": [
-            "youth"
+            "youth",
+            "intermediate",
+            "beginner"
         ],
         "style": [
             "Kpop"

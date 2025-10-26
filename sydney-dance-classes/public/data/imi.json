@@ -19,22 +19,6 @@
         "start": "2025-10-27T19:00",
         "end": "2025-10-27T20:15",
         "choreo": {
-            "id": "8",
-            "name": "Tommy",
-            "instagram": "@tommythungs"
-        },
-        "name": "Beginner Choreography Studio A",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-10-27T19:00",
-        "end": "2025-10-27T20:15",
-        "choreo": {
             "id": "33",
             "name": "Pacient",
             "instagram": "@frckn.p"
@@ -48,12 +32,28 @@
         ]
     },
     {
-        "start": "2025-10-27T20:15",
-        "end": "2025-10-27T21:30",
+        "start": "2025-10-27T19:00",
+        "end": "2025-10-27T20:15",
         "choreo": {
             "id": "192",
             "name": "MinBin",
             "instagram": "@minibin_"
+        },
+        "name": "Beginner Choreography Studio A",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-10-27T20:15",
+        "end": "2025-10-27T21:30",
+        "choreo": {
+            "id": "8",
+            "name": "Tommy",
+            "instagram": "@tommythungs"
         },
         "name": "Beginner Choreography Studio B",
         "level": [

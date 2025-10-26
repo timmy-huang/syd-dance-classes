@@ -1,496 +1,5 @@
 [
     {
-        "serviceId": "choreography_abs_beg",
-        "start": "2025-10-24 17:00:00",
-        "end": "2025-10-24 18:00:00",
-        "choreo": {
-            "id": "128",
-            "name": "Whyan Chen",
-            "instagram": ""
-        },
-        "name": "Choreography (Abs Beg)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "serviceId": "girls_choreo_absolute_beginners",
-        "start": "2025-10-24 17:00:00",
-        "end": "2025-10-24 18:00:00",
-        "choreo": {
-            "id": "76",
-            "name": "Tab",
-            "instagram": ""
-        },
-        "name": "Girls Choreo (Absolute Beginners)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "serviceId": "kpop_burning_up_meovv_beg",
-        "start": "2025-10-24 17:00:00",
-        "end": "2025-10-24 18:00:00",
-        "choreo": {
-            "id": "98",
-            "name": "Imogen",
-            "instagram": ""
-        },
-        "name": "Kpop | Burning Up - Meovv (Beg)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Kpop"
-        ]
-    },
-    {
-        "serviceId": "choreo_beg_int",
-        "start": "2025-10-24 18:00:00",
-        "end": "2025-10-24 19:00:00",
-        "choreo": {
-            "id": "81",
-            "name": "HanBK",
-            "instagram": ""
-        },
-        "name": "Choreo (Beg-Int)",
-        "studio": "Crossover",
-        "level": [
-            "intermediate",
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "serviceId": "choreography_beginners",
-        "start": "2025-10-24 18:00:00",
-        "end": "2025-10-24 19:00:00",
-        "choreo": {
-            "id": "128",
-            "name": "Whyan Chen",
-            "instagram": ""
-        },
-        "name": "Choreography (Beginners)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "serviceId": "hip_hop_beginners",
-        "start": "2025-10-24 18:00:00",
-        "end": "2025-10-24 19:00:00",
-        "choreo": {
-            "id": "55",
-            "name": "Chizuru",
-            "instagram": ""
-        },
-        "name": "Hip Hop (Beginners)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Hip Hop"
-        ]
-    },
-    {
-        "serviceId": "class_xo2s_kpop_wannabe_itzy_beg",
-        "start": "2025-10-24 18:10:00",
-        "end": "2025-10-24 19:10:00",
-        "choreo": {
-            "id": "166",
-            "name": "Kirsten",
-            "instagram": ""
-        },
-        "name": "Class@XO2S | Kpop | Wannabe - ITZY (Beg)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Kpop"
-        ]
-    },
-    {
-        "serviceId": "locking_beginners",
-        "start": "2025-10-24 19:00:00",
-        "end": "2025-10-24 20:00:00",
-        "choreo": {
-            "id": "82",
-            "name": "Kaye",
-            "instagram": ""
-        },
-        "name": "Locking (Beginners)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "serviceId": "hip_hop_collab_workshop_w_gacha_gacha",
-        "start": "2025-10-24 19:00:00",
-        "end": "2025-10-24 20:30:00",
-        "choreo": {
-            "id": "16",
-            "name": "COLLAB CLASS",
-            "instagram": ""
-        },
-        "name": "Hip Hop Collab Workshop w Gacha Gacha",
-        "studio": "Crossover",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Hip Hop"
-        ]
-    },
-    {
-        "serviceId": "class_xo2s_choreo_pop_up_class_w_flora",
-        "start": "2025-10-24 19:00:00",
-        "end": "2025-10-24 20:00:00",
-        "choreo": {
-            "id": "160",
-            "name": "workshop",
-            "instagram": ""
-        },
-        "name": "Class@XO2S | Choreo Pop Up class w Flora",
-        "studio": "Crossover",
-        "level": [
-            "pop-up"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "serviceId": "class_xo2s_vogue_femme_beginners",
-        "start": "2025-10-24 19:10:00",
-        "end": "2025-10-24 20:10:00",
-        "choreo": {
-            "id": "83",
-            "name": "Caleb",
-            "instagram": ""
-        },
-        "name": "Class@XO2S | Vogue Femme (Beginners)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "serviceId": "class_xo2s_hip_hop_beg_int",
-        "start": "2025-10-24 20:10:00",
-        "end": "2025-10-24 21:10:00",
-        "choreo": {
-            "id": "22",
-            "name": "Koki",
-            "instagram": ""
-        },
-        "name": "Class@XO2S | Hip Hop (Beg-Int)",
-        "studio": "Crossover",
-        "level": [
-            "intermediate",
-            "beginner"
-        ],
-        "style": [
-            "Hip Hop"
-        ]
-    },
-    {
-        "serviceId": "popping_beg_int",
-        "start": "2025-10-24 20:15:00",
-        "end": "2025-10-24 21:30:00",
-        "choreo": {
-            "id": "43",
-            "name": "Kevin",
-            "instagram": ""
-        },
-        "name": "Popping (Beg-Int)",
-        "studio": "Crossover",
-        "level": [
-            "intermediate",
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "serviceId": "choreo_intermediate",
-        "start": "2025-10-24 20:30:00",
-        "end": "2025-10-24 21:30:00",
-        "choreo": {
-            "id": "78",
-            "name": "Nao",
-            "instagram": ""
-        },
-        "name": "Choreo (Intermediate)",
-        "studio": "Crossover",
-        "level": [
-            "intermediate"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "serviceId": "girls_choreo_absolute_beginners",
-        "start": "2025-10-25 13:00:00",
-        "end": "2025-10-25 14:00:00",
-        "choreo": {
-            "id": "212",
-            "name": "Sanami",
-            "instagram": ""
-        },
-        "name": "Girls Choreo (Absolute Beginners)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "serviceId": "choreo_beginners",
-        "start": "2025-10-25 13:00:00",
-        "end": "2025-10-25 14:00:00",
-        "choreo": {
-            "id": "132",
-            "name": "Kat",
-            "instagram": ""
-        },
-        "name": "Choreo (Beginners)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "serviceId": "girls_choreo_beginners",
-        "start": "2025-10-25 14:00:00",
-        "end": "2025-10-25 15:00:00",
-        "choreo": {
-            "id": "133",
-            "name": "Janita",
-            "instagram": ""
-        },
-        "name": "Girls Choreo (Beginners)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "serviceId": "hip_hop_absolute_beginners",
-        "start": "2025-10-25 14:00:00",
-        "end": "2025-10-25 15:00:00",
-        "choreo": {
-            "id": "132",
-            "name": "Kat",
-            "instagram": ""
-        },
-        "name": "Hip Hop (Absolute Beginners)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Hip Hop"
-        ]
-    },
-    {
-        "serviceId": "choreo_beginners",
-        "start": "2025-10-25 14:00:00",
-        "end": "2025-10-25 15:00:00",
-        "choreo": {
-            "id": "30",
-            "name": "Anna",
-            "instagram": "@ai.clarice"
-        },
-        "name": "Choreo (Beginners)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "serviceId": "house_beginners",
-        "start": "2025-10-25 15:00:00",
-        "end": "2025-10-25 16:00:00",
-        "choreo": {
-            "id": "144",
-            "name": "JC",
-            "instagram": ""
-        },
-        "name": "House (Beginners)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "serviceId": "choreo_beginners",
-        "start": "2025-10-25 15:00:00",
-        "end": "2025-10-25 16:00:00",
-        "choreo": {
-            "id": "41",
-            "name": "Seina",
-            "instagram": ""
-        },
-        "name": "Choreo (Beginners)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "serviceId": "girls_choreo_beginners",
-        "start": "2025-10-25 16:00:00",
-        "end": "2025-10-25 17:00:00",
-        "choreo": {
-            "id": "76",
-            "name": "Tab",
-            "instagram": ""
-        },
-        "name": "Girls Choreo (Beginners)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "serviceId": "choreo_intermediate",
-        "start": "2025-10-25 16:00:00",
-        "end": "2025-10-25 17:00:00",
-        "choreo": {
-            "id": "41",
-            "name": "Seina",
-            "instagram": ""
-        },
-        "name": "Choreo (Intermediate)",
-        "studio": "Crossover",
-        "level": [
-            "intermediate"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "serviceId": "kpop_miniskirt_aoa_beg",
-        "start": "2025-10-25 16:00:00",
-        "end": "2025-10-25 17:00:00",
-        "choreo": {
-            "id": "133",
-            "name": "Janita",
-            "instagram": ""
-        },
-        "name": "Kpop | Miniskirt - Aoa (Beg)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Kpop"
-        ]
-    },
-    {
-        "serviceId": "hip_hop_beginner_intermediate",
-        "start": "2025-10-25 17:00:00",
-        "end": "2025-10-25 18:00:00",
-        "choreo": {
-            "id": "74",
-            "name": "Nana",
-            "instagram": ""
-        },
-        "name": "Hip Hop (Beginner-Intermediate)",
-        "studio": "Crossover",
-        "level": [
-            "intermediate",
-            "beginner"
-        ],
-        "style": [
-            "Hip Hop"
-        ]
-    },
-    {
-        "serviceId": "house_choreo_beginners",
-        "start": "2025-10-25 17:00:00",
-        "end": "2025-10-25 18:00:00",
-        "choreo": {
-            "id": "74",
-            "name": "Nana",
-            "instagram": ""
-        },
-        "name": "House Choreo (Beginners)",
-        "studio": "Crossover",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "serviceId": "house_beg_int",
-        "start": "2025-10-25 18:00:00",
-        "end": "2025-10-25 19:00:00",
-        "choreo": {
-            "id": "42",
-            "name": "Genki",
-            "instagram": ""
-        },
-        "name": "House (Beg-Int)",
-        "studio": "Crossover",
-        "level": [
-            "intermediate",
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
         "serviceId": "breaking_beginners",
         "start": "2025-10-26 12:00:00",
         "end": "2025-10-26 13:00:00",
@@ -946,7 +455,7 @@
         ]
     },
     {
-        "serviceId": "hip_hop_choreo_beg_int",
+        "serviceId": "choreo_beg_int",
         "start": "2025-10-27 20:15:00",
         "end": "2025-10-27 21:15:00",
         "choreo": {
@@ -954,14 +463,14 @@
             "name": "Yu-P",
             "instagram": ""
         },
-        "name": "Hip Hop Choreo (Beg-Int)",
+        "name": "Choreo (Beg-Int)",
         "studio": "Crossover",
         "level": [
             "intermediate",
             "beginner"
         ],
         "style": [
-            "Hip Hop"
+            "Choreography"
         ]
     },
     {
@@ -1327,21 +836,21 @@
         ]
     },
     {
-        "serviceId": "class_xo2s_hip_hop_foundations_intermediate",
-        "start": "2025-10-29 19:15:00",
-        "end": "2025-10-29 20:15:00",
+        "serviceId": "class_xo2s_house_beginners",
+        "start": "2025-10-29 19:10:00",
+        "end": "2025-10-29 20:10:00",
         "choreo": {
-            "id": "74",
-            "name": "Nana",
+            "id": "42",
+            "name": "Genki",
             "instagram": ""
         },
-        "name": "Class@XO2S | Hip Hop Foundations (Intermediate)",
+        "name": "Class@XO2S | House (Beginners)",
         "studio": "Crossover",
         "level": [
-            "intermediate"
+            "beginner"
         ],
         "style": [
-            "Hip Hop"
+            "Other"
         ]
     },
     {
@@ -1368,8 +877,8 @@
         "start": "2025-10-30 17:00:00",
         "end": "2025-10-30 18:00:00",
         "choreo": {
-            "id": "73",
-            "name": "Kenny",
+            "id": "59",
+            "name": "Yu-P",
             "instagram": ""
         },
         "name": "Hip Hop (Absolute Beginners)",
@@ -1404,8 +913,8 @@
         "start": "2025-10-30 18:00:00",
         "end": "2025-10-30 19:00:00",
         "choreo": {
-            "id": "66",
-            "name": "Carmen",
+            "id": "217",
+            "name": "Gabby",
             "instagram": ""
         },
         "name": "Choreo (Beginners)",
@@ -1476,8 +985,8 @@
         "start": "2025-10-30 19:00:00",
         "end": "2025-10-30 20:00:00",
         "choreo": {
-            "id": "73",
-            "name": "Kenny",
+            "id": "59",
+            "name": "Yu-P",
             "instagram": ""
         },
         "name": "Hip Hop (Beginners)",
@@ -1567,8 +1076,8 @@
         "start": "2025-10-30 20:00:00",
         "end": "2025-10-30 21:00:00",
         "choreo": {
-            "id": "73",
-            "name": "Kenny",
+            "id": "59",
+            "name": "Yu-P",
             "instagram": ""
         },
         "name": "Hip Hop Freestyle (Beg-Int)",
@@ -1633,6 +1142,534 @@
         ],
         "style": [
             "Hip Hop"
+        ]
+    },
+    {
+        "serviceId": "choreography_abs_beg",
+        "start": "2025-10-31 17:00:00",
+        "end": "2025-10-31 18:00:00",
+        "choreo": {
+            "id": "80",
+            "name": "Andii",
+            "instagram": ""
+        },
+        "name": "Choreography (Abs Beg)",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "serviceId": "girls_choreo_absolute_beginners",
+        "start": "2025-10-31 17:00:00",
+        "end": "2025-10-31 18:00:00",
+        "choreo": {
+            "id": "76",
+            "name": "Tab",
+            "instagram": ""
+        },
+        "name": "Girls Choreo (Absolute Beginners)",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "serviceId": "choreo_beg_int",
+        "start": "2025-10-31 18:00:00",
+        "end": "2025-10-31 19:00:00",
+        "choreo": {
+            "id": "81",
+            "name": "HanBK",
+            "instagram": ""
+        },
+        "name": "Choreo (Beg-Int)",
+        "studio": "Crossover",
+        "level": [
+            "intermediate",
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "serviceId": "choreography_beginners",
+        "start": "2025-10-31 18:00:00",
+        "end": "2025-10-31 19:00:00",
+        "choreo": {
+            "id": "80",
+            "name": "Andii",
+            "instagram": ""
+        },
+        "name": "Choreography (Beginners)",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "serviceId": "hip_hop_beginners",
+        "start": "2025-10-31 18:00:00",
+        "end": "2025-10-31 19:00:00",
+        "choreo": {
+            "id": "55",
+            "name": "Chizuru",
+            "instagram": ""
+        },
+        "name": "Hip Hop (Beginners)",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Hip Hop"
+        ]
+    },
+    {
+        "serviceId": "class_xo2s_kpop_ikonik_zerobaseone_int_encore_trial_class",
+        "start": "2025-10-31 18:00:00",
+        "end": "2025-10-31 19:30:00",
+        "choreo": {
+            "id": "139",
+            "name": "Daniel Chen",
+            "instagram": ""
+        },
+        "name": "Class@XO2S | Kpop | Ikonik - ZeroBaseOne (Int) | Encore Trial Class",
+        "studio": "Crossover",
+        "level": [
+            "intermediate"
+        ],
+        "style": [
+            "Kpop"
+        ]
+    },
+    {
+        "serviceId": "locking_beginners",
+        "start": "2025-10-31 19:00:00",
+        "end": "2025-10-31 20:00:00",
+        "choreo": {
+            "id": "82",
+            "name": "Kaye",
+            "instagram": ""
+        },
+        "name": "Locking (Beginners)",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "serviceId": "hip_hop_drills_beginners",
+        "start": "2025-10-31 19:00:00",
+        "end": "2025-10-31 20:00:00",
+        "choreo": {
+            "id": "55",
+            "name": "Chizuru",
+            "instagram": ""
+        },
+        "name": "Hip Hop Drills (Beginners)",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Hip Hop"
+        ]
+    },
+    {
+        "serviceId": "class_xo2s_vogue_femme_beginners",
+        "start": "2025-10-31 19:10:00",
+        "end": "2025-10-31 20:10:00",
+        "choreo": {
+            "id": "83",
+            "name": "Caleb",
+            "instagram": ""
+        },
+        "name": "Class@XO2S | Vogue Femme (Beginners)",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "serviceId": "party_groove_soul_beginners",
+        "start": "2025-10-31 20:00:00",
+        "end": "2025-10-31 21:00:00",
+        "choreo": {
+            "id": "82",
+            "name": "Kaye",
+            "instagram": ""
+        },
+        "name": "Party Groove / Soul (Beginners)",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "serviceId": "class_xo2s_hip_hop_beg_int",
+        "start": "2025-10-31 20:10:00",
+        "end": "2025-10-31 21:10:00",
+        "choreo": {
+            "id": "22",
+            "name": "Koki",
+            "instagram": ""
+        },
+        "name": "Class@XO2S | Hip Hop (Beg-Int)",
+        "studio": "Crossover",
+        "level": [
+            "intermediate",
+            "beginner"
+        ],
+        "style": [
+            "Hip Hop"
+        ]
+    },
+    {
+        "serviceId": "popping_beg_int",
+        "start": "2025-10-31 20:15:00",
+        "end": "2025-10-31 21:30:00",
+        "choreo": {
+            "id": "43",
+            "name": "Kevin",
+            "instagram": ""
+        },
+        "name": "Popping (Beg-Int)",
+        "studio": "Crossover",
+        "level": [
+            "intermediate",
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "serviceId": "choreo_intermediate",
+        "start": "2025-10-31 20:30:00",
+        "end": "2025-10-31 21:30:00",
+        "choreo": {
+            "id": "78",
+            "name": "Nao",
+            "instagram": ""
+        },
+        "name": "Choreo (Intermediate)",
+        "studio": "Crossover",
+        "level": [
+            "intermediate"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "serviceId": "girls_choreo_absolute_beginners",
+        "start": "2025-11-01 13:00:00",
+        "end": "2025-11-01 14:00:00",
+        "choreo": {
+            "id": "212",
+            "name": "Sanami",
+            "instagram": ""
+        },
+        "name": "Girls Choreo (Absolute Beginners)",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "serviceId": "choreo_beginners",
+        "start": "2025-11-01 13:00:00",
+        "end": "2025-11-01 14:00:00",
+        "choreo": {
+            "id": "132",
+            "name": "Kat",
+            "instagram": ""
+        },
+        "name": "Choreo (Beginners)",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "serviceId": "class_xo2s_kpop_whiplash_aespa_beg_int_encore_audition_class",
+        "start": "2025-11-01 13:30:00",
+        "end": "2025-11-01 15:00:00",
+        "choreo": {
+            "id": "198",
+            "name": "David",
+            "instagram": ""
+        },
+        "name": "Class@XO2S | Kpop | Whiplash - Aespa (Beg-Int) | Encore Audition Class",
+        "studio": "Crossover",
+        "level": [
+            "intermediate",
+            "beginner"
+        ],
+        "style": [
+            "Kpop"
+        ]
+    },
+    {
+        "serviceId": "girls_choreo_beginners",
+        "start": "2025-11-01 14:00:00",
+        "end": "2025-11-01 15:00:00",
+        "choreo": {
+            "id": "133",
+            "name": "Janita",
+            "instagram": ""
+        },
+        "name": "Girls Choreo (Beginners)",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "serviceId": "hip_hop_absolute_beginners",
+        "start": "2025-11-01 14:00:00",
+        "end": "2025-11-01 15:00:00",
+        "choreo": {
+            "id": "132",
+            "name": "Kat",
+            "instagram": ""
+        },
+        "name": "Hip Hop (Absolute Beginners)",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Hip Hop"
+        ]
+    },
+    {
+        "serviceId": "choreo_beginners",
+        "start": "2025-11-01 14:00:00",
+        "end": "2025-11-01 15:00:00",
+        "choreo": {
+            "id": "30",
+            "name": "Anna",
+            "instagram": "@ai.clarice"
+        },
+        "name": "Choreo (Beginners)",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "serviceId": "house_beginners",
+        "start": "2025-11-01 15:00:00",
+        "end": "2025-11-01 16:00:00",
+        "choreo": {
+            "id": "144",
+            "name": "JC",
+            "instagram": ""
+        },
+        "name": "House (Beginners)",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "serviceId": "choreo_beginners",
+        "start": "2025-11-01 15:00:00",
+        "end": "2025-11-01 16:00:00",
+        "choreo": {
+            "id": "41",
+            "name": "Seina",
+            "instagram": ""
+        },
+        "name": "Choreo (Beginners)",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "serviceId": "class_xo2s_girls_choreo_beg_encore_trial_class",
+        "start": "2025-11-01 15:00:00",
+        "end": "2025-11-01 16:30:00",
+        "choreo": {
+            "id": "212",
+            "name": "Sanami",
+            "instagram": ""
+        },
+        "name": "Class@XO2S | Girls Choreo (Beg) | Encore Trial Class",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "serviceId": "class_xo2s_kpop_that_that_psy_abs_beg_encore_trial_class",
+        "start": "2025-11-01 15:00:00",
+        "end": "2025-11-01 16:30:00",
+        "choreo": {
+            "id": "39",
+            "name": "Jaye",
+            "instagram": ""
+        },
+        "name": "Class@XO2S | Kpop | That That - PSY (Abs-Beg) | Encore Trial Class",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Kpop"
+        ]
+    },
+    {
+        "serviceId": "choreo_intermediate",
+        "start": "2025-11-01 16:00:00",
+        "end": "2025-11-01 17:00:00",
+        "choreo": {
+            "id": "41",
+            "name": "Seina",
+            "instagram": ""
+        },
+        "name": "Choreo (Intermediate)",
+        "studio": "Crossover",
+        "level": [
+            "intermediate"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "serviceId": "class_xo2s_girls_choreo_beg_encore_trial_class",
+        "start": "2025-11-01 16:30:00",
+        "end": "2025-11-01 18:00:00",
+        "choreo": {
+            "id": "76",
+            "name": "Tab",
+            "instagram": ""
+        },
+        "name": "Class@XO2S | Girls Choreo (Beg) | Encore Trial Class",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "serviceId": "hip_hop_beginner_intermediate",
+        "start": "2025-11-01 17:00:00",
+        "end": "2025-11-01 18:00:00",
+        "choreo": {
+            "id": "74",
+            "name": "Nana",
+            "instagram": ""
+        },
+        "name": "Hip Hop (Beginner-Intermediate)",
+        "studio": "Crossover",
+        "level": [
+            "intermediate",
+            "beginner"
+        ],
+        "style": [
+            "Hip Hop"
+        ]
+    },
+    {
+        "serviceId": "house_beg_encore_trial_class",
+        "start": "2025-11-01 17:00:00",
+        "end": "2025-11-01 18:30:00",
+        "choreo": {
+            "id": "74",
+            "name": "Nana",
+            "instagram": ""
+        },
+        "name": "House (Beg) | Encore Trial Class",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "serviceId": "class_xo2s_kpop_war_of_hormones_bts_beg_encore_audition_class",
+        "start": "2025-11-01 17:30:00",
+        "end": "2025-11-01 19:00:00",
+        "choreo": {
+            "id": "39",
+            "name": "Jaye",
+            "instagram": ""
+        },
+        "name": "Class@XO2S | Kpop | War of Hormones - BTS (Beg) | Encore Audition Class",
+        "studio": "Crossover",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Kpop"
+        ]
+    },
+    {
+        "serviceId": "house_beg_int",
+        "start": "2025-11-01 18:00:00",
+        "end": "2025-11-01 19:00:00",
+        "choreo": {
+            "id": "42",
+            "name": "Genki",
+            "instagram": ""
+        },
+        "name": "House (Beg-Int)",
+        "studio": "Crossover",
+        "level": [
+            "intermediate",
+            "beginner"
+        ],
+        "style": [
+            "Other"
         ]
     }
 ]

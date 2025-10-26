@@ -1,0 +1,114 @@
+[
+    {
+        "start": "2025-10-28T09:00:00+00:00",
+        "end": "2025-10-28T10:45:00+00:00",
+        "choreo": {
+            "id": "338",
+            "name": "Cameron Mitchell",
+            "instagram": ""
+        },
+        "name": "Jazz",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-10-29T08:30:00+00:00",
+        "end": "2025-10-29T10:15:00+00:00",
+        "choreo": {
+            "id": "339",
+            "name": "Tylah Paterson",
+            "instagram": ""
+        },
+        "name": "Jazz",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-02T07:30:00+00:00",
+        "end": "2025-11-02T08:45:00+00:00",
+        "choreo": {
+            "id": "340",
+            "name": "Joel Houwen",
+            "instagram": ""
+        },
+        "name": "BACK2BACK",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-02T09:00:00+00:00",
+        "end": "2025-11-02T10:15:00+00:00",
+        "choreo": {
+            "id": "173",
+            "name": "Nicole Aspinall",
+            "instagram": ""
+        },
+        "name": "BACK2BACK",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-05T08:30:00+00:00",
+        "end": "2025-11-05T10:15:00+00:00",
+        "choreo": {
+            "id": "284",
+            "name": "Jess Subba",
+            "instagram": ""
+        },
+        "name": "Commercial Jazz",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-06T08:30:00+00:00",
+        "end": "2025-11-06T10:15:00+00:00",
+        "choreo": {
+            "id": "342",
+            "name": "Veronica Beattie",
+            "instagram": ""
+        },
+        "name": "Theatre Jazz",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-07T00:00:00+00:00",
+        "end": "2025-11-07T01:45:00+00:00",
+        "choreo": {
+            "id": "343",
+            "name": "Kate Beattie",
+            "instagram": ""
+        },
+        "name": "Jazz Technique",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ]
+    }
+]

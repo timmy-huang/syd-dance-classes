@@ -8,7 +8,8 @@ const studios = [
   "PDC",
   "DUTI",
   "Endless",
-  "KCC"
+  "KCC",
+  "Colab"
 ]
 
 const styles = [

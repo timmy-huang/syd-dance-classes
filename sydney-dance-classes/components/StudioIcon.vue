@@ -64,6 +64,13 @@
           src="/imi.png"
         />
       </a>
+
+      <a :href="`https://www.instagram.com/colabquarters`" target="_blank" rel="noopener">
+        <v-img
+          v-if="studio === 'Colab'"
+          src="/colab.webp"
+        />
+      </a>
     </div>
   </div>
 </template>

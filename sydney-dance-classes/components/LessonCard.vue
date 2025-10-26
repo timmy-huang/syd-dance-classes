@@ -138,6 +138,9 @@
       if (props.lesson.studio === "KCC") {
         return "https://kccstudio.com.au/pages/classes"
       }
+      if (props.lesson.studio === "Colab") {
+        return "https://www.colabquarters.com.au/classes"
+      }
     }
     console.log("Booking Link not found for ", props.lesson)
     return ""

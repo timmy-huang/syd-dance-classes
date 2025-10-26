@@ -1,6 +1,7 @@
 <template>
   <div class="d-flex flex-column align-center">
     <FilterBox 
+      :youth="youth"
       :beg="beg"
       :inte="inte"
       :adv="adv"
@@ -8,6 +9,7 @@
       :search="search"
       :selectedStudios="selectedStudios"
       :selectedStyles="selectedStyles"
+      @update:youth="toggleYouth"
       @update:beg="toggleBeg"
       @update:inte="toggleInte"
       @update:adv="toggleAdv"
@@ -46,6 +48,7 @@ const props = defineProps<Props>()
 
 // Classes data and state
 const search = ref<string>('')
+const youth = ref(localStorage.getItem('youth') ? JSON.parse(localStorage.getItem('youth')!) : false)
 const beg = ref(localStorage.getItem('beg') ? JSON.parse(localStorage.getItem('beg')!) : true)
 const inte = ref(localStorage.getItem('inte') ? JSON.parse(localStorage.getItem('inte')!) : true)
 const adv = ref(localStorage.getItem('adv') ? JSON.parse(localStorage.getItem('adv')!) : true)  
@@ -75,10 +78,13 @@ const displayData = computed(() => {
     lesson.studio.toLowerCase().includes(search.value.toLowerCase()) || 
     lesson.choreo.name.toLowerCase().includes(search.value.toLowerCase())
   }).filter((lesson) => {  // filter lessons by level
-    return (beg.value && lesson.level.includes('beginner')) || 
-    (inte.value && lesson.level.includes('intermediate')) ||
-    (adv.value && lesson.level.includes('advanced')) ||
-    (popUp.value && lesson.level.includes('pop-up'))
+    return (
+      (beg.value && lesson.level.includes('beginner')) || 
+      (inte.value && lesson.level.includes('intermediate')) ||
+      (adv.value && lesson.level.includes('advanced')) ||
+      (popUp.value && lesson.level.includes('pop-up')) ||
+      (youth.value && lesson.level.includes('youth'))
+    )
   }).filter((lesson) => {  // filter lessons by studio
     return selectedStudios.value.includes(lesson.studio)
   }).filter((lesson) => { // Filter by style
@@ -102,6 +108,11 @@ const updateSelectedStudios = (newStudios: string[]) => {
 const updateSelectedStyles = (newStyles: string[]) => {
   selectedStyles.value = newStyles
   localStorage.setItem('selectedStyles', JSON.stringify(selectedStyles.value))
+}
+
+const toggleYouth = () => {
+  youth.value = !youth.value
+  localStorage.setItem('youth', JSON.stringify(youth.value))
 }
 
 const toggleBeg = () => {

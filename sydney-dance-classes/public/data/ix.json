@@ -13,7 +13,7 @@
         "openSpots": 8,
         "name": "K-pop (Under 15s)",
         "level": [
-            "advanced"
+            "youth"
         ],
         "style": [
             "Kpop"
@@ -113,7 +113,7 @@
         "openSpots": 12,
         "name": "Popping (Under 15s)",
         "level": [
-            "advanced"
+            "youth"
         ],
         "style": [
             "Other"
@@ -193,7 +193,7 @@
         "openSpots": 11,
         "name": "K-pop (Under 15s)",
         "level": [
-            "advanced"
+            "youth"
         ],
         "style": [
             "Kpop"
@@ -273,7 +273,7 @@
         "openSpots": 8,
         "name": "Youth K-pop (Y7-Y9)",
         "level": [
-            "advanced"
+            "youth"
         ],
         "style": [
             "Kpop"
@@ -333,7 +333,7 @@
         "openSpots": 6,
         "name": "Kids K-pop (K-Y3)",
         "level": [
-            "advanced"
+            "youth"
         ],
         "style": [
             "Kpop"
@@ -353,7 +353,7 @@
         "openSpots": 11,
         "name": "Junior/Youth K-pop (Y4-Y9)",
         "level": [
-            "advanced"
+            "youth"
         ],
         "style": [
             "Kpop"
@@ -393,7 +393,7 @@
         "openSpots": 11,
         "name": "K-pop (Under 15s)",
         "level": [
-            "advanced"
+            "youth"
         ],
         "style": [
             "Kpop"
@@ -410,7 +410,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 19,
         "name": "Waacking | Beginners",
         "level": [
             "beginner"
@@ -473,7 +473,7 @@
         "openSpots": 15,
         "name": "Popping (Under 15s)",
         "level": [
-            "advanced"
+            "youth"
         ],
         "style": [
             "Other"
@@ -490,7 +490,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 19,
         "name": "Breaking | Beginners",
         "level": [
             "beginner"
@@ -553,7 +553,7 @@
         "openSpots": 14,
         "name": "K-pop (Under 15s)",
         "level": [
-            "advanced"
+            "youth"
         ],
         "style": [
             "Kpop"
@@ -653,7 +653,7 @@
         "openSpots": 10,
         "name": "Youth K-pop (Y7-Y9)",
         "level": [
-            "advanced"
+            "youth"
         ],
         "style": [
             "Kpop"
@@ -713,7 +713,7 @@
         "openSpots": 13,
         "name": "Kids K-pop (K-Y3)",
         "level": [
-            "advanced"
+            "youth"
         ],
         "style": [
             "Kpop"
@@ -733,7 +733,7 @@
         "openSpots": 13,
         "name": "Junior/Youth K-pop (Y4-Y9)",
         "level": [
-            "advanced"
+            "youth"
         ],
         "style": [
             "Kpop"

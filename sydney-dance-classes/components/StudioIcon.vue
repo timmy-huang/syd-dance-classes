@@ -50,7 +50,7 @@
       />
     </a>
 
-    <div v-if="studio === 'KCC' || studio === 'IMI'" class="pa-2 transparent-container">
+    <div v-if="studio === 'KCC' || studio === 'IMI' || studio === 'Colab'" class="pa-2 transparent-container">
       <a :href="`https://www.instagram.com/kcc_studio`" target="_blank" rel="noopener">
         <v-img
           v-if="studio === 'KCC'"
@@ -62,6 +62,13 @@
         <v-img
           v-if="studio === 'IMI'"
           src="/imi.png"
+        />
+      </a>
+
+      <a :href="`https://www.instagram.com/colabquarters`" target="_blank" rel="noopener">
+        <v-img
+          v-if="studio === 'Colab'"
+          src="/colab.webp"
         />
       </a>
     </div>

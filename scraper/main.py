@@ -6,6 +6,7 @@ from pdc.pdc import pdc
 from duti.duti import duti
 from endless.endless import endless
 from kcc.kcc import kcc
+from colab.colab import colab
 import datetime
 
 
@@ -39,4 +40,5 @@ pdc(location, previous_monday, upcoming_sunday)
 duti(duti_callback, today, duti_id, location)
 endless(previous_monday, upcoming_sunday, location)
 kcc(kcc_callback, today, kcc_id, location)
+colab(previous_monday, upcoming_sunday, location)
 print("Scraping completed")

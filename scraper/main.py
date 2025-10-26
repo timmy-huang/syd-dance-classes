@@ -6,6 +6,7 @@ from pdc.pdc import pdc
 from duti.duti import duti
 from endless.endless import endless
 from kcc.kcc import kcc
+from colab.colab import colab
 import datetime
 
 
@@ -31,12 +32,13 @@ today_weekday = today.weekday()
 previous_monday = today - datetime.timedelta(days=today_weekday)
 upcoming_sunday = today + datetime.timedelta(days=(7 + 6 - today_weekday + 1)) # +1 so that it includes the upcoming sunday
 
-movement(location, previous_monday, upcoming_sunday)
-imi(imi_callback, today, imi_id, location)
-xo(location)
-ix(location, previous_monday, upcoming_sunday)
-pdc(location, previous_monday, upcoming_sunday)
-duti(duti_callback, today, duti_id, location)
-endless(previous_monday, upcoming_sunday, location)
-kcc(kcc_callback, today, kcc_id, location)
+# movement(location, previous_monday, upcoming_sunday)
+# imi(imi_callback, today, imi_id, location)
+# xo(location)
+# ix(location, previous_monday, upcoming_sunday)
+# pdc(location, previous_monday, upcoming_sunday)
+# duti(duti_callback, today, duti_id, location)
+# endless(previous_monday, upcoming_sunday, location)
+# kcc(kcc_callback, today, kcc_id, location)
+colab(previous_monday, upcoming_sunday, location)
 print("Scraping completed")

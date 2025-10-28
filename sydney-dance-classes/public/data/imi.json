@@ -1,69 +1,5 @@
 [
     {
-        "start": "2025-10-27T17:45",
-        "end": "2025-10-27T19:00",
-        "choreo": {
-            "id": "3",
-            "name": "Ivy",
-            "instagram": "@ivy.moon"
-        },
-        "name": "Beginner Choreography Studio A",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-10-27T19:00",
-        "end": "2025-10-27T20:15",
-        "choreo": {
-            "id": "33",
-            "name": "Pacient",
-            "instagram": "@frckn.p"
-        },
-        "name": "Intermediate Choreography Studio B",
-        "level": [
-            "intermediate"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-10-27T19:00",
-        "end": "2025-10-27T20:15",
-        "choreo": {
-            "id": "192",
-            "name": "MinBin",
-            "instagram": "@minibin_"
-        },
-        "name": "Beginner Choreography Studio A",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-10-27T20:15",
-        "end": "2025-10-27T21:30",
-        "choreo": {
-            "id": "8",
-            "name": "Tommy",
-            "instagram": "@tommythungs"
-        },
-        "name": "Beginner Choreography Studio B",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
         "start": "2025-10-28T17:45",
         "end": "2025-10-28T19:00",
         "choreo": {
@@ -138,22 +74,6 @@
         "name": "Beginner Choreography Studio B",
         "level": [
             "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-10-29T19:00",
-        "end": "2025-10-29T20:15",
-        "choreo": {
-            "id": "143",
-            "name": "Angie",
-            "instagram": "@ch_4ngi3"
-        },
-        "name": "Intermediate Choreography Studio B",
-        "level": [
-            "intermediate"
         ],
         "style": [
             "Choreography"

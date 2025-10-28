@@ -10,7 +10,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 20,
+        "openSpots": 17,
         "name": "Beginner Choreography W Momo",
         "level": [
             "beginner"
@@ -30,7 +30,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 28,
-        "openSpots": 24,
+        "openSpots": 14,
         "name": "Beginner Choreo W Merry",
         "level": [
             "beginner"
@@ -92,26 +92,6 @@
         "totalSpots": 25,
         "openSpots": 23,
         "name": "Beginner Hip Hop W Jeff",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Hip Hop"
-        ]
-    },
-    {
-        "serviceId": "3a815b0d-bc60-4280-8c01-2c24a9439cdd",
-        "start": "2025-10-28T20:00:00.000+11:00",
-        "end": "2025-10-28T21:00:00.000+11:00",
-        "choreo": {
-            "id": "27",
-            "name": "Amanda",
-            "instagram": ""
-        },
-        "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 25,
-        "openSpots": 25,
-        "name": "Beginner Hip Hop W Amanda",
         "level": [
             "beginner"
         ],

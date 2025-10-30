@@ -1,37 +1,5 @@
 [
     {
-        "start": "2025-10-29T17:45",
-        "end": "2025-10-29T19:00",
-        "choreo": {
-            "id": "31",
-            "name": "HanB",
-            "instagram": "@han_b_k"
-        },
-        "name": "Beginner Choreography Studio B",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-10-29T20:15",
-        "end": "2025-10-29T21:30",
-        "choreo": {
-            "id": "34",
-            "name": "Tianna",
-            "instagram": "@tiannapessotto"
-        },
-        "name": "Intermediate Choreography Studio B",
-        "level": [
-            "intermediate"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
         "start": "2025-10-30T17:45",
         "end": "2025-10-30T19:00",
         "choreo": {
@@ -243,13 +211,13 @@
         "start": "2025-11-04T20:15",
         "end": "2025-11-04T21:30",
         "choreo": {
-            "id": "344",
-            "name": "Simon",
-            "instagram": "@simonjinpark"
+            "id": "33",
+            "name": "Pacient",
+            "instagram": "@frckn.p"
         },
-        "name": "Open Choreography Studio A",
+        "name": "Beginner Choreography Studio B",
         "level": [
-            "advanced"
+            "beginner"
         ],
         "style": [
             "Choreography"
@@ -259,13 +227,13 @@
         "start": "2025-11-04T20:15",
         "end": "2025-11-04T21:30",
         "choreo": {
-            "id": "33",
-            "name": "Pacient",
-            "instagram": "@frckn.p"
+            "id": "344",
+            "name": "Simon",
+            "instagram": "@simonjinpark"
         },
-        "name": "Beginner Choreography Studio B",
+        "name": "Open Choreography Studio A",
         "level": [
-            "beginner"
+            "advanced"
         ],
         "style": [
             "Choreography"

@@ -1,53 +1,5 @@
 [
     {
-        "start": "2025-11-01T09:30",
-        "end": "2025-11-01T11:00",
-        "choreo": {
-            "id": "345",
-            "name": "Billy William Keohavong",
-            "instagram": ""
-        },
-        "name": "Contemporary Intermediate",
-        "level": [
-            "intermediate"
-        ],
-        "style": [
-            "Contemporary"
-        ]
-    },
-    {
-        "start": "2025-11-01T10:00",
-        "end": "2025-11-01T11:00",
-        "choreo": {
-            "id": "135",
-            "name": "Tess Sturmann",
-            "instagram": ""
-        },
-        "name": "Ballet Absolute Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-11-01T11:00",
-        "end": "2025-11-01T12:00",
-        "choreo": {
-            "id": "136",
-            "name": "Natasha Sturgis",
-            "instagram": ""
-        },
-        "name": "Contemporary Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Contemporary"
-        ]
-    },
-    {
         "start": "2025-11-01T11:30",
         "end": "2025-11-01T12:30",
         "choreo": {
@@ -61,38 +13,6 @@
         ],
         "style": [
             "Other"
-        ]
-    },
-    {
-        "start": "2025-11-01T12:15",
-        "end": "2025-11-01T13:15",
-        "choreo": {
-            "id": "138",
-            "name": "Lucky Lartey",
-            "instagram": ""
-        },
-        "name": "African Dance Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-11-01T12:30",
-        "end": "2025-11-01T13:30",
-        "choreo": {
-            "id": "37",
-            "name": "Andrew",
-            "instagram": ""
-        },
-        "name": "Choreography Intermediate",
-        "level": [
-            "intermediate"
-        ],
-        "style": [
-            "Choreography"
         ]
     },
     {
@@ -196,8 +116,8 @@
         "start": "2025-11-03T18:30",
         "end": "2025-11-03T19:30",
         "choreo": {
-            "id": "111",
-            "name": "Mathew Mizyed",
+            "id": "121",
+            "name": "Rosemarie Romeo",
             "instagram": ""
         },
         "name": "Street Jazz Beginner",

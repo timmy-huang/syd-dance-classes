@@ -270,7 +270,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 15,
-        "openSpots": 10,
+        "openSpots": 8,
         "name": "Youth K-pop (Y7-Y9)",
         "level": [
             "youth"
@@ -290,7 +290,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 16,
         "name": "K-pop",
         "level": [
             "advanced"
@@ -310,7 +310,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 14,
+        "openSpots": 9,
         "name": "House | Beginners Course 2/5",
         "level": [
             "beginner"
@@ -330,7 +330,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 15,
-        "openSpots": 7,
+        "openSpots": 5,
         "name": "Kids K-pop (K-Y3)",
         "level": [
             "youth"
@@ -350,7 +350,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 15,
-        "openSpots": 13,
+        "openSpots": 9,
         "name": "Junior/Youth K-pop (Y4-Y9)",
         "level": [
             "youth"
@@ -630,7 +630,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 15,
-        "openSpots": 8,
+        "openSpots": 10,
         "name": "Kids K-pop (K-Y3)",
         "level": [
             "youth"

@@ -14,13 +14,23 @@ export default defineNuxtConfig({
   },
   plugins: ['~/plugins/vuetify.ts'],
   modules: [
+    '@nuxtjs/supabase',
     async (options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         config.plugins ||= []
         config.plugins.push(vuetify({ autoImport: true }))
       })
-    }
+    },
   ],
+
+  supabase: {
+    // Redirects
+    redirectOptions: {
+      login: '/login',
+      callback: '/confirm',
+      exclude: ['/', '/classes', '/classes/*'], // Public pages
+    }
+  },
 
   compatibilityDate: '2024-11-01'
 })

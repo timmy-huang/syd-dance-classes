@@ -64,6 +64,23 @@
         ]
     },
     {
+        "start": "2025-11-04T17:45",
+        "end": "2025-11-04T19:00",
+        "choreo": {
+            "id": "336",
+            "name": "Kailan Teneti",
+            "instagram": "@kalian.zane"
+        },
+        "name": "Pop Up Open Choreography Studio 1",
+        "level": [
+            "advanced",
+            "pop-up"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
         "start": "2025-11-04T19:00",
         "end": "2025-11-04T20:15",
         "choreo": {
@@ -128,6 +145,57 @@
         ]
     },
     {
+        "start": "2025-11-05T17:45",
+        "end": "2025-11-05T19:00",
+        "choreo": {
+            "id": "207",
+            "name": "Christian",
+            "instagram": "__itsmechristian"
+        },
+        "name": "Pop Up Open Choreography Studio B",
+        "level": [
+            "advanced",
+            "pop-up"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-05T19:00",
+        "end": "2025-11-05T20:15",
+        "choreo": {
+            "id": "297",
+            "name": "Rome",
+            "instagram": "@romechampion"
+        },
+        "name": "Pop Up Open Choreography Studio B",
+        "level": [
+            "advanced",
+            "pop-up"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-05T20:15",
+        "end": "2025-11-05T21:30",
+        "choreo": {
+            "id": "346",
+            "name": "JacobYarr",
+            "instagram": "@jacobyarr"
+        },
+        "name": "Pop Up Open Choreography Studio B",
+        "level": [
+            "advanced",
+            "pop-up"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
         "start": "2025-11-06T17:45",
         "end": "2025-11-06T19:00",
         "choreo": {
@@ -183,9 +251,10 @@
             "name": "Karen",
             "instagram": "@karen_mirage"
         },
-        "name": "Beginner House Foundation Studio B",
+        "name": "Pop Up Beginner House Foundation Studio B",
         "level": [
-            "beginner"
+            "beginner",
+            "pop-up"
         ],
         "style": [
             "Other"
@@ -202,6 +271,23 @@
         "name": "Pop Up Open Choreography Studio A",
         "level": [
             "advanced",
+            "pop-up"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-07T17:45",
+        "end": "2025-11-07T19:00",
+        "choreo": {
+            "id": "347",
+            "name": "ToshiyaMaru",
+            "instagram": "@toshiya_maru"
+        },
+        "name": "Pop Up Beginner Choreography Studio B",
+        "level": [
+            "beginner",
             "pop-up"
         ],
         "style": [

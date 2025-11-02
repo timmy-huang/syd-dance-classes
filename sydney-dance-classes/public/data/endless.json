@@ -396,7 +396,7 @@
             "Hip Hop"
         ],
         "totalSpots": 50,
-        "openSpots": 46
+        "openSpots": 42
     },
     {
         "serviceId": "k4AzpGBjUnhLgdILyn7T",
@@ -417,7 +417,7 @@
             "Kpop"
         ],
         "totalSpots": 50,
-        "openSpots": 48
+        "openSpots": 47
     },
     {
         "serviceId": "xjn9bsXZJwbQmVqtqlIm",
@@ -564,7 +564,7 @@
             "Heels"
         ],
         "totalSpots": 50,
-        "openSpots": 50
+        "openSpots": 49
     },
     {
         "serviceId": "JPjFdAYHpEYVReEucSlD",
@@ -753,7 +753,7 @@
             "Choreography"
         ],
         "totalSpots": 50,
-        "openSpots": 50
+        "openSpots": 49
     },
     {
         "serviceId": "sCJwzQDdinW78q24sGD6",
@@ -823,8 +823,8 @@
         "start": "2025-11-06T08:45:00+00:00",
         "end": "2025-11-06T10:00:00+00:00",
         "choreo": {
-            "id": "11",
-            "name": "Chimy",
+            "id": "1",
+            "name": "Lynn",
             "instagram": ""
         },
         "name": "Choreography (All Level)",
@@ -963,15 +963,15 @@
             "Hip Hop"
         ],
         "totalSpots": 50,
-        "openSpots": 50
+        "openSpots": 49
     },
     {
         "serviceId": "pk64H9EMIMsfZRC6UiXl",
         "start": "2025-11-08T04:30:00+00:00",
         "end": "2025-11-08T05:45:00+00:00",
         "choreo": {
-            "id": "6",
-            "name": "Yezi",
+            "id": "11",
+            "name": "Chimy",
             "instagram": ""
         },
         "name": "Kpop (Beginner-All Level)",
@@ -982,27 +982,6 @@
         ],
         "style": [
             "Kpop"
-        ],
-        "totalSpots": 50,
-        "openSpots": 50
-    },
-    {
-        "serviceId": "9F3rjRGrPq0qoNnHEg7e",
-        "start": "2025-11-08T05:45:00+00:00",
-        "end": "2025-11-08T07:00:00+00:00",
-        "choreo": {
-            "id": "6",
-            "name": "Yezi",
-            "instagram": ""
-        },
-        "name": "Choreography (Beginner Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
         ],
         "totalSpots": 50,
         "openSpots": 50

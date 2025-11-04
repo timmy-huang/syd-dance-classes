@@ -10,7 +10,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 23,
+        "openSpots": 19,
         "name": "Beginner Choreography W Momo",
         "level": [
             "beginner"
@@ -30,7 +30,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 28,
-        "openSpots": 27,
+        "openSpots": 17,
         "name": "Beginner Choreo W Merry",
         "level": [
             "beginner"
@@ -50,7 +50,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 24,
+        "openSpots": 23,
         "name": "Beginner Choreography W Pacient",
         "level": [
             "beginner"
@@ -70,7 +70,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 23,
+        "openSpots": 20,
         "name": "Beginner Girls Choreo W Chantelle",
         "level": [
             "beginner"
@@ -90,7 +90,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 24,
+        "openSpots": 21,
         "name": "Beginner Hip Hop W Jeff",
         "level": [
             "beginner"
@@ -110,7 +110,7 @@
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 25,
-        "openSpots": 25,
+        "openSpots": 24,
         "name": "Beginner Hip Hop W Amanda",
         "level": [
             "beginner"
@@ -131,9 +131,8 @@
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 12,
         "openSpots": 8,
-        "name": "Beginner Girls Choreography W Winter",
+        "name": "Beginner Girls Choreo W Taylor (cover)",
         "level": [
-            "intermediate",
             "beginner"
         ],
         "style": [
@@ -170,8 +169,8 @@
             "instagram": "@ivy.moon"
         },
         "location": "110 Church Street, Parramatta NSW, Australia",
-        "totalSpots": 28,
-        "openSpots": 26,
+        "totalSpots": 12,
+        "openSpots": 9,
         "name": "Beginner Choreography W Ivy",
         "level": [
             "beginner"
@@ -292,9 +291,8 @@
         "location": "110 Church Street, Parramatta NSW, Australia",
         "totalSpots": 12,
         "openSpots": 12,
-        "name": "Beginner Girls Choreography W Winter",
+        "name": "Beginner Girls Choreo W Taylor (cover)",
         "level": [
-            "intermediate",
             "beginner"
         ],
         "style": [

@@ -10,7 +10,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 15,
-        "openSpots": 15,
+        "openSpots": 8,
         "name": "K-pop (Under 15s)",
         "level": [
             "youth"
@@ -30,7 +30,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 19,
+        "openSpots": 17,
         "name": "Waacking | Beginners",
         "level": [
             "beginner"
@@ -50,7 +50,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 19,
         "name": "K-pop",
         "level": [
             "advanced"
@@ -90,7 +90,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 17,
         "name": "K-pop",
         "level": [
             "advanced"
@@ -130,7 +130,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 15,
-        "openSpots": 15,
+        "openSpots": 14,
         "name": "K-pop (Under 15s)",
         "level": [
             "youth"
@@ -177,6 +177,26 @@
         ],
         "style": [
             "Other"
+        ]
+    },
+    {
+        "serviceId": "cfc23659-ae30-4cd7-bc9a-213c53d6368a",
+        "start": "2025-11-06T19:40:00.000+11:00",
+        "end": "2025-11-06T20:55:00.000+11:00",
+        "choreo": {
+            "id": "87",
+            "name": "Winnie",
+            "instagram": ""
+        },
+        "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
+        "totalSpots": 20,
+        "openSpots": 20,
+        "name": "K-pop",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Kpop"
         ]
     },
     {
@@ -230,7 +250,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 15,
+        "openSpots": 14,
         "name": "House | Beginners Course 3/5",
         "level": [
             "beginner"
@@ -532,7 +552,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 15,
+        "openSpots": 14,
         "name": "House | Beginners Course 4/5",
         "level": [
             "beginner"

@@ -4,7 +4,7 @@
     <div v-if="user">
       <v-menu>
         <template v-slot:activator="{ props }">
-          <v-btn icon v-bind='props'>
+          <v-btn icon v-bind="props">
             <v-icon>mdi-account-circle</v-icon>
           </v-btn>
         </template>
@@ -16,14 +16,23 @@
           
           <v-divider />
           
-          <v-list-item @click='goToProfile'>
+          <v-list-item @click="goToProfile">
             <template v-slot:prepend>
               <v-icon>mdi-account</v-icon>
             </template>
             <v-list-item-title>Profile</v-list-item-title>
           </v-list-item>
           
-          <v-list-item @click='handleLogout'>
+          <v-list-item @click="goToChoreographerSetup">
+            <template v-slot:prepend>
+              <v-icon>mdi-dance-ballroom</v-icon>
+            </template>
+            <v-list-item-title>Become a Choreographer</v-list-item-title>
+          </v-list-item>
+          
+          <v-divider />
+          
+          <v-list-item @click="handleLogout">
             <template v-slot:prepend>
               <v-icon>mdi-logout</v-icon>
             </template>
@@ -34,7 +43,7 @@
     </div>
     
     <!-- Show if user is NOT logged in -->
-    <v-btn v-else @click='goToLogin' variant='text'>
+    <v-btn v-else @click="goToLogin" variant="text">
       Login
     </v-btn>
   </ClientOnly>
@@ -47,6 +56,7 @@ const router = useRouter()
 
 const goToLogin = () => router.push('/login')
 const goToProfile = () => router.push('/profile')
+const goToChoreographerSetup = () => router.push('/choreographer/setup')
 
 const handleLogout = async () => {
   await supabase.auth.signOut()

@@ -30,7 +30,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 20,
-        "openSpots": 12,
+        "openSpots": 13,
         "name": "Heels Open",
         "level": [
             "advanced"
@@ -70,7 +70,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 15,
-        "openSpots": 14,
+        "openSpots": 8,
         "name": "HIPHOP Beginner",
         "level": [
             "beginner"
@@ -90,33 +90,13 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 20,
-        "openSpots": 16,
+        "openSpots": 13,
         "name": "Girls Choreography",
         "level": [
             "advanced"
         ],
         "style": [
             "Choreography"
-        ]
-    },
-    {
-        "serviceId": "1e979da7-66e3-4c44-a331-1c1546c89d09",
-        "start": "2025-11-04T20:00:00.000+11:00",
-        "end": "2025-11-04T21:00:00.000+11:00",
-        "choreo": {
-            "id": "23",
-            "name": "Momo",
-            "instagram": ""
-        },
-        "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
-        "totalSpots": 15,
-        "openSpots": 15,
-        "name": "Waacking Begginer",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
         ]
     },
     {
@@ -130,7 +110,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 15,
-        "openSpots": 15,
+        "openSpots": 10,
         "name": "Girl style Abs Beginner",
         "level": [
             "beginner"
@@ -170,7 +150,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 18,
-        "openSpots": 18,
+        "openSpots": 17,
         "name": "Heels Beginner-Intermediate",
         "level": [
             "intermediate",
@@ -211,7 +191,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 20,
-        "openSpots": 18,
+        "openSpots": 19,
         "name": "Girls Choreography",
         "level": [
             "advanced"
@@ -251,7 +231,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 20,
-        "openSpots": 18,
+        "openSpots": 17,
         "name": "Girl Style Beginner",
         "level": [
             "beginner"
@@ -271,7 +251,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 15,
-        "openSpots": 15,
+        "openSpots": 14,
         "name": "Choreography",
         "level": [
             "advanced"
@@ -351,7 +331,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 19,
         "name": "Heels Open",
         "level": [
             "advanced"
@@ -411,7 +391,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 19,
         "name": "Girls Choreography",
         "level": [
             "advanced"
@@ -445,8 +425,8 @@
         "start": "2025-11-12T17:30:00.000+11:00",
         "end": "2025-11-12T18:30:00.000+11:00",
         "choreo": {
-            "id": "97",
-            "name": "Yuming",
+            "id": "102",
+            "name": "Jinny Park",
             "instagram": ""
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
@@ -485,8 +465,8 @@
         "start": "2025-11-12T19:30:00.000+11:00",
         "end": "2025-11-12T21:00:00.000+11:00",
         "choreo": {
-            "id": "101",
-            "name": "Kris",
+            "id": "97",
+            "name": "Yuming",
             "instagram": ""
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
@@ -512,7 +492,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 20,
-        "openSpots": 17,
+        "openSpots": 16,
         "name": "Heels Absolute Beginner",
         "level": [
             "beginner"

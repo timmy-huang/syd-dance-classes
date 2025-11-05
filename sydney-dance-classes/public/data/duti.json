@@ -1,134 +1,5 @@
 [
     {
-        "start": "2025-11-04T17:20",
-        "end": "2025-11-04T18:20",
-        "choreo": {
-            "id": "305",
-            "name": "Y U- P.",
-            "instagram": ""
-        },
-        "name": "Rnb Grooves Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-11-04T17:45",
-        "end": "2025-11-04T19:00",
-        "choreo": {
-            "id": "115",
-            "name": "Nicholas Jachno",
-            "instagram": ""
-        },
-        "name": "Contemporary Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Contemporary"
-        ]
-    },
-    {
-        "start": "2025-11-04T18:00",
-        "end": "2025-11-04T19:00",
-        "choreo": {
-            "id": "42",
-            "name": "Genki",
-            "instagram": ""
-        },
-        "name": "House Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-11-04T18:30",
-        "end": "2025-11-04T19:30",
-        "choreo": {
-            "id": "116",
-            "name": "Anjelica Osuji\\\" Chika\\\"",
-            "instagram": ""
-        },
-        "name": "Afro Fusion Open",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-11-04T19:00",
-        "end": "2025-11-04T20:00",
-        "choreo": {
-            "id": "117",
-            "name": "Nicol\u00e1s Mena",
-            "instagram": ""
-        },
-        "name": "Choreography Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-11-04T19:00",
-        "end": "2025-11-04T20:00",
-        "choreo": {
-            "id": "214",
-            "name": "Manuel Nascimento",
-            "instagram": ""
-        },
-        "name": "Afro Fusion Course",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-11-04T19:30",
-        "end": "2025-11-04T20:30",
-        "choreo": {
-            "id": "119",
-            "name": "Amy Zhang",
-            "instagram": ""
-        },
-        "name": "Heels Beginner Foundations",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Heels"
-        ]
-    },
-    {
-        "start": "2025-11-04T20:00",
-        "end": "2025-11-04T21:30",
-        "choreo": {
-            "id": "117",
-            "name": "Nicol\u00e1s Mena",
-            "instagram": ""
-        },
-        "name": "Choreography Int Adv",
-        "level": [
-            "intermediate",
-            "advanced"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
         "start": "2025-11-05T17:30",
         "end": "2025-11-05T18:30",
         "choreo": {
@@ -645,6 +516,185 @@
         ],
         "style": [
             "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-11T12:00",
+        "end": "2025-11-11T13:30",
+        "choreo": {
+            "id": "139",
+            "name": "Daniel Chen",
+            "instagram": ""
+        },
+        "name": "Int Adv Jazz Funk International Guest",
+        "level": [
+            "intermediate",
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-11T15:00",
+        "end": "2025-11-11T16:30",
+        "choreo": {
+            "id": "132",
+            "name": "Kat",
+            "instagram": ""
+        },
+        "name": "Int Adv Heels International Guest",
+        "level": [
+            "intermediate",
+            "advanced"
+        ],
+        "style": [
+            "Heels"
+        ]
+    },
+    {
+        "start": "2025-11-11T17:20",
+        "end": "2025-11-11T18:20",
+        "choreo": {
+            "id": "305",
+            "name": "Y U- P.",
+            "instagram": ""
+        },
+        "name": "Rnb Grooves Beginner",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-11T17:45",
+        "end": "2025-11-11T19:00",
+        "choreo": {
+            "id": "115",
+            "name": "Nicholas Jachno",
+            "instagram": ""
+        },
+        "name": "Contemporary Beginner",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Contemporary"
+        ]
+    },
+    {
+        "start": "2025-11-11T18:00",
+        "end": "2025-11-11T19:00",
+        "choreo": {
+            "id": "42",
+            "name": "Genki",
+            "instagram": ""
+        },
+        "name": "House Beginner",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-11T18:30",
+        "end": "2025-11-11T19:30",
+        "choreo": {
+            "id": "116",
+            "name": "Anjelica Osuji\\\" Chika\\\"",
+            "instagram": ""
+        },
+        "name": "Afro Fusion Open",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-11T19:00",
+        "end": "2025-11-11T20:00",
+        "choreo": {
+            "id": "117",
+            "name": "Nicol\u00e1s Mena",
+            "instagram": ""
+        },
+        "name": "Choreography Beginner",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-11T19:00",
+        "end": "2025-11-11T20:00",
+        "choreo": {
+            "id": "214",
+            "name": "Manuel Nascimento",
+            "instagram": ""
+        },
+        "name": "Afro Fusion Course",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-11T19:30",
+        "end": "2025-11-11T20:30",
+        "choreo": {
+            "id": "119",
+            "name": "Amy Zhang",
+            "instagram": ""
+        },
+        "name": "Heels Beginner Foundations",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Heels"
+        ]
+    },
+    {
+        "start": "2025-11-11T20:00",
+        "end": "2025-11-11T21:30",
+        "choreo": {
+            "id": "117",
+            "name": "Nicol\u00e1s Mena",
+            "instagram": ""
+        },
+        "name": "Choreography Int Adv",
+        "level": [
+            "intermediate",
+            "advanced"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-11T20:00",
+        "end": "2025-11-11T21:30",
+        "choreo": {
+            "id": "353",
+            "name": "Geny Navuzi",
+            "instagram": ""
+        },
+        "name": "Afro Fusion Open",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Other"
         ]
     }
 ]

@@ -70,7 +70,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 19,
+        "openSpots": 13,
         "name": "Breaking | Beginners",
         "level": [
             "beginner"
@@ -110,7 +110,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 18,
         "name": "Popping | Beginners",
         "level": [
             "beginner"
@@ -130,7 +130,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 15,
-        "openSpots": 14,
+        "openSpots": 13,
         "name": "K-pop (Under 15s)",
         "level": [
             "youth"
@@ -190,7 +190,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 18,
         "name": "K-pop",
         "level": [
             "advanced"
@@ -260,6 +260,26 @@
         ]
     },
     {
+        "serviceId": "cfc23659-ae30-4cd7-bc9a-213c53d6368a",
+        "start": "2025-11-07T18:40:00.000+11:00",
+        "end": "2025-11-07T19:55:00.000+11:00",
+        "choreo": {
+            "id": "88",
+            "name": "Cat",
+            "instagram": ""
+        },
+        "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
+        "totalSpots": 20,
+        "openSpots": 19,
+        "name": "K-pop",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Kpop"
+        ]
+    },
+    {
         "serviceId": "c8313dc3-98b4-4168-917a-b97d4db203b4",
         "start": "2025-11-08T10:00:00.000+11:00",
         "end": "2025-11-08T10:45:00.000+11:00",
@@ -324,8 +344,8 @@
         "start": "2025-11-10T17:00:00.000+11:00",
         "end": "2025-11-10T18:00:00.000+11:00",
         "choreo": {
-            "id": "84",
-            "name": "Jenny",
+            "id": "88",
+            "name": "Cat",
             "instagram": ""
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
@@ -410,7 +430,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 19,
         "name": "Breaking | Beginners",
         "level": [
             "beginner"
@@ -430,7 +450,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 19,
         "name": "K-pop",
         "level": [
             "advanced"
@@ -559,6 +579,26 @@
         ],
         "style": [
             "Other"
+        ]
+    },
+    {
+        "serviceId": "cfc23659-ae30-4cd7-bc9a-213c53d6368a",
+        "start": "2025-11-14T18:40:00.000+11:00",
+        "end": "2025-11-14T19:55:00.000+11:00",
+        "choreo": {
+            "id": "88",
+            "name": "Cat",
+            "instagram": ""
+        },
+        "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
+        "totalSpots": 20,
+        "openSpots": 20,
+        "name": "K-pop",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Kpop"
         ]
     },
     {

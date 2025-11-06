@@ -1,120 +1,5 @@
 [
     {
-        "start": "2025-11-05T17:30",
-        "end": "2025-11-05T18:30",
-        "choreo": {
-            "id": "115",
-            "name": "Nicholas Jachno",
-            "instagram": ""
-        },
-        "name": "Street Jazz Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-11-05T18:00",
-        "end": "2025-11-05T19:15",
-        "choreo": {
-            "id": "21",
-            "name": "Lana",
-            "instagram": "lanaborisova_"
-        },
-        "name": "Intro To Heels Course",
-        "level": [
-            "intermediate"
-        ],
-        "style": [
-            "Heels"
-        ]
-    },
-    {
-        "start": "2025-11-05T18:15",
-        "end": "2025-11-05T19:30",
-        "choreo": {
-            "id": "37",
-            "name": "Andrew",
-            "instagram": ""
-        },
-        "name": "Choreography Int Adv",
-        "level": [
-            "intermediate",
-            "advanced"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-11-05T18:30",
-        "end": "2025-11-05T19:45",
-        "choreo": {
-            "id": "124",
-            "name": "Georgette Sofazis",
-            "instagram": ""
-        },
-        "name": "Contemporary Open",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Contemporary"
-        ]
-    },
-    {
-        "start": "2025-11-05T19:30",
-        "end": "2025-11-05T21:00",
-        "choreo": {
-            "id": "121",
-            "name": "Rosemarie Romeo",
-            "instagram": ""
-        },
-        "name": "Commercial Jazz Int Adv",
-        "level": [
-            "intermediate",
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-11-05T19:30",
-        "end": "2025-11-05T20:30",
-        "choreo": {
-            "id": "125",
-            "name": "Sisqo.",
-            "instagram": ""
-        },
-        "name": "Hip Hop Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Hip Hop"
-        ]
-    },
-    {
-        "start": "2025-11-05T19:45",
-        "end": "2025-11-05T21:00",
-        "choreo": {
-            "id": "21",
-            "name": "Lana",
-            "instagram": "lanaborisova_"
-        },
-        "name": "Heels Int Adv",
-        "level": [
-            "intermediate",
-            "advanced"
-        ],
-        "style": [
-            "Heels"
-        ]
-    },
-    {
         "start": "2025-11-06T17:30",
         "end": "2025-11-06T18:15",
         "choreo": {
@@ -370,22 +255,6 @@
         ],
         "style": [
             "Choreography"
-        ]
-    },
-    {
-        "start": "2025-11-08T13:30",
-        "end": "2025-11-08T16:30",
-        "choreo": {
-            "id": "345",
-            "name": "Billy William Keohavong",
-            "instagram": ""
-        },
-        "name": "Framework Workshop With Billy Keohavong",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
         ]
     },
     {
@@ -695,6 +564,121 @@
         ],
         "style": [
             "Other"
+        ]
+    },
+    {
+        "start": "2025-11-12T17:30",
+        "end": "2025-11-12T18:30",
+        "choreo": {
+            "id": "21",
+            "name": "Lana",
+            "instagram": "lanaborisova_"
+        },
+        "name": "Street Jazz Beginner",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-12T18:00",
+        "end": "2025-11-12T19:15",
+        "choreo": {
+            "id": "21",
+            "name": "Lana",
+            "instagram": "lanaborisova_"
+        },
+        "name": "Intro To Heels Course",
+        "level": [
+            "intermediate"
+        ],
+        "style": [
+            "Heels"
+        ]
+    },
+    {
+        "start": "2025-11-12T18:15",
+        "end": "2025-11-12T19:30",
+        "choreo": {
+            "id": "37",
+            "name": "Andrew",
+            "instagram": ""
+        },
+        "name": "Choreography Int Adv",
+        "level": [
+            "intermediate",
+            "advanced"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-12T18:30",
+        "end": "2025-11-12T19:45",
+        "choreo": {
+            "id": "124",
+            "name": "Georgette Sofazis",
+            "instagram": ""
+        },
+        "name": "Contemporary Open",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Contemporary"
+        ]
+    },
+    {
+        "start": "2025-11-12T19:30",
+        "end": "2025-11-12T21:00",
+        "choreo": {
+            "id": "121",
+            "name": "Rosemarie Romeo",
+            "instagram": ""
+        },
+        "name": "Commercial Jazz Int Adv",
+        "level": [
+            "intermediate",
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-12T19:30",
+        "end": "2025-11-12T20:30",
+        "choreo": {
+            "id": "125",
+            "name": "Sisqo.",
+            "instagram": ""
+        },
+        "name": "Hip Hop Beginner",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Hip Hop"
+        ]
+    },
+    {
+        "start": "2025-11-12T19:45",
+        "end": "2025-11-12T21:00",
+        "choreo": {
+            "id": "21",
+            "name": "Lana",
+            "instagram": "lanaborisova_"
+        },
+        "name": "Heels Int Adv",
+        "level": [
+            "intermediate",
+            "advanced"
+        ],
+        "style": [
+            "Heels"
         ]
     }
 ]

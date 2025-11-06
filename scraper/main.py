@@ -9,36 +9,124 @@ from kcc.kcc import kcc
 from colab.colab import colab
 import datetime
 
-
-# Globals
-location = './sydney-dance-classes/public/data/'
-
-# Note that currently for authorisation, the token is hardcoded and will expire after a certain time
-# Get new token from accessing webpage if it doesnt work
-#mnh_auth = "1wJDsV3ZG9ljZuHHRoy0y1UCtr-yL89st8SuzeTw4AA.eyJpbnN0YW5jZUlkIjoiZjI4MWM2ZjItOGMxMy00ZDRmLTlmYWMtYjgwYTE1NTZlZmIxIiwiYXBwRGVmSWQiOiIxM2QyMWM2My1iNWVjLTU5MTItODM5Ny1jM2E1ZGRiMjdhOTciLCJtZXRhU2l0ZUlkIjoiMzQyMGE5MjktMzUwYy00NGFkLWE1M2ItMmM0NTQ1NzMyNjM2Iiwic2lnbkRhdGUiOiIyMDI0LTA5LTE3VDE5OjE4OjI3LjM4M1oiLCJ2ZW5kb3JQcm9kdWN0SWQiOiJib29raW5ncyIsImRlbW9Nb2RlIjpmYWxzZSwiYWlkIjoiY2ViZTE3MjEtODdhNC00NTc5LWFjNzMtMWEzMmI5Y2RhMGFjIiwiYmlUb2tlbiI6ImM2YTE2ZmRiLWI5MWYtMDllMi0zYTk3LTk0NGY1MDI1Yzk4NyIsInNpdGVPd25lcklkIjoiZTQ1NDYxYzMtNjRhZC00ZDlmLTg0NGUtNzc0MGJjMjU2NGE2In0"
-#mnp_auth = "aOhvictdeaKTuQxsdRXNiy5tz_uchUKgsodI7ygk9Cc.eyJpbnN0YW5jZUlkIjoiYWJjNTcxYzItMzhlMC00ZGMzLWI4MGEtZmJkZTRhNTk4YzcyIiwiYXBwRGVmSWQiOiIxM2QyMWM2My1iNWVjLTU5MTItODM5Ny1jM2E1ZGRiMjdhOTciLCJtZXRhU2l0ZUlkIjoiZDFkZjNhMTUtNWYwZC00OWZjLWJkNmYtNDc0NmI4OGZjNTRjIiwic2lnbkRhdGUiOiIyMDI0LTA2LTI0VDA0OjA1OjQwLjk0NloiLCJ2ZW5kb3JQcm9kdWN0SWQiOiJib29raW5ncyIsImRlbW9Nb2RlIjpmYWxzZSwib3JpZ2luSW5zdGFuY2VJZCI6ImYyODFjNmYyLThjMTMtNGQ0Zi05ZmFjLWI4MGExNTU2ZWZiMSIsImFpZCI6ImEzOWQ0NmU1LTQxNzAtNDdlNC1hZDViLTcwNzc1ODQxMzJlOSIsImJpVG9rZW4iOiI3YTFhNGJkNy02N2VkLTA0M2YtMDU2NS1iYzk4ZjJkNjQ5M2UiLCJzaXRlT3duZXJJZCI6ImU0NTQ2MWMzLTY0YWQtNGQ5Zi04NDRlLTc3NDBiYzI1NjRhNiJ9"
-
-imi_callback = "jQuery36406886794353924179_1715325689640"
-imi_id = "1715325689641"
-
-duti_callback = "jQuery364011093063789286006_1740274810344"
-duti_id = "1740274810346"
-
-kcc_callback = "jQuery36407072146344659085_1747063164353"
-kcc_id = "1747063164355"
-
+# Calculate date range
 today = datetime.date.today()
 today_weekday = today.weekday()
 previous_monday = today - datetime.timedelta(days=today_weekday)
-upcoming_sunday = today + datetime.timedelta(days=(7 + 6 - today_weekday + 1)) # +1 so that it includes the upcoming sunday
+upcoming_sunday = today + datetime.timedelta(days=(7 + 6 - today_weekday + 1))
 
-movement(location, previous_monday, upcoming_sunday)
-imi(imi_callback, today, imi_id, location)
-xo(location)
-ix(location, previous_monday, upcoming_sunday)
-pdc(location, previous_monday, upcoming_sunday)
-duti(duti_callback, today, duti_id, location)
-endless(previous_monday, upcoming_sunday, location)
-kcc(kcc_callback, today, kcc_id, location)
-colab(previous_monday, upcoming_sunday, location)
-print("Scraping completed")
+print("=" * 70)
+print(f"🎯 Starting Dance Class Sync")
+print(f"📅 Date range: {previous_monday} to {upcoming_sunday}")
+print("=" * 70)
+
+# Configuration for each studio
+studios = [
+    {
+        "name": "Movement Nation",
+        "func": movement,
+        "args": (previous_monday, upcoming_sunday)
+    },
+    {
+        "name": "IMI Dance",
+        "func": imi,
+        "args": (
+            "jQuery36406886794353924179_1715325689640",
+            today,
+            "1715325689641"
+        )
+    },
+    {
+        "name": "CrossOver (XO)",
+        "func": xo,
+        "args": ()
+    },
+    {
+        "name": "IX Dance",
+        "func": ix,
+        "args": (previous_monday, upcoming_sunday)
+    },
+    {
+        "name": "PDC",
+        "func": pdc,
+        "args": (previous_monday, upcoming_sunday)
+    },
+    {
+        "name": "Duti Dance",
+        "func": duti,
+        "args": (
+            "jQuery364011093063789286006_1740274810344",
+            today,
+            "1740274810346"
+        )
+    },
+    {
+        "name": "Endless Dance",
+        "func": endless,
+        "args": (previous_monday, upcoming_sunday)
+    },
+    {
+        "name": "KCC",
+        "func": kcc,
+        "args": (
+            "jQuery36407072146344659085_1747063164353",
+            today,
+            "1747063164355"
+        )
+    },
+    {
+        "name": "Colab Dance",
+        "func": colab,
+        "args": (previous_monday, upcoming_sunday)
+    },
+]
+
+# Sync each studio
+total_created = 0
+total_updated = 0
+total_errors = 0
+successful_studios = 0
+failed_studios = []
+
+for studio_config in studios:
+    studio_name = studio_config["name"]
+    print(f"\n{'─' * 70}")
+    print(f"🏢 Syncing {studio_name}...")
+    print(f"{'─' * 70}")
+    
+    try:
+        result = studio_config["func"](*studio_config["args"])
+        
+        if result:
+            total_created += result.get("created", 0)
+            total_updated += result.get("updated", 0)
+            total_errors += len(result.get("errors", []))
+            successful_studios += 1
+            
+            print(f"✅ {studio_name} complete:")
+            print(f"   📝 Created: {result.get('created', 0)}")
+            print(f"   🔄 Updated: {result.get('updated', 0)}")
+            if result.get('errors'):
+                print(f"   ⚠️  Errors: {len(result['errors'])}")
+        else:
+            print(f"⚠️  {studio_name} returned no result")
+            
+    except Exception as e:
+        print(f"❌ Error syncing {studio_name}: {e}")
+        failed_studios.append(studio_name)
+        continue
+
+# Summary
+print("\n" + "=" * 70)
+print("📊 SYNC SUMMARY")
+print("=" * 70)
+print(f"✅ Successful studios: {successful_studios}/{len(studios)}")
+print(f"📝 Total created: {total_created}")
+print(f"🔄 Total updated: {total_updated}")
+print(f"⚠️  Total errors: {total_errors}")
+
+if failed_studios:
+    print(f"\n❌ Failed studios: {', '.join(failed_studios)}")
+
+print("\n✅ Scraping completed!")
+print("=" * 70)

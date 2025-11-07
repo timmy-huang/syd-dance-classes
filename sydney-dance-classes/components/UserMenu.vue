@@ -23,12 +23,7 @@
             <v-list-item-title>Profile</v-list-item-title>
           </v-list-item>
           
-          <v-list-item @click="goToChoreographerSetup">
-            <template v-slot:prepend>
-              <v-icon>mdi-dance-ballroom</v-icon>
-            </template>
-            <v-list-item-title>Become a Choreographer</v-list-item-title>
-          </v-list-item>
+
           
           <v-divider />
           
@@ -56,7 +51,6 @@ const router = useRouter()
 
 const goToLogin = () => router.push('/login')
 const goToProfile = () => router.push('/profile')
-const goToChoreographerSetup = () => router.push('/choreographer/setup')
 
 const handleLogout = async () => {
   await supabase.auth.signOut()

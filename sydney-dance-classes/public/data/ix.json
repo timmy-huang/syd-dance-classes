@@ -130,7 +130,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 15,
-        "openSpots": 13,
+        "openSpots": 11,
         "name": "K-pop (Under 15s)",
         "level": [
             "youth"
@@ -150,7 +150,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 18,
         "name": "Locking | Beginners",
         "level": [
             "beginner"
@@ -190,7 +190,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 18,
+        "openSpots": 12,
         "name": "K-pop",
         "level": [
             "advanced"
@@ -261,8 +261,8 @@
     },
     {
         "serviceId": "cfc23659-ae30-4cd7-bc9a-213c53d6368a",
-        "start": "2025-11-07T18:40:00.000+11:00",
-        "end": "2025-11-07T19:55:00.000+11:00",
+        "start": "2025-11-07T19:40:00.000+11:00",
+        "end": "2025-11-07T20:55:00.000+11:00",
         "choreo": {
             "id": "88",
             "name": "Cat",
@@ -290,7 +290,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 15,
-        "openSpots": 10,
+        "openSpots": 9,
         "name": "Kids K-pop (K-Y3)",
         "level": [
             "youth"
@@ -330,7 +330,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 19,
         "name": "K-pop",
         "level": [
             "advanced"
@@ -510,7 +510,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 19,
         "name": "Choreography Pop-Up | Intermediate/Advanced",
         "level": [
             "intermediate",

@@ -1,118 +1,5 @@
 [
     {
-        "start": "2025-11-06T17:30",
-        "end": "2025-11-06T18:15",
-        "choreo": {
-            "id": "122",
-            "name": "Evie Morris",
-            "instagram": ""
-        },
-        "name": "Pilates",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-11-06T18:00",
-        "end": "2025-11-06T19:00",
-        "choreo": {
-            "id": "127",
-            "name": "Dee Hayek",
-            "instagram": ""
-        },
-        "name": "Reggaeton Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-11-06T18:15",
-        "end": "2025-11-06T19:15",
-        "choreo": {
-            "id": "122",
-            "name": "Evie Morris",
-            "instagram": ""
-        },
-        "name": "Contemporary Absolute Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Contemporary"
-        ]
-    },
-    {
-        "start": "2025-11-06T18:15",
-        "end": "2025-11-06T19:30",
-        "choreo": {
-            "id": "128",
-            "name": "Whyan Chen",
-            "instagram": ""
-        },
-        "name": "Choreography Intermediate",
-        "level": [
-            "intermediate"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-11-06T19:00",
-        "end": "2025-11-06T20:30",
-        "choreo": {
-            "id": "336",
-            "name": "Kailan Teneti",
-            "instagram": "@kalian.zane"
-        },
-        "name": "Hip Hop Choreography Int Adv",
-        "level": [
-            "intermediate",
-            "advanced"
-        ],
-        "style": [
-            "Hip Hop"
-        ]
-    },
-    {
-        "start": "2025-11-06T19:15",
-        "end": "2025-11-06T20:15",
-        "choreo": {
-            "id": "131",
-            "name": "Rachell Dade",
-            "instagram": ""
-        },
-        "name": "Dancehall Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-11-06T19:30",
-        "end": "2025-11-06T20:45",
-        "choreo": {
-            "id": "197",
-            "name": "Cassandra Merwood",
-            "instagram": ""
-        },
-        "name": "Heels Beginner Foundations",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Heels"
-        ]
-    },
-    {
         "start": "2025-11-08T09:30",
         "end": "2025-11-08T11:00",
         "choreo": {
@@ -148,8 +35,8 @@
         "start": "2025-11-08T11:00",
         "end": "2025-11-08T12:00",
         "choreo": {
-            "id": "136",
-            "name": "Natasha Sturgis",
+            "id": "42",
+            "name": "Genki",
             "instagram": ""
         },
         "name": "Contemporary Beginner",
@@ -676,6 +563,119 @@
         "level": [
             "intermediate",
             "advanced"
+        ],
+        "style": [
+            "Heels"
+        ]
+    },
+    {
+        "start": "2025-11-13T17:30",
+        "end": "2025-11-13T18:15",
+        "choreo": {
+            "id": "122",
+            "name": "Evie Morris",
+            "instagram": ""
+        },
+        "name": "Pilates",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-13T18:00",
+        "end": "2025-11-13T19:00",
+        "choreo": {
+            "id": "127",
+            "name": "Dee Hayek",
+            "instagram": ""
+        },
+        "name": "Reggaeton Beginner",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-13T18:15",
+        "end": "2025-11-13T19:15",
+        "choreo": {
+            "id": "122",
+            "name": "Evie Morris",
+            "instagram": ""
+        },
+        "name": "Contemporary Absolute Beginner",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Contemporary"
+        ]
+    },
+    {
+        "start": "2025-11-13T18:15",
+        "end": "2025-11-13T19:30",
+        "choreo": {
+            "id": "128",
+            "name": "Whyan Chen",
+            "instagram": ""
+        },
+        "name": "Choreography Intermediate",
+        "level": [
+            "intermediate"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-13T19:00",
+        "end": "2025-11-13T20:30",
+        "choreo": {
+            "id": "336",
+            "name": "Kailan Teneti",
+            "instagram": "@kalian.zane"
+        },
+        "name": "Hip Hop Choreography Int Adv",
+        "level": [
+            "intermediate",
+            "advanced"
+        ],
+        "style": [
+            "Hip Hop"
+        ]
+    },
+    {
+        "start": "2025-11-13T19:15",
+        "end": "2025-11-13T20:15",
+        "choreo": {
+            "id": "131",
+            "name": "Rachell Dade",
+            "instagram": ""
+        },
+        "name": "Dancehall Beginner",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-13T19:30",
+        "end": "2025-11-13T20:45",
+        "choreo": {
+            "id": "24",
+            "name": "Chantelle",
+            "instagram": ""
+        },
+        "name": "Heels Beginner Foundations",
+        "level": [
+            "beginner"
         ],
         "style": [
             "Heels"

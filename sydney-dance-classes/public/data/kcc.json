@@ -1,11 +1,11 @@
 [
     {
-        "start": "2025-11-06T17:00",
-        "end": "2025-11-06T18:00",
+        "start": "2025-11-13T17:00",
+        "end": "2025-11-13T18:00",
         "choreo": {
-            "id": "349",
-            "name": "KirkIcao",
-            "instagram": "@kaizenkirk"
+            "id": "326",
+            "name": "TyrinBarnett",
+            "instagram": "@tyrinnnn"
         },
         "name": "Jr Academy Hip Hop",
         "level": [
@@ -16,8 +16,8 @@
         ]
     },
     {
-        "start": "2025-11-06T18:00",
-        "end": "2025-11-06T19:00",
+        "start": "2025-11-13T18:00",
+        "end": "2025-11-13T19:00",
         "choreo": {
             "id": "93",
             "name": "Tango",
@@ -32,12 +32,12 @@
         ]
     },
     {
-        "start": "2025-11-06T19:00",
-        "end": "2025-11-06T20:00",
+        "start": "2025-11-13T19:00",
+        "end": "2025-11-13T20:00",
         "choreo": {
-            "id": "352",
-            "name": "StanleyXu",
-            "instagram": "@drift_maddawg"
+            "id": "327",
+            "name": "AquilaFugawai",
+            "instagram": "@babyfacequills02"
         },
         "name": "Jr Academy Krump",
         "level": [

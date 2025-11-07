@@ -171,7 +171,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 20,
-        "openSpots": 13,
+        "openSpots": 11,
         "name": "Heels Absolute Beginner",
         "level": [
             "beginner"
@@ -191,7 +191,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 20,
-        "openSpots": 19,
+        "openSpots": 16,
         "name": "Girls Choreography",
         "level": [
             "advanced"
@@ -211,7 +211,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 15,
-        "openSpots": 10,
+        "openSpots": 9,
         "name": "HIPHOP Beginner",
         "level": [
             "beginner"
@@ -231,7 +231,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 20,
-        "openSpots": 17,
+        "openSpots": 16,
         "name": "Girl Style Beginner",
         "level": [
             "beginner"
@@ -282,8 +282,8 @@
     },
     {
         "serviceId": "8dcbceaf-8302-47cc-bc19-835b20057ac5",
-        "start": "2025-11-08T15:00:00.000+11:00",
-        "end": "2025-11-08T16:00:00.000+11:00",
+        "start": "2025-11-10T18:00:00.000+11:00",
+        "end": "2025-11-10T19:00:00.000+11:00",
         "choreo": {
             "id": "97",
             "name": "Yuming",
@@ -298,26 +298,6 @@
         ],
         "style": [
             "Other"
-        ]
-    },
-    {
-        "serviceId": "846b932b-30bb-4651-8d21-f90067e5dbb0",
-        "start": "2025-11-10T18:00:00.000+11:00",
-        "end": "2025-11-10T19:00:00.000+11:00",
-        "choreo": {
-            "id": "13",
-            "name": "Rishika",
-            "instagram": ""
-        },
-        "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
-        "totalSpots": 20,
-        "openSpots": 20,
-        "name": "Girls Choreography",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Choreography"
         ]
     },
     {

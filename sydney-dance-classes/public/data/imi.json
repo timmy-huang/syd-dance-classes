@@ -1,54 +1,5 @@
 [
     {
-        "start": "2025-11-06T17:45",
-        "end": "2025-11-06T19:00",
-        "choreo": {
-            "id": "192",
-            "name": "MinBin",
-            "instagram": "@minibin_"
-        },
-        "name": "Intermediate Choreography Studio 1",
-        "level": [
-            "intermediate"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-11-06T17:45",
-        "end": "2025-11-06T19:00",
-        "choreo": {
-            "id": "142",
-            "name": "AngelaJung",
-            "instagram": "@angelaajung_"
-        },
-        "name": "Beginner Choreography Studio A",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-11-06T19:00",
-        "end": "2025-11-06T20:15",
-        "choreo": {
-            "id": "240",
-            "name": "Karen",
-            "instagram": "@karen_mirage"
-        },
-        "name": "Pop Up Beginner House Foundation Studio B",
-        "level": [
-            "beginner",
-            "pop-up"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
         "start": "2025-11-07T17:45",
         "end": "2025-11-07T19:00",
         "choreo": {
@@ -307,6 +258,72 @@
         ],
         "style": [
             "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-13T17:45",
+        "end": "2025-11-13T19:00",
+        "choreo": {
+            "id": "192",
+            "name": "MinBin",
+            "instagram": "@minibin_"
+        },
+        "name": "Intermediate Choreography Studio 1",
+        "level": [
+            "intermediate"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-13T17:45",
+        "end": "2025-11-13T19:00",
+        "choreo": {
+            "id": "142",
+            "name": "AngelaJung",
+            "instagram": "@angelaajung_"
+        },
+        "name": "Beginner Choreography Studio A",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-13T17:45",
+        "end": "2025-11-13T19:00",
+        "choreo": {
+            "id": "143",
+            "name": "Angie",
+            "instagram": "@angeliquevanjour"
+        },
+        "name": "Pop Up Open Choreography Studio B",
+        "level": [
+            "advanced",
+            "pop-up"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-13T19:00",
+        "end": "2025-11-13T20:15",
+        "choreo": {
+            "id": "240",
+            "name": "Karen",
+            "instagram": "@karen_mirage"
+        },
+        "name": "Pop Up Beginner House Foundation Studio B",
+        "level": [
+            "beginner",
+            "pop-up"
+        ],
+        "style": [
+            "Other"
         ]
     }
 ]

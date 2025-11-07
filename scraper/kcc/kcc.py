@@ -29,8 +29,8 @@ def kcc(callback, start_date, _id):
     transformed = [
         transform_class_data(
             cls,
-            "KCC Dance",
-            "https://www.kcc.dance"  # Replace with actual URL
+            "KCC",
+            "https://kccstudio.com.au/pages/classes"  # Replace with actual URL
         )
         for cls in classes
     ]

@@ -108,7 +108,7 @@ def scrape_colab_classes(start_date, end_date):
     }
     
     # The token - you'll need to update this periodically from your browser
-    token = "ly1HQ75uW89w4sI1atUT8Gi+B5LUmtjuK6t1dXYg4rQLaYHlYhiEXFSZ+OxuUZzOVHUCHlIpqZgtLpFPeK2EmywVIgvQzTa1SAZhM01NTChY9VgC+ue7kfnlJYktuGpuk5ClhRk19rbr/bCBVOPxlUbQ0UWBeehqRRoDybCGfH/gLRulOVVCVq8cnlxsRieI9fAeNpQBFMrTo2UA"
+    token = "Io9ZpRYxyBPHJfjWavcKGm19X5snichDCW4KkMnUtu5tC+V43DTIUpJuuxmhBNwT/No5AffxYzljfUd/vjQWgpzz5kjmE/TCbTCzhS4B+LL9ts32KjJzshdXnJw+EPbe/lL5F3O/1NFFb9cQ1jN/XX9HP2TR/uzl52bgfwCjxeZ5w7VXe+ITL+o6QErjx9prSL92hucSSqCKU0+Z"
     
     # Prepare multipart form data
     files = {

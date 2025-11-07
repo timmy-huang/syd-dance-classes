@@ -25,8 +25,8 @@ def xo():
     transformed = [
         transform_class_data(
             cls,
-            "CrossOver Dance Studio",
-            "https://www.crossoverdance.com.au"  # Replace with actual URL
+            "Crossover",
+            "https://www.crossoverdance.com/timetable/"  # Replace with actual URL
         )
         for cls in classes
     ]
@@ -106,7 +106,7 @@ def scrape_xo_classes():
                 service_id = session_id_pattern[i]
             else:
                 # Temporary fallback - log warning
-                print(f"⚠️  CrossOver class '{display_name.strip()}' missing session ID")
+                print(f"⚠️  Crossover class '{display_name.strip()}' missing session ID")
                 print(f"   Using class name as temporary ID: {class_name_raw}")
                 print(f"   Please inspect HTML to find correct ID field")
                 service_id = class_name_raw
@@ -117,13 +117,13 @@ def scrape_xo_classes():
                 "end": end.isoformat(),
                 "choreo": choreographer,
                 "name": display_name.strip(),
-                "location": "CrossOver Dance Studio",
+                "location": "Crossover Dance Studio",
                 "level": determine_level(display_name.strip()),
                 "style": determine_style(display_name.strip())
             }
             formatted_classes.append(class_data)
         
-        print(f"✓ Scraped {len(formatted_classes)} classes from CrossOver")
+        print(f"✓ Scraped {len(formatted_classes)} classes from Crossover")
         return formatted_classes
         
     except requests.exceptions.RequestException as e:

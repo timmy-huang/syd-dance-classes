@@ -29,8 +29,8 @@ def imi(callback, start_date, _id):
     transformed = [
         transform_class_data(
             cls,
-            "IMI Dance",
-            "https://imient.com.au"
+            "IMI",
+            "https://imient.com.au/classes"
         )
         for cls in classes
     ]

@@ -27,8 +27,8 @@ def ix(start_date, end_date):
     transformed = [
         transform_class_data(
             cls,
-            "IX Dance Studio",
-            "https://www.ixdancestudio.com"
+            "IX",
+            "https://www.ixdancestudio.com/booking"
         )
         for cls in classes
     ]

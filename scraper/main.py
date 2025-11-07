@@ -28,7 +28,7 @@ studios = [
         "args": (previous_monday, upcoming_sunday)
     },
     {
-        "name": "IMI Dance",
+        "name": "IMI",
         "func": imi,
         "args": (
             "jQuery36406886794353924179_1715325689640",
@@ -37,12 +37,12 @@ studios = [
         )
     },
     {
-        "name": "CrossOver (XO)",
+        "name": "Crossover",
         "func": xo,
         "args": ()
     },
     {
-        "name": "IX Dance",
+        "name": "IX",
         "func": ix,
         "args": (previous_monday, upcoming_sunday)
     },
@@ -52,7 +52,7 @@ studios = [
         "args": (previous_monday, upcoming_sunday)
     },
     {
-        "name": "Duti Dance",
+        "name": "DUTI",
         "func": duti,
         "args": (
             "jQuery364011093063789286006_1740274810344",
@@ -75,7 +75,7 @@ studios = [
         )
     },
     {
-        "name": "Colab Dance",
+        "name": "Colab",
         "func": colab,
         "args": (previous_monday, upcoming_sunday)
     },

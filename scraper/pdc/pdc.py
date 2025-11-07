@@ -27,7 +27,7 @@ def pdc(start_date, end_date):
     transformed = [
         transform_class_data(
             cls,
-            "PDC Dance",
+            "PDC",
             "https://www.pdcdance.net"
         )
         for cls in classes

@@ -29,8 +29,8 @@ def endless(start_date, end_date):
     transformed = [
         transform_class_data(
             cls,
-            "Endless Dance Studio",
-            "https://endlessdance.com.au"
+            "Endless Dance",
+            "https://endlessdance.com.au/classes"
         )
         for cls in classes
     ]

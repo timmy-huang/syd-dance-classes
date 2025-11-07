@@ -29,8 +29,8 @@ def duti(callback, start_date, _id):
     transformed = [
         transform_class_data(
             cls,
-            "Duti Dance",
-            "https://www.dutidance.com"
+            "DUTI",
+            "https://www.dutistudios.com.au/timetable"
         )
         for cls in classes
     ]

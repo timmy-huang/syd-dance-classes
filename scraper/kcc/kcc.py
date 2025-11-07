@@ -1,7 +1,7 @@
 import requests
 import json
 import re
-from helper import get_or_create_choreographer, determine_level, determine_style
+from helper import determine_level, determine_style
 from api_client import DanceClassAPI, transform_class_data
 
 
@@ -118,7 +118,7 @@ def scrape_kcc_classes(callback, start_date, _id):
             insta = staff_parts[1].strip() if len(staff_parts) > 1 else ""
             
             # Get or create choreographer object
-            choreographer = get_or_create_choreographer(name, insta)
+            choreographer = {"name": name, "instagram": insta}
             
             classData = {
                 "serviceId": str(session_ids[i]),

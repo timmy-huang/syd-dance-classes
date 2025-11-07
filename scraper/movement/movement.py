@@ -1,6 +1,6 @@
 import requests
 import json
-from helper import get_or_create_choreographer, determine_level, determine_style
+from helper import determine_level, determine_style
 from api_client import DanceClassAPI, transform_class_data
 
 def movement(start_date, end_date):
@@ -88,7 +88,7 @@ def scrape_movement_nation(url: str, start_date, end_date) -> list:
     # Process and structure data
     classes = []
     for slot in query["availabilityEntries"]:
-        choreographer = get_or_create_choreographer(slot["slot"]["resource"]["name"])
+        choreographer = {"name": slot["slot"]["resource"]["name"], "instagram": ""}
         
         class_data = {
             "serviceId": slot["slot"]["serviceId"],

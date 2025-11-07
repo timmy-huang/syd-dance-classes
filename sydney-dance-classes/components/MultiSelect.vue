@@ -43,8 +43,9 @@
 </template>
 
 <script lang="ts" setup>
-  import { computed } from 'vue';
-  import { studios, styles } from '../utils/consts';
+  import { computed, onMounted } from 'vue';
+  import { styles } from '../utils/consts';
+  const { studios, fetchStudios } = useStudios();
 
   const emit = defineEmits(["update"]);
 
@@ -53,9 +54,16 @@
     type: String
   });
 
+  // Fetch studios on mount
+  onMounted(async () => {
+    if (props.type === 'Studios') {
+      await fetchStudios();
+    }
+  });
+
   const items = computed(() => {
     if (props.type === 'Studios') {
-      return studios;
+      return studios.value;
     } else {
       return styles;
     }

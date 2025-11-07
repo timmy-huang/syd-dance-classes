@@ -2,7 +2,12 @@ import requests
 import json
 import re
 import datetime
-from helper import get_or_create_choreographer, determine_level, determine_style
+try:
+    from zoneinfo import ZoneInfo
+except ImportError:
+    # Fallback for Python < 3.9
+    from backports.zoneinfo import ZoneInfo
+from helper import determine_level, determine_style
 from api_client import DanceClassAPI, transform_class_data
 
 
@@ -231,12 +236,20 @@ def parse_endless_response_text(content):
                         # Remove name from title
                         class_name = title.split('/')[1].strip() if '/' in title else title
                         
-                        # Create choreographer object
-                        choreographer = get_or_create_choreographer(choreo_name)
+                        # Create choreographer object (backend API handles creation)
+                        choreographer = {
+                            "name": choreo_name,
+                            "instagram": ""
+                        }
                         
                         # Extract start time
                         start_time = fields["start_date_time"]["timestampValue"]
-                        start_datetime = datetime.datetime.fromisoformat(start_time.replace('Z', '+00:00'))
+                        # Parse UTC timestamp from Firestore
+                        start_datetime_utc = datetime.datetime.fromisoformat(start_time.replace('Z', '+00:00'))
+                        
+                        # Convert from UTC to Australia/Sydney timezone
+                        sydney_tz = ZoneInfo("Australia/Sydney")
+                        start_datetime = start_datetime_utc.astimezone(sydney_tz)
                         
                         # Calculate end time based on minutes
                         minutes = int(fields["minutes"]["integerValue"])

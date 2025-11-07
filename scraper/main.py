@@ -75,7 +75,7 @@ studios = [
         )
     },
     {
-        "name": "Colab",
+        "name": "Co-Lab Quarters",
         "func": colab,
         "args": (previous_monday, upcoming_sunday)
     },

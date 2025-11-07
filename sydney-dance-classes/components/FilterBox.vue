@@ -51,8 +51,6 @@
 </template>
 
 <script lang="ts" setup>
-  import { computed } from 'vue';
-  import { studios } from '../utils/consts';
   import MultiSelect from './MultiSelect.vue';
 
   const emit = defineEmits(["update:selectedStudios", "update:selectedStyles", "update:adv", "update:inte", "update:beg", "update:search", "update:youth", "update:popUp"]);

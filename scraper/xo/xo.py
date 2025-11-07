@@ -2,7 +2,7 @@ import requests
 import json
 import re
 from datetime import datetime
-from helper import get_or_create_choreographer, determine_level, determine_style
+from helper import determine_level, determine_style
 from api_client import DanceClassAPI, transform_class_data
 
 
@@ -94,7 +94,7 @@ def scrape_xo_classes():
         formatted_classes = []
         for i, (class_name_raw, start_time, end_time, display_name, trainer) in enumerate(class_rows):
             # Get or create choreographer object
-            choreographer = get_or_create_choreographer(trainer.strip())
+            choreographer = {"name": trainer.strip(), "instagram": ""}
             
             # Parse datetime strings
             start = datetime.strptime(start_time, '%Y-%m-%dT%H:%M:%S.%f%z')

@@ -1,7 +1,7 @@
 import requests
 import json
 import re
-from helper import get_or_create_choreographer, determine_level, determine_style
+from helper import determine_level, determine_style
 from api_client import DanceClassAPI, transform_class_data
 
 
@@ -116,7 +116,7 @@ def scrape_duti_classes(callback, start_date, _id):
             # Normalize DUTI name by adding a space before capital letters except for the first letter
             name = re.sub(r'(?<!^)(?=[A-Z])', ' ', name)
             
-            choreographer = get_or_create_choreographer(name)
+            choreographer = {"name": name, "instagram": ""}
             
             classData = {
                 "serviceId": str(session_ids[i]),

@@ -1,7 +1,7 @@
 import requests
 from datetime import datetime
 import json
-from helper import get_or_create_choreographer, determine_level, determine_style
+from helper import determine_level, determine_style
 from api_client import DanceClassAPI, transform_class_data
 
 
@@ -145,9 +145,9 @@ def scrape_colab_classes(start_date, end_date):
                 instructor = staff_list[0]
                 name = instructor.get('displayLabel', 'Unknown')
                 insta = ""  # Not available in API response
-                choreographer = get_or_create_choreographer(name, insta)
+                choreographer = {"name": name, "instagram": insta}
             else:
-                choreographer = get_or_create_choreographer("Unknown", "")
+                choreographer = {"name": "Unknown", "instagram": ""}
             
             # TODO: Find the actual serviceId/class ID from the Co-Lab API response
             # For now, skip classes without a proper ID

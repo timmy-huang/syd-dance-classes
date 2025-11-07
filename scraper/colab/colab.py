@@ -83,9 +83,9 @@ def scrape_colab_classes(start_date, end_date):
     headers = {
         "accept": "text/x-component",
         "accept-language": "en-US,en;q=0.9",
-        "newrelic": "eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkJyb3dzZXIiLCJhYyI6Ijg0NDY3IiwiYXAiOiIxODM1MDM3NjE3IiwiaWQiOiI5N2ZhMTg1ZThiMzMyMjhhIiwidHIiOiI2YTU3OTFiNzNhNjJjNGFhODhhOTU1NDhhMzQ2NjhlZSIsInRpIjoxNzYxNDY3NTQ4NjU5fX0=",
+        "newrelic": "eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkJyb3dzZXIiLCJhYyI6IjIxMTg0NDkiLCJhcCI6IjE4MzUwMzcyMDIiLCJpZCI6IjdkODlhNzYxZTcwYThjNzgiLCJ0ciI6IjEzNzdlMDcyMzQyYTZhNjkxNGI2OGE0NTZmZTU5NmJlIiwidGkiOjE3NjI0ODQ0NDg0MTEsInRrIjoiODQ0NjcifX0=",
         "next-action": "4f5d69414e1b758541ec223c15d6e1f87de21681",
-        "next-router-state-tree": "%5B%22%22%2C%7B%22children%22%3A%5B%5B%22locale%22%2C%22en%22%2C%22d%22%5D%2C%7B%22children%22%3A%5B%22widgets%22%2C%7B%22children%22%3A%5B%22schedules%22%2C%7B%22children%22%3A%5B%5B%22preview%22%2C%22view%22%2C%22d%22%5D%2C%7B%22children%22%3A%5B%5B%22widgetId%22%2C%22562306b3ba%22%2C%22d%22%5D%2C%7B%22children%22%3A%5B%22schedule%22%2C%7B%22children%22%3A%5B%22__PAGE__%22%2C%7B%7D%2C%22%2Fcomponents%2Fwidgets%2Fschedules%2Fview%2F562306b3ba%2Fschedule%22%2C%22refresh%22%5D%7D%5D%7D%5D%7D%5D%7D%5D%7D%2Cnull%2Cnull%2Ctrue%5D%7D%5D",
+        "next-router-state-tree": "%5B%22%22%2C%7B%22children%22%3A%5B%5B%22locale%22%2C%22en%22%2C%22d%22%5D%2C%7B%22children%22%3A%5B%22widgets%22%2C%7B%22children%22%3A%5B%22schedules%22%2C%7B%22children%22%3A%5B%5B%22preview%22%2C%22view%22%2C%22d%22%5D%2C%7B%22children%22%3A%5B%5B%22widgetId%22%2C%22562306b3ba%22%2C%22d%22%5D%2C%7B%22children%22%3A%5B%22schedule%22%2C%7B%22children%22%3A%5B%22__PAGE__%22%2C%7B%7D%2C%22%2Fcomponents%2Fwidgets%2Fschedules%2Fview%2F562306b3ba%2Fschedule%22%2C%22refresh%22%5D%7D%5D%7D%5D%7D%5D%7D%5D%7D%5D%7D%2Cnull%2Cnull%2Ctrue%5D%7D%5D",
         "origin": "https://brandedweb-next.mindbodyonline.com",
         "priority": "u=1, i",
         "referer": "https://brandedweb-next.mindbodyonline.com/components/widgets/schedules/view/562306b3ba/schedule",
@@ -96,19 +96,19 @@ def scrape_colab_classes(start_date, end_date):
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "sec-fetch-storage-access": "active",
-        "traceparent": "00-6a5791b73a62c4aa88a95548a34668ee-97fa185e8b33228a-01",
-        "tracestate": "84467@nr=0-1-84467-1835037617-97fa185e8b33228a----1761467548659",
+        "traceparent": "00-1377e072342a6a6914b68a456fe596be-7d89a761e70a8c78-01",
+        "tracestate": "84467@nr=0-1-2118449-1835037202-7d89a761e70a8c78----1762484448411",
         "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36"
     }
     
     # Cookies
     cookies = {
-        "_cfuvid": "B45Epv39rxByirWxBaJIfxP5X.e4XblbpIMaw5AmBL0-1761467939686-0.0.1.1-604800000",
-        "cf_clearance": "ZHHJoCFrZKSqSFel.h_C4VmYTwge3HNHn_Ee9rSj9lc-1761463348-1.2.1.1-22MFYw.HDxwsFKQTWOD_hScUoOFwXmcWi6Sum9HjQlBaEBaDMNpT6TmY7JDJz_K4Jhh7Nx0P3M44RbJfiAseuc6a46FF7rDI9IHhPmH_qK9PAbhbL3whLdxCCLnKECYMvfulFNqGi2oGWXjRGmsqSruOhUXfEe6Q6vBT1ulUGzwMzATksXAjofLpNjLF6WkW4LLodXTLoCtL_2INu8Csx6NJzmFHJsW2qyRo9sulxe4"
+        "_cfuvid": "ei498bJ0wHHIsFHc2a4JuFvTgaHYslQCnPvcAeN3CS8-1762484440221-0.0.1.1-604800000",
+        "cf_clearance": "4wPFWdangUO8JbqdJ7X9DgK.8ybDQDOiYspCorDn2Jg-1762483832-1.2.1.1-2rmiwSLWHCQzJ_KVBMMq7FBDTm8jN9tV5xw.CtPWInxci9xipPjgePCS2zEnUmA9c7sDUyR3vaB7ci5z6N.QOVHHfD6AHbVQ3h_lnEWxNoeRJI.nCfvETZfCdnyHdqeLvSuP.hyJJkKokv91MZ5FF_HH6Cnz5ffjLC96a_3amCZ7t4l7GzqKWgyObQDCvYMTHZW7sopikS.HtsWglbu6tj1QV1XK3_sf6yxxENyLirg"
     }
     
     # The token - you'll need to update this periodically from your browser
-    token = "Io9ZpRYxyBPHJfjWavcKGm19X5snichDCW4KkMnUtu5tC+V43DTIUpJuuxmhBNwT/No5AffxYzljfUd/vjQWgpzz5kjmE/TCbTCzhS4B+LL9ts32KjJzshdXnJw+EPbe/lL5F3O/1NFFb9cQ1jN/XX9HP2TR/uzl52bgfwCjxeZ5w7VXe+ITL+o6QErjx9prSL92hucSSqCKU0+Z"
+    token = "Ls/jQ/npoH70XN8IDoO8KQgBvxV7/Kjuo9rMsTkD7O0ZAv19g2UOXStXdSIg6eulz2osoGeyliYC8esO3QKAaU2XCrD/XSAcThaqFa4yxXlpBp5bDuo43tiLEH1hzQ1qnxCdlVYmonomSZ70vUE1Bovxcpwp+3NacJjlfNYPVTUnvZjPet55kg+qVpTEC4iZLRKuqL2CIU7CE2vI"
     
     # Prepare multipart form data
     files = {

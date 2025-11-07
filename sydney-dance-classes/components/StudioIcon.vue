@@ -45,7 +45,7 @@
 
     <a :href="`https://www.instagram.com/endlessdancesydney`" target="_blank" rel="noopener">
       <v-img
-        v-if="studio === 'Endless'"
+        v-if="studio === 'Endless Dance'"
         src="/endless.jpg"
       />
     </a>
@@ -67,7 +67,7 @@
 
       <a :href="`https://www.instagram.com/colabquarters`" target="_blank" rel="noopener">
         <v-img
-          v-if="studio === 'Colab'"
+          v-if="studio === 'Co-Lab Quarters'"
           src="/colab.webp"
         />
       </a>

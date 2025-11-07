@@ -1,43 +1,42 @@
 import type { Lesson } from '~/types'
-import { studios } from './consts'
 
 const getData = async (lessons: Ref<Lesson[]>) => {
   try {
-    const fetchPromises = studios.map(async (studioName) => {
-      const file = studioName.replaceAll(' ', '_').toLowerCase()
-      try {
-        // Use absolute path from public folder
-        const response = await fetch(`/data/${file}.json`)
+    // Fetch all classes from the database API
+    const response = await fetch('/api/classes')
 
-        if (!response.ok) {
-          throw new Error(`Data not found for ${file}`)
+    if (!response.ok) {
+      throw new Error(`Failed to fetch classes: ${response.statusText}`)
+    }
+
+    const result = await response.json()
+    const data = result.lessons || []
+
+    // Transform API response to match Lesson type
+    data.forEach((lesson: any) => {
+      lessons.value.push({
+        serviceId: lesson.serviceId,
+        start: new Date(lesson.start),
+        end: new Date(lesson.end),
+        name: lesson.name,
+        location: lesson.location,
+        totalSpots: lesson.totalSpots,
+        openSpots: lesson.openSpots,
+        level: lesson.level || [],
+        style: lesson.style || [],
+        studio: lesson.studio,
+        choreo: {
+          id: lesson.choreo.id || '',
+          name: lesson.choreo.name || '',
+          instagram: lesson.choreo.instagram || ''
         }
-
-        const data = await response.json()
-
-        data.forEach((lesson: Lesson) => {
-          lessons.value.push({
-            ...lesson,
-            start: new Date(lesson.start),
-            end: new Date(lesson.end),
-            studio: studioName,
-            choreo: {
-              id: lesson.choreo.id || '',
-              name: lesson.choreo.name || '',
-              instagram: lesson.choreo.instagram || ''
-            }
-          })
-        })
-      } catch (error) {
-        console.error(`Could not fetch data for ${file}:`, error)
-      }
+      })
     })
 
-    await Promise.all(fetchPromises)
-    console.log('All data fetched, lessons count:', lessons.value.length)
+    console.log('All data fetched from database, lessons count:', lessons.value.length)
     return lessons
   } catch (error) {
-    console.error('Error fetching data:', error)
+    console.error('Error fetching data from database:', error)
     return lessons
   }
 }

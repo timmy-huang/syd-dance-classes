@@ -7,9 +7,9 @@ const studios = [
   "IX",
   "PDC",
   "DUTI",
-  "Endless",
+  "Endless Dance",
   "KCC",
-  "Colab"
+  "Co-Lab Quarters"
 ]
 
 const styles = [

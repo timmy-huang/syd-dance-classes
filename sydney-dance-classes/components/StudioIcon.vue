@@ -50,7 +50,7 @@
       />
     </a>
 
-    <div v-if="studio === 'KCC' || studio === 'IMI' || studio === 'Colab'" class="pa-2 transparent-container">
+    <div v-if="studio === 'KCC' || studio === 'IMI' || studio === 'Co-Lab Quarters'" class="pa-2 transparent-container">
       <a :href="`https://www.instagram.com/kcc_studio`" target="_blank" rel="noopener">
         <v-img
           v-if="studio === 'KCC'"

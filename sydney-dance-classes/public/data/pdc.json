@@ -211,7 +211,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 15,
-        "openSpots": 9,
+        "openSpots": 6,
         "name": "HIPHOP Beginner",
         "level": [
             "beginner"
@@ -451,7 +451,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 18,
-        "openSpots": 18,
+        "openSpots": 17,
         "name": "Heels Beginner-Intermediate",
         "level": [
             "intermediate",
@@ -472,7 +472,7 @@
         },
         "location": "PDC DANCE STUDIO, \u6fb3\u5927\u5229\u4e9a\u65b0\u5357\u5a01\u5c14\u58eb\u5dde\u5b9d\u6d3b Burwood Road",
         "totalSpots": 20,
-        "openSpots": 15,
+        "openSpots": 16,
         "name": "Heels Absolute Beginner",
         "level": [
             "beginner"

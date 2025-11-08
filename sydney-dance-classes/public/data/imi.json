@@ -1,71 +1,5 @@
 [
     {
-        "start": "2025-11-07T17:45",
-        "end": "2025-11-07T19:00",
-        "choreo": {
-            "id": "143",
-            "name": "Angie",
-            "instagram": "@angeliquevanjour"
-        },
-        "name": "Pop Up Open Choreography Studio A",
-        "level": [
-            "advanced",
-            "pop-up"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-11-07T17:45",
-        "end": "2025-11-07T19:00",
-        "choreo": {
-            "id": "347",
-            "name": "ToshiyaMaru",
-            "instagram": "@toshiya_maru"
-        },
-        "name": "Pop Up Beginner Choreography Studio B",
-        "level": [
-            "beginner",
-            "pop-up"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-11-07T19:00",
-        "end": "2025-11-07T20:15",
-        "choreo": {
-            "id": "29",
-            "name": "Suzy",
-            "instagram": "@suzywang1010"
-        },
-        "name": "Beginner Choreography Studio B",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-11-07T20:30",
-        "end": "2025-11-07T21:45",
-        "choreo": {
-            "id": "15",
-            "name": "Merry",
-            "instagram": "@charmingmerry888"
-        },
-        "name": "Intermediate Choreography Studio B",
-        "level": [
-            "intermediate"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
         "start": "2025-11-10T17:45",
         "end": "2025-11-10T19:00",
         "choreo": {
@@ -324,6 +258,55 @@
         ],
         "style": [
             "Other"
+        ]
+    },
+    {
+        "start": "2025-11-14T17:45",
+        "end": "2025-11-14T19:00",
+        "choreo": {
+            "id": "347",
+            "name": "ToshiyaMaru",
+            "instagram": "@toshiya_maru"
+        },
+        "name": "Pop Up Open Choreography Studio A",
+        "level": [
+            "advanced",
+            "pop-up"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-14T19:00",
+        "end": "2025-11-14T20:15",
+        "choreo": {
+            "id": "29",
+            "name": "Suzy",
+            "instagram": "@suzywang1010"
+        },
+        "name": "Beginner Choreography Studio B",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-14T20:30",
+        "end": "2025-11-14T21:45",
+        "choreo": {
+            "id": "15",
+            "name": "Merry",
+            "instagram": "@charmingmerry888"
+        },
+        "name": "Intermediate Choreography Studio B",
+        "level": [
+            "intermediate"
+        ],
+        "style": [
+            "Choreography"
         ]
     }
 ]

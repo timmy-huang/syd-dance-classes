@@ -333,7 +333,7 @@
             "Hip Hop"
         ],
         "totalSpots": 50,
-        "openSpots": 48
+        "openSpots": 46
     },
     {
         "serviceId": "4x3L7M5LIKvWLbwgSk0v",
@@ -375,7 +375,7 @@
             "Choreography"
         ],
         "totalSpots": 50,
-        "openSpots": 48
+        "openSpots": 45
     },
     {
         "serviceId": "JJpCgBxeZeq83ofZpDWx",
@@ -417,7 +417,7 @@
             "Hip Hop"
         ],
         "totalSpots": 50,
-        "openSpots": 48
+        "openSpots": 45
     },
     {
         "serviceId": "pk64H9EMIMsfZRC6UiXl",
@@ -438,7 +438,7 @@
             "Kpop"
         ],
         "totalSpots": 50,
-        "openSpots": 50
+        "openSpots": 47
     },
     {
         "serviceId": "rPRrv8EXGx6q215FwiEN",
@@ -756,27 +756,6 @@
         "openSpots": 50
     },
     {
-        "serviceId": "ATVZ34jYqK3Lgpnef01x",
-        "start": "2025-11-12T08:45:00+00:00",
-        "end": "2025-11-12T10:00:00+00:00",
-        "choreo": {
-            "id": "7",
-            "name": "Icy",
-            "instagram": ""
-        },
-        "name": "Chinese Dance Choreo (All Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Choreography"
-        ],
-        "totalSpots": 50,
-        "openSpots": 50
-    },
-    {
         "serviceId": "O2XaaXqYavQUeC6yskn1",
         "start": "2025-11-13T07:00:00+00:00",
         "end": "2025-11-13T08:15:00+00:00",
@@ -903,27 +882,6 @@
         "openSpots": 50
     },
     {
-        "serviceId": "8qJNMigVCfZnljxE81U3",
-        "start": "2025-11-14T08:30:00+00:00",
-        "end": "2025-11-14T09:45:00+00:00",
-        "choreo": {
-            "id": "11",
-            "name": "Chimy",
-            "instagram": ""
-        },
-        "name": "Choreography (All Level)",
-        "studio": "Endless",
-        "location": "Studio 3, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Choreography"
-        ],
-        "totalSpots": 50,
-        "openSpots": 50
-    },
-    {
         "serviceId": "95qKPVDpFOBCrixsuwVz",
         "start": "2025-11-14T08:30:00+00:00",
         "end": "2025-11-14T10:00:00+00:00",
@@ -964,69 +922,6 @@
         ],
         "totalSpots": 25,
         "openSpots": 10
-    },
-    {
-        "serviceId": "7nXIHUMzcGJttlo6imPp",
-        "start": "2025-11-15T04:15:00+00:00",
-        "end": "2025-11-15T05:30:00+00:00",
-        "choreo": {
-            "id": "14",
-            "name": "ICE",
-            "instagram": ""
-        },
-        "name": "Hiphop Choreo (All Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Hip Hop"
-        ],
-        "totalSpots": 50,
-        "openSpots": 50
-    },
-    {
-        "serviceId": "bAb2jUE8ZUj1MmrkDqEV",
-        "start": "2025-11-15T04:30:00+00:00",
-        "end": "2025-11-15T05:45:00+00:00",
-        "choreo": {
-            "id": "6",
-            "name": "Yezi",
-            "instagram": ""
-        },
-        "name": "Kpop (Beginner-All Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Kpop"
-        ],
-        "totalSpots": 50,
-        "openSpots": 50
-    },
-    {
-        "serviceId": "jvQivGVfJ9yBwlOrMl1p",
-        "start": "2025-11-15T05:45:00+00:00",
-        "end": "2025-11-15T07:00:00+00:00",
-        "choreo": {
-            "id": "6",
-            "name": "Yezi",
-            "instagram": ""
-        },
-        "name": "Choreography (Beginner Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ],
-        "totalSpots": 50,
-        "openSpots": 50
     },
     {
         "serviceId": "Z9jQF51QH7KQTr8Dcxmt",

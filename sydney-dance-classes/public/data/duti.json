@@ -1,69 +1,5 @@
 [
     {
-        "start": "2025-11-08T09:30",
-        "end": "2025-11-08T11:00",
-        "choreo": {
-            "id": "115",
-            "name": "Nicholas Jachno",
-            "instagram": ""
-        },
-        "name": "Contemporary Intermediate",
-        "level": [
-            "intermediate"
-        ],
-        "style": [
-            "Contemporary"
-        ]
-    },
-    {
-        "start": "2025-11-08T10:00",
-        "end": "2025-11-08T11:00",
-        "choreo": {
-            "id": "135",
-            "name": "Tess Sturmann",
-            "instagram": ""
-        },
-        "name": "Ballet Absolute Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-11-08T11:00",
-        "end": "2025-11-08T12:00",
-        "choreo": {
-            "id": "42",
-            "name": "Genki",
-            "instagram": ""
-        },
-        "name": "Contemporary Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Contemporary"
-        ]
-    },
-    {
-        "start": "2025-11-08T11:00",
-        "end": "2025-11-08T12:00",
-        "choreo": {
-            "id": "137",
-            "name": "La La.",
-            "instagram": ""
-        },
-        "name": "Brazilian Funk Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
         "start": "2025-11-08T11:30",
         "end": "2025-11-08T12:30",
         "choreo": {
@@ -679,6 +615,23 @@
         ],
         "style": [
             "Heels"
+        ]
+    },
+    {
+        "start": "2025-11-13T20:15",
+        "end": "2025-11-13T21:30",
+        "choreo": {
+            "id": "260",
+            "name": "R\u014dre Rutene",
+            "instagram": ""
+        },
+        "name": "Choreography Int Adv Guest Class",
+        "level": [
+            "intermediate",
+            "advanced"
+        ],
+        "style": [
+            "Choreography"
         ]
     }
 ]

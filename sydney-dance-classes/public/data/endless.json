@@ -1,551 +1,5 @@
 [
     {
-        "serviceId": "5FTLqW8AZRHuBMH4FWkE",
-        "start": "2025-11-03T07:15:00+00:00",
-        "end": "2025-11-03T08:30:00+00:00",
-        "choreo": {
-            "id": "10",
-            "name": "Joyce",
-            "instagram": ""
-        },
-        "name": "Heels (Beginner Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Heels"
-        ],
-        "totalSpots": 50,
-        "openSpots": 42
-    },
-    {
-        "serviceId": "JPjFdAYHpEYVReEucSlD",
-        "start": "2025-11-03T07:15:00+00:00",
-        "end": "2025-11-03T08:45:00+00:00",
-        "choreo": {
-            "id": "292",
-            "name": "Showcase Training 2025",
-            "instagram": ""
-        },
-        "name": "TEAM KAT",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ],
-        "totalSpots": 25,
-        "openSpots": 17
-    },
-    {
-        "serviceId": "VNDNq8PpKwoNIdEcWdSy",
-        "start": "2025-11-03T08:45:00+00:00",
-        "end": "2025-11-03T10:00:00+00:00",
-        "choreo": {
-            "id": "149",
-            "name": "Queenjuh",
-            "instagram": ""
-        },
-        "name": "Girl Style (Beginner Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ],
-        "totalSpots": 50,
-        "openSpots": 45
-    },
-    {
-        "serviceId": "SJtc6Wyh4KUiMbE6IxJD",
-        "start": "2025-11-04T07:00:00+00:00",
-        "end": "2025-11-04T08:15:00+00:00",
-        "choreo": {
-            "id": "15",
-            "name": "Merry",
-            "instagram": "@charmingmerry888"
-        },
-        "name": "Girls Style (Beginner Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ],
-        "totalSpots": 50,
-        "openSpots": 39
-    },
-    {
-        "serviceId": "YpfapNxPGuQ4me81UcGf",
-        "start": "2025-11-04T08:30:00+00:00",
-        "end": "2025-11-04T09:45:00+00:00",
-        "choreo": {
-            "id": "3",
-            "name": "Ivy",
-            "instagram": "@ivy.moon"
-        },
-        "name": "Choreography (Beginner Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Choreography"
-        ],
-        "totalSpots": 50,
-        "openSpots": 46
-    },
-    {
-        "serviceId": "eG78r42fSGEVw8RhG62T",
-        "start": "2025-11-04T08:30:00+00:00",
-        "end": "2025-11-04T10:00:00+00:00",
-        "choreo": {
-            "id": "292",
-            "name": "Showcase Training 2025",
-            "instagram": ""
-        },
-        "name": "TEAM IRENE",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ],
-        "totalSpots": 25,
-        "openSpots": 12
-    },
-    {
-        "serviceId": "e2Q1sZLCUTNOkTpTSum3",
-        "start": "2025-11-05T07:00:00+00:00",
-        "end": "2025-11-05T08:15:00+00:00",
-        "choreo": {
-            "id": "5",
-            "name": "Cheryll",
-            "instagram": ""
-        },
-        "name": "Choreography (All level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Choreography"
-        ],
-        "totalSpots": 50,
-        "openSpots": 49
-    },
-    {
-        "serviceId": "mq2PymBha1a39PGp9NxA",
-        "start": "2025-11-05T07:15:00+00:00",
-        "end": "2025-11-05T08:45:00+00:00",
-        "choreo": {
-            "id": "292",
-            "name": "Showcase Training 2025",
-            "instagram": ""
-        },
-        "name": "TEAM LYNN",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ],
-        "totalSpots": 15,
-        "openSpots": 0
-    },
-    {
-        "serviceId": "y7efKPgZNVFcWUkDjHMT",
-        "start": "2025-11-05T08:30:00+00:00",
-        "end": "2025-11-05T09:45:00+00:00",
-        "choreo": {
-            "id": "335",
-            "name": "Raido",
-            "instagram": ""
-        },
-        "name": "Hiphop Choreo (All Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Hip Hop"
-        ],
-        "totalSpots": 50,
-        "openSpots": 41
-    },
-    {
-        "serviceId": "z3nFMA9Jv6DZFRi3AkhG",
-        "start": "2025-11-05T08:45:00+00:00",
-        "end": "2025-11-05T10:00:00+00:00",
-        "choreo": {
-            "id": "7",
-            "name": "Icy",
-            "instagram": ""
-        },
-        "name": "Chinese Dance Choreo (All Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Choreography"
-        ],
-        "totalSpots": 50,
-        "openSpots": 41
-    },
-    {
-        "serviceId": "sCJwzQDdinW78q24sGD6",
-        "start": "2025-11-06T07:00:00+00:00",
-        "end": "2025-11-06T08:15:00+00:00",
-        "choreo": {
-            "id": "8",
-            "name": "Tommy",
-            "instagram": "@tommythungs"
-        },
-        "name": "Choreography (Beginner level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ],
-        "totalSpots": 50,
-        "openSpots": 50
-    },
-    {
-        "serviceId": "4JQlUBV2LcJVj5LIEPMI",
-        "start": "2025-11-06T07:15:00+00:00",
-        "end": "2025-11-06T08:30:00+00:00",
-        "choreo": {
-            "id": "322",
-            "name": "SoJeong",
-            "instagram": ""
-        },
-        "name": "Choreography (Beginner Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ],
-        "totalSpots": 35,
-        "openSpots": 29
-    },
-    {
-        "serviceId": "eMZWQkuXajnrBqJzoHZK",
-        "start": "2025-11-06T08:30:00+00:00",
-        "end": "2025-11-06T10:00:00+00:00",
-        "choreo": {
-            "id": "292",
-            "name": "Showcase Training 2025",
-            "instagram": ""
-        },
-        "name": "TEAM JOYCE",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ],
-        "totalSpots": 25,
-        "openSpots": 8
-    },
-    {
-        "serviceId": "XsLUcgZnf3fjy1QDL6Uq",
-        "start": "2025-11-06T08:45:00+00:00",
-        "end": "2025-11-06T10:00:00+00:00",
-        "choreo": {
-            "id": "1",
-            "name": "Lynn",
-            "instagram": ""
-        },
-        "name": "Choreography (All Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Choreography"
-        ],
-        "totalSpots": 50,
-        "openSpots": 50
-    },
-    {
-        "serviceId": "Nxc06CgoU90wmj8VeI2H",
-        "start": "2025-11-07T07:00:00+00:00",
-        "end": "2025-11-07T08:30:00+00:00",
-        "choreo": {
-            "id": "292",
-            "name": "Showcase Training 2025",
-            "instagram": ""
-        },
-        "name": "TEAM CHIMY",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ],
-        "totalSpots": 25,
-        "openSpots": 10
-    },
-    {
-        "serviceId": "dtK6QPFcWhe7ogUphcUg",
-        "start": "2025-11-07T07:00:00+00:00",
-        "end": "2025-11-07T08:15:00+00:00",
-        "choreo": {
-            "id": "33",
-            "name": "Pacient",
-            "instagram": "@frckn.p"
-        },
-        "name": "Hiphop Choreo (Beginner Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Hip Hop"
-        ],
-        "totalSpots": 50,
-        "openSpots": 46
-    },
-    {
-        "serviceId": "4x3L7M5LIKvWLbwgSk0v",
-        "start": "2025-11-07T08:30:00+00:00",
-        "end": "2025-11-07T10:00:00+00:00",
-        "choreo": {
-            "id": "292",
-            "name": "Showcase Training 2025",
-            "instagram": ""
-        },
-        "name": "TEAM ICE",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ],
-        "totalSpots": 25,
-        "openSpots": 13
-    },
-    {
-        "serviceId": "tufEw12z4hslz75sWilx",
-        "start": "2025-11-07T08:30:00+00:00",
-        "end": "2025-11-07T09:45:00+00:00",
-        "choreo": {
-            "id": "11",
-            "name": "Chimy",
-            "instagram": ""
-        },
-        "name": "Choreography (All Level)",
-        "studio": "Endless",
-        "location": "Studio 3, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Choreography"
-        ],
-        "totalSpots": 50,
-        "openSpots": 45
-    },
-    {
-        "serviceId": "JJpCgBxeZeq83ofZpDWx",
-        "start": "2025-11-08T00:00:00+00:00",
-        "end": "2025-11-08T01:30:00+00:00",
-        "choreo": {
-            "id": "292",
-            "name": "Showcase Training 2025",
-            "instagram": ""
-        },
-        "name": "TEAM ICY",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ],
-        "totalSpots": 14,
-        "openSpots": 0
-    },
-    {
-        "serviceId": "hvu1ntyE5n5A2zwC3toE",
-        "start": "2025-11-08T04:15:00+00:00",
-        "end": "2025-11-08T05:30:00+00:00",
-        "choreo": {
-            "id": "14",
-            "name": "ICE",
-            "instagram": ""
-        },
-        "name": "Hiphop Choreo (All Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Hip Hop"
-        ],
-        "totalSpots": 50,
-        "openSpots": 35
-    },
-    {
-        "serviceId": "pk64H9EMIMsfZRC6UiXl",
-        "start": "2025-11-08T04:30:00+00:00",
-        "end": "2025-11-08T05:45:00+00:00",
-        "choreo": {
-            "id": "11",
-            "name": "Chimy",
-            "instagram": ""
-        },
-        "name": "Kpop (Beginner-All Level)",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Kpop"
-        ],
-        "totalSpots": 50,
-        "openSpots": 43
-    },
-    {
-        "serviceId": "rPRrv8EXGx6q215FwiEN",
-        "start": "2025-11-08T07:00:00+00:00",
-        "end": "2025-11-08T08:30:00+00:00",
-        "choreo": {
-            "id": "292",
-            "name": "Showcase Training 2025",
-            "instagram": ""
-        },
-        "name": "TEAM CHIMY",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ],
-        "totalSpots": 25,
-        "openSpots": 10
-    },
-    {
-        "serviceId": "O9V64HFYaTiq0mkMBbSc",
-        "start": "2025-11-09T00:00:00+00:00",
-        "end": "2025-11-09T01:30:00+00:00",
-        "choreo": {
-            "id": "292",
-            "name": "Showcase Training 2025",
-            "instagram": ""
-        },
-        "name": "TEAM ICY",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ],
-        "totalSpots": 14,
-        "openSpots": 0
-    },
-    {
-        "serviceId": "T2HGgPVYT47nhBxgyGTs",
-        "start": "2025-11-09T04:00:00+00:00",
-        "end": "2025-11-09T05:30:00+00:00",
-        "choreo": {
-            "id": "292",
-            "name": "Showcase Training 2025",
-            "instagram": ""
-        },
-        "name": "TEAM TOMMY",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ],
-        "totalSpots": 25,
-        "openSpots": 16
-    },
-    {
-        "serviceId": "lYyZ1ZvEKfjfUXhFkj1g",
-        "start": "2025-11-09T06:00:00+00:00",
-        "end": "2025-11-09T07:30:00+00:00",
-        "choreo": {
-            "id": "292",
-            "name": "Showcase Training 2025",
-            "instagram": ""
-        },
-        "name": "TEAM MERRY",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ],
-        "totalSpots": 25,
-        "openSpots": 12
-    },
-    {
-        "serviceId": "TwRjGDJD6fGMefh2Dx6q",
-        "start": "2025-11-09T08:00:00+00:00",
-        "end": "2025-11-09T09:30:00+00:00",
-        "choreo": {
-            "id": "292",
-            "name": "Showcase Training 2025",
-            "instagram": ""
-        },
-        "name": "TEAM LYNN",
-        "studio": "Endless",
-        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ],
-        "totalSpots": 25,
-        "openSpots": 10
-    },
-    {
         "serviceId": "RymeLwVjBT4eKYbdMbuy",
         "start": "2025-11-10T07:15:00+00:00",
         "end": "2025-11-10T08:45:00+00:00",
@@ -585,7 +39,7 @@
             "Heels"
         ],
         "totalSpots": 50,
-        "openSpots": 49
+        "openSpots": 43
     },
     {
         "serviceId": "9oxFHnAjWDlJKM3VQkqv",
@@ -606,7 +60,7 @@
             "Other"
         ],
         "totalSpots": 50,
-        "openSpots": 49
+        "openSpots": 46
     },
     {
         "serviceId": "88tmfJNODrRmKiL7HR5i",
@@ -690,7 +144,7 @@
             "Choreography"
         ],
         "totalSpots": 50,
-        "openSpots": 50
+        "openSpots": 49
     },
     {
         "serviceId": "ffD1iKCvOzROYwdZaLnD",
@@ -795,7 +249,7 @@
             "Choreography"
         ],
         "totalSpots": 35,
-        "openSpots": 35
+        "openSpots": 34
     },
     {
         "serviceId": "JKdjrsBdGYR76IPm5HDf",
@@ -948,6 +402,321 @@
         "serviceId": "umgCNmLjaM1XkDuxNQjt",
         "start": "2025-11-17T08:45:00+00:00",
         "end": "2025-11-17T10:00:00+00:00",
+        "choreo": {
+            "id": "149",
+            "name": "Queenjuh",
+            "instagram": ""
+        },
+        "name": "Girl Style (Beginner Level)",
+        "studio": "Endless",
+        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ],
+        "totalSpots": 50,
+        "openSpots": 50
+    },
+    {
+        "serviceId": "NIFnVuRKsHroopECwlG0",
+        "start": "2025-11-18T07:00:00+00:00",
+        "end": "2025-11-18T08:15:00+00:00",
+        "choreo": {
+            "id": "15",
+            "name": "Merry",
+            "instagram": "@charmingmerry888"
+        },
+        "name": "Girls Style (Beginner Level)",
+        "studio": "Endless",
+        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ],
+        "totalSpots": 50,
+        "openSpots": 50
+    },
+    {
+        "serviceId": "Yb7SGq5YcfNM60upabJu",
+        "start": "2025-11-18T08:30:00+00:00",
+        "end": "2025-11-18T09:45:00+00:00",
+        "choreo": {
+            "id": "3",
+            "name": "Ivy",
+            "instagram": "@ivy.moon"
+        },
+        "name": "Choreography (Beginner Level)",
+        "studio": "Endless",
+        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Choreography"
+        ],
+        "totalSpots": 50,
+        "openSpots": 50
+    },
+    {
+        "serviceId": "w1OImKVvLQOCFeCgpIoA",
+        "start": "2025-11-19T07:00:00+00:00",
+        "end": "2025-11-19T08:15:00+00:00",
+        "choreo": {
+            "id": "5",
+            "name": "Cheryll",
+            "instagram": ""
+        },
+        "name": "Choreography (All level)",
+        "studio": "Endless",
+        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Choreography"
+        ],
+        "totalSpots": 50,
+        "openSpots": 50
+    },
+    {
+        "serviceId": "nfDUGvfmcAzJN7LQHuIY",
+        "start": "2025-11-19T08:30:00+00:00",
+        "end": "2025-11-19T09:45:00+00:00",
+        "choreo": {
+            "id": "335",
+            "name": "Raido",
+            "instagram": ""
+        },
+        "name": "Hiphop Choreo (All Level)",
+        "studio": "Endless",
+        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Hip Hop"
+        ],
+        "totalSpots": 50,
+        "openSpots": 50
+    },
+    {
+        "serviceId": "kDkrvnXAw99P6KLUXrCN",
+        "start": "2025-11-19T08:45:00+00:00",
+        "end": "2025-11-19T10:00:00+00:00",
+        "choreo": {
+            "id": "7",
+            "name": "Icy",
+            "instagram": ""
+        },
+        "name": "Chinese Dance Choreo (All Level)",
+        "studio": "Endless",
+        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Choreography"
+        ],
+        "totalSpots": 50,
+        "openSpots": 50
+    },
+    {
+        "serviceId": "eKvlZ3JJoEM3bJigLJt0",
+        "start": "2025-11-20T07:00:00+00:00",
+        "end": "2025-11-20T08:15:00+00:00",
+        "choreo": {
+            "id": "8",
+            "name": "Tommy",
+            "instagram": "@tommythungs"
+        },
+        "name": "Choreography (Beginner level)",
+        "studio": "Endless",
+        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ],
+        "totalSpots": 50,
+        "openSpots": 50
+    },
+    {
+        "serviceId": "SwPCwK8L1HCHT3Atg0Av",
+        "start": "2025-11-20T07:15:00+00:00",
+        "end": "2025-11-20T08:30:00+00:00",
+        "choreo": {
+            "id": "322",
+            "name": "SoJeong",
+            "instagram": ""
+        },
+        "name": "Choreography (Beginner Level)",
+        "studio": "Endless",
+        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ],
+        "totalSpots": 35,
+        "openSpots": 35
+    },
+    {
+        "serviceId": "WtFZx3MKL4noCKZ01iwJ",
+        "start": "2025-11-20T08:45:00+00:00",
+        "end": "2025-11-20T10:00:00+00:00",
+        "choreo": {
+            "id": "11",
+            "name": "Chimy",
+            "instagram": ""
+        },
+        "name": "Choreography (All Level)",
+        "studio": "Endless",
+        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Choreography"
+        ],
+        "totalSpots": 50,
+        "openSpots": 50
+    },
+    {
+        "serviceId": "9KolL4Ve7oYJ9KoMu2wG",
+        "start": "2025-11-21T07:00:00+00:00",
+        "end": "2025-11-21T08:15:00+00:00",
+        "choreo": {
+            "id": "33",
+            "name": "Pacient",
+            "instagram": "@frckn.p"
+        },
+        "name": "Hiphop Choreo (Beginner Level)",
+        "studio": "Endless",
+        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Hip Hop"
+        ],
+        "totalSpots": 50,
+        "openSpots": 50
+    },
+    {
+        "serviceId": "mLBm5yjFFRMATCBgoxaJ",
+        "start": "2025-11-21T08:30:00+00:00",
+        "end": "2025-11-21T09:45:00+00:00",
+        "choreo": {
+            "id": "11",
+            "name": "Chimy",
+            "instagram": ""
+        },
+        "name": "Choreography (All Level)",
+        "studio": "Endless",
+        "location": "Studio 3, L5/332-336 Pitt St, Sydney NSW 2000",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Choreography"
+        ],
+        "totalSpots": 50,
+        "openSpots": 50
+    },
+    {
+        "serviceId": "HCp7MyRUvYekaSYxSpM3",
+        "start": "2025-11-22T04:15:00+00:00",
+        "end": "2025-11-22T05:30:00+00:00",
+        "choreo": {
+            "id": "14",
+            "name": "ICE",
+            "instagram": ""
+        },
+        "name": "Hiphop Choreo (All Level)",
+        "studio": "Endless",
+        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Hip Hop"
+        ],
+        "totalSpots": 50,
+        "openSpots": 49
+    },
+    {
+        "serviceId": "kloUcVUYzTOlQc9ehn0F",
+        "start": "2025-11-22T04:30:00+00:00",
+        "end": "2025-11-22T05:45:00+00:00",
+        "choreo": {
+            "id": "6",
+            "name": "Yezi",
+            "instagram": ""
+        },
+        "name": "Kpop (Beginner-All Level)",
+        "studio": "Endless",
+        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Kpop"
+        ],
+        "totalSpots": 50,
+        "openSpots": 50
+    },
+    {
+        "serviceId": "Z7SGxxtan6aMDQzXueXY",
+        "start": "2025-11-22T05:45:00+00:00",
+        "end": "2025-11-22T07:00:00+00:00",
+        "choreo": {
+            "id": "6",
+            "name": "Yezi",
+            "instagram": ""
+        },
+        "name": "Choreography (Beginner Level)",
+        "studio": "Endless",
+        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ],
+        "totalSpots": 50,
+        "openSpots": 50
+    },
+    {
+        "serviceId": "chtxSTVxk95vFwQFTmnD",
+        "start": "2025-11-24T07:15:00+00:00",
+        "end": "2025-11-24T08:30:00+00:00",
+        "choreo": {
+            "id": "10",
+            "name": "Joyce",
+            "instagram": ""
+        },
+        "name": "Heels (Beginner Level)",
+        "studio": "Endless",
+        "location": "Studio 1, L5/332-336 Pitt St, Sydney NSW 2000",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Heels"
+        ],
+        "totalSpots": 50,
+        "openSpots": 50
+    },
+    {
+        "serviceId": "Enc4iuvn2VqaRuffklME",
+        "start": "2025-11-24T08:45:00+00:00",
+        "end": "2025-11-24T10:00:00+00:00",
         "choreo": {
             "id": "149",
             "name": "Queenjuh",

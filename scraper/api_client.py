@@ -13,6 +13,28 @@ class DanceClassAPI:
         if not self.api_key:
             raise ValueError("SYNC_API_KEY environment variable not set")
     
+    def delete_all_external_classes(self) -> Dict:
+        """
+        Delete all external classes from the database via API
+        """
+        payload = {
+            "api_key": self.api_key
+        }
+        
+        try:
+            response = requests.delete(
+                f"{self.base_url}/api/sync/external-classes",
+                json=payload,
+                timeout=30
+            )
+            response.raise_for_status()
+            
+            result = response.json()
+            return result
+            
+        except requests.exceptions.RequestException as e:
+            raise Exception(f"Failed to delete external classes: {e}")
+    
     def sync_classes(self, source: str, classes: List[Dict]) -> Dict:
         """
         Sync classes to the database via API in batches

@@ -1,15 +1,11 @@
-name: Daily Web Scrape
-
+name: Daily Class Sync
 on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
 
-permissions:
-  contents: write
-  
 jobs:
-  scrape-and-deploy:
+  sync-classes:
     runs-on: ubuntu-latest
     
     steps:
@@ -17,22 +13,19 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.11'
+          cache: 'pip'
           
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests
           
-      - name: Run main.py
+      - name: Run class sync
         run: |
           PYTHONPATH=$PYTHONPATH:$(pwd)/scraper python scraper/main.py
-        
-      - name: Commit scraping changes to master
-        run: |
-          git config --global user.name 'GitHub Actions Bot'
-          git config --global user.email 'actions@github.com'
-          git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Daily automated update" && git push)
+        env:
+          NUXT_API_URL: ${{ secrets.PRODUCTION_URL }}  # e.g., https://sydney-dance-classes.vercel.app
+          SYNC_API_KEY: ${{ secrets.SYNC_API_KEY }}

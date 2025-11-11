@@ -47,16 +47,30 @@ export default defineEventHandler(async (event) => {
     })
   }
 
+  // 1. Delete all existing external classes for this source
+  const { error: deleteError } = await supabase
+    .from('classes')
+    .delete()
+    .eq('external_source', source)
+    .eq('booking_type', 'external')
+
+  if (deleteError) {
+    throw createError({
+      statusCode: 500,
+      message: `Failed to delete existing classes: ${deleteError.message}`
+    })
+  }
+
   const results = {
     created: 0,
     updated: 0,
     errors: [] as any[]
   }
 
-  // Process each class
+  // 2. Process and insert each class
   for (const classData of classes) {
     try {
-      // 1. Find or create choreographer
+      // Find or create choreographer
       let { data: choreographer } = await supabase
         .from('choreographers')
         .select('id')
@@ -77,7 +91,7 @@ export default defineEventHandler(async (event) => {
         choreographer = newChoreo
       }
 
-      // 2. Find or create studio
+      // Find or create studio
       let { data: studio } = await supabase
         .from('studios')
         .select('id')
@@ -98,15 +112,7 @@ export default defineEventHandler(async (event) => {
         studio = newStudio
       }
 
-      // 3. Upsert class
-      // 3. Check if class already exists
-      const { data: existingClass } = await supabase
-        .from('classes')
-        .select('id')
-        .eq('external_source', source)
-        .eq('external_id', classData.external_id)
-        .maybeSingle()
-
+      // Insert new class
       const classPayload = {
         booking_type: 'external' as const,
         name: classData.name,
@@ -125,50 +131,18 @@ export default defineEventHandler(async (event) => {
         status: 'published'
       }
 
-      if (existingClass) {
-        // Update existing class
-        const { error: updateError } = await supabase
-          .from('classes')
-          .update(classPayload)
-          .eq('id', existingClass.id)
+      const { error: insertError } = await supabase
+        .from('classes')
+        .insert(classPayload)
 
-        if (updateError) throw updateError
-        results.updated++
-      } else {
-        // Insert new class
-        const { error: insertError } = await supabase
-          .from('classes')
-          .insert(classPayload)
-
-        if (insertError) throw insertError
-        results.created++
-      }
+      if (insertError) throw insertError
+      results.created++
 
     } catch (error: any) {
       results.errors.push({
         external_id: classData.external_id,
         error: error.message
       })
-    }
-  }
-
-  // 4. Mark classes as deleted if not in this sync
-  const externalIds = classes.map(c => c.external_id)
-
-  if (externalIds.length > 0) {
-    const { error: deleteError } = await supabase
-      .from('classes')
-      .update({
-        sync_status: 'deleted',
-        status: 'cancelled'
-      })
-      .eq('external_source', source)
-      .eq('booking_type', 'external')
-      .not('external_id', 'in', `(${externalIds.join(',')})`)
-      .eq('sync_status', 'active')
-
-    if (deleteError) {
-      console.error('Error marking deleted classes:', deleteError)
     }
   }
 

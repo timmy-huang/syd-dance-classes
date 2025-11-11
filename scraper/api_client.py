@@ -1,5 +1,6 @@
 import requests
 import os
+import json
 from typing import List, Dict
 
 class DanceClassAPI:
@@ -17,20 +18,24 @@ class DanceClassAPI:
         """
         Delete all external classes from the database via API
         """
-        payload = {
-            "api_key": self.api_key
-        }
-        
         try:
             response = requests.delete(
                 f"{self.base_url}/api/sync/external-classes",
-                json=payload,
+                params={"api_key": self.api_key},
                 timeout=30
             )
             response.raise_for_status()
             
-            result = response.json()
-            return result
+            # Check if response has content before parsing JSON
+            if not response.text:
+                raise Exception("Empty response from server")
+            
+            try:
+                result = response.json()
+                return result
+            except json.JSONDecodeError as e:
+                # JSON decode error
+                raise Exception(f"Failed to parse JSON response: {e}. Response text: {response.text[:200]}")
             
         except requests.exceptions.RequestException as e:
             raise Exception(f"Failed to delete external classes: {e}")

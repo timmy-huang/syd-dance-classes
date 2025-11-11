@@ -1,34 +1,68 @@
 import requests
 import json
 import re
-from helper import get_or_create_choreographer, determine_level, determine_style
+from helper import determine_level, determine_style
+from api_client import DanceClassAPI, transform_class_data
 
-# pre sure these guys use square space
 
-# They seem to use a widget within their squarespace called mindbody which is some sort of scheduling software
-# We can use their js call "load_markup" to get the data
-# /widgets/schedules/86397/load_markup?callback=jQuery36408016788701280633_1713673043345&options%5Bstart_date%5D=2024-04-21&_=1713673043348
+def duti(callback, start_date, _id):
+    """
+    Fetch Duti Dance schedule data and sync to API.
+    
+    Args:
+        callback: jQuery callback string
+        start_date: datetime.date object
+        _id: Request ID string
+        
+    Returns:
+        Dict with created/updated/errors counts
+    """
+    api_client = DanceClassAPI()
+    
+    # Scrape classes
+    classes = scrape_duti_classes(callback, start_date, _id)
+    
+    if not classes:
+        return {"created": 0, "updated": 0, "errors": []}
+    
+    # Transform to API format
+    transformed = [
+        transform_class_data(
+            cls,
+            "DUTI",
+            "https://www.dutistudios.com.au/timetable"
+        )
+        for cls in classes
+    ]
+    
+    # Sync to API
+    result = api_client.sync_classes("duti", transformed)
+    return result
 
-# curl ^"https://widgets.mindbodyonline.com/widgets/schedules/86397/load_markup?callback=jQuery36408016788701280633_1713673043345&options^%^5Bstart_date^%^5D=2024-04-21&_=1713673043348^" ^
-#   -H "accept: */*" ^
-#   -H "accept-language: en-US,en;q=0.9" ^
-#   -H "referer: https://imient.com.au/" ^
-#   -H ^"sec-ch-ua: ^\^"Google Chrome^\^";v=^\^"123^\^", ^\^"Not:A-Brand^\^";v=^\^"8^\^", ^\^"Chromium^\^";v=^\^"123^\^"^" ^
-#   -H "sec-ch-ua-mobile: ?1" ^
-#   -H ^"sec-ch-ua-platform: ^\^"Android^\^"^" ^
-#   -H "sec-fetch-dest: script" ^
-#   -H "sec-fetch-mode: no-cors" ^
-#   -H "sec-fetch-site: cross-site" ^
-#   -H "user-agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Mobile Safari/537.36"
-  
 
-def duti(callback, start_date, _id, location):
+def scrape_duti_classes(callback, start_date, _id):
+    """
+    Scrape Duti Dance classes from MindBody widget
+    
+    Args:
+        callback: jQuery callback string
+        start_date: datetime.date object
+        _id: Request ID string
+        
+    Returns:
+        List of class dictionaries
+    """
     url = "https://widgets.mindbodyonline.com/widgets/schedules/68257/load_markup"
+    
+    # Convert date to string format expected by API
+    date_str = start_date.strftime("%Y-%m-%d")
+    
     params = {
         "callback": callback,
-        "options[start_date]": start_date,
+        "options[start_date]": date_str,
         "_": _id
     }
+    
     headers = {
         "accept": "*/*",
         "accept-language": "en-US,en;q=0.9",
@@ -38,44 +72,81 @@ def duti(callback, start_date, _id, location):
         "sec-fetch-dest": "script",
         "sec-fetch-mode": "no-cors",
         "sec-fetch-site": "cross-site",
-        "referrer": "(link unavailable)",
+        "referrer": "https://www.dutidance.com",
         "referrerPolicy": "strict-origin-when-cross-origin"
     }
-
-    html = requests.get(url, params=params, headers=headers).text.replace(" ", "")
-
-    # Extract class names
-    class_names = re.findall(r'data-bw-widget-mbo-class-name=\\"(.*?)\\"', html)
     
-    # Extract start times
-    start_times = re.findall(r'timeclass=\\"hc_starttime\\"datetime=\\"(.*?)\\"', html)
-    # Extract end times
-    end_times = re.findall(r'timeclass=\\"hc_endtime\\"datetime=\\"(.*?)\\"', html)
-
-    # Extract staff names
-    staff = re.findall(r'divclass=\\"bw-session__staff\\"style=\\"\\"\\u003e\\n(.*?)\\n', html)
-
-    data = []
-
-    for i in range(len(class_names)):
-        name = staff[i].split("|")[0]
-        # Normalize DUTI name by adding a space before capital letters except for the first letter
-        name = re.sub(r'(?<!^)(?=[A-Z])', ' ', name)
+    try:
+        response = requests.get(url, params=params, headers=headers, timeout=30)
         
-        choreographer = get_or_create_choreographer(name)
+        if response.status_code != 200:
+            print(f"⚠️  Duti request failed with status code {response.status_code}")
+            return []
         
-        classData = {
-            "start": start_times[i],
-            "end": end_times[i],
-            "choreo": choreographer,
-            "name": class_names[i].replace("_", " ").title(),
-            "level": determine_level(class_names[i].replace("_", " ").title()),
-            "style": determine_style(class_names[i].replace("_", " ").title())
-        }
-        data.append(classData)
+        html = response.text.replace(" ", "")
+        
+        # Extract session IDs (the unique identifier for each class)
+        session_ids = re.findall(r'data-bw-widget-id=\\"(.*?)\\"', html)
+        
+        # Extract class names
+        class_names = re.findall(r'data-bw-widget-mbo-class-name=\\"(.*?)\\"', html)
+        
+        # Extract start times
+        start_times = re.findall(r'timeclass=\\"hc_starttime\\"datetime=\\"(.*?)\\"', html)
+        
+        # Extract end times
+        end_times = re.findall(r'timeclass=\\"hc_endtime\\"datetime=\\"(.*?)\\"', html)
+        
+        # Extract staff names
+        staff = re.findall(r'divclass=\\"bw-session__staff\\"style=\\"\\"\\u003e\\n(.*?)\\n', html)
+        
+        # Validate we have matching data
+        if not (len(session_ids) == len(class_names) == len(start_times) == len(end_times) == len(staff)):
+            print(f"⚠️  Duti data mismatch:")
+            print(f"   Session IDs: {len(session_ids)}")
+            print(f"   Class names: {len(class_names)}")
+            print(f"   Start times: {len(start_times)}")
+            print(f"   End times: {len(end_times)}")
+            print(f"   Staff: {len(staff)}")
+            return []
+        
+        data = []
+        for i in range(len(class_names)):
+            name = staff[i].split("|")[0]
+            # Normalize DUTI name by adding a space before capital letters except for the first letter
+            name = re.sub(r'(?<!^)(?=[A-Z])', ' ', name)
+            
+            choreographer = {"name": name, "instagram": ""}
+            
+            classData = {
+                "serviceId": str(session_ids[i]),
+                "start": start_times[i],
+                "end": end_times[i],
+                "choreo": choreographer,
+                "name": class_names[i].replace("_", " ").title(),
+                "location": "DUTI Studios",
+                "level": determine_level(class_names[i].replace("_", " ").title()),
+                "style": determine_style(class_names[i].replace("_", " ").title())
+            }
+            data.append(classData)
+        
+        print(f"✓ Scraped {len(data)} classes from Duti")
+        return data
+        
+    except requests.exceptions.RequestException as e:
+        print(f"❌ Error scraping Duti: {e}")
+        return []
+    except Exception as e:
+        print(f"❌ Error parsing Duti data: {e}")
+        return []
 
-    formatted_json = json.dumps(data, indent=4)
-    with open(location + "duti.json", 'w+') as file:
-        file.write(formatted_json)
 
-    print("Scraped DUTI")
+if __name__ == "__main__":
+    # Example usage for testing
+    from datetime import date
+    
+    callback = "jQuery364011093063789286006_1740274810344"
+    _id = "1740274810346"
+    
+    result = duti(callback, date.today(), _id)
+    print(f"Result: {result}")

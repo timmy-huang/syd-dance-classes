@@ -2,7 +2,7 @@
   <v-select
     variant="underlined"
     density="comfortable"
-    :model-value="value"
+    :model-value="value || []"
     @update:model-value="$emit('update', $event)"
     :items="items"
     :label="type"
@@ -43,29 +43,70 @@
 </template>
 
 <script lang="ts" setup>
-  import { computed } from 'vue';
-  import { studios, styles } from '../utils/consts';
+  import { computed, onMounted, watch } from 'vue';
+  import { styles } from '../utils/consts';
+  const { studios, fetchStudios } = useStudios();
 
   const emit = defineEmits(["update"]);
 
-  const props = defineProps({
-    value: Array,
-    type: String
+  const props = defineProps<{
+    value?: string[];
+    type: string;
+  }>();
+
+  // Track if we've initialized studios to avoid re-initializing
+  let studiosInitialized = false;
+
+  // Fetch studios on mount
+  onMounted(async () => {
+    if (props.type === 'Studios') {
+      // After fetching studios, set the value to the studios
+      await fetchStudios();
+    }
   });
 
   const items = computed(() => {
     if (props.type === 'Studios') {
-      return studios;
+      return studios.value;
     } else {
       return styles;
     }
   });
 
+  // Watch for when studios are loaded and initialize selection
+  watch(items, (newItems) => {
+    if (props.type === 'Studios' && newItems.length > 0 && !studiosInitialized) {
+      studiosInitialized = true;
+      
+      // Check localStorage for saved selection
+      const savedStudios = localStorage.getItem('selectedStudios');
+      
+      if (savedStudios) {
+        try {
+          const parsedStudios = JSON.parse(savedStudios);
+          // Validate that saved studios are still in the current list
+          const validStudios = parsedStudios.filter((studio: string) => newItems.includes(studio));
+          if (validStudios.length > 0) {
+            emit('update', validStudios);
+            return;
+          }
+        } catch (e) {
+          console.error('Error parsing saved studios from localStorage:', e);
+        }
+      }
+      
+      // If no valid saved selection, select all studios
+      emit('update', [...newItems]);
+    }
+  }, { immediate: true });
+
   const allSelected = computed(() => {
+    if (!props.value || props.value.length === 0) return false;
     return props.value.length === items.value.length;
   });
 
   const someSelected = computed(() => {
+    if (!props.value) return false;
     return props.value.length > 0 && props.value.length < items.value.length;
   });
 

@@ -1,34 +1,37 @@
 ﻿<template>
   <v-responsive
-    class="align-center fill-height mx-auto"
+    class="mx-auto"
     max-width="975"
   >
-    <div style="justify-content: center; align-items: center;" class="mt-2 d-flex flex-column">      
-      <!-- Tabs for switching between Classes and Events -->
-      <ClientOnly>
-        <v-tabs
-          v-model="activeTab"
-          color="primary"
-          class="mb-6"
-          centered
-          :touch="false"
-          height="60"
-        >
-          <v-tab value="classes" :size="tabSize">Classes</v-tab>
-          <v-tab value="events" :size="tabSize">Events</v-tab>
-        </v-tabs>
-      </ClientOnly>
-      <!-- Tab Content -->
-      <v-window v-model="activeTab" :touch="false">
-        <v-window-item value="classes">
-          <Classes :lessons="lessonsValue" />
-        </v-window-item>
+    <div>
+      <div style="justify-content: center; align-items: center;" class="mt-2 d-flex flex-column">      
+        <!-- Tabs for switching between Classes and Events -->
+        <ClientOnly>
+          <v-tabs
+            v-model="activeTab"
+            color="primary"
+            class="mb-6"
+            centered
+            :touch="false"
+            height="60"
+          >
+            <v-tab value="classes" :size="tabSize">Classes</v-tab>
+            <v-tab value="events" :size="tabSize">Events</v-tab>
+          </v-tabs>
+        </ClientOnly>
+        <!-- Tab Content -->
+        <v-window v-model="activeTab" :touch="false">
+          <v-window-item value="classes">
+            <Classes :lessons="lessonsValue" />
+          </v-window-item>
 
-        <v-window-item value="events">
-          <Events />
-        </v-window-item>
-      </v-window>
+          <v-window-item value="events">
+            <Events />
+          </v-window-item>
+        </v-window>
+      </div>
     </div>
+    
   </v-responsive>
 </template>
 

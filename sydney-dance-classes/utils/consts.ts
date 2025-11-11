@@ -1,16 +1,7 @@
-
-const studios = [
-  "IMI",
-  "Movement Nation Hurstville",
-  "Movement Nation Parramatta",
-  "Crossover",
-  "IX",
-  "PDC",
-  "DUTI",
-  "Endless",
-  "KCC",
-  "Colab"
-]
+// Studios are now fetched from the database via useStudios composable
+// This is kept for backward compatibility but will be empty
+// Components should use useStudios() composable instead
+const studios: string[] = []
 
 const styles = [
   "Hip Hop",

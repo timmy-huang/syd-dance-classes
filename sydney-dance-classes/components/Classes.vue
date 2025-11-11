@@ -89,7 +89,10 @@ const displayData = computed(() => {
     return selectedStudios.value.includes(lesson.studio)
   }).filter((lesson) => { // Filter by style
     return selectedStyles.value.some(style => lesson.style.includes(style))
-  }).sort((a, b) => {  // sort lessons by start time
+  }).sort((a, b) => {  // sort lessons by start time then end time
+    if (a.start.getTime() === b.start.getTime()) {
+      return a.end.getTime() - b.end.getTime()
+    }
     return a.start.getTime() - b.start.getTime()
   })
   

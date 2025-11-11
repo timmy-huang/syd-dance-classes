@@ -85,7 +85,8 @@ def scrape_pdc_classes(start_date, end_date):
         choreographer = {"name": slot["slot"]["resource"]["name"], "instagram": ""}
         
         class_data = {
-            "serviceId": slot["slot"]["serviceId"],
+            "serviceId": slot["slot"]["sessionId"],
+            "linkId": slot["slot"]["serviceId"], # this is the serviceId in the bulk data but we use it to link the name, but it is not unique
             "start": slot["slot"]["startDate"],
             "end": slot["slot"]["endDate"],
             "choreo": choreographer,
@@ -96,7 +97,7 @@ def scrape_pdc_classes(start_date, end_date):
         
         # Find service name from bulk data
         for service in bulk["responseServices"]['services']:
-            if service["service"]['id'] == class_data["serviceId"]:
+            if service["service"]['id'] == class_data["linkId"]:
                 class_data["name"] = service["service"]["info"]["name"]
                 break
         

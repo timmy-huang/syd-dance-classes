@@ -1,4 +1,9 @@
 import { createClient } from '@supabase/supabase-js'
+import { z } from 'zod'
+
+const DeleteRequestSchema = z.object({
+  api_key: z.string(),
+})
 
 export default defineEventHandler(async (event) => {
   // Create Supabase client with service role (bypasses RLS)
@@ -13,12 +18,12 @@ export default defineEventHandler(async (event) => {
     }
   )
 
-  // Get API key from query parameter
-  const query = getQuery(event)
-  const api_key = query.api_key as string
+  // Parse request
+  const body = await readBody(event)
+  const { api_key } = DeleteRequestSchema.parse(body)
 
   // Verify API key
-  if (!api_key || api_key !== process.env.SYNC_API_KEY) {
+  if (api_key !== process.env.SYNC_API_KEY) {
     throw createError({
       statusCode: 401,
       message: 'Invalid API key'

@@ -22,7 +22,7 @@ class DanceClassAPI:
             return {"created": 0, "updated": 0, "errors": []}
         
         # Batch size - adjust if needed
-        BATCH_SIZE = 10
+        BATCH_SIZE = 8
         total_results = {
             "created": 0,
             "updated": 0,

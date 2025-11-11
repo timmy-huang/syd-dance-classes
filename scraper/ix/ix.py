@@ -88,7 +88,8 @@ def scrape_ix_classes(start_date, end_date):
         choreographer = {"name": slot["slot"]["resource"]["name"], "instagram": ""}
         
         class_data = {
-            "serviceId": slot["slot"]["serviceId"],
+            "serviceId": slot["slot"]["sessionId"],
+            "linkId": slot["slot"]["serviceId"], # this is the serviceId in the bulk data but we use it to link the name, but it is not unique
             "start": slot["slot"]["startDate"],
             "end": slot["slot"]["endDate"],
             "choreo": choreographer,

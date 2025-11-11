@@ -47,20 +47,6 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  // 1. Delete all existing external classes for this source
-  const { error: deleteError } = await supabase
-    .from('classes')
-    .delete()
-    .eq('external_source', source)
-    .eq('booking_type', 'external')
-
-  if (deleteError) {
-    throw createError({
-      statusCode: 500,
-      message: `Failed to delete existing classes: ${deleteError.message}`
-    })
-  }
-
   const results = {
     created: 0,
     updated: 0,

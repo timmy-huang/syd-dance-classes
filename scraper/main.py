@@ -7,6 +7,7 @@ from duti.duti import duti
 from endless.endless import endless
 from kcc.kcc import kcc
 from colab.colab import colab
+from api_client import DanceClassAPI
 import datetime
 
 # Calculate date range
@@ -19,6 +20,18 @@ print("=" * 70)
 print(f"🎯 Starting Dance Class Sync")
 print(f"📅 Date range: {previous_monday} to {upcoming_sunday}")
 print("=" * 70)
+
+# Initialize API client
+api_client = DanceClassAPI()
+
+# Delete all existing external classes before syncing
+print("\n🗑️  Deleting all existing external classes...")
+try:
+    delete_result = api_client.delete_all_external_classes()
+    print(f"✅ Deleted {delete_result.get('deleted', 0)} external classes")
+except Exception as e:
+    print(f"❌ Error deleting external classes: {e}")
+    print("⚠️  Continuing with sync anyway...")
 
 # Configuration for each studio
 studios = [

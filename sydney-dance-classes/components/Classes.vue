@@ -38,6 +38,8 @@
 </template>
 
 <script lang="ts" setup>
+import type { Lesson } from '~/types';
+
 
 // Props
 interface Props {
@@ -88,7 +90,7 @@ const displayData = computed(() => {
   }).filter((lesson) => {  // filter lessons by studio
     return selectedStudios.value.includes(lesson.studio)
   }).filter((lesson) => { // Filter by style
-    return selectedStyles.value.some(style => lesson.style.includes(style))
+    return selectedStyles.value.some((style: string) => lesson.style.includes(style))
   }).sort((a, b) => {  // sort lessons by start time then end time
     if (a.start.getTime() === b.start.getTime()) {
       return a.end.getTime() - b.end.getTime()

@@ -1,7 +1,7 @@
 [
     {
-        "start": "2025-10-30T17:00",
-        "end": "2025-10-30T18:00",
+        "start": "2025-11-13T17:00",
+        "end": "2025-11-13T18:00",
         "choreo": {
             "id": "326",
             "name": "TyrinBarnett",
@@ -16,8 +16,8 @@
         ]
     },
     {
-        "start": "2025-10-30T18:00",
-        "end": "2025-10-30T19:00",
+        "start": "2025-11-13T18:00",
+        "end": "2025-11-13T19:00",
         "choreo": {
             "id": "93",
             "name": "Tango",
@@ -32,8 +32,8 @@
         ]
     },
     {
-        "start": "2025-10-30T19:00",
-        "end": "2025-10-30T20:00",
+        "start": "2025-11-13T19:00",
+        "end": "2025-11-13T20:00",
         "choreo": {
             "id": "327",
             "name": "AquilaFugawai",
@@ -45,6 +45,22 @@
         ],
         "style": [
             "Other"
+        ]
+    },
+    {
+        "start": "2025-11-17T19:00",
+        "end": "2025-11-17T20:30",
+        "choreo": {
+            "id": "164",
+            "name": "BellaBarcelon",
+            "instagram": "@bellabarcelon_"
+        },
+        "name": "Beginner Choreography",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
         ]
     }
 ]

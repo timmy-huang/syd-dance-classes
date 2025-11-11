@@ -1,152 +1,24 @@
 [
     {
-        "start": "2025-10-27T17:20",
-        "end": "2025-10-27T18:20",
+        "start": "2025-11-11T15:00",
+        "end": "2025-11-11T16:30",
         "choreo": {
-            "id": "108",
-            "name": "Alice Weber",
+            "id": "132",
+            "name": "Kat",
             "instagram": ""
         },
-        "name": "Ballet Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-10-27T17:20",
-        "end": "2025-10-27T18:20",
-        "choreo": {
-            "id": "109",
-            "name": "Tee Vella",
-            "instagram": ""
-        },
-        "name": "Dancehall Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-10-27T18:15",
-        "end": "2025-10-27T19:30",
-        "choreo": {
-            "id": "110",
-            "name": "Daryl Morante",
-            "instagram": ""
-        },
-        "name": "Choreography Intermediate",
-        "level": [
-            "intermediate"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-10-27T18:20",
-        "end": "2025-10-27T19:20",
-        "choreo": {
-            "id": "109",
-            "name": "Tee Vella",
-            "instagram": ""
-        },
-        "name": "Dancehall Intermediate",
-        "level": [
-            "intermediate"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-10-27T18:30",
-        "end": "2025-10-27T19:30",
-        "choreo": {
-            "id": "121",
-            "name": "Rosemarie Romeo",
-            "instagram": ""
-        },
-        "name": "Street Jazz Beginner",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-10-27T19:30",
-        "end": "2025-10-27T20:30",
-        "choreo": {
-            "id": "112",
-            "name": "Moniquewa Williams",
-            "instagram": ""
-        },
-        "name": "Reggaeton Fusion Intermediate",
-        "level": [
-            "intermediate"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-10-27T19:30",
-        "end": "2025-10-27T20:30",
-        "choreo": {
-            "id": "42",
-            "name": "Genki",
-            "instagram": ""
-        },
-        "name": "House Open",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-10-27T19:30",
-        "end": "2025-10-27T21:00",
-        "choreo": {
-            "id": "78",
-            "name": "Nao",
-            "instagram": ""
-        },
-        "name": "Choreography Int Adv",
+        "name": "Int Adv Heels International Guest",
         "level": [
             "intermediate",
             "advanced"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-10-27T20:30",
-        "end": "2025-10-27T21:30",
-        "choreo": {
-            "id": "112",
-            "name": "Moniquewa Williams",
-            "instagram": ""
-        },
-        "name": "Heels Intermediate",
-        "level": [
-            "intermediate"
         ],
         "style": [
             "Heels"
         ]
     },
     {
-        "start": "2025-10-28T17:20",
-        "end": "2025-10-28T18:20",
+        "start": "2025-11-11T17:20",
+        "end": "2025-11-11T18:20",
         "choreo": {
             "id": "305",
             "name": "Y U- P.",
@@ -161,8 +33,8 @@
         ]
     },
     {
-        "start": "2025-10-28T17:45",
-        "end": "2025-10-28T19:00",
+        "start": "2025-11-11T17:45",
+        "end": "2025-11-11T19:00",
         "choreo": {
             "id": "115",
             "name": "Nicholas Jachno",
@@ -177,8 +49,8 @@
         ]
     },
     {
-        "start": "2025-10-28T18:00",
-        "end": "2025-10-28T19:00",
+        "start": "2025-11-11T18:00",
+        "end": "2025-11-11T19:00",
         "choreo": {
             "id": "42",
             "name": "Genki",
@@ -193,8 +65,8 @@
         ]
     },
     {
-        "start": "2025-10-28T18:30",
-        "end": "2025-10-28T19:30",
+        "start": "2025-11-11T18:30",
+        "end": "2025-11-11T19:30",
         "choreo": {
             "id": "116",
             "name": "Anjelica Osuji\\\" Chika\\\"",
@@ -209,8 +81,8 @@
         ]
     },
     {
-        "start": "2025-10-28T19:00",
-        "end": "2025-10-28T20:00",
+        "start": "2025-11-11T19:00",
+        "end": "2025-11-11T20:00",
         "choreo": {
             "id": "117",
             "name": "Nicol\u00e1s Mena",
@@ -225,8 +97,8 @@
         ]
     },
     {
-        "start": "2025-10-28T19:00",
-        "end": "2025-10-28T20:00",
+        "start": "2025-11-11T19:00",
+        "end": "2025-11-11T20:00",
         "choreo": {
             "id": "214",
             "name": "Manuel Nascimento",
@@ -241,11 +113,11 @@
         ]
     },
     {
-        "start": "2025-10-28T19:30",
-        "end": "2025-10-28T20:30",
+        "start": "2025-11-11T19:30",
+        "end": "2025-11-11T20:30",
         "choreo": {
-            "id": "309",
-            "name": "Amara Shin",
+            "id": "119",
+            "name": "Amy Zhang",
             "instagram": ""
         },
         "name": "Heels Beginner Foundations",
@@ -257,8 +129,8 @@
         ]
     },
     {
-        "start": "2025-10-28T20:00",
-        "end": "2025-10-28T21:30",
+        "start": "2025-11-11T20:00",
+        "end": "2025-11-11T21:30",
         "choreo": {
             "id": "117",
             "name": "Nicol\u00e1s Mena",
@@ -274,14 +146,14 @@
         ]
     },
     {
-        "start": "2025-10-28T20:00",
-        "end": "2025-10-28T21:15",
+        "start": "2025-11-11T20:00",
+        "end": "2025-11-11T21:30",
         "choreo": {
-            "id": "139",
-            "name": "Daniel Chen",
+            "id": "353",
+            "name": "Geny Navuzi",
             "instagram": ""
         },
-        "name": "Commercial Dance Course",
+        "name": "Afro Fusion Open",
         "level": [
             "advanced"
         ],
@@ -290,25 +162,8 @@
         ]
     },
     {
-        "start": "2025-10-28T20:30",
-        "end": "2025-10-28T21:45",
-        "choreo": {
-            "id": "334",
-            "name": "Vanessa Dai",
-            "instagram": ""
-        },
-        "name": "Choreography Int Adv Guest Class",
-        "level": [
-            "intermediate",
-            "advanced"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-10-29T17:30",
-        "end": "2025-10-29T18:30",
+        "start": "2025-11-12T17:30",
+        "end": "2025-11-12T18:30",
         "choreo": {
             "id": "21",
             "name": "Lana",
@@ -323,8 +178,24 @@
         ]
     },
     {
-        "start": "2025-10-29T18:15",
-        "end": "2025-10-29T19:30",
+        "start": "2025-11-12T18:00",
+        "end": "2025-11-12T19:15",
+        "choreo": {
+            "id": "21",
+            "name": "Lana",
+            "instagram": "lanaborisova_"
+        },
+        "name": "Intro To Heels Course",
+        "level": [
+            "intermediate"
+        ],
+        "style": [
+            "Heels"
+        ]
+    },
+    {
+        "start": "2025-11-12T18:15",
+        "end": "2025-11-12T19:30",
         "choreo": {
             "id": "37",
             "name": "Andrew",
@@ -340,40 +211,8 @@
         ]
     },
     {
-        "start": "2025-10-29T18:15",
-        "end": "2025-10-29T19:30",
-        "choreo": {
-            "id": "123",
-            "name": "Tara Jafari",
-            "instagram": ""
-        },
-        "name": "Afrohouse Open",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-10-29T18:30",
-        "end": "2025-10-29T19:45",
-        "choreo": {
-            "id": "124",
-            "name": "Georgette Sofazis",
-            "instagram": ""
-        },
-        "name": "Contemporary Open",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Contemporary"
-        ]
-    },
-    {
-        "start": "2025-10-29T19:30",
-        "end": "2025-10-29T21:00",
+        "start": "2025-11-12T19:30",
+        "end": "2025-11-12T21:00",
         "choreo": {
             "id": "121",
             "name": "Rosemarie Romeo",
@@ -389,8 +228,8 @@
         ]
     },
     {
-        "start": "2025-10-29T19:30",
-        "end": "2025-10-29T20:30",
+        "start": "2025-11-12T19:30",
+        "end": "2025-11-12T20:30",
         "choreo": {
             "id": "125",
             "name": "Sisqo.",
@@ -405,8 +244,8 @@
         ]
     },
     {
-        "start": "2025-10-29T19:45",
-        "end": "2025-10-29T21:00",
+        "start": "2025-11-12T19:45",
+        "end": "2025-11-12T21:00",
         "choreo": {
             "id": "21",
             "name": "Lana",
@@ -422,24 +261,8 @@
         ]
     },
     {
-        "start": "2025-10-30T17:30",
-        "end": "2025-10-30T18:15",
-        "choreo": {
-            "id": "122",
-            "name": "Evie Morris",
-            "instagram": ""
-        },
-        "name": "Pilates",
-        "level": [
-            "advanced"
-        ],
-        "style": [
-            "Other"
-        ]
-    },
-    {
-        "start": "2025-10-30T18:00",
-        "end": "2025-10-30T19:00",
+        "start": "2025-11-13T18:00",
+        "end": "2025-11-13T19:00",
         "choreo": {
             "id": "127",
             "name": "Dee Hayek",
@@ -454,8 +277,8 @@
         ]
     },
     {
-        "start": "2025-10-30T18:15",
-        "end": "2025-10-30T19:15",
+        "start": "2025-11-13T18:15",
+        "end": "2025-11-13T19:15",
         "choreo": {
             "id": "122",
             "name": "Evie Morris",
@@ -470,8 +293,8 @@
         ]
     },
     {
-        "start": "2025-10-30T18:15",
-        "end": "2025-10-30T19:30",
+        "start": "2025-11-13T18:15",
+        "end": "2025-11-13T19:30",
         "choreo": {
             "id": "128",
             "name": "Whyan Chen",
@@ -486,12 +309,12 @@
         ]
     },
     {
-        "start": "2025-10-30T19:00",
-        "end": "2025-10-30T20:30",
+        "start": "2025-11-13T19:00",
+        "end": "2025-11-13T20:30",
         "choreo": {
             "id": "336",
             "name": "Kailan Teneti",
-            "instagram": ""
+            "instagram": "@kalian.zane"
         },
         "name": "Hip Hop Choreography Int Adv",
         "level": [
@@ -503,8 +326,8 @@
         ]
     },
     {
-        "start": "2025-10-30T19:15",
-        "end": "2025-10-30T20:15",
+        "start": "2025-11-13T19:15",
+        "end": "2025-11-13T20:15",
         "choreo": {
             "id": "131",
             "name": "Rachell Dade",
@@ -519,8 +342,8 @@
         ]
     },
     {
-        "start": "2025-10-30T19:30",
-        "end": "2025-10-30T20:45",
+        "start": "2025-11-13T19:30",
+        "end": "2025-11-13T20:45",
         "choreo": {
             "id": "24",
             "name": "Chantelle",
@@ -535,11 +358,11 @@
         ]
     },
     {
-        "start": "2025-10-30T20:15",
-        "end": "2025-10-30T21:45",
+        "start": "2025-11-13T20:15",
+        "end": "2025-11-13T21:30",
         "choreo": {
-            "id": "337",
-            "name": "Erika Palma",
+            "id": "260",
+            "name": "R\u014dre Rutene",
             "instagram": ""
         },
         "name": "Choreography Int Adv Guest Class",
@@ -552,8 +375,8 @@
         ]
     },
     {
-        "start": "2025-11-01T09:30",
-        "end": "2025-11-01T11:00",
+        "start": "2025-11-15T09:30",
+        "end": "2025-11-15T11:00",
         "choreo": {
             "id": "115",
             "name": "Nicholas Jachno",
@@ -568,8 +391,8 @@
         ]
     },
     {
-        "start": "2025-11-01T10:00",
-        "end": "2025-11-01T11:00",
+        "start": "2025-11-15T10:00",
+        "end": "2025-11-15T11:00",
         "choreo": {
             "id": "135",
             "name": "Tess Sturmann",
@@ -584,8 +407,8 @@
         ]
     },
     {
-        "start": "2025-11-01T11:00",
-        "end": "2025-11-01T12:00",
+        "start": "2025-11-15T11:00",
+        "end": "2025-11-15T12:00",
         "choreo": {
             "id": "136",
             "name": "Natasha Sturgis",
@@ -600,8 +423,24 @@
         ]
     },
     {
-        "start": "2025-11-01T11:30",
-        "end": "2025-11-01T12:30",
+        "start": "2025-11-15T11:00",
+        "end": "2025-11-15T12:00",
+        "choreo": {
+            "id": "137",
+            "name": "La La.",
+            "instagram": ""
+        },
+        "name": "Brazilian Funk Beginner",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-15T11:30",
+        "end": "2025-11-15T12:30",
         "choreo": {
             "id": "111",
             "name": "Mathew Mizyed",
@@ -616,8 +455,8 @@
         ]
     },
     {
-        "start": "2025-11-01T12:15",
-        "end": "2025-11-01T13:15",
+        "start": "2025-11-15T12:15",
+        "end": "2025-11-15T13:15",
         "choreo": {
             "id": "138",
             "name": "Lucky Lartey",
@@ -632,8 +471,8 @@
         ]
     },
     {
-        "start": "2025-11-01T12:30",
-        "end": "2025-11-01T13:30",
+        "start": "2025-11-15T12:30",
+        "end": "2025-11-15T13:30",
         "choreo": {
             "id": "66",
             "name": "Carmen",
@@ -648,8 +487,8 @@
         ]
     },
     {
-        "start": "2025-11-01T12:30",
-        "end": "2025-11-01T13:30",
+        "start": "2025-11-15T12:30",
+        "end": "2025-11-15T13:30",
         "choreo": {
             "id": "51",
             "name": "Miku",
@@ -664,8 +503,8 @@
         ]
     },
     {
-        "start": "2025-11-01T13:30",
-        "end": "2025-11-01T14:45",
+        "start": "2025-11-15T13:30",
+        "end": "2025-11-15T14:45",
         "choreo": {
             "id": "139",
             "name": "Daniel Chen",
@@ -678,6 +517,168 @@
         ],
         "style": [
             "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-15T13:30",
+        "end": "2025-11-15T15:00",
+        "choreo": {
+            "id": "354",
+            "name": "Toshiya Maruyama",
+            "instagram": ""
+        },
+        "name": "Rnb Grooves Int Adv",
+        "level": [
+            "intermediate",
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-17T17:20",
+        "end": "2025-11-17T18:20",
+        "choreo": {
+            "id": "108",
+            "name": "Alice Weber",
+            "instagram": ""
+        },
+        "name": "Ballet Beginner",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-17T17:20",
+        "end": "2025-11-17T18:20",
+        "choreo": {
+            "id": "109",
+            "name": "Tee Vella",
+            "instagram": ""
+        },
+        "name": "Dancehall Beginner",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-17T18:15",
+        "end": "2025-11-17T19:30",
+        "choreo": {
+            "id": "110",
+            "name": "Daryl Morante",
+            "instagram": ""
+        },
+        "name": "Choreography Intermediate",
+        "level": [
+            "intermediate"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-17T18:20",
+        "end": "2025-11-17T19:20",
+        "choreo": {
+            "id": "109",
+            "name": "Tee Vella",
+            "instagram": ""
+        },
+        "name": "Dancehall Intermediate",
+        "level": [
+            "intermediate"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-17T18:30",
+        "end": "2025-11-17T19:30",
+        "choreo": {
+            "id": "111",
+            "name": "Mathew Mizyed",
+            "instagram": ""
+        },
+        "name": "Street Jazz Beginner",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-17T19:30",
+        "end": "2025-11-17T20:30",
+        "choreo": {
+            "id": "112",
+            "name": "Moniquewa Williams",
+            "instagram": ""
+        },
+        "name": "Reggaeton Fusion Intermediate",
+        "level": [
+            "intermediate"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-17T19:30",
+        "end": "2025-11-17T20:30",
+        "choreo": {
+            "id": "42",
+            "name": "Genki",
+            "instagram": ""
+        },
+        "name": "House Open",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Other"
+        ]
+    },
+    {
+        "start": "2025-11-17T19:30",
+        "end": "2025-11-17T21:00",
+        "choreo": {
+            "id": "78",
+            "name": "Nao",
+            "instagram": ""
+        },
+        "name": "Choreography Int Adv",
+        "level": [
+            "intermediate",
+            "advanced"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-17T20:30",
+        "end": "2025-11-17T21:30",
+        "choreo": {
+            "id": "112",
+            "name": "Moniquewa Williams",
+            "instagram": ""
+        },
+        "name": "Heels Intermediate",
+        "level": [
+            "intermediate"
+        ],
+        "style": [
+            "Heels"
         ]
     }
 ]

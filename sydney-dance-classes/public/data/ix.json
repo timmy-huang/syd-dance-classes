@@ -10,7 +10,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 15,
-        "openSpots": 15,
+        "openSpots": 8,
         "name": "K-pop (Under 15s)",
         "level": [
             "youth"
@@ -30,7 +30,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 18,
         "name": "Waacking | Beginners",
         "level": [
             "beginner"
@@ -50,7 +50,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 20,
-        "openSpots": 20,
+        "openSpots": 19,
         "name": "K-pop",
         "level": [
             "advanced"
@@ -70,7 +70,7 @@
         },
         "location": "IX Dance Studio, Burwood Road, Burwood NSW, Australia",
         "totalSpots": 15,
-        "openSpots": 15,
+        "openSpots": 14,
         "name": "Popping (Under 15s)",
         "level": [
             "youth"

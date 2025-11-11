@@ -1,21 +1,5 @@
 [
     {
-        "start": "2025-11-10T19:00",
-        "end": "2025-11-10T20:30",
-        "choreo": {
-            "id": "164",
-            "name": "BellaBarcelon",
-            "instagram": "@bellabarcelon_"
-        },
-        "name": "Beginner Choreography",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
         "start": "2025-11-13T17:00",
         "end": "2025-11-13T18:00",
         "choreo": {
@@ -61,6 +45,22 @@
         ],
         "style": [
             "Other"
+        ]
+    },
+    {
+        "start": "2025-11-17T19:00",
+        "end": "2025-11-17T20:30",
+        "choreo": {
+            "id": "164",
+            "name": "BellaBarcelon",
+            "instagram": "@bellabarcelon_"
+        },
+        "name": "Beginner Choreography",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
         ]
     }
 ]

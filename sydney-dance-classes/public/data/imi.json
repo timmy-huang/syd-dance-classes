@@ -1,70 +1,5 @@
 [
     {
-        "start": "2025-11-10T17:45",
-        "end": "2025-11-10T19:00",
-        "choreo": {
-            "id": "350",
-            "name": "DylanBull",
-            "instagram": "@dylan__bull"
-        },
-        "name": "Pop Up Open Choreography Studio 1",
-        "level": [
-            "advanced",
-            "pop-up"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-11-10T19:00",
-        "end": "2025-11-10T20:15",
-        "choreo": {
-            "id": "8",
-            "name": "Tommy",
-            "instagram": "@tommythungs"
-        },
-        "name": "Beginner Choreography Studio A",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-11-10T19:00",
-        "end": "2025-11-10T20:15",
-        "choreo": {
-            "id": "33",
-            "name": "Pacient",
-            "instagram": "@frckn.p"
-        },
-        "name": "Intermediate Choreography Studio B",
-        "level": [
-            "intermediate"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
-        "start": "2025-11-10T20:15",
-        "end": "2025-11-10T21:30",
-        "choreo": {
-            "id": "192",
-            "name": "MinBin",
-            "instagram": "@minibin_"
-        },
-        "name": "Beginner Choreography Studio B",
-        "level": [
-            "beginner"
-        ],
-        "style": [
-            "Choreography"
-        ]
-    },
-    {
         "start": "2025-11-11T17:45",
         "end": "2025-11-11T19:00",
         "choreo": {
@@ -304,6 +239,87 @@
         "name": "Intermediate Choreography Studio B",
         "level": [
             "intermediate"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-17T17:45",
+        "end": "2025-11-17T19:00",
+        "choreo": {
+            "id": "3",
+            "name": "Ivy",
+            "instagram": "@ivy.moon"
+        },
+        "name": "Beginner Choreography Studio A",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-17T17:45",
+        "end": "2025-11-17T19:00",
+        "choreo": {
+            "id": "350",
+            "name": "DylanBull",
+            "instagram": "@dylan__bull"
+        },
+        "name": "Pop Up Open Choreography Studio 1",
+        "level": [
+            "advanced",
+            "pop-up"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-17T19:00",
+        "end": "2025-11-17T20:15",
+        "choreo": {
+            "id": "8",
+            "name": "Tommy",
+            "instagram": "@tommythungs"
+        },
+        "name": "Beginner Choreography Studio A",
+        "level": [
+            "beginner"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-17T19:00",
+        "end": "2025-11-17T20:15",
+        "choreo": {
+            "id": "195",
+            "name": "RobMclean",
+            "instagram": "@robjamesmclean"
+        },
+        "name": "Open Choreography Studio B",
+        "level": [
+            "advanced"
+        ],
+        "style": [
+            "Choreography"
+        ]
+    },
+    {
+        "start": "2025-11-17T20:15",
+        "end": "2025-11-17T21:30",
+        "choreo": {
+            "id": "192",
+            "name": "MinBin",
+            "instagram": "@minibin_"
+        },
+        "name": "Beginner Choreography Studio B",
+        "level": [
+            "beginner"
         ],
         "style": [
             "Choreography"

@@ -100,7 +100,7 @@ def scrape_ix_classes(start_date, end_date):
         
         # Find service name from bulk data
         for service in bulk["responseServices"]['services']:
-            if service["service"]['id'] == class_data["serviceId"]:
+            if service["service"]['id'] == class_data["linkId"]:
                 class_data["name"] = service["service"]["info"]["name"]
                 break
         

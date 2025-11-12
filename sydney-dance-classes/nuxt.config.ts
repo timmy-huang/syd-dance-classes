@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     redirectOptions: {
       login: '/login',
       callback: '/confirm',
-      exclude: ['/', '/classes', '/classes/*'], // Public pages
+      exclude: ['/', '/classes', '/classes/*', '/choreographer', '/choreographer/*'], // Public pages
     }
   },
 

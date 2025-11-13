@@ -1,8 +1,8 @@
 <template>
   <ClientOnly>
-    <div :class="display.smAndDown ? 'scrollable-mobile' : 'desktop-view'" class="d-flex align-center justify-content-center mt-5">
+    <div :class="isMobile ? 'scrollable-mobile' : 'desktop-view'" class="d-flex align-center justify-content-center mt-5">
       <v-btn
-        v-if="display.smAndDown"
+        v-if="!isMobile"
         icon="mdi-chevron-left"
         variant="text"
         @click="handleLeftClick"
@@ -29,7 +29,7 @@
       </div>
 
       <v-btn
-        v-if="display.smAndDown"
+        v-if="!isMobile"
         icon="mdi-chevron-right"
         variant="text"
         @click="handleRightClick"
@@ -54,6 +54,7 @@
     mondayDate: Date
   });
 
+  const isMobile = computed(() => display.smAndDown.value)
   const viewingCurrentWeek = ref(true);
 
   const disablePrevious = computed(() => {
@@ -70,7 +71,7 @@
     // if viewing current week, return the dates for the current week
     const arr : Date[] = [];
     // If mobile return both current and next week
-    if (display.smAndDown.value) {
+    if (isMobile.value) {
       for (let i = 0; i < 14; i++) {
         if (props.mondayDate) {
           arr.push(new Date(props.mondayDate.getTime() + i * 24 * 60 * 60 * 1000));

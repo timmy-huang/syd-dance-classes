@@ -78,20 +78,22 @@
     if (props.type === 'Studios' && newItems.length > 0 && !studiosInitialized) {
       studiosInitialized = true;
       
-      // Check localStorage for saved selection
-      const savedStudios = localStorage.getItem('selectedStudios');
-      
-      if (savedStudios) {
-        try {
-          const parsedStudios = JSON.parse(savedStudios);
-          // Validate that saved studios are still in the current list
-          const validStudios = parsedStudios.filter((studio: string) => newItems.includes(studio));
-          if (validStudios.length > 0) {
-            emit('update', validStudios);
-            return;
+      // Check localStorage for saved selection (only on client)
+      if (import.meta.client && typeof window !== 'undefined' && window.localStorage) {
+        const savedStudios = localStorage.getItem('selectedStudios');
+        
+        if (savedStudios) {
+          try {
+            const parsedStudios = JSON.parse(savedStudios);
+            // Validate that saved studios are still in the current list
+            const validStudios = parsedStudios.filter((studio: string) => newItems.includes(studio));
+            if (validStudios.length > 0) {
+              emit('update', validStudios);
+              return;
+            }
+          } catch (e) {
+            console.error('Error parsing saved studios from localStorage:', e);
           }
-        } catch (e) {
-          console.error('Error parsing saved studios from localStorage:', e);
         }
       }
       

@@ -39,7 +39,22 @@
 
 <script lang="ts" setup>
 import type { Lesson } from '~/types';
+import { studios, styles } from '~/utils/consts';
 
+// Helper function to safely get from localStorage (only on client)
+const getFromLocalStorage = (key: string, defaultValue: any) => {
+  if (import.meta.client && typeof window !== 'undefined' && window.localStorage) {
+    const item = localStorage.getItem(key)
+    if (item) {
+      try {
+        return JSON.parse(item)
+      } catch (e) {
+        return defaultValue
+      }
+    }
+  }
+  return defaultValue
+}
 
 // Props
 interface Props {
@@ -50,14 +65,29 @@ const props = defineProps<Props>()
 
 // Classes data and state
 const search = ref<string>('')
-const youth = ref(localStorage.getItem('youth') ? JSON.parse(localStorage.getItem('youth')!) : false)
-const beg = ref(localStorage.getItem('beg') ? JSON.parse(localStorage.getItem('beg')!) : true)
-const inte = ref(localStorage.getItem('inte') ? JSON.parse(localStorage.getItem('inte')!) : true)
-const adv = ref(localStorage.getItem('adv') ? JSON.parse(localStorage.getItem('adv')!) : true)  
-const popUp = ref(localStorage.getItem('popUp') ? JSON.parse(localStorage.getItem('popUp')!) : true)
+const youth = ref(false)
+const beg = ref(true)
+const inte = ref(true)
+const adv = ref(true)  
+const popUp = ref(true)
 
-const selectedStudios = ref(localStorage.getItem('selectedStudios') ? JSON.parse(localStorage.getItem('selectedStudios')!) : [...studios])
-const selectedStyles = ref(localStorage.getItem('selectedStyles') ? JSON.parse(localStorage.getItem('selectedStyles')!) : [...styles])
+const selectedStudios = ref<string[]>([])
+const selectedStyles = ref<string[]>([])
+
+// Load from localStorage on client side
+onMounted(() => {
+  youth.value = getFromLocalStorage('youth', false)
+  beg.value = getFromLocalStorage('beg', true)
+  inte.value = getFromLocalStorage('inte', true)
+  adv.value = getFromLocalStorage('adv', true)
+  popUp.value = getFromLocalStorage('popUp', true)
+  
+  const savedStudios = getFromLocalStorage('selectedStudios', null)
+  const savedStyles = getFromLocalStorage('selectedStyles', null)
+  
+  selectedStudios.value = savedStudios || [...studios]
+  selectedStyles.value = savedStyles || [...styles]
+})
 
 // Handle the selected day
 const today = ref(new Date())
@@ -107,37 +137,51 @@ const handleUpdateDate = (newDate: Date) => {
 
 const updateSelectedStudios = (newStudios: string[]) => {
   selectedStudios.value = newStudios
-  localStorage.setItem('selectedStudios', JSON.stringify(selectedStudios.value))
+  if (import.meta.client && typeof window !== 'undefined' && window.localStorage) {
+    localStorage.setItem('selectedStudios', JSON.stringify(selectedStudios.value))
+  }
 }
 
 const updateSelectedStyles = (newStyles: string[]) => {
   selectedStyles.value = newStyles
-  localStorage.setItem('selectedStyles', JSON.stringify(selectedStyles.value))
+  if (import.meta.client && typeof window !== 'undefined' && window.localStorage) {
+    localStorage.setItem('selectedStyles', JSON.stringify(selectedStyles.value))
+  }
 }
 
 const toggleYouth = () => {
   youth.value = !youth.value
-  localStorage.setItem('youth', JSON.stringify(youth.value))
+  if (import.meta.client && typeof window !== 'undefined' && window.localStorage) {
+    localStorage.setItem('youth', JSON.stringify(youth.value))
+  }
 }
 
 const toggleBeg = () => {
   beg.value = !beg.value
-  localStorage.setItem('beg', JSON.stringify(beg.value))
+  if (import.meta.client && typeof window !== 'undefined' && window.localStorage) {
+    localStorage.setItem('beg', JSON.stringify(beg.value))
+  }
 }
 
 const toggleInte = () => {
   inte.value = !inte.value
-  localStorage.setItem('inte', JSON.stringify(inte.value))
+  if (import.meta.client && typeof window !== 'undefined' && window.localStorage) {
+    localStorage.setItem('inte', JSON.stringify(inte.value))
+  }
 }
 
 const toggleAdv = () => {
   adv.value = !adv.value
-  localStorage.setItem('adv', JSON.stringify(adv.value))
+  if (import.meta.client && typeof window !== 'undefined' && window.localStorage) {
+    localStorage.setItem('adv', JSON.stringify(adv.value))
+  }
 }
 
 const togglePopUp = () => {
   popUp.value = !popUp.value
-  localStorage.setItem('popUp', JSON.stringify(popUp.value))
+  if (import.meta.client && typeof window !== 'undefined' && window.localStorage) {
+    localStorage.setItem('popUp', JSON.stringify(popUp.value))
+  }
 }
 
 const getNoClassesMessage = () => {

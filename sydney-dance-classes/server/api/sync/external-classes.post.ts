@@ -26,7 +26,7 @@ export default defineEventHandler(async (event) => {
   // Create Supabase client with service role (bypasses RLS)
   const supabase = createClient(
     process.env.SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    process.env.SUPABASE_SECRET_KEY!,
     {
       auth: {
         autoRefreshToken: false,

@@ -6,6 +6,11 @@
           <v-card-title>My Profile</v-card-title>
           
           <v-card-text>
+            <!-- Debug info -->
+            <v-alert v-if="debug" type="info" class="mb-4">
+              <pre>{{ debug }}</pre>
+            </v-alert>
+
             <v-form @submit.prevent="updateProfile">
               <v-text-field
                 v-model="profile.email"
@@ -22,6 +27,10 @@
                 v-model="profile.phone"
                 label="Phone"
               />
+              
+              <v-alert v-if="error" type="error" class="mt-4">
+                {{ error }}
+              </v-alert>
               
               <v-alert v-if="message" type="success" class="mt-4">
                 {{ message }}
@@ -43,95 +52,122 @@
   </v-container>
 </template>
 
-<script setup>
-definePageMeta({
-  middleware: 'auth' // Only logged-in users can access
-})
 
-const supabase = useSupabaseClient()
-const user = useSupabaseUser()
+<script setup lang="ts">
+  definePageMeta({
+    middleware: 'auth'
+  })
 
-const profile = ref({
-  email: '',
-  name: '',
-  phone: ''
-})
-
-const loading = ref(false)
-const message = ref('')
-const profileLoaded = ref(false)
-
-// Load profile when user becomes available
-watchEffect(async () => {
-  // Wait for user to be available and only load once
-  if (!user.value?.id || profileLoaded.value) {
-    return
+  interface Profile {
+    id: string
+    email: string | null
+    name: string | null
+    phone: string | null
+    created_at?: string
+    updated_at?: string
   }
-  
-  profileLoaded.value = true
-  loading.value = true
-  
-  try {
-    // Initialize with user info from auth
-    profile.value = {
-      email: user.value.email || '',
-      name: user.value.user_metadata?.name || '',
-      phone: ''
+
+  const supabase = useSupabaseClient()
+  const user = useSupabaseUser()
+
+  const profile = ref({
+    email: '',
+    name: '',
+    phone: ''
+  })
+
+  const loading = ref(false)
+  const message = ref('')
+  const error = ref('')
+  const debug = ref('')
+
+  const loadProfile = async () => {
+    console.log('Loading profile')
+    console.log('User:', user.value)
+
+    if (!user.value?.sub) {
+      debug.value = 'No user ID found'
+      console.log('No user ID')
+      return
     }
     
-    // Load profile from database and merge with user info
-    // Use maybeSingle() instead of single() to handle case where profile doesn't exist
-    const { data, error } = await supabase
-      .from('profiles')
-      .select('*')
-      .eq('id', user.value.id)
-      .maybeSingle()
+    // debug.value = `Loading profile for user: ${user.value.sub}`
+    loading.value = true
     
-    if (error && error.code !== 'PGRST116') {
-      // PGRST116 is "no rows returned" which is expected if profile doesn't exist
-      console.error('Error loading profile:', error)
-    }
-    
-    if (data) {
-      console.log('data', data)
-      // Merge database profile with user auth data (email from auth takes priority)
-      profile.value = {
-        email: user.value.email || data.email || '',
-        name: data.name || user.value.user_metadata?.name || '',
-        phone: data.phone || ''
+    try {
+      const { data, error: fetchError } = await supabase
+        .from('profiles')
+        .select('*')
+        .eq('id', user.value.sub)
+        .single()
+      
+      console.log('Profile fetch result:', { data, error: fetchError })
+      
+      if (fetchError) {
+        console.error('Error loading profile:', fetchError)
+        error.value = `Error loading profile: ${fetchError.message}`
+        debug.value = JSON.stringify(fetchError, null, 2)
+        return
       }
+      
+      if (data) {
+        console.log('Setting profile data:', data)
+        const profileData = data as Profile
+        
+        profile.value = {
+          email: profileData.email || user.value.email || '',
+          name: profileData.name || '',
+          phone: profileData.phone || ''
+        }
+        // debug.value = `Profile loaded successfully: ${JSON.stringify(profile.value, null, 2)}`
+      } else {
+        debug.value = 'No profile data returned'
+      }
+    } catch (err) {
+      console.error('Unexpected error:', err)
+      error.value = 'Unexpected error loading profile'
+      debug.value = JSON.stringify(err, null, 2)
+    } finally {
+      loading.value = false
     }
-  } catch (err) {
-    console.error('Unexpected error loading profile:', err)
-  } finally {
+  }
+
+   // Watch for user to become available
+  watch(user, async (newUser) => {
+    if (newUser?.sub) {
+      await loadProfile()
+    }
+  }, { immediate: true })
+
+  const updateProfile = async () => {
+    if (!user.value?.sub) {
+      error.value = 'User not authenticated'
+      return
+    }
+    
+    loading.value = true
+    message.value = ''
+    error.value = ''
+    
+    const { error: updateError } = await supabase
+      .from('profiles')
+      .update({
+        name: profile.value.name,
+        phone: profile.value.phone,
+        updated_at: new Date().toISOString()
+      } as any)
+      .eq('id', user.value.sub)
+    
+    if (updateError) {
+      console.error('Error updating profile:', updateError)
+      error.value = `Error updating profile: ${updateError.message}`
+    } else {
+      message.value = 'Profile updated successfully!'
+      setTimeout(() => {
+        message.value = ''
+      }, 3000)
+    }
+    
     loading.value = false
   }
-})
-
-const updateProfile = async () => {
-  if (!user.value?.id) {
-    alert('User not authenticated')
-    return
-  }
-  
-  loading.value = true
-  message.value = ''
-  
-  const { error } = await supabase
-    .from('profiles')
-    .update({
-      name: profile.value.name,
-      phone: profile.value.phone,
-      updated_at: new Date().toISOString()
-    })
-    .eq('id', user.value.id)
-  
-  if (error) {
-    alert('Error updating profile')
-  } else {
-    message.value = 'Profile updated successfully!'
-  }
-  
-  loading.value = false
-}
 </script>

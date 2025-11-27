@@ -185,6 +185,15 @@
 <script setup lang="ts">
   import { styles } from '~/utils/consts'
 
+  interface Profile {
+    id: string
+    email: string | null
+    name: string | null
+    phone: string | null
+    created_at?: string
+    updated_at?: string
+  }
+
   definePageMeta({
     middleware: 'auth' // Only logged-in users can access
   })

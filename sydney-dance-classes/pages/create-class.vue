@@ -195,7 +195,7 @@
   }
 
   definePageMeta({
-    middleware: 'auth' // Only logged-in users can access
+    middleware: ['auth', 'profile-complete'] // Only logged-in users can access
   })
 
   const supabase = useSupabaseClient()

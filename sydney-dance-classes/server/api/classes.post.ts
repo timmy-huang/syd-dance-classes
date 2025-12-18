@@ -1,9 +1,11 @@
 import { z } from 'zod'
 import { serverSupabaseClient, serverSupabaseServiceRole } from '#supabase/server'
 
+// Validation schema for platform classes
 const CreateClassSchema = z.object({
   name: z.string().min(1, 'Class name is required'),
   description: z.string().nullable().optional(),
+  song: z.string().nullable().optional(), // NEW!
   location: z.string().min(1, 'Location is required'),
   start_time: z.string().datetime('Invalid start time format'),
   end_time: z.string().datetime('Invalid end time format'),
@@ -13,7 +15,9 @@ const CreateClassSchema = z.object({
   price: z.number().positive('Price must be greater than 0'),
   capacity: z.number().int().positive('Capacity must be a positive integer'),
   available_spots: z.number().int().nonnegative('Available spots must be a non-negative integer'),
-  status: z.enum(['draft', 'published']).default('draft'),
+  status: z.enum(['draft', 'published'], {
+    message: 'Status must be either draft or published'
+  }).default('draft'),
 }).refine(
   (data) => data.available_spots <= data.capacity,
   {
@@ -23,7 +27,7 @@ const CreateClassSchema = z.object({
 )
 
 export default defineEventHandler(async (event) => {
-  // 1. Authenticate using regular client
+  // 1. Authenticate
   const supabase = await serverSupabaseClient(event)
   const { data: { user }, error: authError } = await supabase.auth.getUser()
 
@@ -55,16 +59,16 @@ export default defineEventHandler(async (event) => {
     level,
     style,
     description,
+    song, // NEW!
     price,
     capacity,
     available_spots,
     status
   } = validatedData
 
-  // 3. Use service role client for database operations (bypasses RLS)
+  // 3. Get or create choreographer
   const supabaseAdmin = await serverSupabaseServiceRole(event)
 
-  // 4. Get or create choreographer
   let { data: choreographer } = await supabaseAdmin
     .from('choreographers')
     .select('id')
@@ -95,7 +99,7 @@ export default defineEventHandler(async (event) => {
     choreographerId = choreographer.id
   }
 
-  // 5. Verify choreographer belongs to authenticated user (security check)
+  // 4. Verify ownership
   const { data: ownerCheck } = await supabaseAdmin
     .from('choreographers')
     .select('user_id')
@@ -109,15 +113,16 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  // 6. Insert class
+  // 5. Insert class
   const { data: newClass, error: insertError } = await supabaseAdmin
     .from('classes')
     .insert({
       name,
       description: description || null,
+      song: song || null, // NEW!
       choreographer_id: choreographerId,
       booking_type: 'platform',
-      external_source: 'user_created',  // Mark as user-created
+      external_source: 'user_created',
       external_id: null,
       external_booking_url: null,
       studio_id: null,

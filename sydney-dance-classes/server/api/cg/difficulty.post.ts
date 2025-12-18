@@ -3,7 +3,7 @@ import { serverSupabaseServiceRole } from '#supabase/server'
 
 // Validation schema
 const DifficultySchema = z.object({
-  difficulty: z.string().min(1, 'Difficulty is required')
+  difficulty: z.number().int().min(1).max(5, 'Difficulty must be between 1 and 5')
 })
 
 export default defineEventHandler(async (event) => {

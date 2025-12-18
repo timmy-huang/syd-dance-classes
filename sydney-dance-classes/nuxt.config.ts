@@ -33,17 +33,17 @@ export default defineNuxtConfig({
   },
 
 
-  routeRules: {
-    '/api/cg/**': {
-      cors: true,
-      headers: {
-        'Access-Control-Allow-Origin': 'https://choreoguessr.vercel.app/', // ✅ Only this domain
-        'Access-Control-Allow-Methods': 'POST, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Allow-Credentials': 'true'
-      }
-    }
-  },
+  // routeRules: {
+  //   '/api/cg/**': {
+  //     cors: true,
+  //     headers: {
+  //       'Access-Control-Allow-Origin': 'https://choreoguessr.vercel.app/', // ✅ Only this domain
+  //       'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  //       'Access-Control-Allow-Headers': 'Content-Type',
+  //       'Access-Control-Allow-Credentials': 'true'
+  //     }
+  //   }
+  // },
 
   compatibilityDate: '2024-11-01'
 })

@@ -28,7 +28,20 @@ export default defineNuxtConfig({
     redirectOptions: {
       login: '/login',
       callback: '/confirm',
-      exclude: ['/', '/classes', '/classes/*', '/events', '/events/*', '/choreographer', '/choreographer/*'], // Public pages
+      exclude: ['/', '/classes', '/classes/*', '/events', '/events/*', '/choreographer', '/choreographer/*', '/api/cg/**'], // Public pages
+    }
+  },
+
+
+  routeRules: {
+    '/api/cg/**': {
+      cors: true,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+        'Access-Control-Max-Age': '86400',
+      }
     }
   },
 

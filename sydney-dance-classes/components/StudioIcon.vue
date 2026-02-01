@@ -7,6 +7,13 @@
     />
     </a>
 
+    <a :href="`https://www.instagram.com/sydneydanceco`" target="_blank" rel="noopener">
+      <v-img
+        v-if="studio === 'Sydney Dance Company'"
+        src="/sdc.png"
+      />
+    </a>
+
     <a :href="`https://www.instagram.com/movementnation.parramatta`" target="_blank" rel="noopener">
       <v-img 
         v-if="studio === 'Movement Nation Parramatta'"

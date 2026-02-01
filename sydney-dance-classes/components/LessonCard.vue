@@ -141,6 +141,9 @@
       if (props.lesson.studio === "Colab") {
         return "https://www.colabquarters.com.au/classes"
       }
+      if (props.lesson.studio === "Sydney Dance Company") {
+        return "https://www.sydneydancecompany.com/classes/classes-schedule/"
+      }
     }
     console.log("Booking Link not found for ", props.lesson)
     return ""

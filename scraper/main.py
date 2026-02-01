@@ -7,6 +7,7 @@ from duti.duti import duti
 from endless.endless import endless
 from kcc.kcc import kcc
 from colab.colab import colab
+from sdc.sdc import sdc
 from api_client import DanceClassAPI
 import datetime
 
@@ -90,6 +91,11 @@ studios = [
     {
         "name": "Co-Lab Quarters",
         "func": colab,
+        "args": (previous_monday, upcoming_sunday)
+    },
+    {
+        "name": "Sydney Dance Company",
+        "func": sdc,
         "args": (previous_monday, upcoming_sunday)
     },
 ]

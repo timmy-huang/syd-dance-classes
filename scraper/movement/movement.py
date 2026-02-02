@@ -3,55 +3,50 @@ import json
 from helper import determine_level, determine_style
 from api_client import DanceClassAPI, transform_class_data
 
-def movement(start_date, end_date):
+def movement_hurstville(start_date, end_date):
     """
-    Scrape Movement Nation classes and sync to database
+    Scrape Movement Nation Hurstville classes and sync to database
+    
+    Returns:
+        Dict with created/updated/errors counts and classes data
     """
     api_client = DanceClassAPI()
     
-    # Hurstville location
-    hurstville_url = "https://www.movementnationdancestudio.com"
-    hurstville_classes = scrape_movement_nation(
-        hurstville_url, 
-        start_date, 
-        end_date
-    )
+    url = "https://www.movementnationdancestudio.com"
+    classes = scrape_movement_nation(url, start_date, end_date)
     
-    # Transform and sync
-    if hurstville_classes:
-        transformed = [
-            transform_class_data(
-                cls, 
-                "Movement Nation Hurstville",
-                hurstville_url
-            ) 
-            for cls in hurstville_classes
-        ]
-        
-        result = api_client.sync_classes("movement_nation_hurstville", transformed)
-        print(f"✅ Hurstville: Created {result['created']}, Updated {result['updated']}, Errors {len(result['errors'])}")
+    if not classes:
+        return {"created": 0, "updated": 0, "errors": [], "classes": []}
     
-    # Parramatta location
-    parramatta_url = "https://2020movementnation.wixsite.com/website-1"
-    parramatta_classes = scrape_movement_nation(
-        parramatta_url, 
-        start_date, 
-        end_date
-    )
+    transformed = [
+        transform_class_data(cls, "Movement Nation Hurstville", url) 
+        for cls in classes
+    ]
     
-    # Transform and sync
-    if parramatta_classes:
-        transformed = [
-            transform_class_data(
-                cls, 
-                "Movement Nation Parramatta",
-                parramatta_url
-            ) 
-            for cls in parramatta_classes
-        ]
-        
-        result = api_client.sync_classes("movement_nation_parramatta", transformed)
-        print(f"✅ Parramatta: Created {result['created']}, Updated {result['updated']}, Errors {len(result['errors'])}")
+    return api_client.sync_classes("movement_nation_hurstville", transformed)
+
+
+def movement_parramatta(start_date, end_date):
+    """
+    Scrape Movement Nation Parramatta classes and sync to database
+    
+    Returns:
+        Dict with created/updated/errors counts and classes data
+    """
+    api_client = DanceClassAPI()
+    
+    url = "https://2020movementnation.wixsite.com/website-1"
+    classes = scrape_movement_nation(url, start_date, end_date)
+    
+    if not classes:
+        return {"created": 0, "updated": 0, "errors": [], "classes": []}
+    
+    transformed = [
+        transform_class_data(cls, "Movement Nation Parramatta", url) 
+        for cls in classes
+    ]
+    
+    return api_client.sync_classes("movement_nation_parramatta", transformed)
 
 
 def scrape_movement_nation(url: str, start_date, end_date) -> list:

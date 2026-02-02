@@ -1,4 +1,18 @@
-from movement.movement import movement
+import datetime
+import json
+import os
+
+# ============================================================
+# TEST MODE - Set to True to save locally instead of API sync
+# ============================================================
+TEST_MODE = True
+TEST_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "test_output")
+
+# Set environment variable BEFORE importing scrapers so api_client picks it up
+if TEST_MODE:
+    os.environ['SCRAPER_TEST_MODE'] = 'true'
+
+from movement.movement import movement_hurstville, movement_parramatta
 from imi.imi import imi
 from xo.xo import xo
 from ix.ix import ix
@@ -9,15 +23,6 @@ from kcc.kcc import kcc
 from colab.colab import colab
 from sdc.sdc import sdc
 from api_client import DanceClassAPI
-import datetime
-import json
-import os
-
-# ============================================================
-# TEST MODE - Set to True to save locally instead of API sync
-# ============================================================
-TEST_MODE = False
-TEST_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "test_output")
 
 # Calculate date range
 today = datetime.date.today()
@@ -53,8 +58,13 @@ else:
 # Configuration for each studio
 studios = [
     {
-        "name": "Movement Nation",
-        "func": movement,
+        "name": "Movement Nation Hurstville",
+        "func": movement_hurstville,
+        "args": (previous_monday, upcoming_sunday)
+    },
+    {
+        "name": "Movement Nation Parramatta",
+        "func": movement_parramatta,
         "args": (previous_monday, upcoming_sunday)
     },
     {

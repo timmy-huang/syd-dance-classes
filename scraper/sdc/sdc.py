@@ -1,8 +1,47 @@
 import requests
 from datetime import datetime
+from zoneinfo import ZoneInfo
 import json
 from helper import determine_level, determine_style
 from api_client import DanceClassAPI, transform_class_data
+
+
+# Sydney timezone for converting UTC times
+SYDNEY_TZ = ZoneInfo("Australia/Sydney")
+
+
+def convert_utc_to_sydney(utc_time_str):
+    """
+    Convert a UTC time string to Sydney time.
+    
+    The API returns times like: "2026-02-02T22:00:00.0000000Z"
+    We need to convert to Sydney local time without the Z suffix.
+    
+    Args:
+        utc_time_str: UTC time string with Z suffix
+        
+    Returns:
+        ISO format string in Sydney time (e.g., "2026-02-03T09:00:00")
+    """
+    # Handle different possible formats from the API
+    # Remove trailing Z and any extra precision
+    clean_time = utc_time_str.rstrip('Z')
+    
+    # Handle microsecond precision (up to 7 digits from API)
+    if '.' in clean_time:
+        base, frac = clean_time.split('.')
+        # Truncate to 6 digits (Python's max microsecond precision)
+        frac = frac[:6]
+        clean_time = f"{base}.{frac}"
+        dt_utc = datetime.fromisoformat(clean_time).replace(tzinfo=ZoneInfo("UTC"))
+    else:
+        dt_utc = datetime.fromisoformat(clean_time).replace(tzinfo=ZoneInfo("UTC"))
+    
+    # Convert to Sydney time
+    dt_sydney = dt_utc.astimezone(SYDNEY_TZ)
+    
+    # Return without timezone info to match other scrapers' format
+    return dt_sydney.strftime("%Y-%m-%dT%H:%M:%S")
 
 
 def parse_nextjs_response(response_text):
@@ -189,11 +228,15 @@ def scrape_sdc_classes(start_date, end_date):
             else:
                 location = 'Sydney Dance Company'
             
+            # Convert UTC times to Sydney time
+            start_sydney = convert_utc_to_sydney(class_item['startDateTime'])
+            end_sydney = convert_utc_to_sydney(class_item['endDateTime'])
+            
             # Format the class data
             classData = {
                 "serviceId": str(service_id),
-                "start": class_item['startDateTime'],
-                "end": class_item['endDateTime'],
+                "start": start_sydney,
+                "end": end_sydney,
                 "choreo": choreographer,
                 "name": class_item['name'],
                 "location": location,

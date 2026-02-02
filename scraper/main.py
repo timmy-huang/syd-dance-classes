@@ -10,6 +10,14 @@ from colab.colab import colab
 from sdc.sdc import sdc
 from api_client import DanceClassAPI
 import datetime
+import json
+import os
+
+# ============================================================
+# TEST MODE - Set to True to save locally instead of API sync
+# ============================================================
+TEST_MODE = False
+TEST_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "test_output")
 
 # Calculate date range
 today = datetime.date.today()
@@ -18,21 +26,29 @@ previous_monday = today - datetime.timedelta(days=today_weekday)
 upcoming_sunday = today + datetime.timedelta(days=(7 + 6 - today_weekday + 1))
 
 print("=" * 70)
-print(f"🎯 Starting Dance Class Sync")
+if TEST_MODE:
+    print(f"🧪 Starting Dance Class Sync (TEST MODE - Local Save)")
+else:
+    print(f"🎯 Starting Dance Class Sync")
 print(f"📅 Date range: {previous_monday} to {upcoming_sunday}")
 print("=" * 70)
 
-# Initialize API client
-api_client = DanceClassAPI()
-
-# Delete all existing external classes before syncing
-print("\n🗑️  Deleting all existing external classes...")
-try:
-    delete_result = api_client.delete_all_external_classes()
-    print(f"✅ Deleted {delete_result.get('deleted', 0)} external classes")
-except Exception as e:
-    print(f"❌ Error deleting external classes: {e}")
-    print("⚠️  Continuing with sync anyway...")
+# Initialize API client or test output directory
+api_client = None
+if TEST_MODE:
+    os.makedirs(TEST_OUTPUT_DIR, exist_ok=True)
+    print(f"\n📁 Test output directory: {TEST_OUTPUT_DIR}")
+    all_test_classes = {}  # Collect all classes for combined output
+else:
+    api_client = DanceClassAPI()
+    # Delete all existing external classes before syncing
+    print("\n🗑️  Deleting all existing external classes...")
+    try:
+        delete_result = api_client.delete_all_external_classes()
+        print(f"✅ Deleted {delete_result.get('deleted', 0)} external classes")
+    except Exception as e:
+        print(f"❌ Error deleting external classes: {e}")
+        print("⚠️  Continuing with sync anyway...")
 
 # Configuration for each studio
 studios = [
@@ -104,29 +120,52 @@ studios = [
 total_created = 0
 total_updated = 0
 total_errors = 0
+total_classes = 0
 successful_studios = 0
 failed_studios = []
 
 for studio_config in studios:
     studio_name = studio_config["name"]
     print(f"\n{'─' * 70}")
-    print(f"🏢 Syncing {studio_name}...")
+    if TEST_MODE:
+        print(f"🏢 Scraping {studio_name}...")
+    else:
+        print(f"🏢 Syncing {studio_name}...")
     print(f"{'─' * 70}")
     
     try:
         result = studio_config["func"](*studio_config["args"])
         
         if result:
-            total_created += result.get("created", 0)
-            total_updated += result.get("updated", 0)
-            total_errors += len(result.get("errors", []))
-            successful_studios += 1
-            
-            print(f"✅ {studio_name} complete:")
-            print(f"   📝 Created: {result.get('created', 0)}")
-            print(f"   🔄 Updated: {result.get('updated', 0)}")
-            if result.get('errors'):
-                print(f"   ⚠️  Errors: {len(result['errors'])}")
+            if TEST_MODE:
+                # In test mode, result contains the raw classes data
+                classes_data = result.get("classes", [])
+                total_classes += len(classes_data)
+                successful_studios += 1
+                
+                # Save individual studio file
+                studio_filename = studio_name.lower().replace(" ", "_").replace("-", "_")
+                studio_file = os.path.join(TEST_OUTPUT_DIR, f"{studio_filename}.json")
+                with open(studio_file, 'w', encoding='utf-8') as f:
+                    json.dump(classes_data, f, indent=2, ensure_ascii=False, default=str)
+                
+                # Add to combined output
+                all_test_classes[studio_name] = classes_data
+                
+                print(f"✅ {studio_name} complete:")
+                print(f"   📊 Classes found: {len(classes_data)}")
+                print(f"   💾 Saved to: {studio_file}")
+            else:
+                total_created += result.get("created", 0)
+                total_updated += result.get("updated", 0)
+                total_errors += len(result.get("errors", []))
+                successful_studios += 1
+                
+                print(f"✅ {studio_name} complete:")
+                print(f"   📝 Created: {result.get('created', 0)}")
+                print(f"   🔄 Updated: {result.get('updated', 0)}")
+                if result.get('errors'):
+                    print(f"   ⚠️  Errors: {len(result['errors'])}")
         else:
             print(f"⚠️  {studio_name} returned no result")
             
@@ -137,12 +176,32 @@ for studio_config in studios:
 
 # Summary
 print("\n" + "=" * 70)
-print("📊 SYNC SUMMARY")
+if TEST_MODE:
+    print("📊 TEST MODE SUMMARY")
+else:
+    print("📊 SYNC SUMMARY")
 print("=" * 70)
 print(f"✅ Successful studios: {successful_studios}/{len(studios)}")
-print(f"📝 Total created: {total_created}")
-print(f"🔄 Total updated: {total_updated}")
-print(f"⚠️  Total errors: {total_errors}")
+
+if TEST_MODE:
+    print(f"📊 Total classes scraped: {total_classes}")
+    
+    # Save combined output file
+    combined_file = os.path.join(TEST_OUTPUT_DIR, "_all_classes.json")
+    with open(combined_file, 'w', encoding='utf-8') as f:
+        json.dump({
+            "date_range": {
+                "start": str(previous_monday),
+                "end": str(upcoming_sunday)
+            },
+            "total_classes": total_classes,
+            "studios": all_test_classes
+        }, f, indent=2, ensure_ascii=False, default=str)
+    print(f"💾 Combined output: {combined_file}")
+else:
+    print(f"📝 Total created: {total_created}")
+    print(f"🔄 Total updated: {total_updated}")
+    print(f"⚠️  Total errors: {total_errors}")
 
 if failed_studios:
     print(f"\n❌ Failed studios: {', '.join(failed_studios)}")

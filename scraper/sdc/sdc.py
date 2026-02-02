@@ -132,17 +132,41 @@ def scrape_sdc_classes(start_date, end_date):
         # The actual class data is in key "1"
         if '1' not in parsed:
             print("⚠️  No class data found in Sydney Dance Company response")
+            print(f"   Available keys: {list(parsed.keys())}")
             return []
         
         classes = parsed['1']
+        
+        # Check if classes is a list (expected format)
+        if not isinstance(classes, list):
+            print(f"⚠️  Sydney Dance Company response format unexpected")
+            print(f"   Expected list, got {type(classes).__name__}")
+            # Try to find class data in other keys
+            for key, value in parsed.items():
+                if isinstance(value, list) and len(value) > 0 and isinstance(value[0], dict):
+                    print(f"   Found potential class data in key '{key}'")
+                    classes = value
+                    break
+            else:
+                print(f"   Response preview: {str(classes)[:200]}...")
+                return []
+        
         data = []
         
         for class_item in classes:
+            # Skip if not a dictionary
+            if not isinstance(class_item, dict):
+                continue
             # Extract instructor information
             staff_list = class_item.get('staff', [])
-            if staff_list:
+            if staff_list and isinstance(staff_list, list) and len(staff_list) > 0:
                 instructor = staff_list[0]
-                name = instructor.get('displayLabel', 'Unknown')
+                if isinstance(instructor, dict):
+                    name = instructor.get('displayLabel', 'Unknown')
+                elif isinstance(instructor, str):
+                    name = instructor
+                else:
+                    name = "Unknown"
                 insta = ""  # Not available in API response
                 choreographer = {"name": name, "instagram": insta}
             else:
@@ -156,6 +180,15 @@ def scrape_sdc_classes(start_date, end_date):
                 print(f"   Available fields: {list(class_item.keys())}")
                 continue
             
+            # Get location - handle different formats
+            location_data = class_item.get('location', {})
+            if isinstance(location_data, dict):
+                location = location_data.get('name', 'Sydney Dance Company')
+            elif isinstance(location_data, str):
+                location = location_data
+            else:
+                location = 'Sydney Dance Company'
+            
             # Format the class data
             classData = {
                 "serviceId": str(service_id),
@@ -163,7 +196,7 @@ def scrape_sdc_classes(start_date, end_date):
                 "end": class_item['endDateTime'],
                 "choreo": choreographer,
                 "name": class_item['name'],
-                "location": class_item.get('location', {}).get('name', 'Sydney Dance Company'),
+                "location": location,
                 "level": determine_level(class_item['name']),
                 "style": determine_style(class_item['name'])
             }

@@ -6,7 +6,7 @@ import os
 # TEST MODE - Set to True to save locally instead of API sync
 # ============================================================
 TEST_MODE = True
-TEST_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "test_output")
+TEST_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), ".test_output")
 
 # Set environment variable BEFORE importing scrapers so api_client picks it up
 if TEST_MODE:

@@ -36,5 +36,5 @@ pnpm-debug.log*
 choreographers.json
 
 # Scraper test output
-scraper/test_output/
+scraper/.test_output/
 scraper/debug/

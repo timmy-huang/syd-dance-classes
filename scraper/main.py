@@ -1,12 +1,40 @@
 import datetime
 import json
 import os
+import requests
 
 # ============================================================
 # TEST MODE - Set to True to save locally instead of API sync
 # ============================================================
 TEST_MODE = False
 TEST_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), ".test_output")
+
+# ============================================================
+# TELEGRAM NOTIFICATIONS
+# ============================================================
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
+
+
+def send_telegram_notification(message: str) -> bool:
+    """Send a notification via Telegram bot."""
+    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+        print("⚠️  Telegram not configured (missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID)")
+        return False
+    
+    try:
+        url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+        payload = {
+            "chat_id": TELEGRAM_CHAT_ID,
+            "text": message,
+            "parse_mode": "HTML"
+        }
+        response = requests.post(url, json=payload, timeout=10)
+        response.raise_for_status()
+        return True
+    except Exception as e:
+        print(f"⚠️  Failed to send Telegram notification: {e}")
+        return False
 
 # Set environment variable BEFORE importing scrapers so api_client picks it up
 if TEST_MODE:
@@ -215,6 +243,17 @@ else:
 
 if failed_studios:
     print(f"\n❌ Failed studios: {', '.join(failed_studios)}")
+    
+    # Send Telegram notification for failed studios
+    failure_message = (
+        f"🚨 <b>Dance Class Scraper Alert</b>\n\n"
+        f"❌ <b>{len(failed_studios)} studio(s) failed:</b>\n"
+        f"• {chr(10).join(failed_studios)}\n\n"
+        f"📅 Date range: {previous_monday} to {upcoming_sunday}\n"
+        f"✅ Successful: {successful_studios}/{len(studios)}"
+    )
+    if send_telegram_notification(failure_message):
+        print("📱 Telegram notification sent")
 
 print("\n✅ Scraping completed!")
 print("=" * 70)

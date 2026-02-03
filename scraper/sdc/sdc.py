@@ -158,37 +158,34 @@ def scrape_sdc_classes(start_date, end_date):
         response = requests.post(url, headers=headers, cookies=cookies, files=files, timeout=30)
         
         if response.status_code != 200:
-            print(f"⚠️  Sydney Dance Company request failed with status code {response.status_code}")
-            print("This could be due to:")
-            print("1. The encrypted token may have expired")
-            print("2. The session may no longer be valid")
-            print("3. The server may be detecting this as not coming from a browser")
-            return []
+            raise Exception(
+                f"Sydney Dance Company request failed with status code {response.status_code}. "
+                "Possible causes: expired token, invalid session, or server blocking request."
+            )
         
         # Parse the Next.js response
         parsed = parse_nextjs_response(response.text)
         
         # The actual class data is in key "1"
         if '1' not in parsed:
-            print("⚠️  No class data found in Sydney Dance Company response")
-            print(f"   Available keys: {list(parsed.keys())}")
-            return []
+            raise Exception(
+                f"No class data found in Sydney Dance Company response. Available keys: {list(parsed.keys())}"
+            )
         
         classes = parsed['1']
         
         # Check if classes is a list (expected format)
         if not isinstance(classes, list):
-            print(f"⚠️  Sydney Dance Company response format unexpected")
-            print(f"   Expected list, got {type(classes).__name__}")
             # Try to find class data in other keys
             for key, value in parsed.items():
                 if isinstance(value, list) and len(value) > 0 and isinstance(value[0], dict):
-                    print(f"   Found potential class data in key '{key}'")
                     classes = value
                     break
             else:
-                print(f"   Response preview: {str(classes)[:200]}...")
-                return []
+                raise Exception(
+                    f"Sydney Dance Company response format unexpected. "
+                    f"Expected list, got {type(classes).__name__}. Preview: {str(classes)[:200]}..."
+                )
         
         data = []
         
@@ -249,8 +246,7 @@ def scrape_sdc_classes(start_date, end_date):
         return data
         
     except requests.exceptions.RequestException as e:
-        print(f"❌ Error scraping Sydney Dance Company: {e}")
-        return []
+        raise Exception(f"Error scraping Sydney Dance Company: {e}")
 
 
 if __name__ == "__main__":

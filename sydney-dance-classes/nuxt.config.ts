@@ -1,4 +1,4 @@
-﻿import vuetify from 'vite-plugin-vuetify'
+import vuetify from 'vite-plugin-vuetify'
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -34,6 +34,16 @@ export default defineNuxtConfig({
 
 
   routeRules: {
+    '/api/classes': {
+      headers: {
+        'Cache-Control': 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=60'
+      }
+    },
+    '/api/studios': {
+      headers: {
+        'Cache-Control': 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=60'
+      }
+    },
     '/api/cg/**': {
       cors: true,
       headers: {

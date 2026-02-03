@@ -120,12 +120,10 @@ def scrape_colab_classes(start_date, end_date):
         response = requests.post(url, headers=headers, cookies=cookies, files=files, timeout=30)
         
         if response.status_code != 200:
-            print(f"⚠️  Co-Lab request failed with status code {response.status_code}")
-            print("This could be due to:")
-            print("1. The encrypted token may have expired")
-            print("2. The session may no longer be valid")
-            print("3. The server may be detecting this as not coming from a browser")
-            return []
+            raise Exception(
+                f"Co-Lab request failed with status code {response.status_code}. "
+                "Possible causes: expired token, invalid session, or server blocking request."
+            )
         
         # Parse the Next.js response
         parsed = parse_nextjs_response(response.text)

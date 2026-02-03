@@ -3,8 +3,19 @@ import os
 import json
 from typing import List, Dict
 
+# Test mode - set via environment variable or imported from main
+TEST_MODE = os.getenv('SCRAPER_TEST_MODE', 'false').lower() == 'true'
+
 class DanceClassAPI:
     def __init__(self):
+        # In test mode, skip API initialization
+        if TEST_MODE:
+            self.base_url = None
+            self.api_key = None
+            self.test_mode = True
+            return
+        
+        self.test_mode = False
         self.base_url = os.getenv('NUXT_API_URL', 'http://localhost:3000')
         self.api_key = os.getenv('SYNC_API_KEY')
         
@@ -18,6 +29,10 @@ class DanceClassAPI:
         """
         Delete all external classes from the database via API
         """
+        # In test mode, skip deletion
+        if self.test_mode:
+            return {"deleted": 0, "message": "Test mode - skipped deletion"}
+        
         payload = {
             "api_key": self.api_key
         }
@@ -39,10 +54,21 @@ class DanceClassAPI:
     def sync_classes(self, source: str, classes: List[Dict]) -> Dict:
         """
         Sync classes to the database via API in batches
+        In test mode, returns the classes data without syncing
         """
         if not classes:
             print(f"⚠️  No classes to sync for {source}")
-            return {"created": 0, "updated": 0, "errors": []}
+            return {"created": 0, "updated": 0, "errors": [], "classes": []}
+        
+        # In test mode, return the classes data without syncing
+        if self.test_mode:
+            print(f"   🧪 Test mode: Collected {len(classes)} classes for {source}")
+            return {
+                "created": len(classes),
+                "updated": 0,
+                "errors": [],
+                "classes": classes  # Include raw classes data for test output
+            }
         
         # Batch size - adjust if needed
         BATCH_SIZE = 8

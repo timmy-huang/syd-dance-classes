@@ -1,184 +1,264 @@
-import requests
-from datetime import datetime
-import json
+import asyncio
+import re
+from datetime import datetime, timedelta
+from playwright.async_api import async_playwright
 from helper import determine_level, determine_style
 from api_client import DanceClassAPI, transform_class_data
 
 
-def parse_nextjs_response(response_text):
-    """
-    Parse the Next.js Server Action response format.
-    Response format is like: "0:data\n1:data\n2:data"
-    """
-    lines = response_text.strip().split('\n')
-    parsed_data = {}
+# Widget URL for Co-Lab Quarters schedule
+WIDGET_URL = "https://brandedweb-next.mindbodyonline.com/components/widgets/schedules/view/562306b3ba/schedule"
+
+
+def parse_time_to_datetime(time_str, date_obj):
+    """Parse a time string like "9:00 AM" to a datetime object."""
+    time_str = time_str.strip().upper()
     
-    for line in lines:
-        if ':' in line:
-            # Split only on first colon
-            idx, data = line.split(':', 1)
-            try:
-                # Parse the JSON data
-                parsed_data[idx] = json.loads(data)
-            except json.JSONDecodeError:
-                parsed_data[idx] = data
+    try:
+        time_obj = datetime.strptime(time_str, "%I:%M %p").time()
+    except ValueError:
+        try:
+            time_obj = datetime.strptime(time_str, "%H:%M").time()
+        except ValueError:
+            return None
     
-    return parsed_data
+    return datetime.combine(date_obj, time_obj)
+
+
+def extract_classes_from_text(visible_text, current_date):
+    """Extract class information from visible page text."""
+    classes = []
+    lines = visible_text.split('\n')
+    
+    i = 0
+    while i < len(lines):
+        line = lines[i].strip()
+        
+        # Look for time pattern like "9:00 AM" or "10:45 AM"
+        time_match = re.match(r'^(\d{1,2}:\d{2}\s*(?:AM|PM))$', line, re.IGNORECASE)
+        
+        if time_match:
+            time_str = time_match.group(1)
+            duration = 60
+            class_name = None
+            instructor = "Unknown"
+            
+            # Look through the next few lines for class info
+            for j in range(i + 1, min(i + 8, len(lines))):
+                next_line = lines[j].strip()
+                
+                if not next_line:
+                    continue
+                
+                # Duration pattern: "90 min"
+                dur_match = re.match(r'^(\d+)\s*min', next_line, re.IGNORECASE)
+                if dur_match:
+                    duration = int(dur_match.group(1))
+                    continue
+                
+                # Class name patterns - expanded for Co-Lab classes
+                class_types = ['BALLET', 'CONTEMPORARY', 'THEATRE JAZZ', 'JAZZ', 'HIP HOP', 
+                              'HEELS', 'STRETCH', 'PILATES', 'CONDITIONING', 'BARRE',
+                              'AFRO', 'KPOP', 'K-POP', 'LYRICAL', 'HOUSE', 'WAACKING',
+                              'LOCKING', 'POPPING', 'BREAKING', 'OPEN', 'GROOVES',
+                              'FUNK', 'LATIN', 'COMMERCIAL', 'URBAN', 'CHOREOGRAPHY']
+                for ct in class_types:
+                    if next_line.upper().startswith(ct) or ct in next_line.upper():
+                        class_name = next_line
+                        break
+                
+                # Instructor pattern (after class name)
+                if class_name and instructor == "Unknown":
+                    # Look for name pattern
+                    name_match = re.match(r'^([A-Z][a-z]+\s+[A-Z][a-z]+)', next_line)
+                    if name_match:
+                        instructor = name_match.group(1)
+                        break
+                    
+                    name_match2 = re.match(r'^([A-Za-z]+\s+[A-Za-z]+)\s*[\u2013\u2014:-]', next_line)
+                    if name_match2:
+                        instructor = name_match2.group(1)
+                        break
+                
+                # Stop conditions
+                if re.match(r'^\d{1,2}:\d{2}\s*(?:AM|PM)$', next_line, re.IGNORECASE):
+                    break
+                if next_line.lower() in ['show details', 'sign up', 'unavailable', 'co-lab quarters']:
+                    break
+            
+            if class_name:
+                start_dt = parse_time_to_datetime(time_str, current_date)
+                if start_dt:
+                    end_dt = start_dt + timedelta(minutes=duration)
+                    service_id = f"colab_{current_date.isoformat()}_{time_str.replace(' ', '').replace(':', '')}_{class_name.replace(' ', '_')[:20]}"
+                    
+                    classes.append({
+                        "serviceId": service_id,
+                        "start": start_dt.strftime("%Y-%m-%dT%H:%M:%S"),
+                        "end": end_dt.strftime("%Y-%m-%dT%H:%M:%S"),
+                        "choreo": {"name": instructor, "instagram": ""},
+                        "name": class_name,
+                        "location": "Co-Lab Quarters",
+                        "level": determine_level(class_name),
+                        "style": determine_style(class_name)
+                    })
+        
+        i += 1
+    
+    return classes
+
+
+async def scrape_colab_classes_async(start_date, end_date):
+    """
+    Scrape Co-Lab Quarters classes using Playwright headless browser.
+    """
+    all_classes = []
+    
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        context = await browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        )
+        page = await context.new_page()
+        
+        try:
+            print(f"[INFO] Loading Co-Lab Quarters schedule...")
+            await page.goto(WIDGET_URL, wait_until="load", timeout=30000)
+            await page.wait_for_timeout(3000)
+            
+            # Calculate days to check
+            days_to_check = (end_date - start_date).days + 1
+            days_to_check = min(days_to_check, 14)
+            
+            print(f"[INFO] Checking {days_to_check} days for classes...")
+            
+            processed_dates = set()
+            
+            for day_offset in range(days_to_check):
+                target_date = start_date + timedelta(days=day_offset)
+                day_num = target_date.day
+                
+                # Click on the target date using role="button" elements
+                try:
+                    # Get all date buttons
+                    date_buttons = page.locator('[role="button"]')
+                    count = await date_buttons.count()
+                    
+                    clicked = False
+                    for i in range(count):
+                        btn = date_buttons.nth(i)
+                        try:
+                            text = await btn.inner_text()
+                            # Check if this button contains our target day number
+                            # Format is like "Wed 4" or "Thu 5"
+                            if text.strip().endswith(str(day_num)) or f" {day_num}" in text:
+                                await btn.click()
+                                await page.wait_for_timeout(2000)
+                                clicked = True
+                                break
+                        except:
+                            continue
+                    
+                    if not clicked:
+                        # Try clicking "Go to next date" link
+                        go_link = page.locator(f'a:has-text("Go to"), span:has-text("Go to February {day_num}")')
+                        if await go_link.count() > 0:
+                            await go_link.first.click()
+                            await page.wait_for_timeout(2000)
+                            clicked = True
+                    
+                except Exception:
+                    pass
+                
+                # Get visible text and extract current date
+                visible_text = await page.evaluate("document.body.innerText")
+                
+                # Determine displayed date
+                date_match = re.search(r'(\w+day), (\w+) (\d+)', visible_text)
+                if date_match:
+                    displayed_day = int(date_match.group(3))
+                    displayed_month = date_match.group(2)
+                    
+                    date_key = f"{displayed_month}-{displayed_day}"
+                    if date_key in processed_dates:
+                        continue
+                    processed_dates.add(date_key)
+                    
+                    # Parse month
+                    month_map = {'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'Jun': 6,
+                                 'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12}
+                    month_num = month_map.get(displayed_month[:3], start_date.month)
+                    
+                    try:
+                        current_date = start_date.replace(month=month_num, day=displayed_day)
+                    except ValueError:
+                        continue
+                    
+                    # Skip if no classes
+                    if "no available classes" in visible_text.lower():
+                        print(f"[INFO] No classes on {current_date.strftime('%b %d')}")
+                        continue
+                    
+                    # Extract classes
+                    day_classes = extract_classes_from_text(visible_text, current_date)
+                    if day_classes:
+                        print(f"[INFO] Found {len(day_classes)} classes on {current_date.strftime('%b %d')}")
+                        all_classes.extend(day_classes)
+            
+        except Exception as e:
+            print(f"[WARN] Error during scraping: {e}")
+        finally:
+            await browser.close()
+        
+        # Remove duplicates
+        seen_ids = set()
+        unique_classes = []
+        for cls in all_classes:
+            if cls['serviceId'] not in seen_ids:
+                seen_ids.add(cls['serviceId'])
+                unique_classes.append(cls)
+        
+        # Filter to requested date range
+        filtered_classes = []
+        for cls in unique_classes:
+            class_date = datetime.fromisoformat(cls['start']).date()
+            if start_date <= class_date <= end_date:
+                filtered_classes.append(cls)
+        
+        all_classes = filtered_classes
+    
+    print(f"[OK] Scraped {len(all_classes)} classes from Co-Lab Quarters")
+    return all_classes
+
+
+def scrape_colab_classes(start_date, end_date):
+    """Synchronous wrapper for the async scraping function."""
+    return asyncio.run(scrape_colab_classes_async(start_date, end_date))
 
 
 def colab(start_date, end_date):
-    """
-    Fetch Co-Lab Quarters schedule data and sync to API.
-    
-    Args:
-        start_date: datetime.date object
-        end_date: datetime.date object
-        
-    Returns:
-        Dict with created/updated/errors counts
-    """
+    """Fetch Co-Lab Quarters schedule data and sync to API."""
     api_client = DanceClassAPI()
     
-    # Scrape classes
     classes = scrape_colab_classes(start_date, end_date)
     
     if not classes:
         return {"created": 0, "updated": 0, "errors": []}
     
-    # Transform to API format
     transformed = [
         transform_class_data(
             cls,
             "Co-Lab Quarters",
-            "https://www.colabquarters.com.au"  # Replace with actual booking URL
+            "https://www.colabquarters.com.au"
         )
         for cls in classes
     ]
     
-    # Sync to API
     result = api_client.sync_classes("colab", transformed)
     return result
 
 
-def scrape_colab_classes(start_date, end_date):
-    """
-    Scrape Co-Lab Quarters classes
-    
-    Args:
-        start_date: datetime.date object
-        end_date: datetime.date object
-        
-    Returns:
-        List of class dictionaries
-    """
-    # Convert date objects to ISO format with time
-    # Assuming Sydney timezone (UTC+11)
-    from_date = f"{start_date.isoformat()}T13:00:00.000Z"
-    to_date = f"{end_date.isoformat()}T12:59:59.999Z"
-    
-    # API endpoint
-    url = "https://brandedweb-next.mindbodyonline.com/components/widgets/schedules/view/562306b3ba/schedule"
-    
-    # Headers
-    headers = {
-        "accept": "text/x-component",
-        "accept-language": "en-US,en;q=0.9",
-        "newrelic": "eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkJyb3dzZXIiLCJhYyI6IjIxMTg0NDkiLCJhcCI6IjE4MzUwMzcyMDIiLCJpZCI6IjdkODlhNzYxZTcwYThjNzgiLCJ0ciI6IjEzNzdlMDcyMzQyYTZhNjkxNGI2OGE0NTZmZTU5NmJlIiwidGkiOjE3NjI0ODQ0NDg0MTEsInRrIjoiODQ0NjcifX0=",
-        "next-action": "4f5d69414e1b758541ec223c15d6e1f87de21681",
-        "next-router-state-tree": "%5B%22%22%2C%7B%22children%22%3A%5B%5B%22locale%22%2C%22en%22%2C%22d%22%5D%2C%7B%22children%22%3A%5B%22widgets%22%2C%7B%22children%22%3A%5B%22schedules%22%2C%7B%22children%22%3A%5B%5B%22preview%22%2C%22view%22%2C%22d%22%5D%2C%7B%22children%22%3A%5B%5B%22widgetId%22%2C%22562306b3ba%22%2C%22d%22%5D%2C%7B%22children%22%3A%5B%22schedule%22%2C%7B%22children%22%3A%5B%22__PAGE__%22%2C%7B%7D%2C%22%2Fcomponents%2Fwidgets%2Fschedules%2Fview%2F562306b3ba%2Fschedule%22%2C%22refresh%22%5D%7D%5D%7D%5D%7D%5D%7D%5D%7D%5D%7D%2Cnull%2Cnull%2Ctrue%5D%7D%5D",
-        "origin": "https://brandedweb-next.mindbodyonline.com",
-        "priority": "u=1, i",
-        "referer": "https://brandedweb-next.mindbodyonline.com/components/widgets/schedules/view/562306b3ba/schedule",
-        "sec-ch-ua": '"Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"',
-        "sec-ch-ua-mobile": "?1",
-        "sec-ch-ua-platform": '"Android"',
-        "sec-fetch-dest": "empty",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "same-origin",
-        "sec-fetch-storage-access": "active",
-        "traceparent": "00-1377e072342a6a6914b68a456fe596be-7d89a761e70a8c78-01",
-        "tracestate": "84467@nr=0-1-2118449-1835037202-7d89a761e70a8c78----1762484448411",
-        "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36"
-    }
-    
-    # Cookies
-    cookies = {
-        "_cfuvid": "ei498bJ0wHHIsFHc2a4JuFvTgaHYslQCnPvcAeN3CS8-1762484440221-0.0.1.1-604800000",
-        "cf_clearance": "4wPFWdangUO8JbqdJ7X9DgK.8ybDQDOiYspCorDn2Jg-1762483832-1.2.1.1-2rmiwSLWHCQzJ_KVBMMq7FBDTm8jN9tV5xw.CtPWInxci9xipPjgePCS2zEnUmA9c7sDUyR3vaB7ci5z6N.QOVHHfD6AHbVQ3h_lnEWxNoeRJI.nCfvETZfCdnyHdqeLvSuP.hyJJkKokv91MZ5FF_HH6Cnz5ffjLC96a_3amCZ7t4l7GzqKWgyObQDCvYMTHZW7sopikS.HtsWglbu6tj1QV1XK3_sf6yxxENyLirg"
-    }
-    
-    # The token - you'll need to update this periodically from your browser
-    token = "Ls/jQ/npoH70XN8IDoO8KQgBvxV7/Kjuo9rMsTkD7O0ZAv19g2UOXStXdSIg6eulz2osoGeyliYC8esO3QKAaU2XCrD/XSAcThaqFa4yxXlpBp5bDuo43tiLEH1hzQ1qnxCdlVYmonomSZ70vUE1Bovxcpwp+3NacJjlfNYPVTUnvZjPet55kg+qVpTEC4iZLRKuqL2CIU7CE2vI"
-    
-    # Prepare multipart form data
-    files = {
-        '1': (None, f'"{token}"'),
-        '0': (None, f'["$@1",{{"fromDate":"{from_date}","toDate":"{to_date}"}}]'),
-    }
-    
-    try:
-        response = requests.post(url, headers=headers, cookies=cookies, files=files, timeout=30)
-        
-        if response.status_code != 200:
-            raise Exception(
-                f"Co-Lab request failed with status code {response.status_code}. "
-                "Possible causes: expired token, invalid session, or server blocking request."
-            )
-        
-        # Parse the Next.js response
-        parsed = parse_nextjs_response(response.text)
-        
-        # The actual class data is in key "1"
-        if '1' not in parsed:
-            print("⚠️  No class data found in Co-Lab response")
-            return []
-        
-        classes = parsed['1']
-        data = []
-        
-        for class_item in classes:
-            # Extract instructor information
-            staff_list = class_item.get('staff', [])
-            if staff_list:
-                instructor = staff_list[0]
-                name = instructor.get('displayLabel', 'Unknown')
-                insta = ""  # Not available in API response
-                choreographer = {"name": name, "instagram": insta}
-            else:
-                choreographer = {"name": "Unknown", "instagram": ""}
-            
-            # TODO: Find the actual serviceId/class ID from the Co-Lab API response
-            # For now, skip classes without a proper ID
-            service_id = class_item.get('id')
-            
-            if not service_id:
-                print(f"⚠️  Skipping Co-Lab class '{class_item['name']}' - no serviceId found in API response")
-                print(f"   Available fields: {list(class_item.keys())}")
-                continue
-            
-            # Format the class data
-            classData = {
-                "serviceId": str(service_id),
-                "start": class_item['startDateTime'],
-                "end": class_item['endDateTime'],
-                "choreo": choreographer,
-                "name": class_item['name'],
-                "location": class_item.get('location', {}).get('name', 'Co-Lab Quarters'),
-                "level": determine_level(class_item['name']),
-                "style": determine_style(class_item['name'])
-            }
-            data.append(classData)
-        
-        print(f"✓ Scraped {len(data)} classes from Co-Lab Quarters")
-        return data
-        
-    except requests.exceptions.RequestException as e:
-        print(f"❌ Error scraping Co-Lab: {e}")
-        return []
-
-
 if __name__ == "__main__":
-    # Example usage for testing
     from datetime import date, timedelta
     
     today = date.today()

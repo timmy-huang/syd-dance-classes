@@ -57,7 +57,7 @@
       />
     </a>
 
-    <div v-if="studio === 'KCC' || studio === 'IMI' || studio === 'Co-Lab Quarters'" class="pa-2 transparent-container">
+    <div v-if="studio === 'KCC' || studio === 'IMI' || studio === 'Co-Lab Quarters' || studio === '2Swagg Studio'" class="pa-2 transparent-container">
       <a :href="`https://www.instagram.com/kcc_studio`" target="_blank" rel="noopener">
         <v-img
           v-if="studio === 'KCC'"
@@ -76,6 +76,13 @@
         <v-img
           v-if="studio === 'Co-Lab Quarters'"
           src="/colab.webp"
+        />
+      </a>
+
+      <a :href="`https://www.instagram.com/2swaggofficial`" target="_blank" rel="noopener">
+        <v-img
+          v-if="studio === '2Swagg Studio'"
+          src="/twoswagg.png"
         />
       </a>
     </div>

@@ -144,6 +144,9 @@
       if (props.lesson.studio === "Sydney Dance Company") {
         return "https://www.sydneydancecompany.com/classes/classes-schedule/"
       }
+      if (props.lesson.studio === "2Swagg Studio") {
+        return "https://2swaggstudio.com/bookings"
+      }
     }
     console.log("Booking Link not found for ", props.lesson)
     return ""

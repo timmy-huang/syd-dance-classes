@@ -50,6 +50,7 @@ from endless.endless import endless
 from kcc.kcc import kcc
 from colab.colab import colab
 from sdc.sdc import sdc
+from twoswagg.twoswagg import twoswagg
 from api_client import DanceClassAPI
 
 # Calculate date range
@@ -150,6 +151,11 @@ studios = [
     {
         "name": "Sydney Dance Company",
         "func": sdc,
+        "args": (previous_monday, upcoming_sunday)
+    },
+    {
+        "name": "2Swagg Studio",
+        "func": twoswagg,
         "args": (previous_monday, upcoming_sunday)
     },
 ]

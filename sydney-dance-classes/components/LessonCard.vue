@@ -95,7 +95,7 @@
         <studio-icon :studio="lesson.studio" />
         <div class="d-flex-column align-center">
           <div v-if="displayDay">
-            {{ (lesson.start.toLocaleDateString('en-US', { weekday: 'long' }) + " (" + lesson.start.getDate() + "/" + lesson.start.getMonth() + ")") }}
+            {{ (lesson.start.toLocaleDateString('en-US', { weekday: 'long' }) + " (" + lesson.start.getDate() + "/" + (lesson.start.getMonth() + 1) + ")") }}
           </div>
           <div class="text-subtitle-1">
             {{ formatDate(lesson.start) + " - " + formatDate(lesson.end) }}

@@ -22,7 +22,7 @@
           style="height: auto; margin-right: 8px; width: 122px;"
         >
           <div style="flex-direction: column;" class="pa-2">
-            <div>{{ date.getDate() }}/{{ date.getMonth() }}</div>
+            <div>{{ date.getDate() }}/{{ date.getMonth() + 1 }}</div>
             <div>{{ days[date.getDay()] }}</div>
           </div>
         </v-btn>

@@ -41,6 +41,17 @@
 import type { Lesson } from '~/types';
 import { studios, styles } from '~/utils/consts';
 
+const legacyStyles = [
+  "Hip Hop",
+  "Contemporary",
+  "Choreography",
+  "Kpop",
+  "Heels",
+  "Other"
+]
+
+const normalizeStyle = (style: string) => style === 'Kpop' ? 'K-Pop' : style
+
 // Helper function to safely get from localStorage (only on client)
 const getFromLocalStorage = (key: string, defaultValue: any) => {
   if (import.meta.client && typeof window !== 'undefined' && window.localStorage) {
@@ -86,7 +97,9 @@ onMounted(() => {
   const savedStyles = getFromLocalStorage('selectedStyles', null)
   
   selectedStudios.value = savedStudios || [...studios]
-  selectedStyles.value = savedStyles || [...styles]
+  const normalizedSavedStyles = Array.isArray(savedStyles) ? savedStyles.map(normalizeStyle) : null
+  const hadAllLegacyStyles = normalizedSavedStyles && legacyStyles.map(normalizeStyle).every((style) => normalizedSavedStyles.includes(style))
+  selectedStyles.value = hadAllLegacyStyles || !normalizedSavedStyles ? [...styles] : normalizedSavedStyles
 })
 
 // Handle the selected day
@@ -120,7 +133,8 @@ const displayData = computed(() => {
   }).filter((lesson) => {  // filter lessons by studio
     return selectedStudios.value.includes(lesson.studio)
   }).filter((lesson) => { // Filter by style
-    return selectedStyles.value.some((style: string) => lesson.style.includes(style))
+    const lessonStyles = lesson.style.map(normalizeStyle)
+    return selectedStyles.value.some((style: string) => lessonStyles.includes(style))
   }).sort((a, b) => {  // sort lessons by start time then end time
     if (a.start.getTime() === b.start.getTime()) {
       return a.end.getTime() - b.end.getTime()
@@ -204,4 +218,4 @@ const getNoClassesMessage = () => {
   
   return `No classes found for ${selectedDate.value.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}.`
 }
-</script> 
+</script>

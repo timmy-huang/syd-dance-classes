@@ -5,10 +5,24 @@ const studios: string[] = []
 
 const styles = [
   "Hip Hop",
-  "Contemporary",
-  "Choreography",
-  "Kpop",
+  "K-Pop",
   "Heels",
+  "Contemporary",
+  "Jazz",
+  "Ballet",
+  "Popping",
+  "Locking",
+  "Breaking",
+  "Waacking",
+  "House",
+  "Afro",
+  "Dancehall",
+  "Reggaeton",
+  "Commercial",
+  "Girl Style",
+  "Vogue",
+  "Stretch / Conditioning",
+  "Choreography",
   "Other"
 ]
 

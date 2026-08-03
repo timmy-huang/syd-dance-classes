@@ -99,11 +99,7 @@ studios = [
     {
         "name": "IMI",
         "func": imi,
-        "args": (
-            "jQuery36406886794353924179_1715325689640",
-            today,
-            "1715325689641"
-        )
+        "args": (previous_monday, upcoming_sunday)
     },
     {
         "name": "Crossover",

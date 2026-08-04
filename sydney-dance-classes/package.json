@@ -18,7 +18,6 @@
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@pinia/nuxt": "^0.11.2",
     "@vercel/analytics": "^1.5.0",
-    "googleapis": "^164.0.0",
     "nuxt": "^4.1.3",
     "pinia": "^3.0.3",
     "sass": "^1.93.2",

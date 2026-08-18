@@ -39,6 +39,29 @@
 
       <v-divider class="mt-2"></v-divider>
     </template>
+    <template v-slot:item="{ props: itemProps, item }">
+      <v-list-item
+        v-bind="itemProps"
+        class="select-option"
+      >
+        <template v-slot:prepend>
+          <v-checkbox-btn
+            :model-value="isSelected(item.value)"
+          ></v-checkbox-btn>
+        </template>
+        <template v-slot:append>
+          <v-btn
+            variant="text"
+            size="small"
+            class="only-button"
+            :aria-label="`Select only ${item.title}`"
+            @click.stop.prevent="selectOnly(item.value)"
+          >
+            Only
+          </v-btn>
+        </template>
+      </v-list-item>
+    </template>
   </v-select>
 </template>
 
@@ -119,11 +142,27 @@
       emit('update', items.value);
     }
   };
+
+  const isSelected = (item: string) => {
+    return props.value?.includes(item) ?? false;
+  };
+
+  const selectOnly = (item: string) => {
+    emit('update', [item]);
+  };
 </script>
 
 <style>
   .select {
     width: 200px;
+  }
+
+  .select-option {
+    gap: 8px;
+  }
+
+  .only-button {
+    min-width: 44px;
   }
 
   @media screen and (max-width: 600px) {

@@ -11,20 +11,38 @@
           :touch="false"
           height="60"
         >
-          <v-tab 
-            value="classes" 
-            :size="tabSize"
-            @click="navigateTo('/classes')"
-          >
-            Classes
-          </v-tab>
-          <v-tab 
-            value="events" 
-            :size="tabSize"
-            @click="navigateTo('/events')"
-          >
-            Events
-          </v-tab>
+          <template v-if="isGenericApplicationPage">
+            <v-tab
+              value="application-home"
+              :size="tabSize"
+              @click="navigateTo('/application-home')"
+            >
+              App Home
+            </v-tab>
+            <v-tab
+              value="privacy-policy"
+              :size="tabSize"
+              @click="navigateTo('/privacy-policy')"
+            >
+              Privacy
+            </v-tab>
+          </template>
+          <template v-else>
+            <v-tab
+              value="classes"
+              :size="tabSize"
+              @click="navigateTo('/classes')"
+            >
+              Classes
+            </v-tab>
+            <v-tab
+              value="events"
+              :size="tabSize"
+              @click="navigateTo('/events')"
+            >
+              Events
+            </v-tab>
+          </template>
         </v-tabs>
       </ClientOnly>
       <div class='user-menu-container'>
@@ -40,11 +58,21 @@
 
 <script setup>
 const route = useRoute()
-const router = useRouter()
+const genericApplicationRoutes = ['/application-home', '/privacy-policy']
+
+const isGenericApplicationPage = computed(() => {
+  return genericApplicationRoutes.includes(route.path)
+})
 
 // Determine active tab based on current route
 const activeTab = computed(() => {
   const path = route.path
+  if (path === '/application-home') {
+    return 'application-home'
+  }
+  if (path === '/privacy-policy') {
+    return 'privacy-policy'
+  }
   if (path.startsWith('/events')) {
     return 'events'
   }

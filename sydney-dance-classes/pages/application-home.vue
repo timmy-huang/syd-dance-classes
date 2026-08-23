@@ -24,6 +24,14 @@
           >
             Privacy policy
           </v-btn>
+          <v-btn
+            color="primary"
+            variant="outlined"
+            to="/terms-of-service"
+            prepend-icon="mdi-file-document-outline"
+          >
+            Terms
+          </v-btn>
         </div>
       </div>
     </section>
@@ -53,6 +61,15 @@
         <p>
           Applications should only request information needed to provide their
           features. The generic privacy policy explains the default approach.
+        </p>
+      </article>
+
+      <article class="info-card">
+        <v-icon icon="mdi-file-document-check-outline" size="28" />
+        <h2>Terms</h2>
+        <p>
+          The public terms of service outline general rules for using applications,
+          accounts, content, availability, and support.
         </p>
       </article>
     </section>
@@ -121,7 +138,7 @@ h1 {
 .content-grid {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   padding: 32px 16px 56px;
 }
 

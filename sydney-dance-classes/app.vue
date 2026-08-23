@@ -26,6 +26,13 @@
             >
               Privacy
             </v-tab>
+            <v-tab
+              value="terms-of-service"
+              :size="tabSize"
+              @click="navigateTo('/terms-of-service')"
+            >
+              Terms
+            </v-tab>
           </template>
           <template v-else>
             <v-tab
@@ -58,7 +65,7 @@
 
 <script setup>
 const route = useRoute()
-const genericApplicationRoutes = ['/application-home', '/privacy-policy']
+const genericApplicationRoutes = ['/application-home', '/privacy-policy', '/terms-of-service']
 
 const isGenericApplicationPage = computed(() => {
   return genericApplicationRoutes.includes(route.path)
@@ -72,6 +79,9 @@ const activeTab = computed(() => {
   }
   if (path === '/privacy-policy') {
     return 'privacy-policy'
+  }
+  if (path === '/terms-of-service') {
+    return 'terms-of-service'
   }
   if (path.startsWith('/events')) {
     return 'events'

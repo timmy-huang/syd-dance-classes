@@ -10,7 +10,10 @@
       <template v-slot:prepend>
         <StudioIcon :studio="lesson.studio" />
       </template> 
-      <v-card-title>
+      <v-card-title
+        :title="lesson.name"
+        :aria-label="`Class: ${lesson.name}`"
+      >
         {{ lesson.name }}
       </v-card-title>
       <v-card-subtitle>
@@ -68,7 +71,11 @@
     rel="noopener"
   >
     <v-card-item class="lesson-card-item-mobile">
-      <v-card-title class="text-wrap">
+      <v-card-title
+        class="text-wrap"
+        :title="lesson.name"
+        :aria-label="`Class: ${lesson.name}`"
+      >
         {{ lesson.name }}
       </v-card-title>
       <v-card-subtitle>
